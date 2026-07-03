@@ -1,0 +1,658 @@
+
+BO_MUSIC_KickDrumVolume = 100 
+BO_MUSIC_SnareDrumVolume = 400 
+BO_MUSIC_HiHatVolume = 100 
+BO_MUSIC_ScratchVolume = 100 
+NO_DixieMusicStatus = 0 
+script NO_LoadingSounds {
+    LoadSound "NJ\\NJ_woodbreak01" 
+    LoadSound "NO\\SK6_NO_HitObriensSign" 
+    LoadSound "NO\\SK6_NO_BreakFence01" 
+    LoadSound "NO\\SK6_NO_GoThroughSmoke" 
+    LoadSound "NO\\SK6_NO_HitSign" 
+    LoadSound "Shared\\Animal\\RatDeathSquish" 
+    LoadSound "Shared\\Hits\\HitGlassPane2X" 
+    LoadSound "Shared\\Misc\\Ricco2_11" 
+    LoadSound "Shared\\Hits\\HitGlassPane2x" 
+    LoadSound "Shared\\Auto\\LA_Skid_11" vol=100 dropoff=150 
+    LoadSound "Shared\\Auto\\CarBrakeSqueal" vol=100 dropoff=150 
+    LoadSound "Shared\\Auto\\CarHorn_11" vol=100 dropoff=150 
+    LoadSound "Shared\\Hits\\HitMetalCan" vol=100 dropoff=150 PosUpdateWithDoppler 
+    LoadSound "Shared\\Hits\\BonkBush" vol=100 dropoff=0 
+    LoadSound "Shared\\Water\\FallWater" 
+    LoadSound "Shared\\Menu\\GoToLoadLevel" 
+    LoadSound "BO\\SK6_BO_RevolutionaryDrum01" 
+    LoadSound "BO\\MB_HiHat_01" 
+    LoadSound "Shared\\Auto\\CarLoop" vol=100 dropoff=150 PosUpdateWithDoppler 
+    LoadSound "Vehicles\\Silent_Vehicle_Tire_Loop" 
+    LoadSound "Terrains\\BonkMetal_11" 
+    LoadSound "BE\\SK6_GlassCrackQuick01" 
+    LoadSound "BO\\SK6_BO_TrainLoop02" PosUpdateWithDoppler 
+    LoadSound "BO\\SK6_BO_Air_Vent_02" 
+    LoadSound "NO\\SK6_NO_CryptRumbleLoop" 
+    LoadSound "BO\\SK6_BO_RiverLoop01_11" 
+    LoadSound "Shared\\Hits\\BustValve" 
+    LoadSound "NO\\SK6_NO_HeloLoop" 
+    LoadSound "NO\\SK6_NO_TrikeSqueak" 
+    LoadSound "NO\\SK6_NO_TrikeLand" 
+    LoadSound "NO\\SK6_NO_TrikeJump" 
+    LoadSound "NO\\SK6_NO_Trike_Grind" 
+    LoadSound "NO\\SK6_NO_Hit_Zombie" 
+    LoadSound "BouncyObjects\\Bouncy_TombstoneHit02" 
+    LoadSound "BouncyObjects\\Bouncy_LemonWedge_Hit01" 
+    LoadSound "BouncyObjects\\Bouncy_LemonWedge_Hit02" 
+    LoadSound "BouncyObjects\\Bouncy_PlantSmall01" 
+    LoadSound "BouncyObjects\\Bouncy_PlantSmall02" 
+    LoadSound "BouncyObjects\\Bouncy_WoodenTableHit01" 
+    LoadSound "BouncyObjects\\Bouncy_WoodenTableHit02" 
+    LoadSound "BouncyObjects\\Bouncy_PlasticChairHit01" 
+    LoadSound "BouncyObjects\\Bouncy_PlasticChairHit02" 
+    LoadSound "BouncyObjects\\Bouncy_MetalTableHit01" 
+    LoadSound "BouncyObjects\\Bouncy_MetalTableHit02" 
+    LoadSound "BouncyObjects\\Bouncy_UmbrellaHit01" 
+    LoadSound "BouncyObjects\\Bouncy_UmbrellaHit02" 
+    LoadSound "BouncyObjects\\Bouncy_BottleNonBreakHit01" 
+    LoadSound "BouncyObjects\\Bouncy_BottleNonBreakHit02" 
+    LoadSound "BouncyObjects\\Bouncy_MetalHit01" 
+    LoadSound "BouncyObjects\\Bouncy_MetalHit02" 
+    if (DebugSoundFX = 1) {
+        dumpheaps 
+    } 
+} 
+script NO_SFX_Music_Volume_Box_Cajun {
+    if ! InSplitScreenGame {
+        if (StaticMusicBoxesOn = 1) {
+            if skatercamanimfinished {
+                if ! IsTrue cutscene_is_playing {
+                    if (inside) {
+                        if (InsideSmallBox = 1) {
+                            if ! GetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK {
+        SpawnScript SK6_Music_Fade_Out 
+    } 
+                            change StaticMusicBoxState=on 
+                        } 
+                    } else {
+                        SpawnScript SK6_Music_Fade_In 
+                        change StaticMusicBoxState=off 
+                        kill name=TRG_SFX_TrigBox_LG_CajunBand01 
+                        wait 1 gameframe 
+                        change OutterBoxesExist=0 
+                        kill name=TRG_SFX_TrigBox_LG_CajunBandMusicOff 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_SFX_SMALL_Cajun_Music_Box {
+    if ! InSplitScreenGame {
+        if skatercamanimfinished {
+            if ! IsTrue cutscene_is_playing {
+                if (inside) {
+                    wait 1 gameframe 
+                    if (OutterBoxesExist = 0) {
+                        change InsideSmallBox=1 
+                        kill name=TRG_SFX_TrigBox_LG_CajunBand01 
+                        kill name=TRG_SFX_TrigBox_LG_CajunBandMusicOff 
+                        create name=TRG_SFX_TrigBox_LG_CajunBand01 
+                        create name=TRG_SFX_TrigBox_LG_CajunBandMusicOff 
+                        change OutterBoxesExist=1 
+                    } 
+                } else {
+                    change InsideSmallBox=0 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_SFX_Music_Volume_Box_Techno {
+    if ! InSplitScreenGame {
+        if (StaticMusicBoxesOn = 1) {
+            if skatercamanimfinished {
+                if ! IsTrue cutscene_is_playing {
+                    if (inside) {
+                        if (InsideSmallBox = 1) {
+                            if ! GetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK {
+        SpawnScript SK6_Music_Fade_Out 
+    } 
+                            change StaticMusicBoxState=on 
+                        } 
+                    } else {
+                        SpawnScript SK6_Music_Fade_In 
+                        change StaticMusicBoxState=off 
+                        kill name=TRG_SFX_TrigBox_LG_Techno 
+                        wait 1 gameframe 
+                        change OutterBoxesExist=0 
+                        kill name=TRG_SFX_TrigBox_LG_TechnoMusicOff 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_SFX_SMALL_Techno_Music_Box {
+    if ! InSplitScreenGame {
+        if skatercamanimfinished {
+            if ! IsTrue cutscene_is_playing {
+                if (inside) {
+                    wait 1 gameframe 
+                    if (OutterBoxesExist = 0) {
+                        change InsideSmallBox=1 
+                        kill name=TRG_SFX_TrigBox_LG_Techno 
+                        kill name=TRG_SFX_TrigBox_LG_TechnoMusicOff 
+                        create name=TRG_SFX_TrigBox_LG_Techno 
+                        create name=TRG_SFX_TrigBox_LG_TechnoMusicOff 
+                        change OutterBoxesExist=1 
+                    } 
+                } else {
+                    change InsideSmallBox=0 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_SFX_Music_Volume_Box_Dixie {
+    if ! InSplitScreenGame {
+        if (StaticMusicBoxesOn = 1) {
+            if skatercamanimfinished {
+                if ! IsTrue cutscene_is_playing {
+                    if (inside) {
+                        if (InsideSmallBox = 1) {
+                            if ! GetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK {
+        SpawnScript SK6_Music_Fade_Out 
+    } 
+                            change StaticMusicBoxState=on 
+                        } 
+                    } else {
+                        SpawnScript SK6_Music_Fade_In 
+                        change StaticMusicBoxState=off 
+                        kill name=TRG_SFX_TrigBox_DixieBand01 
+                        wait 1 gameframe 
+                        change OutterBoxesExist=0 
+                        kill name=TRG_SFX_TrigBox_DixieBandMusicOff 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_SFX_SMALL_Dixie_Music_Box {
+    if ! InSplitScreenGame {
+        if skatercamanimfinished {
+            if ! IsTrue cutscene_is_playing {
+                if (inside) {
+                    wait 1 gameframe 
+                    if (OutterBoxesExist = 0) {
+                        change InsideSmallBox=1 
+                        kill name=TRG_SFX_TrigBox_DixieBand01 
+                        kill name=TRG_SFX_TrigBox_DixieBandMusicOff 
+                        create name=TRG_SFX_TrigBox_DixieBand01 
+                        create name=TRG_SFX_TrigBox_DixieBandMusicOff 
+                        change OutterBoxesExist=1 
+                    } 
+                } else {
+                    change InsideSmallBox=0 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_SFX_Techno_Music {
+    if GetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK {
+        return 
+    } 
+    if ! InSplitScreenGame {
+        if ! IsStreamPlaying Techno_Music {
+            random2 {
+1 { Obj_PlayStream Techno_02 vol=250 emitter=TRG_SFX_SOB_Techno01 dropoff_function=inv_exponential id=Techno_Music num_loops=-1 priority=101 
+ } 1 { Obj_PlayStream Techno_03 vol=250 emitter=TRG_SFX_SOB_Techno01 dropoff_function=inv_exponential id=Techno_Music num_loops=-1 priority=101 
+ } 1 { Obj_PlayStream Techno_04 vol=250 emitter=TRG_SFX_SOB_Techno01 dropoff_function=inv_exponential id=Techno_Music num_loops=-1 priority=101 
+ } 1 { Obj_PlayStream Techno_05 vol=250 emitter=TRG_SFX_SOB_Techno01 dropoff_function=inv_exponential id=Techno_Music num_loops=-1 priority=101 
+ } } 
+            Obj_AddStream Techno_Music add=Techno_01 vol=250 
+            wait 1 gameframe 
+            Obj_RemoveStream Techno_Music remove=Techno_02 
+            Obj_RemoveStream Techno_Music remove=Techno_03 
+            Obj_RemoveStream Techno_Music remove=Techno_04 
+            Obj_RemoveStream Techno_Music remove=Techno_05 
+        } 
+    } 
+} 
+script NO_SFX_DixieBand {
+    if GetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK {
+        return 
+    } 
+    if ! InSplitScreenGame {
+        if ! IsStreamPlaying Dixie_Music {
+            random2 {
+1 { Obj_PlayStream Dixie_02 vol=150 emitter=TRG_SFX_SOB_DixieBand01 dropoff_function=inv_exponential id=Dixie_Music num_loops=-1 priority=101 
+ } 1 { Obj_PlayStream Dixie_03 vol=150 emitter=TRG_SFX_SOB_DixieBand01 dropoff_function=inv_exponential id=Dixie_Music num_loops=-1 priority=101 
+ } 1 { Obj_PlayStream Dixie_04 vol=150 emitter=TRG_SFX_SOB_DixieBand01 dropoff_function=inv_exponential id=Dixie_Music num_loops=-1 priority=101 
+ } 1 { Obj_PlayStream Dixie_05 vol=150 emitter=TRG_SFX_SOB_DixieBand01 dropoff_function=inv_exponential id=Dixie_Music num_loops=-1 priority=101 
+ } } 
+            Obj_AddStream Dixie_Music add=Dixie_01 vol=150 
+            wait 1 gameframe 
+            Obj_RemoveStream Dixie_Music remove=Dixie_02 
+            Obj_RemoveStream Dixie_Music remove=Dixie_03 
+            Obj_RemoveStream Dixie_Music remove=Dixie_04 
+            Obj_RemoveStream Dixie_Music remove=Dixie_05 
+        } 
+    } 
+} 
+script NO_SFX_CajunBand {
+    if GetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK {
+        return 
+    } 
+    if ! InSplitScreenGame {
+        if ! IsStreamPlaying Cajun_Music {
+            random2 {
+1 { Obj_PlayStream Cajun_02 vol=150 emitter=TRG_SFX_SOB_CajunBand01 dropoff_function=inv_exponential id=Cajun_Music num_loops=-1 priority=101 
+ } 1 { Obj_PlayStream Cajun_03 vol=150 emitter=TRG_SFX_SOB_CajunBand01 dropoff_function=inv_exponential id=Cajun_Music num_loops=-1 priority=101 
+ } 1 { Obj_PlayStream Cajun_04 vol=150 emitter=TRG_SFX_SOB_CajunBand01 dropoff_function=inv_exponential id=Cajun_Music num_loops=-1 priority=101 
+ } 1 { Obj_PlayStream Cajun_05 vol=150 emitter=TRG_SFX_SOB_CajunBand01 dropoff_function=inv_exponential id=Cajun_Music num_loops=-1 priority=101 
+ } } 
+            Obj_AddStream Cajun_Music add=Cajun_01 vol=150 
+            wait 1 gameframe 
+            Obj_RemoveStream Cajun_Music remove=Cajun_02 
+            Obj_RemoveStream Cajun_Music remove=Cajun_03 
+            Obj_RemoveStream Cajun_Music remove=Cajun_04 
+            Obj_RemoveStream Cajun_Music remove=Cajun_05 
+        } 
+    } 
+} 
+script NO_SFX_Hit_AC_Unit {
+    if ! (IsStreamPlaying SK6_GlassCracking01) {
+        PlayStream SK6_GlassCracking01 vol=120 
+    } 
+    wait 0.02 seconds 
+    PlaySound SK6_GlassCrackQuick01 vol=200 
+    PauseMusic 1 
+    PauseStream 1 
+} 
+script NO_SFX_Breakout_Ice {
+    PlaySound HitGlassPane2X pitch=200 
+    SpawnSound SK6_SFX_Roll_Booster_Sound 
+    PauseMusic 0 
+    PauseStream 0 
+    wait 1 second 
+    StopStream SK6_GlassCracking01 
+    KillSpawnedScript name=SK6_SFX_BulletTime_Heart 
+} 
+script NO_SFX_AirBlow01 {
+    Obj_PlaySound SK6_BO_Air_Vent_02 emitter=TRG_SFX_SOB_AirBlow01 
+} 
+script NO_SFX_AirBlow02 {
+    Obj_PlaySound SK6_BO_Air_Vent_02 emitter=TRG_SFX_SOB_AirBlow02 
+} 
+script NO_SFX_Manual_Over_Manhole {
+    PlaySound GrindMetalOn02 vol=randomrange(72.0, 80.0) pitch=randomrange(55.0, 60.0) 
+    wait 0.1 seconds 
+    PlaySound GrindMetalOn02 vol=randomrange(80.0, 90.0) pitch=randomrange(65.0, 80.0) 
+} 
+script NO_SFX_Crypt01_First_Rumble {
+} 
+script NO_SFX_Crypt01_Constant_Rumble {
+    if GetFlag flag=FLAG_CRYPT_1 {
+        Obj_PlaySound SK6_NO_CryptRumbleLoop pitch=40 emitter=TRG_SFX_SOB_CryptRumble01 dropoff_function=exponential 
+        while {
+            if ! IsStreamPlaying ACryptStream {
+                random2 {
+1 { TRG_SFX_Ghost_Crypt01:Obj_PlayStream SK6_NO_CryptYell01 id=ACryptStream vol=200 dropoff=100 
+ } 1 { TRG_SFX_Ghost_Crypt01:Obj_PlayStream SK6_NO_CryptYell02 id=ACryptStream vol=200 dropoff=100 
+ } 1 { TRG_SFX_Ghost_Crypt01:Obj_PlayStream SK6_NO_CryptYell03 id=ACryptStream vol=200 dropoff=100 
+ } } 
+            } 
+            wait 1 second 
+        } 
+    } 
+} 
+script NO_SFX_Crypt02_First_Rumble {
+} 
+script NO_SFX_Crypt02_Constant_Rumble {
+    if GetFlag flag=FLAG_CRYPT_2 {
+        Obj_PlaySound SK6_NO_CryptRumbleLoop pitch=40 emitter=TRG_SFX_SOB_CryptRumble02 dropoff_function=exponential 
+        while {
+            if ! IsStreamPlaying ACryptStream {
+                random2 {
+1 { TRG_SFX_Ghost_Crypt02:Obj_PlayStream SK6_NO_CryptYell01 id=ACryptStream vol=200 dropoff=100 
+ } 1 { TRG_SFX_Ghost_Crypt02:Obj_PlayStream SK6_NO_CryptYell02 id=ACryptStream vol=200 dropoff=100 
+ } 1 { TRG_SFX_Ghost_Crypt02:Obj_PlayStream SK6_NO_CryptYell03 id=ACryptStream vol=200 dropoff=100 
+ } } 
+            } 
+            wait 1 second 
+        } 
+    } 
+} 
+script NO_SFX_Crypt03_First_Rumble {
+} 
+script NO_SFX_Crypt03_Constant_Rumble {
+    if GetFlag flag=FLAG_CRYPT_3 {
+        Obj_PlaySound SK6_NO_CryptRumbleLoop pitch=40 emitter=TRG_SFX_SOB_CryptRumble03 dropoff_function=exponential 
+        while {
+            if ! IsStreamPlaying ACryptStream {
+                random2 {
+1 { TRG_SFX_Ghost_Crypt03:Obj_PlayStream SK6_NO_CryptYell01 id=ACryptStream vol=200 dropoff=100 
+ } 1 { TRG_SFX_Ghost_Crypt03:Obj_PlayStream SK6_NO_CryptYell02 id=ACryptStream vol=200 dropoff=100 
+ } 1 { TRG_SFX_Ghost_Crypt03:Obj_PlayStream SK6_NO_CryptYell03 id=ACryptStream vol=200 dropoff=100 
+ } } 
+            } 
+            wait 1 second 
+        } 
+    } 
+} 
+script NO_SFX_Crypt04_First_Rumble {
+} 
+script NO_SFX_Crypt04_Constant_Rumble {
+    if GetFlag flag=FLAG_CRYPT_4 {
+        Obj_PlaySound SK6_NO_CryptRumbleLoop pitch=40 emitter=TRG_SFX_SOB_CryptRumble04 dropoff_function=exponential 
+        while {
+            if ! IsStreamPlaying ACryptStream {
+                random2 {
+1 { TRG_SFX_Ghost_Crypt04:Obj_PlayStream SK6_NO_CryptYell01 id=ACryptStream vol=200 dropoff=100 
+ } 1 { TRG_SFX_Ghost_Crypt04:Obj_PlayStream SK6_NO_CryptYell02 id=ACryptStream vol=200 dropoff=100 
+ } 1 { TRG_SFX_Ghost_Crypt04:Obj_PlayStream SK6_NO_CryptYell03 id=ACryptStream vol=200 dropoff=100 
+ } } 
+            } 
+            wait 1 second 
+        } 
+    } 
+} 
+script NO_SFX_Crypt05_First_Rumble {
+} 
+script NO_SFX_Crypt05_Constant_Rumble {
+    if GetFlag flag=FLAG_CRYPT_5 {
+        Obj_PlaySound SK6_NO_CryptRumbleLoop pitch=40 emitter=TRG_SFX_SOB_CryptRumble05 
+        while {
+            if ! IsStreamPlaying ACryptStream {
+                random2 {
+1 { TRG_SFX_Ghost_Crypt05:Obj_PlayStream SK6_NO_CryptYell01 id=ACryptStream vol=200 dropoff=100 
+ } 1 { TRG_SFX_Ghost_Crypt05:Obj_PlayStream SK6_NO_CryptYell02 id=ACryptStream vol=200 dropoff=100 
+ } 1 { TRG_SFX_Ghost_Crypt05:Obj_PlayStream SK6_NO_CryptYell03 id=ACryptStream vol=200 dropoff=100 
+ } } 
+            } 
+            wait 1 second 
+        } 
+    } 
+} 
+script NO_SFX_Day_Swamp {
+    if skatercamanimfinished {
+        while {
+            if ! IsStreamPlaying SwampDayLoopStream {
+                Obj_PlayStream SK6_NO_SwampDaytimeLoop vol=50 emitter=TRG_SFX_SOB_Swamp01 priority=StreamPriorityHigh id=SwampDayLoopStream num_loops=-1 
+            } 
+            wait 1 second 
+        } 
+    } 
+} 
+script NO_SFX_Night_Swamp {
+    if skatercamanimfinished {
+        while {
+            if ! IsStreamPlaying SwampNightLoopStream {
+                Obj_PlayStream SK6_NO_SwampNightTimeLoop vol=50 emitter=TRG_SFX_SOB_Swamp01 priority=StreamPriorityHigh id=SwampNightLoopStream num_loops=-1 
+            } 
+            wait 1 second 
+        } 
+    } 
+} 
+script NO_SFX_RiverBG01 {
+    Obj_PlaySound SK6_BO_RiverLoop01_11 vol=80 emitter=TRG_SFX_SOB_RiverBG01 
+} 
+script NO_SFX_RiverBG02 {
+} 
+script NO_SFX_Water_Tower01 {
+    Obj_PlaySound SK6_BO_RiverLoop01_11 pitch=200 emitter=TRG_SFX_SOB_WaterTower01 dropoff_function=linear 
+} 
+script NO_SFX_GiantFanBlow01 {
+    Obj_PlaySound SK6_BO_Air_Vent_02 pitch=130 vol=200 emitter=TRG_SFX_SOB_GiantFan01 dropoff_function=linear 
+} 
+script NO_SFX_Train_Electrics {
+    TRG_SFX_Ghost_TrainSparks01:Obj_PlaySound SK6_BO_TrainLoop02 vol=80 pitch=100 dropoff=160 dropoff_function=exponential 
+    while {
+        random2 {
+1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark01 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.7 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark02 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.65 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark03 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.48 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark04 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.42 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark05 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.86 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark06 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.09 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark07 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.44 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark08 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.99 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark09 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.43 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark10 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.66 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark11 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.46 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark12 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.59 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark13 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.53 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark14 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 1.0 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark15 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 1.08 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark16 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 1.54 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark17 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.68 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark18 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 1.22 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark19 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.51 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark20 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.34 seconds 
+ } 1 { TRG_SFX_Ghost_TrainSparks01:Obj_PlayStream SK6_SmSpark21 vol=40 pitch=100 id=TrainSpark dropoff=160 dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.36 seconds 
+ } } 
+        wait 0.1 seconds 
+    } 
+} 
+script NO_SFX_MardiGrasNeon {
+} 
+script NO_SFX_Street_Reverb_01 {
+    if ! GameIsPaused {
+        if ! InSplitScreenGame {
+            if (inside) {
+                change InsideAdjacentReverbBox01=1 
+                GetValueFromVolume cdvol 
+                if (InsideAdjacentReverbBox02 = 0) {
+                    if (<value> = 0) {
+                        SetSfxReverb 30 mode=REV_MODE_ROOM 
+                    } else {
+                        SetSfxReverb 30 mode=REV_MODE_ROOM 
+                    } 
+                } 
+            } else {
+                if (InsideAdjacentReverbBox02 = 0) {
+                    SetSfxReverb 0 mode=REV_MODE_ROOM 
+                } else {
+                } 
+                change InsideAdjacentReverbBox01=0 
+            } 
+        } 
+    } 
+} 
+script NO_SFX_Street_Reverb_02 {
+    if ! GameIsPaused {
+        if ! InSplitScreenGame {
+            if (inside) {
+                change InsideAdjacentReverbBox02=1 
+                GetValueFromVolume cdvol 
+                if (InsideAdjacentReverbBox01 = 0) {
+                    if (<value> = 0) {
+                        SetSfxReverb 30 mode=REV_MODE_ROOM 
+                    } else {
+                        SetSfxReverb 30 mode=REV_MODE_ROOM 
+                    } 
+                } 
+            } else {
+                if (InsideAdjacentReverbBox01 = 0) {
+                    SetSfxReverb 0 mode=REV_MODE_ROOM 
+                } else {
+                } 
+                change InsideAdjacentReverbBox02=0 
+            } 
+        } 
+    } 
+} 
+script NO_SFX_Car_Lift_Reverb01 {
+    if ! GameIsPaused {
+        if ! InSplitScreenGame {
+            if (inside) {
+                change InsideAdjacentReverbBox01=1 
+                GetValueFromVolume cdvol 
+                if (InsideAdjacentReverbBox02 = 0) {
+                    if (<value> = 0) {
+                        SetSfxReverb 100 mode=REV_MODE_ROOM 
+                    } else {
+                        SetSfxReverb 100 mode=REV_MODE_ROOM 
+                    } 
+                } 
+            } else {
+                if (InsideAdjacentReverbBox02 = 0) {
+                    SetSfxReverb 0 mode=REV_MODE_ROOM 
+                } else {
+                } 
+                change InsideAdjacentReverbBox01=0 
+            } 
+        } 
+    } 
+} 
+script NO_SFX_Dixie_Start {
+    if GetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK {
+        return 
+    } 
+    Obj_PlayStream SK6_BO_ChangeDrop vol=250 
+    random2 {
+1 { Obj_PlayStream DixieBandLeader_Start01 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Start02 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Start03 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Start04 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Start05 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Start06 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Start07 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } } 
+} 
+script NO_SFX_Dixie_Start02 {
+    change NO_DixieMusicStatus=1 
+    kill name=TRG_SFX_TrigBox_DixieBand01 
+    kill name=TRG_SFX_TrigBox_DixieBandMusicOff 
+    kill name=TRG_SFX_TrigBox_SmallDixie 
+    create name=TRG_SFX_TrigBox_SmallDixie 
+} 
+script NO_SFX_Dixie_Stop {
+    if GetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK {
+        return 
+    } 
+    random2 {
+1 { Obj_PlayStream DixieBandLeader_Stop01 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Stop02 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Stop03 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Stop04 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Stop05 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Stop06 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } 1 { Obj_PlayStream DixieBandLeader_Stop07 vol=200 dropoff=150 priority=StreamPriorityHigh 
+ } } 
+} 
+script NO_SFX_Dixie_Stop02 {
+    change NO_DixieMusicStatus=0 
+    kill name=TRG_SFX_TrigBox_DixieBand01 
+    kill name=TRG_SFX_TrigBox_DixieBandMusicOff 
+    kill name=TRG_SFX_TrigBox_SmallDixie 
+} 
+script NO_SFX_HitObriensSign {
+    PlaySound SK6_NO_HitObriensSign pitch=randomrange(100.0, 130.0) 
+} 
+script NO_SFX_Go_Through_Smoke {
+    wait 0.3 seconds 
+    PlaySound SK6_NO_GoThroughSmoke vol=250 
+} 
+script NO_SFX_PaddleWheel01 {
+    TRG_SFX_Ghost_PaddleWheel:Obj_PlayStream SK6_NO_PaddleWheelAndHorn vol=200 dropoff=300 
+} 
+script NO_SFX_PaddleWheel02 {
+    TRG_SFX_Ghost_PaddleWheel:Obj_PlayStream SK6_NO_PaddleWheelAndHorn vol=200 dropoff=300 
+} 
+script NO_SFX_PaddleWheel03 {
+    TRG_SFX_Ghost_PaddleWheel:Obj_PlayStream SK6_NO_PaddleWheelAndHorn vol=200 dropoff=300 
+} 
+script NO_SFX_NeonSignBreak {
+    PlaySound SK6_NO_HitSign vol=200 
+    PlaySound HitGlassPane2X vol=60 pitch=150 
+    PlayStream SK6_NO_BreakNeonSign vol=150 
+} 
+script NO_SFX_FliesOnSkater {
+    if ! IsStreamPlaying ThisSkaterFliesSFX {
+        PlayStream SK6_NO_Flies_On_Skater vol=50 id=ThisSkaterFliesSFX 
+    } 
+} 
+script NO_SFX_HydrantPop1 {
+    TRG_SFX_Ghost_Hydrant01:Obj_PlaySound BustValve 
+    TRG_SFX_Ghost_Hydrant01:Obj_PlaySound SK6_BO_RiverLoop01_11 vol=80 pitch=200 dropoff=110 dropoff_function=exponential 
+} 
+script NO_SFX_HydrantPop2 {
+    TRG_SFX_Ghost_Hydrant02:Obj_PlaySound BustValve 
+    TRG_SFX_Ghost_Hydrant02:Obj_PlaySound SK6_BO_RiverLoop01_11 vol=80 pitch=200 dropoff=110 dropoff_function=exponential 
+} 
+script NO_SFX_Giant_Tornado {
+    while {
+        if ! IsStreamPlaying GiantTornadoStream {
+            Obj_PlayStream SK6_NO_GiantTornado vol=400 emitter=TRG_SFX_SOB_GiantTornado dropoff_function=inv_exponential priority=StreamPriorityHigh id=GiantTornadoStream num_loops=-1 
+        } 
+        wait 1 second 
+    } 
+} 
+script NO_SFX_StreetChatter {
+    if ! IsStreamPlaying GiantTornadoStream {
+        if ! IsStreamPlaying StreetCrowdSFX {
+            Obj_PlayStream SK6_NO_CrowdInStreet priority=StreamPriorityHigh id=StreetCrowdSFX num_loops=-1 emitter=TRG_SFX_SOB_StreetChatter 
+        } 
+    } 
+} 
+script NO_SFX_Night_Crix01 {
+    if InSplitScreenGame {
+        if ! IsStreamPlaying SK6_CrixLoop_01 {
+            Obj_PlayStream SK6_CrixLoop_01 vol=30 num_loops=-1 priority=StreamPriorityHigh 
+        } 
+    } else {
+        Obj_PlayStream SK6_CrixLoop_01 vol=30 num_loops=-1 priority=StreamPriorityHigh 
+    } 
+} 
+script NO_SFX_Night_Crix02 {
+    if InSplitScreenGame {
+        if ! IsStreamPlaying SK6_CrixLoop_01 {
+            Obj_PlayStream SK6_CrixLoop_01 vol=30 num_loops=-1 priority=StreamPriorityHigh 
+        } 
+    } else {
+        Obj_PlayStream SK6_CrixLoop_01 vol=30 num_loops=-1 priority=StreamPriorityHigh 
+    } 
+} 
+script NO_SFX_Night_Crix03 {
+    if InSplitScreenGame {
+        if ! IsStreamPlaying SK6_CrixLoop_01 {
+            Obj_PlayStream SK6_CrixLoop_01 vol=30 num_loops=-1 priority=StreamPriorityHigh 
+        } 
+    } else {
+        Obj_PlayStream SK6_CrixLoop_01 vol=30 num_loops=-1 priority=StreamPriorityHigh 
+    } 
+} 
+script NO_SFX_BreakObrienFence {
+    StopStream SK6_BreakMetalFence 
+    PlaySound SK6_NO_BreakFence01 
+    PlaySound HitGlassPane2X pitch=50 
+    PlayStream SK6_BreakMetalFence vol=200 priority=StreamPriorityHigh 
+} 
+script NO_SFX_ObrienFountain {
+    Obj_PlaySound SK6_BO_RiverLoop01_11 emitter=TRG_SFX_SOB_ObrienDrink vol=60 pitch=170 
+} 
+script NO_SFX_Dungeon {
+} 
+__register_checksums__ NO_SFX_Crypt05_First_Rumble KillSpawnedScript SK6_SmSpark17 exponential SK6_BreakMetalFence SK6_SmSpark05 DixieBandLeader_Stop06 SK6_NO_HitSign BO_MUSIC_KickDrumVolume SK6_SmSpark16 SK6_SmSpark04 GameIsPaused dropoff DixieBandLeader_Stop07 SK6_SmSpark15 Dixie_05 PosUpdateWithDoppler pitch TRG_SFX_Ghost_TrainSparks01 DixieBandLeader_Stop04 SK6_NO_HitObriensSign NO_SFX_Crypt04_First_Rumble SK6_SmSpark07 SK6_SmSpark14 Dixie_04 DebugSoundFX DixieBandLeader_Stop05 change num_loops SK6_SmSpark06 NO_SFX_ObrienFountain name Obj_PlayStream TRG_SFX_TrigBox_LG_TechnoMusicOff DixieBandLeader_Start02 TRG_SFX_SOB_CryptRumble03 Dixie_Music StaticMusicBoxState PlaySound off BO_MUSIC_ScratchVolume NO_SFX_Crypt05_Constant_Rumble emitter remove DixieBandLeader_Start03 NO_SFX_Music_Volume_Box_Dixie TRG_SFX_SOB_CryptRumble02 NO_SFX_Night_Swamp SpawnScript TRG_SFX_SOB_CryptRumble01 TRG_SFX_TrigBox_LG_CajunBand01 SK6_NO_GiantTornado OutterBoxesExist SK6_CrixLoop_01 priority SK6_NO_Flies_On_Skater ACryptStream DixieBandLeader_Start01 BustValve SetSfxReverb Dixie_03 SK6_SmSpark13 TRG_SFX_TrigBox_LG_Techno SK6_SmSpark01 TRG_SFX_SOB_DixieBand01 NO_SFX_Night_Crix01 Techno_Music flag TRG_SFX_SOB_Swamp01 DixieBandLeader_Stop02 NO_SFX_Dixie_Start Dixie_02 SK6_SmSpark12 HitGlassPane2X NO_SFX_AirBlow02 DixieBandLeader_Stop03 NO_SFX_GiantFanBlow01 SK6_BO_ChangeDrop NO_SFX_Crypt01_Constant_Rumble Dixie_01 SK6_SmSpark11 dropoff_function NO_SFX_Car_Lift_Reverb01 NO_SFX_Water_Tower01 TRG_SFX_TrigBox_SmallDixie NO_SFX_AirBlow01 NO_SFX_Night_Crix03 SK6_SmSpark03 TRG_SFX_SOB_RiverBG01 LoadSound GetValueFromVolume SK6_SmSpark10 SK6_NO_SwampDaytimeLoop NO_SFX_Hit_AC_Unit DixieBandLeader_Stop01 NO_SFX_Crypt03_Constant_Rumble NO_SFX_Music_Volume_Box_Cajun StreamPriorityLow NO_SFX_Night_Crix02 SK6_SFX_Roll_Booster_Sound SK6_SmSpark02 NO_SFX_Dungeon BO_MUSIC_SnareDrumVolume NO_SFX_Train_Electrics seconds TrainSpark on skatercamanimfinished StopStream SK6_SmSpark20 DixieBandLeader_Start06 cutscene_is_playing SK6_SmSpark21 DixieBandLeader_Start07 NO_SFX_CajunBand SK6_BO_Air_Vent_02 dumpheaps TRG_SFX_SOB_CryptRumble05 linear DixieBandLeader_Start04 SK6_NO_GoThroughSmoke value TRG_SFX_SOB_CryptRumble04 SK6_NO_BreakNeonSign DixieBandLeader_Start05 NO_SFX_NeonSignBreak TRG_SFX_SOB_GiantFan01 InsideAdjacentReverbBox01 NO_SFX_Manual_Over_Manhole vol mode Cajun_05 NO_SFX_Dixie_Start02 id NO_SFX_Street_Reverb_01 SwampDayLoopStream NO_SFX_BreakObrienFence Cajun_04 PauseMusic GrindMetalOn02 StaticMusicBoxesOn NO_SFX_HitObriensSign Techno_05 IsTrue SK6_BO_RiverLoop01_11 NO_SFX_Street_Reverb_02 NO_SFX_Crypt04_Constant_Rumble kill SK6_SFX_BulletTime_Heart Techno_04 InsideAdjacentReverbBox02 SK6_GlassCrackQuick01 NO_SFX_Go_Through_Smoke NO_SFX_Day_Swamp NO_SFX_PaddleWheel01 NO_SFX_Music_Volume_Box_Techno StreetCrowdSFX NO_SFX_HydrantPop1 SK6_BO_TrainLoop02 SK6_GlassCracking01 REV_MODE_ROOM PlayStream NO_SFX_Crypt02_First_Rumble IsStreamPlaying SK6_Music_Fade_In TRG_SFX_Ghost_PaddleWheel TRG_SFX_TrigBox_DixieBandMusicOff Obj_AddStream NO_SFX_PaddleWheel03 NO_SFX_SMALL_Dixie_Music_Box TRG_SFX_SOB_WaterTower01 TRG_SFX_SOB_CajunBand01 NO_SFX_Dixie_Stop02 FLAG_CRYPT_5 TRG_SFX_Ghost_Crypt04 NO_SFX_StreetChatter SK6_NO_BreakFence01 NO_SFX_Breakout_Ice ThisSkaterFliesSFX NO_SFX_PaddleWheel02 NO_SFX_Crypt03_First_Rumble StreamPriorityHigh SK6_Music_Fade_Out cdvol TRG_SFX_SOB_Techno01 NO_SFX_HydrantPop2 SK6_NO_PaddleWheelAndHorn TRG_SFX_SOB_GiantTornado TRG_SFX_Ghost_Crypt05 NO_LoadingSounds FLAG_CRYPT_4 Techno_03 add wait SK6_NO_CryptYell01 NO_SFX_FliesOnSkater SwampNightLoopStream inv_exponential BO_MUSIC_HiHatVolume TRG_SFX_TrigBox_LG_CajunBandMusicOff Cajun_01 SK6_SmSpark09 NO_SFX_RiverBG02 TRG_SFX_SOB_AirBlow02 Techno_02 TRG_SFX_Ghost_Hydrant02 SK6_SmSpark08 SK6_NO_CryptRumbleLoop SK6_NO_CryptYell03 TRG_SFX_Ghost_Hydrant01 TRG_SFX_SOB_AirBlow01 Techno_01 NO_SFX_MardiGrasNeon NO_SFX_RiverBG01 SK6_SmSpark19 Cajun_03 SK6_NO_CrowdInStreet inside NO_SFX_Techno_Music Cajun_Music SK6_NO_CryptYell02 SK6_SmSpark18 Cajun_02 Obj_RemoveStream GiantTornadoStream Obj_PlaySound TRG_SFX_SOB_ObrienDrink SK6_NO_SwampNightTimeLoop TRG_SFX_Ghost_Crypt02 FLAG_CRYPT_3 InSplitScreenGame NO_SFX_Giant_Tornado NO_SFX_Dixie_Stop NO_SFX_Crypt02_Constant_Rumble GetFlag second NO_SFX_SMALL_Cajun_Music_Box FLAG_CRYPT_2 TRG_SFX_Ghost_Crypt03 SpawnSound NO_SFX_Crypt01_First_Rumble create gameframe NO_SFX_SMALL_Techno_Music_Box NO_SFX_DixieBand FLAG_CRYPT_1 InsideSmallBox TRG_SFX_SOB_StreetChatter NO_DixieMusicStatus PauseStream TRG_SFX_TrigBox_DixieBand01 TRG_SFX_Ghost_Crypt01

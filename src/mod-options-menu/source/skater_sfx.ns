@@ -1,0 +1,850 @@
+
+MusicVolume = 50 
+MusicStreamVolume = 100 
+AmbientTrackNum = 0 
+ForceAmbientSFXToMusicVolume = 0 
+MusicChangedAtStartup = 0 
+MusicStartupVolume = 50.0 
+MusicVolOutsideBox = 50.0 
+FadeMusicInRunning = 0 
+FadeMusicOutRunning = 0 
+FadeTempMusicVol = 50.0 
+DontAdjustMusicViaProximNode = 0 
+InsideAdjacentReverbBox01 = 0 
+InsideAdjacentReverbBox02 = 0 
+InsideAdjacentReverbBox03 = 0 
+SloMoMusicPaused = 0 
+InsideMusicAdjustmentBox = 0 
+InsideSmallBox = 0 
+OutterBoxesExist = 0 
+StaticMusicBoxesOn = 1 
+StaticMusicBoxState = off 
+SFX_FootStepWalk01 = WalkStepConc01_11 
+SFX_FootStepWalk02 = WalkStepConc03_11 
+SFX_FootStepWalk03 = WalkStepConc05_11 
+SFX_FootStepRun01 = RunStepConc01_11 
+SFX_FootStepRun02 = RunStepConc02_11 
+SFX_FootStepRun03 = RunStepConc03_11 
+SFX_FootStepRun04 = RunStepConc03_11 
+SFX_FootStepRun05 = RunStepConc03_11 
+GlobalGoalVOVol = 200 
+GlobalHintVOVol = 200 
+GlobalHintVODropoff = 150 
+GlobalIntroVOVol = 160 
+GlobalFarVOVol = 150 
+GlobalFarVODropoff = 150 
+GlobalFarWaitTime = 8 
+GlobalAvoidVOVol = 200 
+GlobalAvoidVODropoff = 150 
+GlobalTrickBailVOVol = 250 
+GlobalTrickBailVODropoff = 150 
+GlobalTrickPositiveVOVol = 200 
+GlobalTrickPositiveVODropoff = 150 
+CheckForPedStreamExistence = 0 
+script SetThisLevelSoundBanks {
+} 
+script LoadPermSounds {
+    LoadPermSFX 
+    LoadPermSongs 
+} 
+script LoadPermSFX {
+    LoadPreFile "skater_sounds.pre" 
+    LoadSound "Skater\\foleymove01" FLAG_PERM vol=50 
+    LoadSound "Skater\\hitblood01" FLAG_PERM vol=50 
+    LoadSound "Skater\\hitblood02" FLAG_PERM vol=50 
+    LoadSound "Skater\\hitblood03" FLAG_PERM vol=50 
+    LoadSound "Skater\\Bails\\BailBodyPunch01_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBodyPunch02_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBodyPunch03_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBodyPunch04_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBodyPunch05_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBodyFall01" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBodyFall02" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBodyFall03" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBodyFall04" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBodyFall05" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailCrack01" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailSlap01" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailSlap02" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailSlap03" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBoard01" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBoard02" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBoard03" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBoard04" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\BailBoard05" FLAG_PERM vol=100 
+    LoadSound "Skater\\Bails\\SK6_BoardGrab01" FLAG_PERM 
+    LoadSound "Skater\\SK6_BoardScrapeLong02_11" FLAG_PERM 
+    LoadSound "Skater\\SK6_BoardRollIn01_11" FLAG_PERM 
+    LoadSound "Terrains\\OllieConc19" FLAG_PERM 
+    LoadSound "Skater\\Bails\\SK6_BoardSplit01" FLAG_PERM 
+    LoadSound "Skater\\Walking\\WalkStepConc01_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Walking\\WalkStepConc03_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Walking\\WalkStepConc05_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Walking\\RunStepConc01_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Walking\\RunStepConc02_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Walking\\RunStepConc03_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Walking\\RunStepConc04_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Walking\\RunStepConc05_11" FLAG_PERM vol=100 
+    LoadSound "Skater\\Walking\\ScuffStepConc01" FLAG_PERM vol=100 
+    LoadSound "Skater\\Walking\\ScuffStepConc02" FLAG_PERM vol=100 
+    LoadSound "Skater\\Walking\\LandStepConc02_11" FLAG_PERM vol=100 
+    LoadSound "Shared\\Menu\\menu03" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Menu\\GUI_buzzer01" FLAG_PERM vol=100 NOREVERB 
+    LoadSound "Shared\\Menu\\MenuUp" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Menu\\SK6_Menu_Fly_In" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Menu\\DE_PauseFlyIn" FLAG_PERM NOREVERB vol=80 
+    LoadSound "Shared\\Menu\\DE_MenuBack" FLAG_PERM NOREVERB vol=80 
+    LoadSound "Shared\\Menu\\SK6_Menu_Move" FLAG_PERM vol=100 NOREVERB 
+    LoadSound "Shared\\Menu\\SK6_Menu_Select" FLAG_PERM vol=80 NOREVERB 
+    LoadSound "Shared\\Menu\\SK6_Menu_Back" FLAG_PERM vol=100 NOREVERB 
+    LoadSound "Skater\\boneless09" FLAG_PERM 
+    LoadSound "Skater\\copinghit3_11" FLAG_PERM vol=100 
+    LoadSound "Shared\\Menu\\timeoutA" FLAG_PERM vol=50 NOREVERB 
+    LoadSound "Shared\\Goals\\GapSound_11" FLAG_PERM vol=100 dropoff=0 NOREVERB 
+    LoadSound "Shared\\Goals\\GoalDone" FLAG_PERM vol=100 dropoff=0 NOREVERB 
+    LoadSound "Shared\\Goals\\TetrisAway" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Goals\\GoalGood02" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Goals\\GoalFail" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Goals\\GoalMidGood" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Goals\\ExtraTrick" FLAG_PERM NOREVERB vol=80 
+    LoadSound "Shared\\Goals\\PerfectLanding_11" FLAG_PERM NOREVERB vol=110 
+    LoadSound "Shared\\Goals\\HUDtrickslopC" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Goals\\HUD_jumpgap" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Goals\\HUD_specialtrickAA" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Goals\\LandCombo01" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Goals\\GotStat04" FLAG_PERM NOREVERB vol=80 
+    LoadSound "Skater\\Sk6_JumpFar_01" FLAG_PERM NOREVERB 
+    LoadSound "Skater\\BoardBounce01" FLAG_PERM 
+    LoadSound "Skater\\SK6_BulletZoomIn" FLAG_PERM NOREVERB 
+    LoadSound "Skater\\SK6_BulletZoomOut" FLAG_PERM NOREVERB 
+    LoadSound "Skater\\SK6_BulletHeart_11" FLAG_PERM NOREVERB 
+    LoadSound "Skater\\SK6_Wind_Test_11" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Misc\\FlipTransitionUp01" FLAG_PERM 
+    LoadSound "Shared\\Misc\\FlipTransitionDown01" FLAG_PERM 
+    LoadSound "Shared\\Goals\\ClockTickUp" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Goals\\ClockTickDown" FLAG_PERM NOREVERB 
+    LoadSound "Shared\\Goals\\FlamingFireBall01" FLAG_PERM 
+    LoadSound "Skater\\SK6_Walk_Spray_Tag_01" FLAG_PERM 
+    LoadSound "Skater\\SK6_StickerSlap_01" FLAG_PERM 
+    UnloadPreFile "skater_sounds.pre" 
+} 
+locked_track1 = -1 
+locked_track2 = -2 
+script LoadPermSongs {
+    if ((isTrue TestMusicFromHost) or (CD)) {
+        LoadMusicHeader "music\\music" 
+        GetArraySize playlist_tracks 
+        index = 0 
+        while {
+            path = ((playlist_tracks [<index>]).path) 
+            FormatText textname=tracktitle "%b: %t" b=((playlist_tracks [<index>]).band) t=((playlist_tracks [<index>]).track_title) 
+            AddMusicTrack <path> FLAG_PERM tracktitle=<tracktitle> 
+            index = (<index> + 1) 
+        } <array_size> 
+    } 
+} 
+playlist_tracks = [
+    {band="25 Ta Life" track_title="Over the Years" genre=2 path="music\\vag\\songs\\25TaLife"} 
+    {band="Aesop Rock" track_title="No Jumper Cables(re-mix)" genre=1 path="music\\vag\\songs\\Aesop"} 
+    {band="Atmosphere" track_title="Trying to Find a Balance" genre=1 path="music\\vag\\songs\\Atmosphere"} 
+    {band="Audio Two" track_title="Top Billin'" genre=1 path="music\\vag\\songs\\AudioTwo"} 
+    {band="Brand Nubian" track_title="Punks Jump Up To Get Beat Down" genre=1 path="music\\vag\\songs\\Nubian"} 
+    {band="Camaros" track_title="Cheesecake" genre=0 path="music\\vag\\songs\\Camaros"} 
+    {band="Cut Chemist" track_title="Drums of Fire" genre=1 path="music\\vag\\songs\\CutChemist"} 
+    {band="Das Oath" track_title="Awesome R***" genre=2 path="music\\vag\\songs\\Oath"} 
+    {band="Dead Boys" track_title="Sonic Reducer" genre=0 path="music\\vag\\songs\\DeadBoys"} 
+    {band="Dead End Road" track_title="Sin City" genre=2 path="music\\vag\\songs\\DeadEndRoad"} 
+    {band="Disturbed" track_title="Liberate" genre=2 path="music\\vag\\songs\\Disturbed"} 
+    {band="Diverse" track_title="Certified" genre=1 path="music\\vag\\songs\\Diverse"} 
+    {band="Faith No More" track_title="Midlife Crisis" genre=2 path="music\\vag\\songs\\FaithNoMore"} 
+    {band="Fear" track_title="I Love Livin' In The City" genre=0 path="music\\vag\\songs\\Fear"} 
+    {band="Frank Sinatra" track_title="That's Life" genre=2 path="music\\vag\\songs\\Frank"} 
+    {band="Grand Puba" track_title="I Like It" genre=1 path="music\\vag\\songs\\GrandPuba"} 
+    {band="Handsome Boy...School" track_title="Holy Calamity" genre=1 path="music\\vag\\songs\\HandsomeBoy"} 
+    {band="Iggy & The Stooges" track_title="1970" genre=0 path="music\\vag\\songs\\TheStooges"} 
+    {band="Jimmy Eat World" track_title="Pain" genre=0 path="music\\vag\\songs\\Jimmy"} 
+    {band="Johnny Cash" track_title="Ring of Fire" genre=2 path="music\\vag\\songs\\JohnnyCash"} 
+    {band="Joy Division" track_title="Warsaw" genre=0 path="music\\vag\\songs\\JoyD"} 
+    {band="Lamb of God" track_title="Black Label" genre=2 path="music\\vag\\songs\\LambofGod"} 
+    {band="Less Than Jake" track_title="That's Why They...Union" genre=0 path="music\\vag\\songs\\Jake"} 
+    {band="Libretto" track_title="Volume" genre=1 path="music\\vag\\songs\\Libretto"} 
+    {band="Living Legends" track_title="Night Prowler" genre=1 path="music\\vag\\songs\\LivingL"} 
+    {band="Melbeatz f.Kool Savas" track_title="Grind on" genre=1 path="music\\vag\\songs\\Melbeatz"} 
+    {band="Melvins" track_title="Sweet Willie Rollbar" genre=0 path="music\\vag\\songs\\Melvins"} 
+    {band="Metallica" track_title="Whiplash" genre=2 path="music\\vag\\songs\\Metallica"} 
+    {band="Mike V and The Rats" track_title="Never Give Up" genre=0 path="music\\vag\\songs\\MikeV"} 
+    {band="Ministry" track_title="No    " genre=2 path="music\\vag\\songs\\Ministry"} 
+    {band="Nebula" track_title="So it Goes" genre=2 path="music\\vag\\songs\\Nebula"} 
+    {band="Operatic" track_title="Interested In Madness" genre=2 path="music\\vag\\songs\\Operatic"} 
+    {band="Pete Rock&CL Smooth" track_title="Soul Brother #1" genre=1 path="music\\vag\\songs\\PeteRock"} 
+    {band="Rancid" track_title="Fall Back Down" genre=0 path="music\\vag\\songs\\Rancid"} 
+    {band="Red Hot Chili Peppers" track_title="The Power of Equality" genre=0 path="music\\vag\\songs\\RedHots"} 
+    {band="Steel Pulse" track_title="Born Fe Rebel" genre=2 path="music\\vag\\songs\\SteelPulse"} 
+    {band="Suicide Machines" track_title="High Anxiety" genre=0 path="music\\vag\\songs\\SuicideMachines"} 
+    {band="The Casualties" track_title="Unknown Soldier" genre=0 path="music\\vag\\songs\\TheCasualties"} 
+    {band="The D.O.C." track_title="Whirlwind Pyramid" genre=1 path="music\\vag\\songs\\DOC"} 
+    {band="The Distillers" track_title="Beat Your Heart Out" genre=0 path="music\\vag\\songs\\Distillers"} 
+    {band="The Doors" track_title="Break On Through" genre=2 path="music\\vag\\songs\\TheDoors"} 
+    {band="The Explosion" track_title="Here I Am" genre=0 path="music\\vag\\songs\\TheExplosion"} 
+    {band="The Germs" track_title="Lexicon Devil" genre=0 path="music\\vag\\songs\\TheGerms"} 
+    {band="The Hiss" track_title="Back on the Radio" genre=2 path="music\\vag\\songs\\Hiss"} 
+    {band="The Living End" track_title="End of the World" genre=2 path="music\\vag\\songs\\LivingEnd"} 
+    {band="The Ramones" track_title="Rock 'n Roll High School" genre=0 path="music\\vag\\songs\\TheRamones"} 
+    {band="The Sugarhill Gang" track_title="Rapper's Delight" genre=1 path="music\\vag\\songs\\TheSugarhill"} 
+    {band="Three Inches of Blood" track_title="Deadly Sinners" genre=2 path="music\\vag\\songs\\ThreeInches"} 
+    {band="Ultramagnetic MC's" track_title="Ego Trippin'" genre=1 path="music\\vag\\songs\\Ultramagnetic"} 
+    {band="Violent Femmes" track_title="Add It Up" genre=2 path="music\\vag\\songs\\VFemmes"} 
+    {band="Ween" track_title="It's Gonna Be a Long Night" genre=2 path="music\\vag\\songs\\Ween"} 
+    {band="X" track_title="Los Angeles" genre=2 path="music\\vag\\songs\\XLA"} 
+    {band="ZEKE" track_title="Long Train Runnin'" genre=2 path="music\\vag\\songs\\ZEKE"} 
+] 
+StreamPriorityLow = 10 
+StreamPriorityLowMid = 30 
+StreamPriorityMid = 50 
+StreamPriorityMidHigh = 70 
+StreamPriorityHigh = 90 
+StreamPriorityHighest = 100 
+script stat_goal_appear {
+    PlaySound menu03 pitch=50 volL=160 volR=80 
+    wait 0.089 seconds 
+    PlaySound menu03 pitch=62.996 volL=160 volR=80 
+    wait 0.089 seconds 
+    PlaySound menu03 pitch=74.915 volL=160 volR=80 
+    wait 0.089 seconds 
+    PlaySound menu03 pitch=100 volL=160 volR=80 
+} 
+script stat_goal_success {
+    PlaySound GotStat04 vol=150 
+} 
+script found_gap_success_sound {
+    PlaySound DE_PauseFlyIn pitch=200 
+    wait 1.8 seconds 
+    found_gap_away_sound 
+} 
+script found_gap_away_sound {
+    PlaySound DE_PauseFlyIn pitch=180 vol=80 
+} 
+script LandPointsSound {
+    PlaySound LandCombo01 vol=250 
+} 
+Paused_Light_Rain = 0 
+Paused_Heavy_Rain = 0 
+Inside_Light_Rain = 0 
+Inside_Heavy_Rain = 0 
+LightRainVolume = 100 
+MediumRainVolume = 66 
+script Light_Rain_SFX_On {
+    if ! IsSoundPlaying TestLight01 {
+        if ! IsSoundPlaying TestLight02 {
+            printf "*********TURNING LIGHT RAIN SFX ON - DO NOT TURN ON AGAIN BEFORE STOPPING!********" 
+            PlaySound Weather_Rain_Light01 vol=LightRainVolume id=TestLight01 
+            change Inside_Light_Rain=0 
+        } 
+    } 
+} 
+script Heavy_Rain_SFX_On {
+    printf "*********TURNING LIGHT and MEDIUM RAIN SFX ON - DO NOT TURN ON AGAIN BEFORE STOPPING!********" 
+    if ! IsSoundPlaying TestLight02 {
+        if ! IsSoundPlaying TestLight01 {
+            printf "*********TURNING LIGHT RAIN SFX ON - DO NOT TURN ON AGAIN BEFORE STOPPING!********" 
+            PlaySound Weather_Rain_Light01 vol=LightRainVolume id=TestLight02 
+            change Inside_Heavy_Rain=0 
+        } 
+    } 
+    if ! IsSoundPlaying TestMedium02 {
+        printf "*********TURNING MEDIUM RAIN SFX ON - DO NOT TURN ON AGAIN BEFORE STOPPING!********" 
+        PlaySound Weather_Rain_Medium01 vol=MediumRainVolume id=TestMedium02 
+    } 
+} 
+script wait_and_start_rain {
+    switch <type>
+        case 1 {
+            while {
+                wait 1 
+                if ! IsSoundPlaying TestLight01 {
+                    break 
+                } 
+            } 
+            Light_Rain_SFX_On 
+            change Paused_Light_Rain=0 
+        }
+        case 2 {
+            while {
+                wait 1 
+                if ! IsSoundPlaying TestLight02 {
+                    break 
+                } 
+            } 
+            while {
+                wait 1 
+                if ! IsSoundPlaying TestMedium02 {
+                    break 
+                } 
+            } 
+            Heavy_Rain_SFX_On 
+            change Paused_Heavy_Rain=0 
+        }
+    endswitch    
+    printf <type> 
+    KillSpawnedScript type=wait_and_start_rain 
+} 
+script Ped_Skater_Grind_Bail_Sound {
+    Temp_Ped_Fall_Sound 
+    wait 0.5 seconds 
+    random2 {
+1 { Obj_PlaySound BailBoard01 pitch=randomrange(100.0, 102.0) vol=randomrange(40.0, 50.0) 
+ } 1 { Obj_PlaySound BailBoard02 pitch=randomrange(100.0, 102.0) vol=randomrange(40.0, 50.0) 
+ } 1 { Obj_PlaySound BailBoard03 pitch=randomrange(100.0, 102.0) vol=randomrange(40.0, 50.0) 
+ } 1 { Obj_PlaySound BailBoard04 pitch=randomrange(100.0, 102.0) vol=randomrange(40.0, 50.0) 
+ } 1 { Obj_PlaySound BailBoard05 pitch=randomrange(100.0, 102.0) vol=randomrange(40.0, 50.0) 
+ } } 
+    random2 {
+1 { Obj_PlaySound BailBodyFall01 pitch=randomrange(95.0, 105.0) vol=randomrange(60.0, 80.0) 
+ } 1 { Obj_PlaySound BailBodyFall02 pitch=randomrange(95.0, 105.0) vol=randomrange(60.0, 80.0) 
+ } 1 { Obj_PlaySound BailBodyFall03 pitch=randomrange(95.0, 105.0) vol=randomrange(60.0, 80.0) 
+ } 1 { Obj_PlaySound BailBodyFall04 pitch=randomrange(95.0, 105.0) vol=randomrange(60.0, 80.0) 
+ } 1 { Obj_PlaySound BailBodyFall05 pitch=randomrange(95.0, 105.0) vol=randomrange(60.0, 80.0) 
+ } } 
+} 
+script projectile_hit_ped_sounds {
+    SpawnSound HandleBailBodyPunchSoundEffect 
+    SpawnSound HandleBailSlapSoundEffect 
+} 
+script Temp_Ped_Fall_Sound {
+    random2 {
+1 { Obj_PlaySound BailBodyPunch01_11 pitch=randomrange(80.0, 102.0) vol=randomrange(100.0, 120.0) 
+ } 1 { Obj_PlaySound BailBodyPunch02_11 pitch=randomrange(80.0, 102.0) vol=randomrange(100.0, 120.0) 
+ } 1 { Obj_PlaySound BailBodyPunch03_11 pitch=randomrange(80.0, 102.0) vol=randomrange(100.0, 120.0) 
+ } 1 { Obj_PlaySound BailBodyPunch04_11 pitch=randomrange(80.0, 102.0) vol=randomrange(100.0, 120.0) 
+ } 1 { Obj_PlaySound BailBodyPunch05_11 pitch=randomrange(80.0, 102.0) vol=randomrange(100.0, 120.0) 
+ } } 
+    random2 {
+1 { Obj_PlaySound BailSlap01 pitch=randomrange(95.0, 115.0) vol=randomrange(100.0, 120.0) 
+ } 1 { Obj_PlaySound BailSlap02 pitch=randomrange(95.0, 115.0) vol=randomrange(100.0, 120.0) 
+ } 1 { Obj_PlaySound BailSlap03 pitch=randomrange(95.0, 115.0) vol=randomrange(100.0, 120.0) 
+ } } 
+} 
+script Goal_Success_Message_Sound {
+    PlaySound GoalGood02 vol=200 
+    PlayStream GoalSuccessStream vol=150 priority=StreamPriorityHighest 
+} 
+script SK6_SFX_BulletTime_In {
+    change SloMoMusicPaused=1 
+    PauseMusic 1 
+    StopSound SK6_BulletZoomIn 
+    StopSound SK6_BulletZoomOut 
+    if ! IsSoundPlaying SK6_BulletZoomIn {
+        PlaySound SK6_BulletZoomIn vol=130 
+    } 
+    if ! IsSoundPlaying SK6_Wind_Test_11 {
+        PlaySound SK6_Wind_Test_11 
+    } 
+    wait 0.15 seconds 
+    SpawnScript SK6_SFX_BulletTime_Heart 
+} 
+script SK6_SFX_BulletTime_Heart {
+    HeartWaitTime = 0.35 
+    HeartPitch = 105 
+    HeartVol = 150 
+    while {
+        PlaySound SK6_BulletHeart_11 pitch=<HeartPitch> vol=<HeartVol> 
+        wait <HeartWaitTime> seconds 
+    } 
+} 
+script SK6_SFX_BulletTime_Out {
+    StopSound SK6_BulletZoomOut 
+    StopSound SK6_BulletZoomIn 
+    if ! IsSoundPlaying SK6_BulletZoomOut {
+        PlaySound SK6_BulletZoomOut vol=180 
+    } 
+    StopSound SK6_BulletHeart_11 
+    StopSound SK6_Wind_Test_11 
+    KillSpawnedScript name=SK6_SFX_BulletTime_Heart 
+    wait 0.33 seconds 
+    change SloMoMusicPaused=0 
+    SFX_Music_Volume_Box_Restore_State 
+} 
+script THUG2_SFX_Tag_Spray_Wallplant {
+    PlaySound SK6_Walk_Spray_Tag_01 
+} 
+script SK6_SFX_Jump_Booster_Sound {
+    if (LevelIs load_bo) {
+    } else {
+        if ! (IsSoundPlaying ThisBoostSound) {
+            PlaySound Sk6_JumpFar_01 id=ThisBoostSound vol=100 
+        } 
+        wait 0.2 seconds 
+    } 
+} 
+script SK6_SFX_Roll_Booster_Sound {DefBoostSound = 1 DefSkaterVO = 0 
+    if (<DefBoostSound> = 1) {
+        if ! (IsSoundPlaying ThisBoostSound) {
+            PlaySound Sk6_JumpFar_01 id=ThisBoostSound vol=100 
+        } 
+    } 
+} 
+script StartupMusicVol {MusicVol = 50 
+    change MusicChangedAtStartup=1 
+    change MusicStartupVolume=<MusicVol> 
+} 
+script SFX_SetOutsideVolAtTopOfLevel {
+    if (MusicChangedAtStartup = 1) {
+        SetMusicVolume MusicStartupVolume 
+        change MusicVolOutsideBox=MusicStartupVolume 
+        change FadeTempMusicVol=(MusicVolOutsideBox) 
+        change MusicChangedAtStartup=0 
+    } else {
+        GetValueFromVolume cdvol 
+        change MusicVolOutsideBox=(<value> * 10) 
+        change FadeTempMusicVol=(MusicVolOutsideBox) 
+    } 
+} 
+script SFX_refresh_music_box_triggers {
+    Kill prefix=TRG_SFX_TrigBox_LG 
+    Kill prefix=TRG_SFX_TrigBox_MS 
+    if GetGlobalFlag flag=SOUNDS_MUSICBOXES_OFF {
+        return 
+    } 
+    if GotParam wait {
+        wait 1 gameframe 
+    } 
+    Create prefix=TRG_SFX_TrigBox_MS 
+} 
+script SFX_Music_Volume_Box {
+    if skatercamanimfinished {
+        if ! isTrue cutscene_is_playing {
+            if (inside) {
+                SpawnScript SK6_Music_Fade_Out 
+                change StaticMusicBoxState=on 
+            } else {
+                SpawnScript SK6_Music_Fade_In 
+                change StaticMusicBoxState=off 
+            } 
+        } 
+    } 
+} 
+script SFX_Music_Volume_Box_Restore_State {
+    if LevelIs load_mainmenu {
+        return 
+    } 
+    if (StaticMusicBoxState = off) {
+        if ! GotParam sound_options {
+            if ! (MusicVolOutsideBox = FadeTempMusicVol) {
+                SpawnScript SK6_Music_Fade_In params={DoQuick=1} 
+            } else {
+                if ! (MusicVolOutsideBox = (FadeTempMusicVol - 1)) {
+                    SpawnScript SK6_Music_Fade_In params={DoQuick=1} 
+                } 
+            } 
+        } 
+    } else {
+        KillSpawnedScript name=SK6_Music_Fade_In 
+        KillSpawnedScript name=SK6_Music_Fade_Out 
+        if GotParam sound_options {
+            GetValueFromVolume cdvol 
+            change MusicVolOutsideBox=(<value> * 10) 
+        } 
+        SetMusicVolume 0 
+    } 
+} 
+script SFX_Music_Volume_Box_Kill_State {
+    if (StaticMusicBoxState = on) {
+        change SloMoMusicPaused=0 
+        SK6_Music_Fade_In DoQuick=1 
+        change StaticMusicBoxState=off 
+    } 
+    change SloMoMusicPaused=0 
+} 
+script SK6_Music_Fade_Out {
+    if (SloMoMusicPaused = 1) {
+        return 
+    } 
+    if ! (DontAdjustMusicViaProximNode = 1) {
+        if (FadeMusicOutRunning = 0) {
+            change FadeMusicOutRunning=1 
+            GetValueFromVolume cdvol 
+            if ! (<value> = 0) {
+                if (FadeMusicInRunning = 0) {
+                    GetValueFromVolume cdvol 
+                    change MusicVolOutsideBox=(<value> * 10) 
+                    change FadeTempMusicVol=(MusicVolOutsideBox) 
+                    KillSpawnedScript name=SK6_Music_Fade_In 
+                    change FadeMusicInRunning=0 
+                } else {
+                    KillSpawnedScript name=SK6_Music_Fade_In 
+                    change FadeMusicInRunning=0 
+                } 
+                while {
+                    if (FadeTempMusicVol < 0.0) {
+                        FadeTempMusicVol = 0.0 
+                        break 
+                    } 
+                    if (FadeTempMusicVol < 0) {
+                        change FadeTempMusicVol=0 
+                    } 
+                    if (FadeTempMusicVol > 100) {
+                        change FadeTempMusicVol=100 
+                    } 
+                    SetMusicVolume FadeTempMusicVol 
+                    if (MusicVolOutsideBox > 50) {
+                        change FadeTempMusicVol=(FadeTempMusicVol - (MusicVolOutsideBox / 50)) 
+                    } else {
+                        change FadeTempMusicVol=(FadeTempMusicVol - 1) 
+                    } 
+                    wait 1 gameframe 
+                } 101 
+                PauseMusic 1 
+            } else {
+                KillSpawnedScript name=SK6_Music_Fade_In 
+                change FadeMusicInRunning=0 
+                while {
+                    if (FadeTempMusicVol < 0.0) {
+                        FadeTempMusicVol = 0.0 
+                        break 
+                    } 
+                    if (FadeTempMusicVol < 0) {
+                        change FadeTempMusicVol=0 
+                    } 
+                    if (FadeTempMusicVol > 100) {
+                        change FadeTempMusicVol=100 
+                    } 
+                    SetMusicVolume FadeTempMusicVol 
+                    change FadeTempMusicVol=(FadeTempMusicVol - 1) 
+                    wait 1 gameframe 
+                } 
+            } 
+            change FadeMusicOutRunning=0 
+        } 
+    } 
+} 
+script SK6_Music_Fade_In {{DoQuick=0}
+    if GetGlobalFlag flag=MOD_STREAMING_MODE {
+        SetMusicVolume 0
+        change FadeMusicInRunning=0
+        return
+    }
+    if (SloMoMusicPaused = 1) {
+        return
+    }
+    if ! (DontAdjustMusicViaProximNode = 1) {
+        if (FadeMusicInRunning = 0) {
+            change FadeMusicInRunning=1 
+            if ! (FadeTempMusicVol = (MusicVolOutsideBox + 1)) {
+                if (FadeMusicOutRunning = 0) {
+                    SetMusicVolume 0 
+                    change FadeTempMusicVol=0.0 
+                    KillSpawnedScript name=SK6_Music_Fade_Out 
+                    change FadeMusicOutRunning=0 
+                } else {
+                    KillSpawnedScript name=SK6_Music_Fade_Out 
+                    change FadeMusicOutRunning=0 
+                } 
+                if (<DoQuick> = 0) {
+                    wait 2 gameframes 
+                } 
+                PauseMusic 0 
+                if (<DoQuick> = 1) {
+                    change FadeTempMusicVol=MusicVolOutsideBox 
+                    if (FadeTempMusicVol < 0) {
+                        change FadeTempMusicVol=0 
+                    } 
+                    if (FadeTempMusicVol > 100) {
+                        change FadeTempMusicVol=100 
+                    } 
+                    SetMusicVolume FadeTempMusicVol 
+                } else {
+                    while {
+                        if (FadeTempMusicVol > MusicVolOutsideBox) {
+                            change FadeTempMusicVol=MusicVolOutsideBox 
+                            break 
+                        } 
+                        if (FadeTempMusicVol < 0) {
+                            change FadeTempMusicVol=0 
+                        } 
+                        if (FadeTempMusicVol > 100) {
+                            change FadeTempMusicVol=100 
+                        } 
+                        SetMusicVolume FadeTempMusicVol 
+                        if (MusicVolOutsideBox > 50) {
+                            change FadeTempMusicVol=(FadeTempMusicVol + (MusicVolOutsideBox / 50)) 
+                        } else {
+                            change FadeTempMusicVol=(FadeTempMusicVol + 1) 
+                        } 
+                        wait 1 gameframe 
+                    } 102 
+                } 
+                PauseMusic 0 
+                GetValueFromVolume cdvol 
+                if (<DoQuick> = 0) {
+                    wait 2 gameframes 
+                } 
+            } 
+            change FadeMusicInRunning=0 
+        } 
+    } 
+} 
+script Menu_SFX_Wheel_Click_Short {
+    PlaySound MenuUp pitch=randomrange(98.0, 102.0) vol=randomrange(50.0, 60.0) 
+    wait 0.1 seconds 
+    PlaySound MenuUp pitch=randomrange(98.0, 102.0) vol=randomrange(50.0, 60.0) 
+} 
+script Menu_SFX_Wheel_Click_Long {
+    PlaySound MenuUp pitch=randomrange(105.0, 110.0) vol=randomrange(50.0, 60.0) 
+    wait 0.05 seconds 
+    PlaySound MenuUp pitch=randomrange(100.0, 107.0) vol=randomrange(50.0, 60.0) 
+    wait 0.05 seconds 
+    PlaySound MenuUp pitch=randomrange(98.0, 105.0) vol=randomrange(50.0, 60.0) 
+    wait 0.05 seconds 
+    PlaySound MenuUp pitch=randomrange(98.0, 102.0) vol=randomrange(50.0, 60.0) 
+    wait 0.05 seconds 
+    PlaySound MenuUp pitch=randomrange(90.0, 95.0) vol=randomrange(50.0, 60.0) 
+    wait 0.05 seconds 
+    PlaySound MenuUp pitch=randomrange(90.0, 95.0) vol=randomrange(50.0, 60.0) 
+    wait 0.05 seconds 
+    PlaySound MenuUp pitch=randomrange(90.0, 95.0) vol=randomrange(50.0, 60.0) 
+    wait 0.05 seconds 
+    PlaySound MenuUp pitch=randomrange(87.0, 89.0) vol=randomrange(50.0, 60.0) 
+    wait 0.05 seconds 
+} 
+script SK6_SFX_OutOfAmmoBuzzer {
+    wait 0.3 seconds 
+} 
+script Auto_SFX_Car_Tire_Squeal {
+    if ! (IsStreamPlaying LA_Skid) {
+        Obj_PlayStream LA_Skid vol=randomrange(30.0, 60.0) 
+    } 
+} 
+script Auto_SFX_CarBrakeSqueal {
+    if ! (IsStreamPlaying CarBrakeSqueal) {
+        Obj_PlayStream CarBrakeSqueal vol=randomrange(5.0, 20.0) pitch=randomrange(80.0, 100.0) priority=StreamPriorityLow 
+    } 
+} 
+script Auto_SFX_Car_Horn_Stream {
+    if ! (IsStreamPlaying CarHorn) {
+        wait random { 1 { 0.2 } 1 { 0.4 } 1 { 0.6 } } seconds 
+        Obj_PlayStream CarHorn vol=randomrange(50.0, 60.0) pitch=randomrange(80.0, 100.0) dropoff=120 
+    } 
+} 
+script SK6_SFX_ShowClassicGoals {
+    PlaySound DE_PauseFlyIn pitch=200 
+    wait 0.2 seconds 
+    PlaySound BailSlap02 
+} 
+script SK6_SFX_ShowPointsFromGoal {
+    wait 12 gameframes 
+    PlaySound boneless09 pitch=30 
+} 
+script SK6_SFX_IncomingBeeper {
+    wait 1 gameframe 
+    PauseStream 0 
+    PlayStream SK6_Motorola_Ringtone vol=150 priority=101 
+} 
+script SK6_SFX_Get_Throwing_Item {
+    if LevelIs load_bo {
+        PlayStream Sk6_Pickup_Apples vol=120 
+    } 
+    if LevelIs load_ba {
+        PlayStream Sk6_Pickup_Tomatoes vol=120 
+    } 
+    if LevelIs load_be {
+        PlayStream Sk6_Pickup_SprayCans vol=120 
+    } 
+    if LevelIs load_au {
+        PlayStream Sk6_Pickup_Shrimp vol=120 
+    } 
+    if LevelIs load_no {
+        PlayStream Sk6_Pickup_Beads vol=120 
+    } 
+    if LevelIs load_st {
+        PlayStream Sk6_Pickup_SmokeBombs vol=150 
+    } 
+    if LevelIs load_se {
+    } 
+} 
+script ALL_Levels_SFX_PlayThrowingSound {
+    if LevelIs load_be {
+        skater:Obj_PlaySound SK6_Throw_SprayCan_11 vol=400 pitch=120 
+    } 
+} 
+script ALL_Levels_SFX_Arcade_Game {
+    wait 1 gameframe 
+    if skatercamanimfinished {
+        while {
+            if ! IsStreamPlaying ArcadeGameStream {
+                random2 {
+6 { Obj_PlayStream SK6_Arcade_Beeps_01 vol=200 emitter=TRG_SFX_SOB_Arcade_Game priority=StreamPriorityLow dropoff_function=exponential id=ArcadeGameStream 
+                wait 28 seconds 
+ } 6 { Obj_PlayStream SK6_Arcade_Beeps_02 vol=200 emitter=TRG_SFX_SOB_Arcade_Game priority=StreamPriorityLow dropoff_function=exponential id=ArcadeGameStream 
+                wait 38 seconds 
+ } 1 { Obj_PlayStream SK6_Arcade_Beeps_03 vol=200 emitter=TRG_SFX_SOB_Arcade_Game priority=StreamPriorityLow dropoff_function=exponential id=ArcadeGameStream 
+                wait 10 seconds 
+ } 6 { Obj_PlayStream SK6_Arcade_Beeps_04 vol=200 emitter=TRG_SFX_SOB_Arcade_Game priority=StreamPriorityLow dropoff_function=exponential id=ArcadeGameStream 
+                wait 11 seconds 
+ } 6 { Obj_PlayStream SK6_Arcade_Beeps_05 vol=200 emitter=TRG_SFX_SOB_Arcade_Game priority=StreamPriorityLow dropoff_function=exponential id=ArcadeGameStream 
+                wait 35 seconds 
+ } } 
+            } 
+            wait 1 second 
+        } 
+    } 
+} 
+script SFX_Arcade_Goal_Win {
+    printf "PLAYING SFX for WINNING Arcade goal" 
+    PauseMusic 1 
+    StopSound GoalGood02 
+    StopStream GoalSuccessStream 
+    if ! IsStreamPlaying WinArcadeGoal {
+        PlayStream SK6_Arcade_Beeps_WIN vol=80 priority=101 id=WinArcadeGoal 
+    } 
+    wait 1 gameframe 
+    StopStream GoalSuccessStream 
+    while {
+        if ! IsStreamPlaying WinArcadeGoal {
+            break 
+        } 
+        wait 1 gameframe 
+    } 
+    SK6_Music_Fade_In 
+} 
+script SFX_Arcade_Goal_Lose {
+    PauseMusic 1 
+    printf "PLAYING SFX for LOSING Arcade goal" 
+    if ! IsStreamPlaying LoseArcadeGoal {
+        PlayStream SK6_Arcade_Beeps_LOSE vol=80 priority=101 id=LoseArcadeGoal 
+    } 
+    wait 1 gameframe 
+    StopStream GoalSuccessStream 
+    while {
+        if ! IsStreamPlaying LoseArcadeGoal {
+            break 
+        } 
+        wait 1 gameframe 
+    } 
+    SK6_Music_Fade_In 
+} 
+script ALL_Levels_Going_Through_Tree {
+    printf "GOING THROUGH TREE SOUNDS!!!!!!!!!!!!!!!!!!!!!!" 
+    if ! IsStreamPlaying SK6_ThroughTrees {
+        PlayStream SK6_ThroughTrees vol=140 
+    } 
+} 
+script ALL_Levels_SFX_Start_Goal {
+    PlayStream SK6_StartAGoal vol=125 priority=101 
+} 
+script Franklin_Grind_SFX {
+    if IsStreamPlaying FranklinGrindThunder {
+        printf "STOPPING THUNDER!" 
+        StopStream FranklinGrindThunder 
+        StopStream FranklinGrindThunder 
+    } 
+    wait 1 gameframe 
+    PlayStream SK6_BE_LightningAndThunder01 vol=130 id=FranklinGrindThunder priority=StreamPriorityHigh 
+} 
+script load_level_handle_ambient_sfx {
+    if ((CD) or (isTrue TestMusicFromHost)) {
+        ClearMusicTrackList 
+        change ForceAmbientSFXToMusicVolume=0 
+        change AmbientTrackNum=0 
+        if GotParam ambient_track {
+            if IsArray <ambient_track> {
+                GetArraySize <ambient_track> 
+                i = 0 
+                while {
+                    AddMusicTrack (<ambient_track> [<i>]) 
+                    i = (<i> + 1) 
+                } <array_size> 
+            } else {
+                AddMusicTrack <ambient_track> 
+            } 
+        } 
+        set_music_ambient_state 
+    } 
+} 
+script set_music_ambient_state {
+    if LevelIs load_mainmenu {
+        SetCDToMusic 
+        return 
+    } 
+    if GotParam force {
+        StopMusic 
+    } 
+    if isTrue ForceAmbientSFXToMusicVolume {
+        SetCDToAmbient 
+    } else {
+        if ((MusicVolOutsideBox) = 0) {
+            SetCDToAmbient 
+        } else {
+            SetCDToMusic 
+        } 
+    } 
+} 
+script set_se2_ambient_zone {
+    if InSplitScreenGame {
+        return 
+    } 
+    if ! GotParam zone {
+        zone = hell 
+    } 
+    switch <zone>
+        case spaceport {
+            change ForceAmbientSFXToMusicVolume=1 
+            change AmbientTrackNum=1 
+            set_music_ambient_state force 
+        }
+        case temple {
+            change ForceAmbientSFXToMusicVolume=1 
+            change AmbientTrackNum=2 
+            set_music_ambient_state force 
+        }
+        case hell {
+            change ForceAmbientSFXToMusicVolume=0 
+            change AmbientTrackNum=0 
+            set_music_ambient_state force 
+        }
+    endswitch    
+} 
+script SFX_Change_Footstep_Sounds_To_Default {
+    change SFX_FootStepWalk01=WalkStepConc01_11 
+    change SFX_FootStepWalk02=WalkStepConc03_11 
+    change SFX_FootStepWalk03=WalkStepConc05_11 
+    change SFX_FootStepRun01=RunStepConc01_11 
+    change SFX_FootStepRun02=RunStepConc02_11 
+    change SFX_FootStepRun03=RunStepConc03_11 
+    change SFX_FootStepRun04=RunStepConc03_11 
+    change SFX_FootStepRun05=RunStepConc03_11 
+} 
+script Paulie_TalkShit {line = 0 
+    if ! IsStreamPlaying ThisPaulieLine {
+        random {
+50 { 
+ } 1 { PlayStream Paulie_Wild01 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild02 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild03 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild04 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild05 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild07 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild08 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild09 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild10 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild11 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild12 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild13 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild14 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild16 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild17 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild18 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild19 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild20 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild21 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild22 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild23 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild25 vol=200 id=ThisPaulieLine 
+ } 1 { PlayStream Paulie_Wild26 vol=200 id=ThisPaulieLine 
+ } } 
+    } 
+} 
+script ALL_SFX_Wait_Before_Tantrum_Stream {
+    wait 0.5 seconds 
+    PlaySkaterStream type="tantrum" 
+} 
+__register_checksums__ b SK6_Walk_Spray_Tag_01 SFX_FootStepWalk01 CD KillSpawnedScript SK6_BulletZoomIn MusicStreamVolume load_be exponential SK6_SFX_Get_Throwing_Item wait_and_start_rain ALL_Levels_SFX_Arcade_Game SK6_Motorola_Ringtone ambient_track Inside_Heavy_Rain HeartPitch dropoff BailSlap01 params LoadMusicHeader pitch SFX_FootStepWalk03 BailSlap02 projectile_hit_ped_sounds GotParam DefSkaterVO found_gap_success_sound SFX_FootStepWalk02 SFX_Change_Footstep_Sounds_To_Default HandleBailSlapSoundEffect GoalSuccessStream SK6_SFX_ShowPointsFromGoal SK6_Throw_SprayCan_11 BailSlap03 IsSoundPlaying SK6_Wind_Test_11 change WalkStepConc01_11 name AmbientTrackNum BailBodyFall03 Obj_PlayStream SFX_SetOutsideVolAtTopOfLevel Paulie_Wild09 LoadPermSongs StaticMusicBoxState PlaySound GlobalAvoidVOVol Auto_SFX_Car_Tire_Squeal BailBodyFall02 off Paulie_Wild08 emitter GlobalGoalVOVol BailBodyFall01 Paulie_Wild19 Paused_Light_Rain SK6_ThroughTrees SpawnScript load_se LoadPreFile GlobalFarVODropoff TRG_SFX_SOB_Arcade_Game SK6_BulletHeart_11 Paulie_Wild18 OutterBoxesExist load_st Sk6_Pickup_Shrimp StreamPriorityHighest gameframes priority Goal_Success_Message_Sound load_au BailBodyPunch02_11 sound_options textname FormatText load_ba SK6_Arcade_Beeps_WIN flag UnloadPreFile BailBodyPunch03_11 GlobalHintVOVol GetArraySize StreamPriorityMidHigh TestMedium02 ArcadeGameStream path RunStepConc01_11 dropoff_function FadeMusicInRunning ALL_Levels_Going_Through_Tree track_title t ThisPaulieLine HandleBailBodyPunchSoundEffect FadeMusicOutRunning LoadSound Ped_Skater_Grind_Bail_Sound MusicVolume GetValueFromVolume spaceport DE_PauseFlyIn HeartWaitTime Light_Rain_SFX_On GlobalHintVODropoff SloMoMusicPaused StreamPriorityLow SK6_SFX_Roll_Booster_Sound printf SK6_SFX_ShowClassicGoals seconds InsideMusicAdjustmentBox on MusicVol skatercamanimfinished StopStream load_no cutscene_is_playing WalkStepConc05_11 SK6_SFX_BulletTime_In StartupMusicVol SK6_SFX_Jump_Booster_Sound DefBoostSound volR BailBodyFall05 SK6_StartAGoal NOREVERB BailBodyFall04 menu03 GlobalIntroVOVol SFX_Music_Volume_Box value LightRainVolume InsideAdjacentReverbBox01 SetMusicVolume vol SK6_Arcade_Beeps_01 LandPointsSound Paulie_Wild20 skater LevelIs CarBrakeSqueal Weather_Rain_Medium01 id DontAdjustMusicViaProximNode type set_music_ambient_state Paulie_Wild21 ThisBoostSound Sk6_Pickup_SmokeBombs index PauseMusic InsideAdjacentReverbBox03 StaticMusicBoxesOn isTrue load_bo Paulie_Wild22 SK6_Arcade_Beeps_03 prefix WalkStepConc03_11 THUG2_SFX_Tag_Spray_Wallplant StreamPriorityMid i Kill SK6_SFX_BulletTime_Heart GlobalAvoidVODropoff GlobalTrickPositiveVODropoff InsideAdjacentReverbBox02 Paulie_Wild23 playlist_tracks FLAG_PERM SK6_Arcade_Beeps_02 Paulie_Wild13 SK6_BE_LightningAndThunder01 SetCDToAmbient Paulie_Wild01 volL SFX_FootStepRun01 Franklin_Grind_SFX Paulie_Wild12 SOUNDS_MUSICBOXES_OFF PlayStream SK6_SFX_IncomingBeeper TRG_SFX_TrigBox_LG SetCDToMusic MusicChangedAtStartup CheckForPedStreamExistence TestLight01 IsStreamPlaying GotStat04 SK6_Music_Fade_In RunStepConc02_11 load_mainmenu MusicVolOutsideBox line stat_goal_appear Paulie_Wild11 BailBoard05 SFX_FootStepRun03 Paulie_Wild03 BailBodyPunch05_11 TestLight02 SK6_SFX_BulletTime_Out LoseArcadeGoal Auto_SFX_CarBrakeSqueal Menu_SFX_Wheel_Click_Long Menu_SFX_Wheel_Click_Short TestMusicFromHost Paulie_Wild10 StreamPriorityHigh BailBoard04 Temp_Ped_Fall_Sound SK6_Music_Fade_Out SFX_FootStepRun02 cdvol Paulie_Wild02 SFX_refresh_music_box_triggers genre PlaySkaterStream ClearMusicTrackList FranklinGrindThunder wait BailBodyPunch01_11 SFX_Music_Volume_Box_Restore_State GlobalTrickBailVOVol BailBodyPunch04_11 DoQuick AddMusicTrack SK6_Arcade_Beeps_05 LandCombo01 SK6_Arcade_Beeps_LOSE SK6_BulletZoomOut GlobalFarWaitTime Heavy_Rain_SFX_On SK6_Arcade_Beeps_04 force MenuUp GoalGood02 boneless09 LA_Skid Paulie_Wild25 band SFX_Arcade_Goal_Lose Paulie_Wild26 inside array_size WinArcadeGoal MediumRainVolume SetThisLevelSoundBanks CarHorn MusicStartupVolume StreamPriorityLowMid Sk6_Pickup_Beads RunStepConc03_11 Sk6_Pickup_Tomatoes Sk6_Pickup_Apples Sk6_Pickup_SprayCans Paused_Heavy_Rain found_gap_away_sound Sk6_JumpFar_01 Weather_Rain_Light01 FadeTempMusicVol Paulie_Wild17 Obj_PlaySound BailBoard03 ForceAmbientSFXToMusicVolume SFX_Music_Volume_Box_Kill_State InSplitScreenGame Inside_Light_Rain SFX_FootStepRun05 Paulie_Wild05 StopSound GlobalTrickBailVODropoff Paulie_Wild16 BailBoard02 set_se2_ambient_zone second ALL_Levels_SFX_Start_Goal HeartVol Paulie_TalkShit SK6_SFX_OutOfAmmoBuzzer SFX_Arcade_Goal_Win locked_track1 SFX_FootStepRun04 Paulie_Wild04 load_level_handle_ambient_sfx SpawnSound Create gameframe stat_goal_success hell LoadPermSFX ALL_Levels_SFX_PlayThrowingSound BailBoard01 temple GetGlobalFlag GlobalTrickPositiveVOVol Paulie_Wild07 locked_track2 LoadPermSounds ALL_SFX_Wait_Before_Tantrum_Stream GlobalFarVOVol IsArray tracktitle InsideSmallBox Paulie_Wild14 StopMusic PauseStream Auto_SFX_Car_Horn_Stream TRG_SFX_TrigBox_MS zone

@@ -1,0 +1,4496 @@
+
+NO_Goal_Intro_Cameras = [{virtual_cam 
+        targetid=world 
+        targetOffset=(-9140.6, 1073.8, 8152.4) 
+        positionOffset=(-1104.7, 52.8, 2288.9) 
+        frames=500 
+        skippable=1 
+        text=NO_Intro_Text1 
+        time=10000 
+        cam_start_script=NO_Intro_Line1 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-9140.6, 1073.8, 8152.4) 
+        positionOffset=(-1104.7, 52.8, 2288.9) 
+        frames=300 
+        skippable=1 
+        text=NO_Intro_Text2 
+        time=5000 
+        cam_start_script=NO_Intro_Line2 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-3987.9, 46.8, 7513.5) 
+        positionOffset=(1676.2, 539.0, -712.8) 
+        frames=375 
+        skippable=1 
+        goal=NO_Goal_TimedScoreRun 
+        time=3000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        {targetOffset=(-5966.8, 901.0, 8031.6) 
+            positionOffset=(540.7, 788.1, 439.7) 
+        } 
+        frames=375 
+        skippable=1 
+        goal=NO_Goal_TrickBeat 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(11751.0, -1592.6, -3621.1) 
+        positionOffset=(2692.4, 164.3, 233.1) 
+        frames=375 
+        skippable=1 
+        goal=NO_Goal_Gaps 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-8085.0, -2069.1, -1634.1) 
+        positionOffset=(781.5, 310.0, 2330.6) 
+        frames=370 
+        skippable=1 
+        goal=NO_Goal_Gaps2 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(7435.6, -1248.9, -8572.7) 
+        positionOffset=(1551.2, 760.4, -741.1) 
+        frames=375 
+        skippable=1 
+        goal=NO_Goal_Gaps8 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(6908.0, -329.9, 6495.9) 
+        positionOffset=(1342.1, 845.0, -1728.4) 
+        frames=370 
+        skippable=1 
+        goal=NO_Goal_Gaps4 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(5139.9, -1786.9, -10094.8) 
+        positionOffset=(-1036.2, 165.8, -2476.2) 
+        frames=370 
+        skippable=1 
+        goal=NO_Goal_Gaps6 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(3027.3, 169.1, 8828.8) 
+        positionOffset=(-152.4, 50.5, -651.2) 
+        frames=370 
+        skippable=1 
+        goal=NO_Goal_SkateTheLine 
+        time=6000 
+    } 
+] 
+NO_Pro_Goal_Intro_Cameras = [{virtual_cam 
+        targetid=world 
+        targetOffset=(-7408.0, -408.9, -7082.5) 
+        positionOffset=(-87.1, 45.6, -285.6) 
+        frames=615 
+        skippable=1 
+        text="New goal list unlocked.  Pro goals!" 
+        time=10000 
+        cam_start_script=FirstSwap_VO 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-6281.5, -3018.1, -6369.9) 
+        positionOffset=(-174.8, 870.4, 528.4) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps13 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(6924.1, -2624.4, -6129.2) 
+        positionOffset=(2022.8, 277.2, 2090.1) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps10 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-8089.3, -4022.9, 3780.7) 
+        positionOffset=(-860.6, 1240.5, -696.1) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_SkateTheLine2 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-8378.5, -2486.4, 6000.6) 
+        positionOffset=(-1359.1, 1274.0, -48.1) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps7 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(3983.1, -2416.3, 7243.8) 
+        positionOffset=(-43.3, 34.2, -1575.6) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_TrickObjects 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-5892.3, 2346.9, -9498.0) 
+        positionOffset=(-377.5, 624.5, -1335.9) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps5 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-244.9, 674.3, -8526.3) 
+        positionOffset=(2419.2, 187.2, 1100.0) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps3 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(5593.2, -2460.4, -6590.3) 
+        positionOffset=(-566.5, 902.4, 533.4) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps12 
+        time=6000 
+    } 
+] 
+NO_Jester_Goal_Intro_Cameras = [{virtual_cam 
+        targetid=world 
+        targetOffset=(-7249.7, 371.2, 9644.2) 
+        positionOffset=(-1791.7, 149.6, 1268.0) 
+        frames=615 
+        skippable=1 
+        text="New goal list unlocked.  Guest goals!\\nNew Special Trick - The Manual Entertainer!" 
+        time=10000 
+        cam_start_script=FirstSwap_VO 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(2481.5, 911.5, -10026.3) 
+        positionOffset=(1874.0, 51.1, -82.3) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps9 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(3505.9, -2194.0, 9042.9) 
+        positionOffset=(-2100.5, 212.5, 1119.8) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps14 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(4305.4, -2590.9, 10208.5) 
+        positionOffset=(-472.1, 385.5, 1943.1) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps19 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(2867.3, 1595.1, -7435.8) 
+        positionOffset=(26.1, 301.0, 2064.2) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps15 
+        time=6000 
+    } 
+] 
+NO_Voodoo_Goal_Intro_Cameras = [{virtual_cam 
+        targetid=world 
+        targetOffset=(5316.5, -1115.9, -12608.5) 
+        positionOffset=(-97.8, 95.8, -4288.8) 
+        frames=615 
+        skippable=1 
+        text="New goal list unlocked.  Secret goals!" 
+        time=10000 
+        cam_start_script=FirstSwap_VO 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(1642.3, 3029.3, 7272.6) 
+        positionOffset=(-29.4, 33.4, -2120.3) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps11 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(4342.8, -1863.5, 7689.4) 
+        positionOffset=(1102.9, 91.7, -1566.9) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps16 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-6020.7, 886.6, -9972.4) 
+        positionOffset=(132.9, 155.2, -2124.0) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps18 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(7860.0, -1155.4, -4990.6) 
+        positionOffset=(-572.5, 353.8, 168.4) 
+        frames=200 
+        skippable=1 
+        goal=NO_Goal_Gaps17 
+        time=6000 
+    } 
+] 
+NO_Equalizer_Intro_Cameras = [
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-3191.7, -430.9, 7595.5) 
+        positionOffset=(-280.4, 60.7, -1958.6) 
+        frames=500 
+        skippable=1 
+        text=NO_Equalizer_Intro_Text1 
+        cam_start_script=NO_Equalizer_Intro_Line1 
+        time=10000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-6270.4, -394.7, 6012.3) 
+        positionOffset=(-154.4, 57.0, -1886.4) 
+        frames=615 
+        skippable=1 
+        text=NO_Equalizer_Intro_Text2 
+        cam_start_script=NO_Equalizer_Intro_Line2 
+        time=10000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-9255.2, -2463.9, 3216.8) 
+        positionOffset=(-876.9, 1101.4, -916.7) 
+        frames=300 
+        skippable=1 
+        text=NO_Equalizer_Intro_Text3 
+        cam_start_script=NO_Equalizer_Intro_Line3 
+        time=7000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-6270.4, -394.7, 6012.3) 
+        positionOffset=(-154.4, 57.0, -1886.4) 
+        frames=300 
+        skippable=1 
+        text=NO_Equalizer_Intro_Text4 
+        cam_start_script=NO_Equalizer_Intro_Line4 
+        time=7000 
+    } 
+] 
+script NO_Intro_Line1 {
+    TRG_Ped_Hawk:Obj_PlayFam NO_Intro_01_Lip vol=160 priority=StreamPriorityHighest 
+} 
+script NO_Intro_Line2 {
+    TRG_Ped_Hawk:Obj_PlayFam NO_Intro_02_Lip vol=160 priority=StreamPriorityHighest 
+} 
+script NO_Equalizer_Intro_Line1 {
+    TRG_Ped_Equalizer_Intro02:Obj_PlayFam NO_Equalizer_Intro_Text1_Lip vol=150 priority=StreamPriorityHighest 
+} 
+script NO_Equalizer_Intro_Line2 {
+    TRG_Ped_Equalizer_Intro02:Obj_StopLastFam 
+    TRG_Ped_Equalizer_Intro01:Obj_PlayFam NO_Equalizer_Intro_Text2_Lip vol=150 priority=StreamPriorityHighest 
+} 
+script NO_Equalizer_Intro_Line3 {
+    TRG_veh_heli:Obj_PlaySound SK6_NO_HeloLoop vol=200 dropoff=500 id=HeloLoopSound dropoff_function=exponential 
+    TRG_Ped_Equalizer_Intro01:Obj_PlayFam NO_Equalizer_Intro_Text3_Lip vol=150 priority=StreamPriorityHighest 
+} 
+script NO_Equalizer_Intro_Line4 {
+    TRG_Ped_Equalizer_Intro01:Obj_PlayFam NO_Equalizer_Intro_Text4_Lip vol=150 priority=StreamPriorityHighest 
+} 
+script NO_ProSwitch_Line1 {
+    Get_Current_Skater_name 
+    switch <name>
+        case Burnquist {
+            
+            TRG_Ped_TeammateIntroPro:Obj_PlayFam Burnquist_FirstSwap_Lip vol=200 priority=StreamPriorityHighest 
+        }
+        case Mullen {
+            
+            TRG_Ped_TeammateIntroPro:Obj_PlayFam Mullen_FirstSwap_Lip vol=200 priority=StreamPriorityHighest 
+        }
+        case Muska {
+            
+            TRG_Ped_TeammateIntroPro:Obj_PlayFam Muska_FirstSwap_Lip vol=200 priority=StreamPriorityHighest 
+        }
+        case Vallely {
+            
+            TRG_Ped_TeammateIntroPro:Obj_PlayFam Vallely_FirstSwap_Lip vol=200 priority=StreamPriorityHighest 
+        }
+    endswitch    
+} 
+script NO_Setup {
+    NO_CreateCars 
+    NO_CreatePeds 
+    NO_combo_panels 
+    NO_manualcheck_init 
+    NO_Initializer 
+    NO_chimney_smoke_Particles 
+    NO_WaterTower_Particles 
+    NO_ApplyTrafficMod 
+} 
+script NO_startup {
+    LoadAsset "models\\gameobjects\\projectiles\\beads\\beads.tex" 
+    LoadAsset "models\\gameobjects\\projectiles\\beads\\beads.mdl" parent=`models\gameobjects\projectiles\beads\beads.tex` 
+    LoadSkeleton name="skeletons/CS_NO_List.ske" CS_NO_List 
+    LoadSkeleton name="skeletons/CS_NO_TunnelGlow.ske" CS_NO_TunnelGlow 
+} 
+jm_skullcount = 0 
+jm_panels_broken = 0 
+jm_skaterinmanual = 0 
+jm_hurricane = 0 
+jm_natchez_move = 0 
+JM_sign_spincount = 0 
+jm_sewer_escape = 0 
+FLAG_SKULL = 0 
+FLAG_CRYPT_1 = 1 
+FLAG_CRYPT_2 = 2 
+FLAG_CRYPT_3 = 3 
+FLAG_CRYPT_4 = 4 
+FLAG_CRYPT_5 = 5 
+FLAG_JESUS = 6 
+FLAG_HELIPAD = 7 
+FLAG_HELIPAD2 = 8 
+FLAG_VORTEX = 9 
+FLAG_SKATER_ON_FLOAT = 10 
+FLAG_SMOKE1 = 11 
+FLAG_SMOKE2 = 12 
+FLAG_TRASH1 = 13 
+FLAG_TRASH2 = 14 
+script NO_KillCreate_NetGeo {
+    if ((InMultiplayerGame) or (InNetGame)) {
+    } 
+} 
+script NO_Goals {
+    if ! InMultiplayerGame {
+    } 
+    if InMultiplayerGame {
+        add_multiplayer_mode_goals 
+    } 
+    if ! InSplitScreenGame {
+        if ((GameModeEquals is_classic) or (InNetGame)) {
+            AddGoal_HighScore {
+                unlimited_time 
+                classic_mode_goal 
+                difficulty_level_params=[
+                    {
+                        score=NO_Classic_Easy_HighScore 
+                        goal_text=NO_Classic_Easy_HighScore_Text 
+                        view_goals_text=NO_Classic_Easy_HighScore_Text 
+                    } 
+                    {
+                        score=NO_Classic_HighScore 
+                        goal_text=NO_Classic_HighScore_Text 
+                        view_goals_text=NO_Classic_HighScore_Text 
+                    } 
+                ] 
+                view_goals_cameras=[{
+                        name=CAM_NO_Classic_Intro 
+                        frames=1200 
+                        skippable=1 
+                    } 
+                ] 
+            } 
+            AddGoal_ProScore {
+                unlimited_time 
+                classic_mode_goal 
+                difficulty_level_params=[
+                    {
+                        score=NO_Classic_Easy_ProScore 
+                        goal_text=NO_Classic_Easy_ProScore_Text 
+                        view_goals_text=NO_Classic_Easy_ProScore_Text 
+                    } 
+                    {
+                        score=NO_Classic_ProScore 
+                        goal_text=NO_Classic_ProScore_Text 
+                        view_goals_text=NO_Classic_ProScore_Text 
+                    } 
+                ] 
+            } 
+            AddGoal_SickScore {
+                unlimited_time 
+                classic_mode_goal 
+                difficulty_level_params=[
+                    {
+                        score=NO_Classic_Easy_SickScore 
+                        goal_text=NO_Classic_Easy_SickScore_Text 
+                        view_goals_text=NO_Classic_Easy_SickScore_Text 
+                    } 
+                    {
+                        score=NO_Classic_SickScore 
+                        goal_text=NO_Classic_SickScore_Text 
+                        view_goals_text=NO_Classic_SickScore_Text 
+                    } 
+                ] 
+            } 
+            AddGoal_HighCombo {
+                unlimited_time 
+                classic_mode_goal 
+                difficulty_level_params=[
+                    {
+                        score=NO_Classic_Easy_HighCombo 
+                        goal_text=NO_Classic_Easy_HighCombo_Text 
+                        view_goals_text=NO_Classic_Easy_HighCombo_Text 
+                    } 
+                    {
+                        score=NO_Classic_HighCombo 
+                        goal_text=NO_Classic_HighCombo_Text 
+                        view_goals_text=NO_Classic_HighCombo_Text 
+                    } 
+                ] 
+            } 
+            AddGoal_Skate {
+                unlimited_time 
+                classic_mode_goal 
+                S_obj_id=TRG_SKATE_S 
+                K_obj_id=TRG_SKATE_K 
+                A_obj_id=TRG_SKATE_A 
+                T_obj_id=TRG_SKATE_T 
+                E_obj_id=TRG_SKATE_E 
+                view_goals_cameras=[{virtual_cam 
+                        targetid=world 
+                        targetOffset=(4109.8, -2804.5, 4794.0) 
+                        positionOffset=(-77.5, 458.7, -3680.4) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+            } 
+            AddGoal_Combo {
+                unlimited_time 
+                classic_mode_goal 
+                letter_info=[
+                    {obj_id=TRG_COMBO_C text="C"} 
+                    {obj_id=TRG_COMBO_O text="O"} 
+                    {obj_id=TRG_COMBO_M text="M"} 
+                    {obj_id=TRG_COMBO_B text="B"} 
+                    {obj_id=TRG_COMBO_O01 text="O"} 
+                ] 
+                view_goals_cameras=[{virtual_cam 
+                        targetid=world 
+                        targetOffset=(-6243.5, -585.8, 8551.7) 
+                        positionOffset=(1618.3, 301.2, 2435.9) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+            } 
+            AddGoal_gaps {
+                unlimited_time 
+                classic_mode_goal 
+                goal_text="\\t1 (\\k1) The Big Crypt" 
+                view_goals_text="\\t1 (\\k1) The Big Crypt" 
+                goal_description="\\t1 (\\k1) The Big Crypt" 
+                key_combos=[Air_CircleUL] 
+                goal_flags=[got_1 
+                ] 
+                view_goals_cameras=[{virtual_cam 
+                        targetid=world 
+                        targetOffset=(7061.9, -4475.8, -287.1) 
+                        positionOffset=(-680.3, 457.4, -4251.5) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+            } 
+            AddGoal_collect {
+                unlimited_time 
+                classic_mode_goal 
+                collect_type="Voodoo Dolls" 
+                use_hud_counter 
+                hud_counter_caption="Dolls Collected" 
+                goal_text="Collect 5 Voodoo Dolls" 
+                view_goals_text="Collect 5 Voodoo Dolls" 
+                goal_description="Collect 5 Voodoo Dolls" 
+                init_script=NO_Goal_Classic_Voodoo_Init 
+                goal_deactivate_script=NO_Goal_Classic_Voodoo_Deactivate 
+                goal_flags=[got_1 
+                    got_2 
+                    got_3 
+                    got_4 
+                    got_5 
+                ] 
+                view_goals_cameras=[{virtual_cam 
+                        targetid=world 
+                        targetOffset=(3221.3, -3638.5, 6138.8) 
+                        positionOffset=(-47.3, 340.4, -2433.5) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+            } 
+            AddGoal_collect {
+                unlimited_time 
+                classic_mode_goal 
+                collect_type="Crystal Balls" 
+                version=2 
+                use_hud_counter 
+                hud_counter_caption="Dolls Collected" 
+                goal_text="Smash 5 Crystal Balls" 
+                view_goals_text="Smash 5 Crystal Balls" 
+                goal_description="Smash 5 Crystal Balls" 
+                init_script=NO_Goal_Classic_CrystalBall_Init 
+                goal_deactivate_script=NO_Goal_Classic_CrystalBall_Deactivate 
+                goal_flags=[got_1 
+                    got_2 
+                    got_3 
+                    got_4 
+                    got_5 
+                ] 
+                view_goals_cameras=[{virtual_cam 
+                        targetid=world 
+                        targetOffset=(-3138.9, -3639.5, 5695.3) 
+                        positionOffset=(1629.8, 983.8, -1780.3) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+            } 
+            AddGoal_SecretTape {
+                classic_mode_goal 
+                goal_text="Get the secret tape" 
+                view_goals_text="Get the secret tape" 
+                goal_description="Get the secret tape" 
+                secret_tape_id=TRG_NO_Secret_Tape 
+                view_goals_cameras=[{virtual_cam 
+                        targetid=world 
+                        targetOffset=(-3489.7, -699.8, -10077.8) 
+                        positionOffset=(1125.9, 804.0, -1335.2) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+            } 
+        } else {
+            if ! ((GameModeEquals is_singlesession) or (GameModeEquals is_creategoals)) {
+                if ! InNetGame {
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_Main_Story_goals {
+    NO_AddGoal_TimedScoreRun 
+    NO_AddGoal_TrickToTheBeat 
+    NO_AddGoal_Gap 
+    NO_AddGoal_Secret 
+    NO_AddGoal_Spat 
+    NO_AddGoal_WaterTower 
+    NO_AddGoal_RaiseTheDead 
+    NO_AddGoal_SkatetheLine 
+    NO_AddGoal_Nawlins 
+    NO_AddGoal_TrolleyWallie 
+    NO_AddGoal_Spines 
+    NO_AddGoal_BigBillboard 
+    NO_AddGoal_Manhole 
+    NO_AddGoal_Birds 
+    NO_AddGoal_GasLamps 
+    NO_AddGoal_BigFocus 
+    NO_AddGoal_Parade 
+    NO_AddGoal_Hurricane 
+    NO_AddGoal_Team 
+    NO_AddGoal_Balconies 
+    NO_AddGoal_Zombies 
+    NO_AddGoal_Dumpster 
+    NO_AddGoal_Natas 
+    NO_AddGoal_Signs 
+} 
+script NO_Capstone_Story_goals {
+    NO_AddGoal_Equalizer 
+} 
+script NO_AddGoal_TimedScoreRun {
+    AddGoal_TimedScoreRun {
+        reward_points=25 
+        view_goals_text=NO_TimedScoreRun_View_Goal_Text 
+        goal_text=NO_TimedScoreRun_Goal_Text 
+        goal_description=NO_TimedScoreRun_Goal_Description 
+        can_retry_goal 
+        restart_node=TRG_Restart_Arcade 
+        view_goals_cameras=[
+            {targetOffset=(-3987.9, 46.8, 7513.5) 
+                positionOffset=(1676.2, 539.0, -712.8) 
+            } 
+        ] 
+        time=60 
+        skater=custom 
+        trigger_obj_id=TRG_Arcade_Machine 
+        pro="Arcade machine" 
+        trigger_wait_script=nullscript 
+        trigger_start_script=arcade_machine_start_goal 
+        trigger_success_script=nullscript 
+        restart_node=TRG_Restart_Arcade 
+        always_initialize_goal 
+        dont_kill_trigger_on_success 
+    } 
+} 
+script NO_AddGoal_TrickToTheBeat {
+    AddGoal_TrickBeat {
+        unlimited_time=0 
+        reward_points=25 
+        view_goals_text=NO_TrickToTheBeat_View_Goal_Text 
+        goal_text=NO_TrickToTheBeat_Goal_Text 
+        goal_description=NO_TrickToTheBeat_View_Goal_Description 
+        view_goals_tip=NO_TrickToTheBeat_View_Goal_Tip 
+        view_goals_cameras=[
+            {
+                targetOffset=(-5966.8, 901.0, 8031.6) 
+                positionOffset=(540.7, 788.1, 439.7) 
+            } 
+        ] 
+        skater=custom 
+        time=60 
+        can_retry_goal 
+        restart_node=TRG_Restart_BeatBox 
+        pro="Boombox" 
+        trigger_obj_id=TRG_BeatBox 
+        always_initialize_goal 
+        trigger_wait_script=nullscript 
+        trigger_start_script=NO_BeatBox_start_goal 
+        trigger_success_script=nullscript 
+        beat_window_time=255 
+        total_to_win=10 
+        block_size=1 
+        goal_trick_beat_key_combos=[
+            Air_SquareD 
+            Air_SquareR 
+            Air_SquareL 
+            Air_SquareU 
+            Air_CircleU 
+            Air_CircleL 
+            Air_CircleD 
+            Air_CircleR 
+        ] 
+        tempo=105 
+        beat_pattern=[
+            {sounds=[{GoToLoadLevel vol=((BO_MUSIC_KickDrumVolume * 2) + randomrange(0.1, 4.0)) pitch=(100 + randomrange(0.1, 3.0))}] 
+            } 
+            {} 
+            {sounds=[{MB_HiHat_01 vol=(BO_MUSIC_HiHatVolume + randomrange(0.1, 4.0)) pitch=(100 + randomrange(0.1, 3.0))}] 
+            } 
+            {} 
+            {pulse 
+                sounds=[{SK6_BO_RevolutionaryDrum01 vol=(BO_MUSIC_SnareDrumVolume + randomrange(0.1, 4.0)) pitch=(160 + randomrange(0.1, 3.0))}] 
+            } 
+            {} 
+            {sounds=[{MB_HiHat_01 vol=(BO_MUSIC_HiHatVolume + randomrange(0.1, 4.0)) pitch=(100 + randomrange(0.1, 3.0))}] 
+            } 
+            {
+                sounds=[{GoToLoadLevel vol=((BO_MUSIC_KickDrumVolume * 2) + randomrange(0.1, 4.0)) pitch=(100 + randomrange(0.1, 3.0))}] 
+            } 
+            {
+                sounds=[{GoToLoadLevel vol=((BO_MUSIC_KickDrumVolume * 2) + randomrange(0.1, 4.0)) pitch=(100 + randomrange(0.1, 3.0))}] 
+            } 
+            {} 
+            {sounds=[{GoToLoadLevel vol=((BO_MUSIC_KickDrumVolume * 2) + randomrange(0.1, 4.0)) pitch=(100 + randomrange(0.1, 3.0))} 
+                    {MB_HiHat_01 vol=(BO_MUSIC_HiHatVolume + randomrange(0.1, 4.0)) pitch=(100 + randomrange(0.1, 3.0))}] 
+            } 
+            {} 
+            {pulse 
+                sounds=[{SK6_BO_RevolutionaryDrum01 vol=(BO_MUSIC_SnareDrumVolume + randomrange(0.1, 4.0)) pitch=(160 + randomrange(0.1, 3.0))}] 
+            } 
+            {} 
+            {sounds=[{MB_HiHat_01 vol=(BO_MUSIC_HiHatVolume + randomrange(0.1, 4.0)) pitch=(100 + randomrange(0.1, 3.0))}] 
+            } 
+            {} 
+        ] 
+    } 
+} 
+script NO_BeatBox_start_goal {
+    create_panel_message {text="Trick to the beat!" style=goal_collect_text} 
+    GoalManager_ActivateGoal name=NO_Goal_TrickBeat 
+} 
+script NO_AddGoal_Gap {
+    AddGoal_gaps {
+        silent_activation 
+        skater=custom 
+        reward_points=25 
+        view_goals_text=NO_BoatSlapper_View_Goal_Text 
+        goal_description=NO_BoatSlapper_View_Goal_Description 
+        view_goals_tip=NO_BoatSlapper_View_Goal_Tip 
+        collect_type="Riverboat Slaps" 
+        goal_flags=[got_1 
+            got_2 
+            got_3 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(11751.0, -1592.6, -3621.1) 
+                positionOffset=(2692.4, 164.3, 233.1) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_Spat {
+    AddGoal_gaps {
+        silent_activation 
+        skater=custom 
+        version=8 
+        reward_points=25 
+        collect_type="Spat Tags" 
+        view_goals_text=NO_SpatTags_View_Goal_Text 
+        goal_description=NO_SpatTags_View_Goal_Description 
+        goal_flags=[got_1 
+            got_2 
+            got_3 
+            got_4 
+            got_5 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(7435.6, -1248.9, -8572.7) 
+                positionOffset=(1551.2, 760.4, -741.1) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_WaterTower {
+    AddGoal_gaps {
+        silent_activation 
+        skater=custom 
+        version=4 
+        reward_points=25 
+        view_goals_text=NO_WaterTower_View_Goal_Text 
+        goal_description=NO_WaterTower_View_Goal_Description 
+        goal_flags=[got_1 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(6908.0, -329.9, 6495.9) 
+                positionOffset=(1342.1, 845.0, -1728.4) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_Secret {
+    AddGoal_gaps {
+        silent_activation 
+        skater=custom 
+        version=2 
+        reward_points=25 
+        view_goals_text=NO_FindJester_View_Goal_Text 
+        goal_description=NO_FindJester_View_Goal_Description 
+        success_node=TRG_Restart_Jester_Found 
+        goal_flags=[got_1 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(-8085.0, -2069.1, -1634.1) 
+                positionOffset=(781.5, 310.0, 2330.6) 
+            } 
+        ] 
+        success_cam_anims=[
+            {virtual_cam 
+                targetid=world 
+                targetOffset=(-9874.7, 508.7, 7129.3) 
+                positionOffset=(-1752.2, 156.5, 1307.0) 
+                frames=100 
+                skippable=1 
+                pre_anim_script=NO_Goal_Secret_Success 
+                cam_anim_text=["Thanks for getting me off that float.  Here, let me buy you a drink." 
+                ] 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_RaiseTheDead {
+    AddGoal_gaps {
+        silent_activation 
+        skater=custom 
+        version=6 
+        reward_points=25 
+        view_goals_text=NO_RaiseTheDead_View_Goal_Text 
+        goal_description=NO_RaiseTheDead_View_Goal_Description 
+        goal_success_script=NO_Goal_RaiseTheDead_Success 
+        view_goals_tip=NO_RaiseTheDead_View_Goal_Tip 
+        collect_type="Crypts" 
+        goal_flags=[got_1 
+            got_2 
+            got_3 
+            got_4 
+            got_5 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(5139.9, -1786.9, -10094.8) 
+                positionOffset=(-1036.2, 165.8, -2476.2) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_SkatetheLine {
+    AddGoal_SkateTheLine {
+        skater=custom 
+        reward_points=100 
+        view_goals_text=NO_SaveNawlins_View_Goal_Text 
+        goal_description=NO_SaveNawlins_View_Goal_Description 
+        view_goals_tip=NO_SaveNawlins_View_Goal_Tip 
+        goal_flags=[
+            got_1 
+            got_2 
+            got_3 
+            got_4 
+        ] 
+        unlimited_time 
+        view_goals_cameras=[
+            {targetOffset=(3027.3, 169.1, 8828.8) 
+                positionOffset=(-152.4, 50.5, -651.2) 
+                time=2 
+            } 
+            {targetOffset=(-2057.2, -7541.0, -7999.6) 
+                positionOffset=(91.8, -2238.7, 202.0) 
+                time=2 
+            } 
+            {targetOffset=(4251.3, 1216.7, 11498.3) 
+                positionOffset=(-278.0, 102.9, 2653.0) 
+                time=2 
+            } 
+        ] 
+        goal_success_script=NO_voodoo_vortex_end 
+        key_combos=[Air_CircleDR] 
+        goal_objects=[
+            {
+                flag=got_1 
+                time=10 
+                trick_objects=[
+                    {name=g_vortex_base light_group=outdoor} 
+                ] 
+            } 
+            {
+                text="Grind the Underworld Ring\\n\\n\\nHold(\\b0)" 
+                flag=got_2 
+                time=10 
+                trick_objects=[
+                    {name=JG_Swr_Chandalier light_group=outdoor} 
+                ] 
+            } 
+            {
+                text="Now Jump off!" 
+                flag=got_3 
+                time=10 
+                trick_objects=[
+                    {name=JG_Swr_Chandalier light_group=outdoor} 
+                ] 
+            } 
+            {
+                text="Save Nawlins!\\nQuickly do a trick (\\ba+\\b2) over the Church Statue" 
+                flag=got_4 
+                time=15 
+                trick_objects=[
+                    {name=g_church_47 light_group=outdoor} 
+                    {name=g_church_vfer1_01 light_group=outdoor} 
+                    {name=g_church_vfer1_02 light_group=outdoor} 
+                ] 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_Equalizer {
+    AddGoal_SkateTheLine {
+        skater=custom 
+        version=3 
+        can_retry_goal 
+        restart_node=TRG_Restart_Equalizer 
+        reward_points=1000 
+        view_goals_text="The Equalizer" 
+        goal_text="Avoid security and get up to the helicopter on the roof." 
+        goal_description=[
+            "- Grab (\\bf) onto the helicopter's skid" 
+            "- Acid drop (\\ml) into the pool below" 
+            "- Air up and grab the helicopter again" 
+            "- Acid Drop (\\ml) again" 
+            "- Spine (\\ml) Over the helicopter" 
+        ] 
+        goal_flags=[
+            got_1 
+            got_2 
+            got_3 
+        ] 
+        restart_node=TRG_Restart_Equalizer 
+        view_goals_cameras=[
+            {targetOffset=(-6760.3, -5380.8, -4692.1) 
+                positionOffset=(-884.0, 1378.5, -244.5) 
+                time=2 
+            } 
+            {targetOffset=(-6180.9, -6350.7, 2376.7) 
+                positionOffset=(-126.2, 1362.4, 415.4) 
+                time=2 
+            } 
+            {targetOffset=(-6180.9, -6350.7, 2376.7) 
+                positionOffset=(-126.2, 1362.4, 415.4) 
+                time=2 
+            } 
+            {targetOffset=(-3647.8, -6451.2, -3508.3) 
+                positionOffset=(-325.1, 1289.2, 1881.0) 
+                time=2 
+            } 
+            {targetOffset=(-6777.0, -2297.0, -6357.9) 
+                positionOffset=(-172.2, 871.7, 449.0) 
+                time=2 
+            } 
+        ] 
+        goal_fail_script=NO_Reset_Equalizer_Die 
+        goal_deactivate_script=NO_Reset_Equalizer 
+        goal_success_script=NO_Equalizer_Success 
+        goal_objects=[
+            {
+                text="Walk up to the helicopter, jump and grab (\\bf) the skid" 
+                flag=got_1 
+                time=10 
+                trick_objects=[
+                    {name=g_blockD_64 light_group=outdoor} 
+                ] 
+            } 
+            {
+                text="Hold on till we get into position!" 
+                flag=got_2 
+                time=10 
+                trick_objects=[
+                    {name=g_blockD_64 light_group=outdoor} 
+                ] 
+            } 
+            {
+                text="Acid drop (\\ml) again and then spine (\\ml) over the helicopter" 
+                flag=got_3 
+                time=15 
+                trick_objects=[
+                    {name=g_blockD_04 light_group=outdoor} 
+                    {name=g_blockD_64 light_group=outdoor} 
+                    {name=g_blockB_vfer_00 light_group=outdoor} 
+                ] 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_BigBillboard {
+    AddGoal_gaps {
+        silent_activation 
+        skater=pro 
+        unlocked_by_another 
+        version=7 
+        reward_points=50 
+        goal_success_script=NO_Goal_Gaps7_Success 
+        view_goals_text=NO_BigBillboard_View_Goal_Text 
+        goal_description=NO_BigBillboard_View_Goal_Description 
+        goal_flags=[got_1 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(-8378.5, -2486.4, 6000.6) 
+                positionOffset=(-1359.1, 1274.0, -48.1) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_TrolleyWallie {
+    AddGoal_gaps {
+        silent_activation 
+        skater=pro 
+        unlocked_by_another 
+        version=10 
+        reward_points=25 
+        view_goals_text=NO_WallieTrolley_View_Goal_Text 
+        view_goals_tip=NO_WallieTrolley_Tip 
+        goal_description=NO_WallieTrolley_Description 
+        goal_flags=[got_1 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(6924.1, -2624.4, -6129.2) 
+                positionOffset=(2022.8, 277.2, 2090.1) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_Spines {
+    AddGoal_SkateTheLine {
+        skater=pro 
+        unlocked_by_another 
+        version=2 
+        reward_points=25 
+        Require_Combo 
+        can_retry_goal 
+        restart_node=TRG_Restart_SpineTingler 
+        view_goals_text=NO_SpineTingler_View_Goal_Text 
+        goal_description=NO_SpineTingler_Description 
+        goal_success_script=NO_Goal_Spines_Success 
+        view_goals_cameras=[
+            {
+                targetOffset=(-8089.3, -4022.9, 3780.7) 
+                positionOffset=(-860.6, 1240.5, -696.1) 
+                time=2 
+            } 
+            {
+                targetOffset=(-7781.1, -4479.9, 4742.7) 
+                positionOffset=(-831.9, 821.6, -115.3) 
+                time=2 
+            } 
+            {targetOffset=(-7484.7, -6080.9, 3900.9) 
+                positionOffset=(-1055.3, 827.2, 594.0) 
+                time=2 
+            } 
+        ] 
+        goal_flags=[
+            got_1 
+            got_2 
+            got_3 
+        ] 
+        unlimited_time=0 
+        goal_objects=[
+            {
+                flag=got_1 
+                time=15 
+                trick_objects=[
+                    {name=g_blockB_vfer_03 light_group=outdoor} 
+                    {name=g_blockB_extra_02 light_group=outdoor} 
+                ] 
+            } 
+            {
+                text="Spine Tingler Combo\\nNext spine into the pool on the bar rooftop" 
+                flag=got_2 
+                time=15 
+                trick_objects=[
+                    {name=g_blockD_qp02 light_group=outdoor} 
+                    {name=g_blockD_62 light_group=outdoor} 
+                ] 
+            } 
+            {
+                text="Spine Tingler Combo\\nFinally spine into the bar" 
+                flag=got_3 
+                time=15 
+                trick_objects=[
+                    {name=g_blockD_62 light_group=outdoor} 
+                    {name=g_blockD_vfer_00 light_group=outdoor} 
+                ] 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_Nawlins {
+    AddGoal_gaps {
+        silent_activation 
+        skater=pro 
+        unlocked_by_another 
+        version=13 
+        reward_points=25 
+        view_goals_text=NO_StreetTransfer_View_Goal_Text 
+        goal_description=NO_StreetTransfer_Description 
+        view_goals_cameras=[
+            {targetOffset=(-6281.5, -3018.1, -6369.9) 
+                positionOffset=(-174.8, 870.4, 528.4) 
+            } 
+        ] 
+        goal_flags=[got_1 
+        ] 
+    } 
+} 
+script NO_AddGoal_Manhole {
+    AddGoal_TrickTheObjects {
+        skater=pro 
+        unlocked_by_another 
+        reward_points=50 
+        num_flags_to_win=5 
+        view_goals_text=NO_ManholeManual_View_Goal_Text 
+        goal_description=NO_ManholeManual_Description 
+        goal_start_script=NO_ManHoleManual_Start 
+        goal_deactivate_script=NO_ManHoleManual_Deactivate 
+        view_goals_cameras=[
+            {targetOffset=(3983.1, -2416.3, 7243.8) 
+                positionOffset=(-43.3, 34.2, -1575.6)} 
+        ] 
+        goal_objects=[
+            {cluster_id=g_manspot_01 flag=got_1} 
+            {cluster_id=g_manspot_02 flag=got_2} 
+            {cluster_id=g_manspot_03 flag=got_3} 
+            {cluster_id=g_manspot_04 flag=got_4} 
+            {cluster_id=g_manspot_05 flag=got_5} 
+            {cluster_id=g_manspot_06 flag=got_6} 
+            {cluster_id=g_manspot_07 flag=got_7} 
+            {cluster_id=g_manspot_08 flag=got_8} 
+            {cluster_id=g_manspot_09 flag=got_9} 
+            {cluster_id=g_manspot_10 flag=got_10} 
+            {cluster_id=g_manspot_11 flag=got_11} 
+        ] 
+        goal_flags=[
+            got_1 
+            got_2 
+            got_3 
+            got_4 
+            got_5 
+            got_6 
+            got_7 
+            got_8 
+            got_9 
+            got_10 
+            got_11 
+        ] 
+        trick_object_prefix="g_manspot_" 
+        trick_object_light_group=outdoor 
+        Require_Combo 
+        no_fail_messages 
+    } 
+} 
+script NO_ManHoleManual_Start {
+    SpawnScript NO_Manhole_Counter 
+} 
+script NO_ManHoleManual_Deactivate {
+    KillSpawnedScript name=NO_Manhole_Counter 
+} 
+script NO_Manhole_Counter {
+    <manhole> = 0 
+    <manhole_old> = 0 
+    while {
+        if GoalManager_GoalFlagSet name=NO_Goal_TrickObjects flag=got_1 {
+            <manhole> = (<manhole> + 1) 
+        } 
+        if GoalManager_GoalFlagSet name=NO_Goal_TrickObjects flag=got_2 {
+            <manhole> = (<manhole> + 1) 
+        } 
+        if GoalManager_GoalFlagSet name=NO_Goal_TrickObjects flag=got_3 {
+            <manhole> = (<manhole> + 1) 
+        } 
+        if GoalManager_GoalFlagSet name=NO_Goal_TrickObjects flag=got_4 {
+            <manhole> = (<manhole> + 1) 
+        } 
+        if GoalManager_GoalFlagSet name=NO_Goal_TrickObjects flag=got_5 {
+            <manhole> = (<manhole> + 1) 
+        } 
+        if GoalManager_GoalFlagSet name=NO_Goal_TrickObjects flag=got_6 {
+            <manhole> = (<manhole> + 1) 
+        } 
+        if GoalManager_GoalFlagSet name=NO_Goal_TrickObjects flag=got_7 {
+            <manhole> = (<manhole> + 1) 
+        } 
+        if GoalManager_GoalFlagSet name=NO_Goal_TrickObjects flag=got_8 {
+            <manhole> = (<manhole> + 1) 
+        } 
+        if GoalManager_GoalFlagSet name=NO_Goal_TrickObjects flag=got_9 {
+            <manhole> = (<manhole> + 1) 
+        } 
+        if GoalManager_GoalFlagSet name=NO_Goal_TrickObjects flag=got_10 {
+            <manhole> = (<manhole> + 1) 
+        } 
+        if GoalManager_GoalFlagSet name=NO_Goal_TrickObjects flag=got_11 {
+            <manhole> = (<manhole> + 1) 
+        } 
+        if (<manhole> > <manhole_old>) {
+            switch <manhole>
+                case 1 {
+                    create_panel_message {id=Current_Goal text="1 of 5 manholes! " style=goal_collect_text} 
+                }
+                case 2 {
+                    create_panel_message {id=Current_Goal text="2 of 5 manholes! " style=goal_collect_text} 
+                }
+                case 3 {
+                    create_panel_message {id=Current_Goal text="3 of 5 manholes! " style=goal_collect_text} 
+                }
+                case 4 {
+                    create_panel_message {id=Current_Goal text="4 of 5 manholes! " style=goal_collect_text} 
+                }
+                case 5 {
+                    create_panel_message {id=Current_Goal text="That's 5!  Now land it! " style=goal_collect_text} 
+                }
+                default {
+                }
+            endswitch            
+        } 
+        <manhole_old> = <manhole> 
+        <manhole> = 0 
+        wait 5 frames 
+    } 
+} 
+script NO_AddGoal_Birds {
+    AddGoal_gaps {
+        silent_activation 
+        skater=pro 
+        unlocked_by_another 
+        version=5 
+        reward_points=50 
+        collect_type="birds" 
+        view_goals_text=NO_SmackBirds_View_Goal_Text 
+        goal_description=NO_SmackBirds_Description 
+        view_goals_tip=NO_SmackBirds_View_Goal_Tip 
+        goal_success_script=NO_Goal_Birds_Success 
+        goal_flags=[got_1 
+            got_2 
+            got_3 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(-5892.3, 2346.9, -9498.0) 
+                positionOffset=(-377.5, 624.5, -1335.9) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_GasLamps {
+    AddGoal_gaps {
+        silent_activation 
+        skater=pro 
+        unlocked_by_another 
+        version=3 
+        reward_points=50 
+        view_goals_text=NO_GasLamps_View_Goal_Text 
+        goal_description=NO_GasLamps_Description 
+        collect_type="Gaslamps" 
+        view_goals_cameras=[
+            {targetOffset=(-244.9, 674.3, -8526.3) 
+                positionOffset=(2419.2, 187.2, 1100.0) 
+            } 
+        ] 
+        goal_flags=[got_1 
+            got_2 
+            got_3 
+        ] 
+    } 
+} 
+script NO_AddGoal_BigFocus {
+    AddGoal_gaps {
+        silent_activation 
+        skater=pro 
+        unlocked_by_another 
+        version=12 
+        reward_points=50 
+        view_goals_text=NO_BigFocus_View_Goal_Text 
+        view_goals_tip=NO_BigFocus_View_Goal_Tip 
+        view_goals_cameras=[
+            {targetOffset=(5593.2, -2460.4, -6590.3) 
+                positionOffset=(-566.5, 902.4, 533.4) 
+            } 
+        ] 
+        goal_flags=[got_1 
+        ] 
+        difficulty_level_params=[
+            {
+                goal_description=NO_BigFocus_Easy_Description 
+            } 
+            {
+                goal_description=NO_BigFocus_Normal_Description 
+            } 
+            {
+                goal_description=NO_BigFocus_Hard_Description 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_Parade {
+    AddGoal_gaps {
+        silent_activation 
+        skater=jester 
+        version=9 
+        reward_points=50 
+        unlocked_by_another 
+        collect_type="Girls gone crazy" 
+        view_goals_text=NO_GirlsGoneCrazy_View_Goal_Text 
+        goal_description=NO_GirlsGoneCrazy_Description 
+        goal_flags=[got_1 
+            got_2 
+            got_3 
+            got_4 
+            got_5 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(2481.5, 911.5, -10026.3) 
+                positionOffset=(1874.0, 51.1, -82.3) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_Hurricane {
+    AddGoal_gaps {
+        silent_activation 
+        skater=jester 
+        unlocked_by_another 
+        version=14 
+        reward_points=50 
+        view_goals_text=NO_AcidHurricane_View_Goal_Text 
+        goal_description=NO_AcidHurricane_Description 
+        goal_flags=[got_1 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(3505.9, -2194.0, 9042.9) 
+                positionOffset=(-2100.5, 212.5, 1119.8) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_Balconies {
+    AddGoal_gaps {
+        silent_activation 
+        skater=jester 
+        unlocked_by_another 
+        version=15 
+        reward_points=50 
+        view_goals_text=NO_BalconyBreaker_View_Goal_Text 
+        goal_description=NO_BalconyBreaker_Description 
+        view_goals_tip=NO_BalconyBreaker_Tip 
+        goal_flags=[got_1 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(2867.3, 1595.1, -7435.8) 
+                positionOffset=(26.1, 301.0, 2064.2) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_Team {
+    AddGoal_gaps {
+        version=19 
+        silent_activation 
+        unlocked_by_another 
+        skater=jester 
+        reward_points=50 
+        view_goals_text=NO_TeamChallenge_View_Goal_Text 
+        goal_description=NO_TeamChallenge_Description 
+        view_goals_cameras=[
+            {targetOffset=(4305.4, -2590.9, 10208.5) 
+                positionOffset=(-472.1, 385.5, 1943.1) 
+            } 
+        ] 
+        goal_flags=[
+            {skater=pro goal_flags=[got_1]} 
+            {skater=custom goal_flags=[got_1]} 
+            {skater=jester goal_flags=[got_1]} 
+        ] 
+    } 
+} 
+script NO_AddGoal_Zombies {
+    AddGoal_gaps {
+        silent_activation 
+        skater=voodoo 
+        unlocked_by_another 
+        version=11 
+        reward_points=50 
+        view_goals_text=NO_ZombieHunter_View_Goal_Text 
+        goal_description=NO_ZombieHunter_Description 
+        view_goals_tip=NO_ZombieHunter_Tip 
+        collect_type="Zombies Killed" 
+        view_goals_cameras=[
+            {targetOffset=(1642.3, 3029.3, 7272.6) 
+                positionOffset=(-29.4, 33.4, -2120.3) 
+            } 
+        ] 
+        goal_flags=[got_1 
+            got_2 
+            got_3 
+            got_4 
+            got_5 
+            got_6 
+            got_7 
+            got_8 
+            got_9 
+            got_10 
+        ] 
+    } 
+} 
+script NO_AddGoal_Dumpster {
+    AddGoal_gaps {
+        silent_activation 
+        skater=voodoo 
+        unlocked_by_another 
+        version=16 
+        reward_points=50 
+        view_goals_text=NO_Trashman_View_Goal_Text 
+        goal_description=NO_TrashMan_Description 
+        view_goals_tip=NO_TrashMan_Tip 
+        goal_flags=[got_1 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(4342.8, -1863.5, 7689.4) 
+                positionOffset=(1102.9, 91.7, -1566.9) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_Natas {
+    AddGoal_gaps {
+        silent_activation 
+        skater=voodoo 
+        unlocked_by_another 
+        version=18 
+        reward_points=50 
+        view_goals_text=NO_NatasNeversoft_View_Goal_Text 
+        goal_description=NO_NatasNeversoft_Description 
+        view_goals_tip=NO_NatasNeversoft_Tip 
+        goal_flags=[got_1 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(-6020.7, 886.6, -9972.4) 
+                positionOffset=(132.9, 155.2, -2124.0) 
+            } 
+        ] 
+    } 
+} 
+script NO_AddGoal_Signs {
+    AddGoal_gaps {
+        silent_activation 
+        skater=voodoo 
+        version=17 
+        reward_points=50 
+        unlocked_by_another 
+        collect_type="Signs spun" 
+        view_goals_text=NO_SignSpinner_View_Goal_Text 
+        goal_description=NO_SignSpinnder_Description 
+        goal_flags=[got_1 
+            got_2 
+            got_3 
+        ] 
+        view_goals_cameras=[
+            {targetOffset=(7860.0, -1155.4, -4990.6) 
+                positionOffset=(-572.5, 353.8, 168.4) 
+            } 
+        ] 
+    } 
+} 
+script NO_killCars {
+    kill prefix="TRG_veh_jester" 
+    kill prefix="TRG_veh_float" 
+    kill prefix="TRG_veh_donkey" 
+    kill name=TRG_Veh_Float_ghost 
+} 
+script NO_ApplyTrafficMod {
+    if GetGlobalFlag flag=MOD_NO_NO_TRAFFIC {
+        Kill name=TRG_streetcar 
+        Kill name=TRG_veh_float1 
+        Kill name=TRG_veh_float2 
+        Kill name=TRG_veh_jester1 
+        Kill name=TRG_veh_jester2 
+        Kill name=TRG_veh_donkey1 
+        Kill name=TRG_veh_donkey2 
+        Kill name=TRG_Veh_Float_ghost 
+    } 
+} 
+script NO_CreateCars {
+    if ! GetGlobalFlag flag=MOD_NO_NO_TRAFFIC {
+    <vehicle> = random { 1 { 1 } 1 { 2 } } 
+    switch <vehicle>
+        case 1 {
+            if ! isAlive name=TRG_veh_float1 {
+                Create name=TRG_veh_float1 
+            } 
+            if ! GoalManager_HasWonGoal name=NO_Goal_Gaps2 {
+                if ! isAlive name=TRG_veh_jester1 {
+                    Create name=TRG_veh_jester1 
+                    
+                } 
+            } 
+        }
+        case 2 {
+            if ! isAlive name=TRG_veh_float2 {
+                Create name=TRG_veh_float2 
+            } 
+            if ! GoalManager_HasWonGoal name=NO_Goal_Gaps2 {
+                if ! isAlive name=TRG_veh_jester1 {
+                    Create name=TRG_veh_jester2 
+                    
+                } 
+            } 
+        }
+        case 3 {
+            if ! isAlive name=TRG_veh_float1 {
+                Create name=TRG_veh_donkey1 
+            } 
+        }
+        case 4 {
+            if ! isAlive name=TRG_veh_float1 {
+                Create name=TRG_veh_donkey2 
+            } 
+        }
+    endswitch    
+    if IsCareerMode {
+        if ! isAlive name=TRG_Veh_Float_ghost {
+            Create name=TRG_Veh_Float_ghost 
+        } 
+    } 
+    } 
+} 
+script NO_veh_path01_end {
+    SpawnScript NO_veh_path01_spawncar id=NO_spawncar 
+    Die 
+} 
+script NO_Initializer {
+    NO_Sewer_Off 
+    SpawnScript NO_FakeLights_Off 
+    if GameModeEquals is_classic {
+    } 
+    if GameModeEquals is_career {
+        Create name=TRG_Ped_Hawk 
+        Create name=TRG_Ped_TeammatePro 
+        if GoalManager_HasWonGoal name=NO_Goal_Gaps7 {
+            Create name=NO_AS_MasterPiece_final01 
+        } 
+        if GoalManager_HasWonGoal name=NO_Goal_Gaps8 {
+            Create prefix="SPAT_COVER" 
+        } else {
+            Create prefix="SPAT" 
+            kill prefix="SPAT_COVER" 
+        } 
+        if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps5 {
+            if ! GoalManager_HasWonGoal name=NO_Goal_Gaps5 {
+                Create name=TRG_Ped_Hint_Birds 
+            } 
+        } 
+        if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps6 {
+            if ! GoalManager_HasWonGoal name=NO_Goal_Gaps6 {
+                Create name=TRG_Ped_Hint_Skulls 
+            } 
+        } 
+        if ! GoalManager_GoalIsLocked name=NO_Goal_SkateTheLine2 {
+            if ! GoalManager_HasWonGoal name=NO_Goal_SkateTheLine2 {
+                Create name=TRG_Ped_Hint_Spine 
+            } 
+        } 
+        if GoalManager_HasWonGoal name=NO_Goal_Gaps2 {
+            if ! isAlive name=TRG_Switchable_Jester {
+                Create name=TRG_Switchable_Jester 
+            } 
+        } 
+        if ! isAlive name=TRG_veh_heli {
+            if GoalManager_HasWonGoal name=NO_Goal_Gaps6 {
+                if ! isAlive name=TRG_ped_voodoo_tricycle01 {
+                    Create name=TRG_ped_voodoo_tricycle01 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_Goal_Classic_CrystalBall_Init {
+    
+    Create prefix="Classic_CrystalBall" 
+} 
+script NO_Goal_Classic_CrystalBall_Deactivate {
+    kill prefix="Classic_CrystalBall" 
+} 
+script NO_Goal_Classic_Voodoo_Init {
+    Create prefix="TRG_Classic_VoodooDoll_" 
+} 
+script NO_Goal_Classic_Voodoo_Deactivate {
+    kill prefix="TRG_Classic_VoodooDoll_" 
+} 
+script NO_Equalizer_Start {
+    if ! isAlive name=TRG_veh_heli {
+        Create name=TRG_veh_heli 
+        Create name=Veh_NO_Heli_Blades 
+        Create name=TRGP_Equalizer_Start 
+        Create prefix="TRG_Ped_Equalizer_Security" 
+    } 
+    kill name=TRG_Ped_TeammatePro 
+    kill name=TRG_Switchable_Jester 
+    kill name=TRG_ped_voodoo_tricycle01 
+    kill name=TRG_Ped_Hint_Birds 
+    kill name=g_blockD_65 
+    kill name=g_blockD_67 
+} 
+script NO_Equalizer_Intro_Setup {
+    Create prefix="TRG_Ped_Equalizer_Intro" 
+} 
+script NO_Equalizer_Intro_CleanUp {
+    kill prefix="TRG_Ped_Equalizer_Intro" 
+    kill_panel_message_if_it_exists id=Current_Goal 
+    create_panel_block id=Current_Goal text="Avoid security and get up to the helicopter on the roof." style=panel_message_goal 
+} 
+script NO_Equalizer_Success {
+    kill prefix="TRG_Ped_Equalizer" 
+    kill name=TRG_veh_heli 
+    kill name=Veh_NO_Heli_Blades 
+    kill name=TRGP_Equalizer_Start 
+} 
+script NO_Goal_Spines_Success {
+    kill name=TRG_Ped_Hint_Spine 
+    if ScreenElementExists id=ped_speech_dialog {
+        DestroyScreenElement id=ped_speech_dialog 
+    } 
+} 
+script NO_Goal_RaiseTheDead_Success {
+    kill name=TRG_Ped_Hint_Skulls 
+    if ScreenElementExists id=ped_speech_dialog {
+        DestroyScreenElement id=ped_speech_dialog 
+    } 
+} 
+script NO_veh_path01_spawncar {
+    wait 2 seconds 
+    kill prefix="TRG_veh_jester" 
+    kill prefix="TRG_veh_float" 
+    kill prefix="TRG_veh_donkey" 
+    
+    NO_CreateCars 
+} 
+script NO_Dish_Collide {
+    if isAlive name=nighton_10_g_blockD_satellite_blinker {
+        kill name=nighton_10_g_blockD_satellite_blinker 
+        TODManager_MarkPermanentlyDead name=nighton_10_g_blockD_satellite_blinker 
+    } 
+} 
+script NO_float_jester {
+    Obj_ClearExceptions 
+    ClearExceptionGroup NO_Jester 
+    Obj_SetInnerRadius 7 
+    if IsCareerMode {
+        Obj_SetException ex=ObjectInRadius scr=NO_Float_Jester_Found group=NO_Jester 
+    } 
+    
+    switch <path>
+        case 1 {
+            Obj_LockToObject ObjectName=TRG_veh_float1 (0.0, 120.0, 100.0) 
+        }
+        case 2 {
+            Obj_LockToObject ObjectName=TRG_veh_float2 (0.0, 120.0, 100.0) 
+        }
+    endswitch    
+    Ped_InitAI stand Default_jester_anim_assets should_look_at_skater=0 
+} 
+script NO_Float_Jester_Found {
+    Obj_ClearExceptions 
+    ClearExceptionGroup NO_Jester 
+    if GoalManager_GoalExists name=NO_Goal_Gaps2 {
+        GoalManager_SetGoalFlag name=NO_Goal_Gaps2 got_1 1 
+    } 
+} 
+script NO_Crazy_Girl {
+    Obj_SetAttentionRadius 10 
+    Ped_InitAI stand avoid GetAttention F_MardisGras_Dance 
+} 
+script NO_Goal_Secret_Success {
+    kill prefix="TRG_veh_jester" 
+    if ! isAlive name=TRG_Switchable_Jester {
+        Create name=TRG_Switchable_Jester 
+    } 
+    TRG_Switchable_Jester:Obj_PlayFam NO_Ped_Jester_VO_Lip vol=GlobalHintVOVol priorty=101 
+} 
+script NO_Goal_BigBillboard {
+    GetTriggerArray graffiti onto 
+    if Triggertype <trigger_array> {
+        if GoalManager_GoalExists name=NO_Goal_Gaps7 {
+            GoalManager_SetGoalFlag name=NO_Goal_Gaps7 got_1 1 
+        } 
+    } 
+} 
+script NO_Goal_Gaps7_Success {
+    
+    KillAllTextureSplats box={height=20 dist=20 width=30 offset=(-188.0, 73.0, 173.0)} 
+    play_cutscene name="cutscenes\\NO_SmallEvent_Billboard.cut" RestartNode=TRG_Restart_Billboard 
+    if ! isAlive name=NO_AS_MasterPiece_final01 {
+        Create name=NO_AS_MasterPiece_final01 
+    } 
+} 
+script NO_Graf_Tag {
+    GetTriggerArray graffiti onto 
+    if Triggertype <trigger_array> {
+        
+        if GoalManager_GoalExists name=NO_Goal_Gaps8 {
+            if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps8 flag=<flag> {
+                GoalManager_SetGoalFlag name=NO_Goal_Gaps8 <flag> 1 
+                if ! isAlive name=<cover> {
+                    Create name=<cover> 
+                    kill name=<name> 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_SwitchSkaters {
+    KillSpawnedScript name=NO_Spawn_SwitchSkaters 
+    SpawnSkaterScript NO_Spawn_SwitchSkaters 
+} 
+script NO_Spawn_SwitchSkaters {
+    wait 2 frames 
+    pulse_blur 
+    swap_skaters_get_current_name 
+    switch <name>
+        case custom {
+            
+            Takeover_VO 
+        }
+        case pro_teammate {
+            SetGlobalFlag flag=PRO_FOUND_05 
+            NO_Unlock_Pro_Goals 
+        }
+        case jester {
+            
+            SetGlobalFlag flag=GUEST_FOUND_JESTER 
+            SetGlobalFlag flag=SKATER_UNLOCKED_JESTER 
+            NO_Unlock_Jester_Goals 
+        }
+        case voodoo {
+            SetGlobalFlag flag=GUEST_FOUND_VOODOO 
+            NO_Unlock_Voodoo_Goals 
+        }
+        default {
+        }
+    endswitch    
+    if GetFlag flag=FLAG_VORTEX {
+        NO_CreateZombies 
+    } 
+} 
+script NO_Talking {
+    while {
+        PlayAnimWithPartialAnimIfExists anim=Ped_M_Talk2_RightHere 
+        Obj_WaitAnimFinished 
+        PlayAnimWithPartialAnimIfExists anim=Ped_M_Talk2_MixIt 
+        Obj_WaitAnimFinished 
+        PlayAnimWithPartialAnimIfExists anim=Ped_M_Talk2_SureThing 
+        Obj_WaitAnimFinished 
+        PlayAnimWithPartialAnimIfExists anim=Ped_M_Talk2_Idle2 
+        Obj_WaitAnimFinished 
+        PlayAnimWithPartialAnimIfExists anim=Ped_M_Talk2_RightHere 
+        Obj_WaitAnimFinished 
+    } 
+} 
+script NO_Unlock_Pro_Goals {
+    if GoalManager_GoalIsLocked name=NO_Goal_Gaps7 {
+        if ScreenElementExists id=ped_speech_dialog {
+            DestroyScreenElement id=ped_speech_dialog 
+        } 
+        
+        play_swappable_pro_intro_cameras intro_cameras=NO_Pro_Goal_Intro_Cameras 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps7 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps10 
+        GoalManager_UnlockGoal name=NO_Goal_SkateTheLine2 
+        GoalManager_UnlockGoal name=NO_Goal_TrickObjects 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps5 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps3 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps12 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps13 
+        Create name=TRG_Ped_Hint_Birds 
+        Create name=TRG_Ped_Hint_Spine 
+    } else {
+        Takeover_VO 
+    } 
+} 
+script NO_Unlock_Jester_Goals {
+    if GoalManager_GoalIsLocked name=NO_Goal_Gaps9 {
+        if ScreenElementExists id=ped_speech_dialog {
+            DestroyScreenElement id=ped_speech_dialog 
+        } 
+        
+        Create name=TRG_Ped_Jester_Intro 
+        PlayIntroCameras goal_intro_cameras=NO_Jester_Goal_Intro_Cameras letterbox 
+        kill name=TRG_Ped_Jester_Intro 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps9 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps14 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps15 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps19 
+        AwardNewSpecialTrickToProfile {
+            all_profiles 
+            trick=Trick_JesterJuggle 
+            key_combo=SpMan_U_D_Triangle 
+        } 
+    } else {
+        Takeover_VO 
+    } 
+} 
+script NO_Unlock_Voodoo_Goals {
+    if GoalManager_GoalIsLocked name=NO_Goal_Gaps11 {
+        if ScreenElementExists id=ped_speech_dialog {
+            DestroyScreenElement id=ped_speech_dialog 
+        } 
+        
+        Create name=TRG_Ped_Voodoo_Intro 
+        PlayIntroCameras goal_intro_cameras=NO_Voodoo_Goal_Intro_Cameras letterbox 
+        kill name=TRG_Ped_Voodoo_Intro 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps11 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps16 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps18 
+        GoalManager_UnlockGoal name=NO_Goal_Gaps17 
+    } else {
+        Takeover_VO 
+    } 
+} 
+script NO_ShatteringGate {
+    GetBonus score=1000 text="Destruction Bonus" 
+    SpawnSound NO_SFX_BreakObrienFence 
+    Shatter {name=<name> 
+        area=2000 
+        texture_swap=JG_BO_Shatter_SHFence 
+        variance=1.0 
+        spread=1.5 
+        life=3 
+        bounce=0 
+        scale=0.4 
+        vel_x=0 
+        vel_y=60 
+        vel_z=0 
+    } 
+    kill name=<name> 
+} 
+script NO_Tony_Advance {
+    Obj_ClearExceptions 
+    setup_ped_speech {ped_id=TRG_Ped_Hawk 
+        activation_script=ChapterAdvanceDialog 
+        accept_text="Tony Hawk press \\m5 to talk" 
+    } 
+    Ped_InitAI stand should_look_at_skater=0 Cop_Ticketing 
+} 
+script NO_CreatePeds {
+    Create prefix="trg_ped_" 
+    Create prefix="trg_skate_ped_" 
+    Create prefix="trg_ped_club_" 
+    Create prefix="trg_ped_jazz_" 
+} 
+script NO_CreateZombies {
+    Get_Current_Skater_name 
+    if (<name> = voodoo) {
+        kill prefix="TRG_zomb_ped_" 
+        kill prefix="TRG_zomb_explode_" 
+        Create prefix="TRG_zomb_explode_" 
+    } else {
+        kill prefix="TRG_zomb_ped_" 
+        Create prefix="TRG_zomb_ped_" 
+        kill prefix="TRG_zomb_explode_" 
+    } 
+} 
+script NO_KillZombies {
+    kill prefix="TRG_zomb_ped_" 
+    kill prefix="TRG_zomb_explode_" 
+} 
+script NO_Peds_Eventstart {
+    kill prefix="trg_ped_" 
+    kill prefix="trg_ped_jazz_" 
+    kill prefix="trg_skate_ped_" 
+    kill prefix="trg_ped_club_" 
+    NO_CreateZombies 
+} 
+script NO_Peds_Eventend {
+    NO_KillZombies 
+    Create prefix="trg_ped_" 
+    Create prefix="trg_ped_club_" 
+    Create prefix="trg_ped_jazz_" 
+    Create prefix="trg_skate_ped" 
+} 
+script TRG_Ped_TricycleScript {
+    NO_Ped_Tricycle {switch_node=TRG_Restart_player1 
+        current_node=TRG_ped_voodoo_tricycle 
+        you_node=TRG_restart_swamp 
+    } 
+} 
+script NO_Sewer_Off {
+    invisible prefix="g_sewer" 
+} 
+script NO_Sewer_On {
+    if ! InMultiplayerGame {
+        visible prefix="g_sewer" 
+    } 
+} 
+script NO_Car01 {
+    Car_Generic01 DefaultSpeed=40 turndist=35 StickToGround skitchspeed=55 
+} 
+script NO_Car02 {
+    Car_Generic01 {
+        DefaultSpeed=25 
+        turndist=25 
+        StickToGround 
+        skitchspeed=55 
+        SkaterCheckOffset=(0.0, 0.0, 15.0) 
+    } 
+} 
+script NO_Float_Proxim {
+    Obj_ClearExceptions 
+    ClearExceptionGroup NO_Float_Ghost 
+    if isAlive name=TRG_veh_float1 {
+        Obj_LockToObject ObjectName=TRG_veh_float1 (0.0, 140.0, 31.0) 
+    } else {
+        if isAlive name=TRG_veh_float2 {
+            Obj_LockToObject ObjectName=TRG_veh_float2 (0.0, 140.0, 31.0) 
+        } 
+    } 
+    UnSetFlag flag=FLAG_SKATER_ON_FLOAT 
+    
+    Obj_SetInnerRadius 15 
+    Obj_SetException ex=ObjectInRadius scr=NO_Float_Proxim_Near group=NO_Float_Ghost 
+} 
+script NO_Float_Proxim_Near {
+    Obj_ClearExceptions 
+    ClearExceptionGroup NO_Float_Ghost 
+    Obj_SetOuterRadius 17 
+    Obj_SetException ex=ObjectOutofRadius scr=NO_Float_Proxim group=NO_Float_Ghost 
+    SetFlag flag=FLAG_SKATER_ON_FLOAT 
+    
+} 
+script NO_ZombieManager {
+    ClearExceptionGroup Zombie 
+    WaitForEvent Type=Zombie_Explode 
+    
+    GoalManager_SetGoalFlag name=NO_Goal_Gaps11 got_1 1 
+    WaitForEvent Type=Zombie_Explode 
+    
+    GoalManager_SetGoalFlag name=NO_Goal_Gaps11 got_2 1 
+    WaitForEvent Type=Zombie_Explode 
+    
+    GoalManager_SetGoalFlag name=NO_Goal_Gaps11 got_3 1 
+    WaitForEvent Type=Zombie_Explode 
+    
+    GoalManager_SetGoalFlag name=NO_Goal_Gaps11 got_4 1 
+    WaitForEvent Type=Zombie_Explode 
+    
+    GoalManager_SetGoalFlag name=NO_Goal_Gaps11 got_5 1 
+    WaitForEvent Type=Zombie_Explode 
+    
+    GoalManager_SetGoalFlag name=NO_Goal_Gaps11 got_6 1 
+    WaitForEvent Type=Zombie_Explode 
+    
+    GoalManager_SetGoalFlag name=NO_Goal_Gaps11 got_7 1 
+    WaitForEvent Type=Zombie_Explode 
+    
+    GoalManager_SetGoalFlag name=NO_Goal_Gaps11 got_8 1 
+    WaitForEvent Type=Zombie_Explode 
+    
+    GoalManager_SetGoalFlag name=NO_Goal_Gaps11 got_9 1 
+    WaitForEvent Type=Zombie_Explode 
+    
+    GoalManager_SetGoalFlag name=NO_Goal_Gaps11 got_10 1 
+    Die 
+} 
+script Zombie_SFX_Die {
+    PlaySound SK6_NO_Hit_Zombie vol=130 
+    random2 {
+1 { PlayStream Zombie_Death01 vol=200 priority=StreamPriorityHigh 
+ } 1 { PlayStream Zombie_Death02 vol=200 priority=StreamPriorityHigh 
+ } 1 { PlayStream Zombie_Death03 vol=200 priority=StreamPriorityHigh 
+ } } 
+} 
+script NO_BeadManager {
+    ClearExceptionGroup NO_Beads 
+    SetException ex=PedHitByProjectile group=NO_Beads scr=NO_BeadManager_Check 
+    block 
+} 
+script NO_BeadManager_Check {
+    ClearExceptionGroup NO_Beads 
+    if GetFlag flag=FLAG_SKATER_ON_FLOAT {
+        
+        SpawnScript NO_SetBeadFlags 
+    } 
+    goto NO_BeadManager 
+} 
+script NO_SetBeadFlags {
+    if GoalManager_GoalExists name=NO_Goal_Gaps9 {
+        if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps9 flag=got_1 {
+            GoalManager_SetGoalFlag name=NO_Goal_Gaps9 got_1 1 
+        } else {
+            if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps9 flag=got_2 {
+                GoalManager_SetGoalFlag name=NO_Goal_Gaps9 got_2 1 
+            } else {
+                if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps9 flag=got_3 {
+                    GoalManager_SetGoalFlag name=NO_Goal_Gaps9 got_3 1 
+                } else {
+                    if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps9 flag=got_4 {
+                        GoalManager_SetGoalFlag name=NO_Goal_Gaps9 got_4 1 
+                    } else {
+                        if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps9 flag=got_5 {
+                            GoalManager_SetGoalFlag name=NO_Goal_Gaps9 got_5 1 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_SkaterOnFloat {
+    SetFlag flag=FLAG_SKATER_ON_FLOAT 
+} 
+script NO_SkaterOffFloat {
+    UnSetFlag flag=FLAG_SKATER_ON_FLOAT 
+} 
+script NO_Classic_Voodoo_Doll {
+    Obj_ClearExceptions 
+    Obj_SetException ex=ObjectInRadius scr=NO_Classic_Voodoo_Got params=<...> 
+    Obj_SetInnerRadius 5 
+    Obj_RotY speed=250 
+    Obj_Hover Amp=10 Freq=1 
+} 
+script NO_Classic_Voodoo_Got {
+    Obj_ClearExceptions 
+    goal_collect_got_object goal_id=NO_Classic_Goal_Collect flag=<flag> 
+    Die 
+} 
+script NO_Classic_Crystal_Ball {
+    Obj_ClearExceptions 
+    Obj_SetException ex=ObjectInRadius scr=NO_Classic_Crystal_Ball_Got params=<...> 
+    
+    Obj_SetInnerRadius 5 
+    Obj_RotY speed=250 
+    Obj_Hover Amp=5 Freq=1 
+} 
+script NO_Classic_Crystal_Ball_Got {
+    Obj_ClearExceptions 
+    goal_collect_got_object goal_id=NO_Classic_Goal_Collect2 flag=<flag> 
+    switch <name>
+        case Classic_CrystalBall01 {
+            CreateFastParticleSystem name=JOW_NO_CrystalBall01 params_Script=JOW_NO_CrystalBall01_fast_particle_params 
+        }
+        case Classic_CrystalBall02 {
+            CreateFastParticleSystem name=JOW_NO_CrystalBall02 params_Script=JOW_NO_CrystalBall02_fast_particle_params 
+        }
+        case Classic_CrystalBall03 {
+            CreateFastParticleSystem name=JOW_NO_CrystalBall03 params_Script=JOW_NO_CrystalBall03_fast_particle_params 
+        }
+        case Classic_CrystalBall04 {
+            CreateFastParticleSystem name=JOW_NO_CrystalBall04 params_Script=JOW_NO_CrystalBall04_fast_particle_params 
+        }
+        case Classic_CrystalBall05 {
+            CreateFastParticleSystem name=JOW_NO_CrystalBall05 params_Script=JOW_NO_CrystalBall05_fast_particle_params 
+        }
+    endswitch    
+    PlaySound HitGlassPane2X 
+    Die 
+} 
+script NO_Enter_ChurchArea {
+    if IsCareerMode {
+        if ! isAlive name=TRG_Church_Dummy {
+            Create name=TRG_Church_Dummy 
+        } 
+    } 
+} 
+script NO_Exit_ChurchArea {
+    if IsCareerMode {
+        kill name=TRG_Church_Dummy 
+    } 
+} 
+script NO_Church_Dummy {
+    ClearExceptionGroup NO_Church_Dummy 
+    SetException ex=SkaterEnterSpecialTrick scr=NO_Church_Dummy_Special group=NO_Church_Dummy 
+    
+    block 
+} 
+script NO_Church_Dummy_Special {
+    ClearExceptionGroup NO_Church_Dummy 
+    SetException ex=SkaterLanded scr=NO_Church_Dummy_Landed group=NO_Church_Dummy 
+    SetException ex=SkaterBailed scr=NO_Church_Dummy_Bailed group=NO_Church_Dummy 
+    
+} 
+script NO_Church_Dummy_Bailed {
+    
+    goto NO_Church_Dummy 
+} 
+script NO_Church_Dummy_Landed {
+    ClearExceptionGroup NO_Church_Dummy 
+    
+    if GoalManager_GoalExists name=NO_Goal_Gaps19 {
+        if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps19 {
+            swap_skaters_get_current_name 
+            switch <name>
+                case custom {
+                    
+                    if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps19 flag=got_1 skater=custom {
+                        GoalManager_SetGoalFlag name=NO_Goal_Gaps19 got_1 1 skater=custom 
+                        
+                    } 
+                }
+                case pro_teammate {
+                    
+                    if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps19 flag=got_1 skater=pro {
+                        GoalManager_SetGoalFlag name=NO_Goal_Gaps19 got_1 1 skater=pro 
+                        
+                    } 
+                }
+                case jester {
+                    
+                    if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps19 flag=got_1 skater=jester {
+                        GoalManager_SetGoalFlag name=NO_Goal_Gaps19 got_1 1 skater=jester 
+                        
+                    } 
+                }
+                case voodoo {
+                    
+                }
+            endswitch            
+            <Special_Tricks> = 0 
+            if GoalManager_GoalFlagSet name=NO_Goal_Gaps19 flag=got_1 skater=pro {
+                <Special_Tricks> = (<Special_Tricks> + 1) 
+            } 
+            if GoalManager_GoalFlagSet name=NO_Goal_Gaps19 flag=got_1 skater=custom {
+                <Special_Tricks> = (<Special_Tricks> + 1) 
+            } 
+            if GoalManager_GoalFlagSet name=NO_Goal_Gaps19 flag=got_1 skater=jester {
+                <Special_Tricks> = (<Special_Tricks> + 1) 
+            } 
+            switch <Special_Tricks>
+                case 0 {
+                    
+                }
+                case 1 {
+                    create_panel_message {text="1 of 3 Special Tricks" style=goal_collect_text} 
+                }
+                case 2 {
+                    create_panel_message {text="2 of 3 Special Tricks" style=goal_collect_text} 
+                }
+                default {
+                }
+            endswitch            
+        } 
+    } 
+    Die 
+} 
+script NO_voodoo_vortex {
+    
+    NO_killCars 
+    kill name=TRG_SFX_TrigBox_DixieBandMusicOff 
+    kill name=TRG_SFX_TrigBox_DixieBand01 
+    kill name=TRG_SFX_TrigBox_SmallDixie 
+    kill name=TRG_SFX_TrigBox_LG_CajunBand01 
+    kill name=TRG_SFX_TrigBox_LG_CajunBandMusicOff 
+    kill name=TRG_SFX_TrigBox_MS_SmallCajunMusic 
+    SpawnScript NO_FakeLights_Off 
+    if ! isAlive name=g_vortex_cone {
+        Create name=g_vortex_cone 
+    } 
+    if isAlive name=g_grv_event_dome {
+        kill name=g_grv_event_dome 
+        kill name=TRG_G_grv_event_dome 
+    } 
+    if isAlive name=g_grv_dome_invis {
+        kill name=g_grv_dome_invis 
+    } 
+    if isAlive name=g_funkhole_cover {
+        kill name=g_funkhole_cover 
+    } 
+    if ! isAlive name=g_grv_event_bowl {
+        Create name=g_grv_event_bowl 
+        Create name=G_grv_event_bowl_soup01 
+        Create prefix="g_grv_bnc_skeleton_" 
+    } 
+    if ! isAlive name=g_vortex_base {
+        Create name=g_vortex_base 
+        Create name=g_vortex_base01 
+    } 
+    if GetFlag flag=FLAG_VORTEX {
+        Create prefix="g_vortex_debris" 
+        Create prefix="g_vortex_lightning" 
+        Create prefix="g_vortex_spin" 
+        Create prefix="g_vortex_bnc_" 
+        Create prefix="g_blockA_fire_hydrant_" 
+        Create name=vortex_particlebox_start_start 
+        Create name=vortex_tornado_particlebox_01_Start 
+        kill name=TRG_SFX_TrigBox_Tornado 
+        Create name=TRG_SFX_TrigBox_Tornado 
+        Create name=TRG_542 
+        Create name=TRG_543 
+        Create name=TRG_544 
+        Create name=TRG_545 
+        Create name=TRG_546 
+        Create name=TRG_547 
+        Create name=TRG_548 
+        Create name=TRG_549 
+        Create name=TRG_550 
+        Create name=TRG_551 
+        Create name=TRG_552 
+        Create name=TRG_553 
+        Create name=TRG_50 
+        Create name=TRG_51 
+        Create name=TRG_52 
+        Create name=TRG_53 
+        Create name=TRG_54 
+        Create name=TRG_55 
+        Create name=TRG_56 
+        Create name=TRG_60 
+        Create name=TRG_271 
+        Create name=TRG_272 
+        Create name=TRG_273 
+        Create name=TRG_274 
+        Create name=TRG_275 
+        Create name=TRG_276 
+        Create name=TRG_277 
+        Create name=TRG_278 
+    } 
+    if IsCareerMode {
+        if ! isAlive name=TRG_veh_heli {
+            if ! isAlive name=TRG_ped_voodoo_tricycle01 {
+                Create name=TRG_ped_voodoo_tricycle01 
+            } 
+        } 
+    } 
+    NO_Peds_Eventstart 
+} 
+script NO_voodoo_vortex_end {
+    UnSetFlag flag=FLAG_VORTEX 
+    play_cutscene name="cutscenes\\NO_LevelEvent2.cut" 
+    
+    NO_CreateCars 
+    kill name=TRG_SFX_TrigBox_CryptConstRumble01 
+    kill name=TRG_SFX_TrigBox_CryptConstRumble02 
+    kill name=TRG_SFX_TrigBox_CryptConstRumble03 
+    kill name=TRG_SFX_TrigBox_CryptConstRumble04 
+    kill name=TRG_SFX_TrigBox_CryptConstRumble05 
+    kill name=TRG_SFX_TrigBox_DixieBandMusicOff 
+    kill name=TRG_SFX_TrigBox_DixieBand01 
+    kill name=TRG_SFX_TrigBox_SmallDixie 
+    kill name=TRG_SFX_TrigBox_LG_CajunBand01 
+    kill name=TRG_SFX_TrigBox_LG_CajunBandMusicOff 
+    kill name=TRG_SFX_TrigBox_MS_SmallCajunMusic 
+    Create name=TRG_SFX_TrigBox_MS_SmallCajunMusic 
+    kill name=TRG_SFX_TrigBox_Tornado 
+    if isAlive name=g_vortex_cone {
+        kill name=g_vortex_cone 
+    } 
+    if isAlive name=g_grv_event_bowl {
+        Create name=g_grv_event_dome 
+        Create name=TRG_G_grv_event_dome 
+        Create name=g_grv_dome_invis 
+        Create name=g_funkhole_cover 
+        kill name=g_grv_crypt1_smoke 
+        kill name=g_grv_crypt2_smoke 
+        kill name=g_grv_crypt3_smoke 
+        kill name=g_grv_crypt4_smoke 
+        kill name=g_grv_crypt5_smoke 
+        KillSpawnedScript name=NO_Crypt1_open1 
+        KillSpawnedScript name=NO_Crypt2_openA 
+        KillSpawnedScript name=NO_Crypt2_openB 
+        KillSpawnedScript name=NO_Crypt3_open 
+        KillSpawnedScript name=NO_Crypt4_open 
+        KillSpawnedScript name=NO_Crypt5_open 
+        Create prefix="trg_skull1_" 
+        Create prefix="trg_skull2_" 
+        Create prefix="trg_skull3_" 
+        Create prefix="trg_skull4_" 
+        Create prefix="trg_skull5_" 
+        UnSetFlag flag=FLAG_CRYPT_1 
+        UnSetFlag flag=FLAG_CRYPT_2 
+        UnSetFlag flag=FLAG_CRYPT_3 
+        UnSetFlag flag=FLAG_CRYPT_4 
+        UnSetFlag flag=FLAG_CRYPT_5 
+        UnSetFlag flag=FLAG_SKULL 
+        change jm_skullcount=0 
+        if isAlive name=g_vortex_base {
+            kill name=g_vortex_base 
+            kill name=g_vortex_base01 
+        } 
+        kill prefix="g_vortex_debris" 
+        kill prefix="g_vortex_lightning" 
+        kill prefix="g_vortex_spin" 
+        kill prefix="g_vortex_bnc_" 
+        kill prefix="g_blockA_fire_hydrant_" 
+        kill name=vortex_particlebox_start_start 
+        kill name=vortex_tornado_particlebox_01_Start 
+        kill name=g_grv_event_bowl 
+        kill name=G_grv_event_bowl_soup01 
+        kill prefix="g_grv_bnc_skeleton_" 
+        kill name=TRG_542 
+        kill name=TRG_543 
+        kill name=TRG_544 
+        kill name=TRG_545 
+        kill name=TRG_546 
+        kill name=TRG_547 
+        kill name=TRG_548 
+        kill name=TRG_549 
+        kill name=TRG_550 
+        kill name=TRG_551 
+        kill name=TRG_552 
+        kill name=TRG_553 
+        kill name=TRG_50 
+        kill name=TRG_51 
+        kill name=TRG_52 
+        kill name=TRG_53 
+        kill name=TRG_54 
+        kill name=TRG_55 
+        kill name=TRG_56 
+        kill name=TRG_60 
+        kill name=TRG_271 
+        kill name=TRG_272 
+        kill name=TRG_273 
+        kill name=TRG_274 
+        kill name=TRG_275 
+        kill name=TRG_276 
+        kill name=TRG_277 
+        kill name=TRG_278 
+        change jm_skullcount=0 
+        kill name=trg_crypt2_coverA 
+        kill name=trg_crypt2_coverB 
+        kill name=trg_crypt3_cover 
+        kill name=trg_crypt4_cover 
+        kill name=trg_crypt5_cover 
+        wait 1 frame 
+        Create name=trg_crypt2_coverA 
+        Create name=trg_crypt2_coverB 
+        Create name=trg_crypt3_cover 
+        Create name=trg_crypt4_cover 
+        Create name=trg_crypt5_cover 
+    } 
+    NO_Peds_Eventend 
+} 
+script NO_vortex_spin_lamp {
+    g_vortex_spin_lamp01:Obj_RotZ speed=200 flag_max_coords 
+} 
+script NO_vortex_spin_happy {
+    g_vortex_spin_happyhour01:Obj_RotZ speed=400 flag_max_coords 
+} 
+script NO_vortex_spin_umbrella {
+    g_vortex_spin_umbrella01:Obj_RotZ speed=200 flag_max_coords 
+} 
+script NO_vortex_spin_plant {
+    g_vortex_spin_plantbox02:Obj_RotZ speed=300 flag_max_coords 
+} 
+script NO_vortex_spin_plant2 {
+    g_vortex_spin_planter01:Obj_RotZ speed=100 flag_max_coords 
+} 
+script NO_vortex_spin_sign {
+    g_vortex_spin_signs01:Obj_RotZ speed=100 flag_max_coords 
+} 
+script NO_Televator {{text="You forgot text=<place>!"} 
+    create_panel_message id=leaving_message text=<text> pos=(320.0, 300.0) rgba=[118, 110, 14, 128] 
+    pulse_blur start=255 speed=5 
+    if GotParam sound {
+        SpawnSound <sound> 
+    } 
+    if GotParam node {
+        sk3_teleporttonode nodename=<node> 
+    } else {
+        create_panel_message id=death_message text="You forgot node=<nodename>!!" pos=(320.0, 200.0) 
+    } 
+} 
+script NO_Televator_vortex {{text="You forgot text=<place>!"} 
+    create_panel_message id=leaving_message text=<text> pos=(320.0, 300.0) rgba=[118, 110, 14, 128] 
+    pulse_blur start=255 speed=5 
+    if GotParam sound {
+        SpawnSound <sound> 
+    } 
+    if GotParam node {
+        sk3_teleporttonode nodename=<node> 
+    } else {
+        create_panel_message id=death_message text="You forgot node=<nodename>!!" pos=(320.0, 200.0) 
+    } 
+} 
+goingup_A1_params = {
+    node=TRG_tele_up01 
+    text="the Nawlins rooftop" 
+    sound=NO_Elevator 
+} 
+sewer_alley_params = {
+    node=TRG_sewer_alley 
+    text="" 
+    sound=NO_sound_gratesopen 
+} 
+sewer_grv_params = {
+    node=TRG_sewer_grv 
+    text="" 
+    sound=NO_sound_gratesopen 
+} 
+sewer_riv_params = {
+    node=TRG_sewer_riv 
+    text="" 
+    sound=NO_sound_gratesopen 
+} 
+sewer_church_params = {
+    node=TRG_sewer_church 
+    text="" 
+    sound=NO_sound_gratesopen 
+} 
+goingdown_D_params = {
+    node=TRG_tele_D_down 
+    text=" Bourbon St. " 
+    sound=NO_Elevator 
+} 
+goingup_D_params = {
+    node=TRG_tele_D_up 
+    text=" Josh O'Briens Rooftop " 
+    sound=NO_Elevator 
+} 
+goingdown_B_params = {
+    node=TRG_tele_B_down 
+    text=" Nawlins St. " 
+    sound=NO_Elevator 
+} 
+goingup_B_params = {
+    node=TRG_tele_B_up 
+    text=" Boo-YA's Bottomless Rooftop " 
+    sound=NO_Elevator 
+} 
+goingdown_C_params = {
+    node=TRG_tele_C_down 
+    text=" Nawlins St. " 
+    sound=NO_Elevator 
+} 
+goingup_C_params = {
+    node=TRG_tele_C_up 
+    text=" Ye Absinthe House of Olde Yonder Lorn Rooftop " 
+    sound=NO_Elevator 
+} 
+goingdown_A_params = {
+    node=TRG_tele_A_down 
+    text=" Dauphine St. " 
+    sound=NO_Elevator 
+} 
+goingup_A_params = {
+    node=TRG_tele_A_up 
+    text=" Green Goddess RoofTop " 
+    sound=NO_Elevator 
+} 
+goingup_Ajump_params = {
+    node=TRG_tele_A_upjump 
+    text=" Bourdeaux's Backyard Rooftop " 
+    sound=NO_Elevator 
+} 
+corner_params = {
+    node=TRG_tele_corner 
+    text=" Office Building " 
+    sound=NO_sound_glassbreak 
+} 
+script NO_Elevator {
+    PlayStream SK6_BA_ElevatorDing 
+} 
+script NO_sound_gratesopen {
+} 
+script NO_sound_glassbreak {
+} 
+script NO_combo_panels {
+    SpawnScript NO_combo_panels_start 
+} 
+script NO_combo_panels_start {
+    if (jm_panels_broken > 0) {
+        change jm_panels_broken=0 
+        SpawnScript recreate_balcs 
+    } 
+    ClearExceptionGroup NO_panelbreak 
+    SetExceptionHandler ex=SkaterEnterCombo scr=NO_combo_panels_end group=NO_panelbreak 
+    block 
+} 
+script NO_combo_panels_end {
+    
+    ClearExceptionGroup NO_panelbreak 
+    SetExceptionHandler ex=SkaterExitCombo scr=NO_combo_panels_start group=NO_panelbreak 
+    SetExceptionHandler ex=SkaterLanded scr=NO_combo_panels_start group=NO_panelbreak 
+    block 
+} 
+script NO_shatter {
+    if ! InNetGame {
+        PlaySound NJ_woodbreak01 pitch=randomrange(90.0, 120.0) 
+        ShatterAndDie {name=<object> 
+            texture_swap=apm_Crate02_xploder02 
+            area=1 
+            variance=4 
+            vel_x=0 
+            vel_y=50 
+            vel_z=-50 
+            spread=1 
+            vibrate 
+        } 
+        change jm_panels_broken=(jm_panels_broken + 1) 
+        FormatText TextName=panels_broken_text "%c Balconies busted" c=jm_panels_broken 
+        create_panel_message id=message_panels_broken text=<panels_broken_text> style=style_NO_broken_panel z_priority=-30 
+        if (SkaterCurrentScorePotLessThan 1) {
+            
+            change jm_panels_broken=0 
+        } 
+        if (jm_panels_broken = 3) {
+            if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps15 {
+                GoalManager_SetGoalFlag name=NO_Goal_Gaps15 got_1 1 
+            } 
+        } 
+        if GetGlobalFlag flag=MOD_NO_BALCONY_RESPAWN {
+            SpawnScript NO_ModBalconyRestore params={object=<object>} 
+        } 
+    } 
+}
+script NO_ModBalconyRestore {
+    while {
+        if (SkaterCurrentScorePotLessThan 1) {
+            if ! isAlive name=<object> {
+                Create name=<object> 
+            } 
+            return 
+        } 
+        wait 2 frames 
+    } 
+}
+ 
+script recreate_panel {time = 4 
+    wait <time> seconds 
+    Create prefix=<prefix> 
+} 
+script recreate_balcs {
+    group = random { 1 { 1 } 1 { 2 } 1 { 3 } 1 { 4 } } 
+    switch <group>
+        case 1 {
+            Create prefix="balc_blockA_" 
+        }
+        case 2 {
+            Create prefix="balc_blockB_" 
+        }
+        case 3 {
+            Create prefix="balc_blockC_" 
+        }
+        case 4 {
+            Create prefix="balc_blockD_" 
+        }
+    endswitch    
+} 
+script style_NO_broken_panel {
+    switch jm_panels_broken
+        case 1 {
+            SetProps just=[center center] rgba=[120 120 0 255] 
+            DoMorph time=0.2 pos=(320.0, 80.0) scale=1.5 alpha=0.8 
+            DoMorph time=0.1 scale=1.2 alpha=1 
+            wait 0.7 seconds 
+            DoMorph time=0.1 scale=0 alpha=0 
+        }
+        case 2 {
+            SetProps just=[center center] rgba=[140 100 0 255] 
+            DoMorph time=0.2 pos=(320.0, 80.0) scale=1.5 alpha=0.8 
+            DoMorph time=0.1 scale=1.2 alpha=1 
+            wait 0.7 seconds 
+            DoMorph time=0.1 scale=0 alpha=0 
+        }
+        case 3 {
+            SetProps just=[center center] rgba=[160 80 0 255] 
+            DoMorph time=0.2 pos=(320.0, 80.0) scale=1.5 alpha=0.8 
+            DoMorph time=0.1 scale=1.2 alpha=1 
+            wait 0.7 seconds 
+            DoMorph time=0.1 scale=0 alpha=0 
+        }
+        case 4 {
+            SetProps just=[center center] rgba=[200 60 0 255] 
+            DoMorph time=0.2 pos=(320.0, 80.0) scale=1.5 alpha=0.8 
+            DoMorph time=0.1 scale=1.2 alpha=1 
+            wait 0.7 seconds 
+            DoMorph time=0.1 scale=0 alpha=0 
+        }
+        case 5 {
+            SetProps just=[center center] rgba=[220 40 0 255] 
+            DoMorph time=0.2 pos=(320.0, 80.0) scale=1.5 alpha=0.8 
+            DoMorph time=0.1 scale=1.2 alpha=1 
+            wait 0.7 seconds 
+            DoMorph time=0.1 scale=0 alpha=0 
+        }
+        case 6 {
+            SetProps just=[center center] rgba=[240 20 0 255] 
+            DoMorph time=0.2 pos=(320.0, 80.0) scale=1.5 alpha=0.8 
+            DoMorph time=0.1 scale=1.2 alpha=1 
+            wait 0.7 seconds 
+            DoMorph time=0.1 scale=0 alpha=0 
+        }
+        default {
+            SetProps just=[center center] rgba=[240 20 0 255] 
+            DoMorph time=0.2 pos=(320.0, 80.0) scale=1.5 alpha=0.8 
+            DoMorph time=0.1 scale=1.2 alpha=1 
+            wait 0.7 seconds 
+            DoMorph time=0.1 scale=0 alpha=0 
+        }
+    endswitch    
+    wait 60 frames 
+    kill_panel_message_if_it_exists id=message_panels_broken 
+} 
+script NO_shatter_freeze2 {
+    SpawnSound NO_SFX_Hit_AC_Unit 
+    if ! InMultiplayerGame {
+        TODManager_SetTempBloomParams On=1 
+        TODManager_SetTempBloomParams color=[80 80 250] 
+        TODManager_SetTempBloomParams bloom1=20 
+        TODManager_SetTempBloomParams bloom2=80 
+        TODManager_SetTempBloomParams Strength=[128 128 128] 
+        GetBonus score=1000 text="AC unit" 
+        trigger_speed_boost multi=1.25 DefBoostSound=0 
+        CreateFastParticleSystem name=MRfreezeF01 params_Script=apm_NO_Freeze01_fast_particle_params attachobjid=skater 
+        createflexibleparticlesystem name=MRfreeze01 params_Script=apm_NO_freeze01_particle_params 
+        wait 10 frames 
+        wait 3 frames 
+    } 
+    wait 5 frames 
+    SpawnSound NO_SFX_Breakout_Ice 
+    if ! InMultiplayerGame {
+        wait 15 frames 
+        TODManager_SetTempBloomParams On=0 
+    } 
+} 
+script NO_shatter_freeze {
+    SpawnSound NO_SFX_Hit_AC_Unit 
+    if ! InMultiplayerGame {
+        TODManager_SetTempBloomParams On=1 
+        TODManager_SetTempBloomParams color=[80 80 250] 
+        TODManager_SetTempBloomParams bloom1=20 
+        TODManager_SetTempBloomParams bloom2=80 
+        TODManager_SetTempBloomParams Strength=[128 128 128] 
+        GetBonus score=1000 text="AC unit" 
+        trigger_speed_boost multi=1.25 DefBoostSound=0 
+        CreateFastParticleSystem name=MRfreezeF01 params_Script=apm_NO_Freeze01_fast_particle_params attachobjid=skater 
+        createflexibleparticlesystem name=MRfreeze01 params_Script=apm_NO_freeze01_particle_params 
+        wait 10 frames 
+        wait 3 frames 
+    } 
+    wait 5 frames 
+    SpawnSound NO_SFX_Breakout_Ice 
+    if ! InMultiplayerGame {
+        wait 15 frames 
+        TODManager_SetTempBloomParams On=0 
+    } 
+    ShatterAndDie name=<name> area=1000 variance=4 vel_x=0 vel_y=0 vel_z=0 spread=100 vibrate 
+    if (<name> = g_blockD_65) {
+    } else {
+        kill name=<shadow> 
+    } 
+} 
+script NO_NatasSpin {
+    
+    GetTriggerArray spin onto 
+    if Triggertype <trigger_array> {
+        
+        SetException ex=SkaterJump scr=NO_Natas_Done 
+        SetException ex=SkaterBailed scr=NO_Natas_Done 
+        SetException ex=SkaterEnterAir scr=NO_Natas_Done 
+        wait 3 seconds 
+        if ! isAlive name=<water_node> {
+            Create name=<water_node> 
+            GetBonus score=1000 text="Hydrant Pop" 
+            if (<water_node> = g_blockA_fire_hydrant_water01) {
+                SpawnScript NO_SFX_HydrantPop1 
+            } 
+            if (<water_node> = g_blockC_fire_hydrant_water01) {
+                SpawnScript NO_SFX_HydrantPop2 
+            } 
+        } 
+        
+    } 
+} 
+script NO_jump_fan {
+    
+    ClearExceptionGroup NO_jumpfan 
+    SetExceptionHandler ex=SkaterJump scr=NO_jump_fan_ollie group=NO_jumpfan 
+    block 
+} 
+script NO_jump_fan_level2 {
+    
+    ClearExceptionGroup NO_jumpfan 
+    SetExceptionHandler ex=SkaterJump scr=NO_jump_fan_ollie_level2 group=NO_jumpfan 
+    block 
+} 
+script NO_jump_vator {
+    
+    ClearExceptionGroup NO_jumpfan 
+    SetExceptionHandler ex=SkaterJump scr=NO_jump_vator_ollie group=NO_jumpfan 
+    block 
+} 
+script NO_jump_fan_ollie {
+    trigger_jump_boost multi=2.3 
+} 
+script NO_jump_fan_ollie_level2 {
+    trigger_jump_boost multi=3.9 
+} 
+script NO_jump_vator_ollie {
+    trigger_jump_boost multi=3.2 
+    SpawnScript NO_vator_updown 
+    SpawnScript NO_vator_ladafly 
+} 
+script NO_vator_updown {
+    wait 10 frames 
+    trg_obj_parkvator:Obj_PlaySound SK6_BO_TrainLoop02 pitch=50 vol=100 dropoff=70 
+    trg_obj_parkvator:Obj_MoveToNode name=TRG_parkvator_roof speed=50 
+    trg_obj_parkvator:Obj_WaitMove 
+    trg_obj_parkvator:Obj_PlaySound GrindMetalOn02 vol=150 pitch=20 dropoff=70 
+    trg_obj_parkvator:Obj_StopSound SK6_BO_TrainLoop02 
+    trg_obj_parkvator:Obj_StopSound SK6_BO_TrainLoop02 
+    wait 5 seconds 
+    trg_obj_parkvator:Obj_MoveToNode name=TRG_parkvator_floor speed=25 
+    trg_obj_parkvator:Obj_PlaySound SK6_BO_TrainLoop02 pitch=50 vol=100 dropoff=70 
+    trg_obj_parkvator:Obj_WaitMove 
+    trg_obj_parkvator:Obj_PlaySound GrindMetalOn02 vol=150 pitch=20 dropoff=70 
+    trg_obj_parkvator:Obj_StopSound SK6_BO_TrainLoop02 
+    trg_obj_parkvator:Obj_StopSound SK6_BO_TrainLoop02 
+} 
+script NO_vator_ladafly {
+    if ! InMultiplayerGame {
+        trg_lada:Obj_MoveToNode name=TRG_ladafly speed=50 
+        trg_lada:Obj_WaitMove 
+        trg_lada:Obj_MoveToNode name=TRG_parkvator_roof speed=25 
+        trg_lada:Obj_WaitMove 
+        wait 4 seconds 
+        trg_lada:Obj_MoveToNode name=TRG_parkvator_floor speed=25 
+    } 
+} 
+script NO_jump_fan_deactivate {
+    
+    KillSpawnedScript name=NO_jump_fan 
+    KillSpawnedScript name=NO_jump_fan_level2 
+    KillSpawnedScript name=NO_jump_vator 
+} 
+script NO_smoke {
+    if ! GetFlag flag=FLAG_SMOKE1 {
+        SetFlag flag=FLAG_SMOKE1 
+        if ! InMultiplayerGame {
+            CreateFastParticleSystem name=SootyF01 params_Script=apm_NO_Sooty01_fast_particle_params attachobjid=skater 
+            createflexibleparticlesystem name=Sooty01 params_Script=apm_NO_Sooty01_particle_params 
+        } 
+        SpawnSound NO_SFX_Go_Through_Smoke 
+        wait 1 second 
+        ClearExceptionGroup NO_cleaned 
+        SpawnScript NO_cleancheck 
+        wait 5 seconds 
+        if ! GetFlag flag=FLAG_SMOKE2 {
+            SpawnScript NO_cleantimer_smoke 
+        } 
+    } 
+} 
+script NO_cleancheck {
+    ClearExceptionGroup NO_cleaned 
+    SetExceptionHandler ex=SkaterBailed scr=NO_bailcleaned_smoke group=NO_cleaned 
+    SetExceptionHandler ex=SkaterJump scr=NO_cleaned_smoke group=NO_cleaned 
+    block 
+} 
+script NO_cleaned_smoke {
+    SetFlag flag=FLAG_SMOKE2 
+    if ! InMultiplayerGame {
+        KillSpawnedScript name=NO_cleantimer 
+        KillSpawnedScript name=NO_cleantimer_smoke 
+        ClearExceptionGroup NO_cleaned 
+        skater:GetGap score=1000 text="CLEAN" 
+        Destroyfastparticlesystem name=SootyF01 attachobjid=skater 
+        skater:Destroyflexibleparticlesystem name=Sooty01 
+        CreateFastParticleSystem name=sootpoof01 params_Script=apm_NO_Sootpoof01_fast_particle_params attachobjid=skater 
+        wait 5 seconds 
+        Destroyfastparticlesystem name=sootpoof01 attachobjid=skater 
+    } 
+    wait 30 frames 
+    UnSetFlag flag=FLAG_SMOKE1 
+    UnSetFlag flag=FLAG_SMOKE2 
+} 
+script NO_bailcleaned_smoke {
+    SetFlag flag=FLAG_SMOKE2 
+    KillSpawnedScript name=NO_cleantimer 
+    KillSpawnedScript name=NO_cleantimer_smoke 
+    ClearExceptionGroup NO_cleaned 
+    if ! InMultiplayerGame {
+        Destroyfastparticlesystem name=SootyF01 attachobjid=skater 
+        skater:Destroyflexibleparticlesystem name=Sooty01 
+        CreateFastParticleSystem name=sootpoof01 params_Script=apm_NO_Sootpoof01_fast_particle_params attachobjid=skater 
+        wait 5 seconds 
+        Destroyfastparticlesystem name=sootpoof01 attachobjid=skater 
+    } 
+    wait 30 frames 
+    UnSetFlag flag=FLAG_SMOKE1 
+    UnSetFlag flag=FLAG_SMOKE2 
+} 
+script NO_cleantimer_smoke {
+    KillSpawnedScript name=NO_cleancheck 
+    ClearExceptionGroup NO_cleaned 
+    if ! InMultiplayerGame {
+        Destroyfastparticlesystem name=SootyF01 attachobjid=skater 
+        skater:Destroyflexibleparticlesystem name=Sooty01 
+        CreateFastParticleSystem name=sootpoof01 params_Script=apm_NO_Sootpoof01_fast_particle_params attachobjid=skater 
+        wait 5 seconds 
+        Destroyfastparticlesystem name=sootpoof01 attachobjid=skater 
+    } 
+    wait 30 frames 
+    UnSetFlag flag=FLAG_SMOKE1 
+    UnSetFlag flag=FLAG_SMOKE2 
+} 
+script NO_garbage {
+    if ! GetFlag flag=FLAG_TRASH1 {
+        SetFlag flag=FLAG_TRASH1 
+        if ! InMultiplayerGame {
+            SpawnScript NO_SFX_FliesOnSkater 
+            CreateFastParticleSystem name=StinkyF01 params_Script=apm_NO_Stinky01_fast_particle_params attachobjid=skater 
+            CreateFastParticleSystem name=flysF01 params_Script=apm_NO_Flys01_fast_particle_params attachobjid=skater 
+            createflexibleparticlesystem name=Stinky01 params_Script=apm_NO_Stinky01_particle_params 
+        } 
+        PlaySound RatDeathSquish pitch=randomrange(90.0, 120.0) 
+        wait 1 second 
+        ClearExceptionGroup NO_cleaned_garbage 
+        SpawnScript NO_cleancheck_garbage 
+        wait 5 seconds 
+        if ! GetFlag flag=FLAG_TRASH2 {
+            SpawnScript NO_cleantimer_garbage 
+        } 
+    } 
+} 
+script NO_cleancheck_garbage {
+    ClearExceptionGroup NO_cleaned_garbage 
+    SetExceptionHandler ex=SkaterBailed scr=NO_bailcleaned_garbage group=NO_cleaned_garbage 
+    SetExceptionHandler ex=SkaterJump scr=NO_cleaned_garbage group=NO_cleaned_garbage 
+    block 
+} 
+script NO_cleaned_garbage {
+    SetFlag flag=FLAG_TRASH2 
+    KillSpawnedScript name=NO_cleantimer_garbage 
+    ClearExceptionGroup NO_cleaned_garbage 
+    StopStream ThisSkaterFliesSFX 
+    if ! InMultiplayerGame {
+        Destroyfastparticlesystem name=StinkyF01 attachobjid=skater 
+        Destroyfastparticlesystem name=flysF01 attachobjid=skater 
+        skater:Destroyflexibleparticlesystem name=Stinky01 
+        CreateFastParticleSystem name=StinkyPoof01 params_Script=apm_NO_StinkyPoof01_fast_particle_params attachobjid=skater 
+        wait 5 seconds 
+        Destroyfastparticlesystem name=StinkyPoof01 attachobjid=skater 
+    } 
+    wait 30 frames 
+    UnSetFlag flag=FLAG_TRASH1 
+    UnSetFlag flag=FLAG_TRASH2 
+} 
+script NO_bailcleaned_garbage {
+    SetFlag flag=FLAG_TRASH2 
+    KillSpawnedScript name=NO_cleantimer_garbage 
+    ClearExceptionGroup NO_cleaned_garbage 
+    if ! InMultiplayerGame {
+        Destroyfastparticlesystem name=StinkyF01 attachobjid=skater 
+        Destroyfastparticlesystem name=flysF01 attachobjid=skater 
+        skater:Destroyflexibleparticlesystem name=Stinky01 
+        CreateFastParticleSystem name=StinkyPoof01 params_Script=apm_NO_StinkyPoof01_fast_particle_params attachobjid=skater 
+        wait 5 seconds 
+        Destroyfastparticlesystem name=StinkyPoof01 attachobjid=skaterdestroyfastparticlesystem name=sootpoof01 attachobjid=skater 
+    } 
+    wait 30 frames 
+    UnSetFlag flag=FLAG_TRASH1 
+    UnSetFlag flag=FLAG_TRASH2 
+} 
+script NO_cleantimer_garbage {
+    KillSpawnedScript name=NO_cleancheck_garbage 
+    ClearExceptionGroup NO_cleaned_garbage 
+    if ! InMultiplayerGame {
+        Destroyfastparticlesystem name=StinkyF01 attachobjid=skater 
+        Destroyfastparticlesystem name=flysF01 attachobjid=skater 
+        skater:Destroyflexibleparticlesystem name=Stinky01 
+        CreateFastParticleSystem name=StinkyPoof01 params_Script=apm_NO_StinkyPoof01_fast_particle_params attachobjid=skater 
+        wait 5 seconds 
+        Destroyfastparticlesystem name=StinkyPoof01 attachobjid=skaterdestroyfastparticlesystem name=sootpoof01 attachobjid=skater 
+    } 
+    wait 30 frames 
+    UnSetFlag flag=FLAG_TRASH1 
+    UnSetFlag flag=FLAG_TRASH2 
+} 
+script NO_water {
+    KillSpawnedScript name=NO_cleancheck 
+    if ! InMultiplayerGame {
+        CreateFastParticleSystem name=waterhead01 params_Script=apm_NO_waterhead01_fast_particle_params attachobjid=skater 
+    } 
+} 
+script NO_Kill_Water {
+    if ! InMultiplayerGame {
+        Destroyfastparticlesystem name=waterhead01 attachobjid=skater 
+    } 
+} 
+script NO_flame {
+    GetTriggerArray skate off 
+    if Triggertype <trigger_array> {
+        if GoalManager_GoalExists name=NO_Goal_Gaps3 {
+            if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps3 {
+                SpawnScript NO_SetFlameFlags 
+            } 
+        } 
+        if ! InNetGame {
+            SpawnSkaterScript NO_FireParticlesOn 
+        } 
+        trigger_speed_boost multi=1.25 
+        PlaySound HitGlassPane2X pitch=110 
+        if ! InNetGame {
+            GetGap score=1000 text="GAS LAMP" 
+            wait 2 seconds 
+            SpawnSkaterScript NO_FireParticlesOff 
+        } 
+    } 
+} 
+script NO_SetFlameFlags {
+    if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps3 flag=got_1 {
+        GoalManager_SetGoalFlag name=NO_Goal_Gaps3 got_1 1 
+    } else {
+        if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps3 flag=got_2 {
+            GoalManager_SetGoalFlag name=NO_Goal_Gaps3 got_2 1 
+        } else {
+            if ! GoalManager_GoalFlagSet name=NO_Goal_Gaps3 flag=got_3 {
+                GoalManager_SetGoalFlag name=NO_Goal_Gaps3 got_3 1 
+            } 
+        } 
+    } 
+} 
+script NO_FireParticlesOn {
+    
+    if ! InMultiplayerGame {
+        createflexibleparticlesystem name=BurnMoFo params_Script=APM_flamingBOARD_particle_params 
+        createflexibleparticlesystem name=SmokeyMoFo params_Script=apm_OILYsmoke_particle_params 
+    } 
+} 
+script NO_FireParticlesOff {
+    if ! InMultiplayerGame {
+        Destroyflexibleparticlesystem name=BurnMoFo 
+        wait 30 frames 
+        Destroyflexibleparticlesystem name=SmokeyMoFo 
+    } 
+} 
+script NO_manualcheck_init {
+    SpawnScript NO_skater_manual 
+} 
+script NO_skater_manual {
+    
+    ClearExceptionGroup NO_inmanual 
+    change jm_skaterinmanual=0 
+    SetExceptionHandler ex=SkaterEnterManual scr=NO_manual_active group=NO_inmanual 
+    block 
+} 
+script NO_manual_active {
+    
+    ClearExceptionGroup NO_inmanual 
+    change jm_skaterinmanual=1 
+    SetExceptionHandler ex=SkaterExitManual scr=NO_skater_manual group=NO_inmanual 
+    block 
+} 
+script NO_manual_spot {
+    switch jm_skaterinmanual
+        case 1 {
+            SpawnScript NO_SFX_Manual_Over_Manhole 
+            ShakeCamera {
+                duration=0.2 
+                vert_amp=5.0 
+                horiz_amp=3.0 
+                vert_vel=10.27 
+                horiz_vel=5.92} 
+            wait 0.5 seconds 
+        }
+    endswitch    
+} 
+script NO_wallplant_sign {
+    
+    SetException ex=SkaterExitAir scr=NO_neon_burst group=NO_neonsign 
+    SetException ex=SkaterExitWallplant scr=NO_neon_burst group=NO_neonsign 
+    
+} 
+script NO_neon_burst {
+    SpawnScript NO_SFX_NeonSignBreak 
+    nightvision_hud 
+    wait 1 frames 
+    really_kill_flicker_nightvision_hud 
+} 
+script NO_sign_obriens {
+    SpawnSound NO_SFX_HitObriensSign 
+    switch <direction>
+        case 1 {
+            trg_sign_obriens1:Obj_RotY angle=-10 speed=100 flag_max_coords 
+            trg_sign_obriens1:Obj_WaitRotate 
+            trg_sign_obriens1:Obj_RotY angle=10 speed=100 flag_max_coords 
+            trg_sign_obriens1:Obj_WaitRotate 
+        }
+        case 2 {
+            trg_sign_obriens1:Obj_RotY angle=10 speed=100 flag_max_coords 
+            trg_sign_obriens1:Obj_WaitRotate 
+            trg_sign_obriens1:Obj_RotY angle=-10 speed=100 flag_max_coords 
+            trg_sign_obriens1:Obj_WaitRotate 
+        }
+        case 3 {
+            trg_sign_obriens2:Obj_RotX angle=-10 speed=100 flag_max_coords 
+            trg_sign_obriens2:Obj_WaitRotate 
+            trg_sign_obriens2:Obj_RotX angle=10 speed=100 flag_max_coords 
+            trg_sign_obriens2:Obj_WaitRotate 
+        }
+        case 4 {
+            trg_sign_obriens2:Obj_RotX angle=-10 speed=100 flag_max_coords 
+            trg_sign_obriens2:Obj_WaitRotate 
+            trg_sign_obriens2:Obj_RotX angle=10 speed=100 flag_max_coords 
+            trg_sign_obriens2:Obj_WaitRotate 
+        }
+    endswitch    
+} 
+script NO_wallplant_natchez {
+    GetTriggerArray wallplant 
+    if Triggertype <trigger_array> {
+        if GoalManager_GoalExists name=NO_Goal_Gaps {
+            GoalManager_SetGoalFlag name=NO_Goal_Gaps <flag> 1 
+        } 
+        NO_foghorn 
+    } 
+} 
+script NO_foghorn {
+    skater:getspeed 
+    switch jm_natchez_move
+        case 0 {
+            SpawnScript NO_SFX_PaddleWheel01 
+            g_natchez_main:Obj_MoveToNode name=TRG_natchez_spot1 speed=25 
+            g_natchez_wheel:Obj_MoveToNode name=TRG_natchez_wheelspot1 speed=25 
+            g_natchez_wheel:Obj_RotY angle=540 speed=(<speed>) flag_max_coords 
+            g_natchez_wheel:Obj_WaitRotate 
+            kill name=g_natchez_trigger3 
+            Create name=g_natchez_trigger1 
+            change jm_natchez_move=1 
+        }
+        case 1 {
+            SpawnScript NO_SFX_PaddleWheel02 
+            g_natchez_main:Obj_MoveToNode name=TRG_natchez_spot2 speed=25 
+            g_natchez_wheel:Obj_MoveToNode name=TRG_natchez_wheelspot2 speed=25 
+            g_natchez_wheel:Obj_RotY angle=540 speed=(<speed>) flag_max_coords 
+            g_natchez_wheel:Obj_WaitRotate 
+            kill name=g_natchez_trigger1 
+            Create name=g_natchez_trigger2 
+            change jm_natchez_move=2 
+        }
+        case 2 {
+            SpawnScript NO_SFX_PaddleWheel03 
+            wait 10 frames 
+            g_natchez_main:Obj_MoveToNode name=TRG_natchez_spot3 speed=25 
+            g_natchez_wheel:Obj_MoveToNode name=TRG_natchez_wheelspot3 speed=25 
+            g_natchez_wheel:Obj_RotY angle=-540 speed=(<speed>) flag_max_coords 
+            g_natchez_wheel:Obj_WaitRotate 
+            wait 20 frames 
+            kill name=g_natchez_trigger2 
+            Create name=g_natchez_trigger3 
+            change jm_natchez_move=0 
+        }
+        default {
+        }
+    endswitch    
+} 
+script NO_wallplant_WaterTower {
+    GetTriggerArray wallplant onto 
+    if Triggertype <trigger_array> {
+        if GoalManager_GoalExists name=NO_Goal_Gaps4 {
+            GoalManager_SetGoalFlag name=NO_Goal_Gaps4 got_1 1 
+        } 
+        if ! objectexists id=WaterTowerSLAP_spray01 {
+            CreateFastParticleSystem name=WaterTowerSLAP_spray01 params_Script=apm_NO_WaterTower_slap01_fast_particle_params 
+        } 
+    } 
+} 
+script NO_Bird {
+    Obj_ClearExceptions 
+    Obj_SetInnerRadius 5 
+    Obj_SetException ex=ObjectInRadius scr=NO_Bird_Die params=<...> 
+    Obj_PlayAnim anim=Fly cycle 
+    Obj_ShadowOff 
+} 
+script NO_Bird_Die {
+    Obj_ClearExceptions 
+    if GoalManager_GoalExists name=NO_Goal_Gaps5 {
+        if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps5 {
+            GoalManager_SetGoalFlag name=NO_Goal_Gaps5 <flag> 1 
+            Obj_PlayAnim anim=Preen cycle 
+            if ! IsStreamPlaying BirdDeathStream {
+                PlayStream SK6_NO_BirdDeath vol=200 id=BirdDeathStream 
+            } 
+            Obj_MoveToRelPos (0.0, -1500.0, 0.0) speed=25 
+            Obj_WaitMove 
+            Die 
+        } 
+    } 
+} 
+script NO_Goal_Birds_Success {
+    kill name=TRG_Ped_Hint_Birds 
+} 
+script NO_Ped_Cop {
+    Obj_ClearExceptions 
+    Obj_SetInnerRadius 25 
+    Obj_SetException ex=ObjectInRadius scr=NO_Ped_Cop_Chase 
+    Ped_InitAI fall should_look_at_skater=1 
+} 
+script NO_Ped_Cop_Chase {
+    Obj_ClearExceptions 
+    Ped_Utils_BeginPlayerChase CatchScript=NO_Ped_Cop_Chase_End 
+} 
+script NO_Ped_Cop_Chase_End {
+    Ped_Utils_EndPlayerChase 
+    wait 2 seconds 
+    goto NO_Ped_Cop 
+} 
+script NO_Ammo_Node {
+    Obj_ClearExceptions 
+    setup_ped_speech {ped_id=<name> 
+        accept_text="Press \\m5 to pick up beads" 
+        activation_script=NO_Ammo_Got 
+        dont_deactivate_goals 
+    } 
+} 
+script NO_Ammo_Got {
+    give_skater_ammo num=10 Type=beads 
+    if ScreenElementExists id=ped_speech_dialog {
+        DestroyScreenElement id=ped_speech_dialog 
+    } 
+    UnPauseSkaters 
+} 
+script NO_Gap_StreetCar {
+    
+    if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps10 {
+        GoalManager_SetGoalFlag name=NO_Goal_Gaps10 got_1 1 
+    } 
+} 
+script NO_Clean_Checker {
+    ClearExceptionGroup NO_Clean_Checker 
+    SetException ex=SkaterEnterFocus scr=NO_Clean_Focus group=NO_Clean_Checker 
+    
+    block 
+} 
+script NO_Clean_Focus {
+    ClearExceptionGroup NO_Clean_Checker 
+    SetException ex=SkaterLanded scr=NO_Clean_Land_Score group=NO_Clean_Checker 
+    SetException ex=SkaterBailed scr=NO_Clean_Bail group=NO_Clean_Checker 
+    
+    block 
+} 
+script NO_Clean_Land_Score {
+    ClearExceptionGroup NO_Clean_Checker 
+    
+    GoalManager_GetDifficultyLevel 
+    switch <difficulty_level>
+        case 0 {
+            if SkaterLastScoreLandedGreaterThan NO_BigFocus_Score_Easy {
+                
+                if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps12 {
+                    GoalManager_SetGoalFlag name=NO_Goal_Gaps12 got_1 1 
+                } 
+            } 
+        }
+        case 1 {
+            if SkaterLastScoreLandedGreaterThan NO_BigFocus_Score_Normal {
+                
+                if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps12 {
+                    GoalManager_SetGoalFlag name=NO_Goal_Gaps12 got_1 1 
+                } 
+            } 
+        }
+        case 2 {
+            if SkaterLastScoreLandedGreaterThan NO_BigFocus_Score_Hard {
+                
+                if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps12 {
+                    GoalManager_SetGoalFlag name=NO_Goal_Gaps12 got_1 1 
+                } 
+            } 
+        }
+    endswitch    
+    goto NO_Clean_Checker 
+} 
+script NO_Clean_Bail {
+    ClearExceptionGroup NO_Clean_Checker 
+    
+    goto NO_Clean_Checker 
+} 
+script NO_Ped_BirdsHint {
+    Ped_Utils_SetupHintSpeech {
+        ped_id=TRG_Ped_Hint_Birds 
+        accept_text="Press \\m5 to talk." 
+        hint_text="There is a flock of lovely birds high up over the cemetary.  Get some speed, spine over this wall and smack them!" 
+        hint_text_time=15 
+        inner_radius=8 
+        outer_radius=30 
+        dont_deactivate_goals 
+        vo=NO_Ped_Hint_Birds_VO 
+    } 
+    Obj_SetAttentionRadius 40 
+    Ped_InitAI stand fall GetAttention 
+} 
+script NO_Ped_SkullsHint {
+    Ped_Utils_SetupHintSpeech {
+        ped_id=TRG_Ped_Hint_Skulls 
+        accept_text="Press \\m5 to talk." 
+        hint_text="Please, oh please, don't knock the skulls off the crypts!" 
+        hint_text_time=15 
+        inner_radius=8 
+        outer_radius=30 
+        dont_deactivate_goals 
+        vo=NO_Ped_Hint_Skulls_VO 
+    } 
+    Obj_SetAttentionRadius 40 
+    Ped_InitAI stand avoid chick 
+} 
+script NO_Ped_SpineHint {
+    Ped_Utils_SetupHintSpeech {
+        ped_id=TRG_Ped_Hint_Spine 
+        accept_text="Press \\m5 to talk." 
+        hint_text="There is a killer line that starts by spining (\\ml) over this quarter pipe" 
+        hint_text_time=15 
+        inner_radius=8 
+        outer_radius=30 
+        dont_deactivate_goals 
+        vo=NO_Ped_Hint_Spine_VO 
+    } 
+    Obj_SetAttentionRadius 40 
+    Ped_InitAI stand fall GetAttention 
+} 
+script NO_streetcar_move {
+    while {
+        Obj_MoveToNode name=TRG_streetcar_01 speed=25 
+        TRG_SFX_Ghost_TrainSparks01:Obj_MoveToNode name=TRG_streetcar_01 speed=25 
+        SpawnSound NO_SFX_Train_Electrics 
+        Obj_WaitMove 
+        KillSpawnedScript name=NO_SFX_Train_Electrics 
+        TRG_SFX_Ghost_TrainSparks01:Obj_StopSound SK6_BO_TrainLoop02 
+        TRG_SFX_Ghost_TrainSparks01:Obj_StopSound SK6_BO_TrainLoop02 
+        wait 5 seconds 
+        Obj_MoveToNode name=TRG_streetcar_02 speed=25 
+        TRG_SFX_Ghost_TrainSparks01:Obj_MoveToNode name=TRG_streetcar_02 speed=25 
+        SpawnSound NO_SFX_Train_Electrics 
+        Obj_WaitMove 
+        KillSpawnedScript name=NO_SFX_Train_Electrics 
+        TRG_SFX_Ghost_TrainSparks01:Obj_StopSound SK6_BO_TrainLoop02 
+        TRG_SFX_Ghost_TrainSparks01:Obj_StopSound SK6_BO_TrainLoop02 
+        wait 5 seconds 
+    } 
+} 
+script style_NO_vfer {
+    SetProps just=[center center] rgba=[0 150 0 255] 
+    DoMorph time=0.3 pos=(100.0, 110.0) scale=0.8 alpha=100 
+} 
+script style_NO_vfer2 {
+    SetProps just=[center center] rgba=[0 100 150 255] 
+    DoMorph time=0.1 pos=(100.0, 125.0) scale=0.8 alpha=100 
+} 
+script NO_SpinSign_Trigger1 {
+    BroadcastEvent Type=NO_EV_SpinSign1 
+    GetGap score=100 text="Nawlins Sign" 
+} 
+script NO_Sign_Waiting1 {
+    ClearExceptionGroup NO_SpinSign 
+    SetException ex=NO_EV_SpinSign1 scr=No_SpinSign_Go1 group=NO_SpinSign 
+    block 
+} 
+script No_SpinSign_Go1 {
+    ClearExceptionGroup NO_SpinSign 
+    SpawnScript NO_neon_burst 
+    CreateFastParticleSystem name=sparky01 params_Script=apm_NO_sparks01_fast_particle_params attachobjid=Trg_spin_sign_01 
+    skater:getspeed 
+    if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps17 {
+        GoalManager_SetGoalFlag name=NO_Goal_Gaps17 got_1 1 
+    } 
+    Trg_spin_sign_01:Obj_RotZ angle=1620 speed=(<speed>) flag_max_coords 
+    Trg_spin_sign_01:Obj_WaitRotate 
+    goto NO_Sign_Waiting1 
+} 
+script NO_SpinSign_Trigger2 {
+    BroadcastEvent Type=NO_EV_SpinSign2 
+    GetGap score=100 text="Boo Ya's Sign" 
+} 
+script NO_Sign_Waiting2 {
+    ClearExceptionGroup NO_SpinSign 
+    SetException ex=NO_EV_SpinSign2 scr=No_SpinSign_Go2 group=NO_SpinSign 
+    block 
+} 
+script No_SpinSign_Go2 {
+    ClearExceptionGroup NO_SpinSign 
+    SpawnScript NO_neon_burst 
+    CreateFastParticleSystem name=sparky01 params_Script=apm_NO_sparks01_fast_particle_params attachobjid=Trg_spin_sign_02 
+    skater:getspeed 
+    if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps17 {
+        GoalManager_SetGoalFlag name=NO_Goal_Gaps17 got_2 1 
+    } 
+    Trg_spin_sign_02:Obj_RotZ angle=1620 speed=(<speed>) flag_max_coords 
+    Trg_spin_sign_02:Obj_WaitRotate 
+    goto NO_Sign_Waiting2 
+} 
+script NO_SpinSign_Trigger3 {
+    BroadcastEvent Type=NO_EV_SpinSign3 
+    GetGap score=100 text="Green Goddess Sign" 
+} 
+script NO_Sign_Waiting3 {
+    ClearExceptionGroup NO_SpinSign 
+    SetException ex=NO_EV_SpinSign3 scr=No_SpinSign_Go3 group=NO_SpinSign 
+    block 
+} 
+script No_SpinSign_Go3 {
+    ClearExceptionGroup NO_SpinSign 
+    SpawnScript NO_neon_burst 
+    CreateFastParticleSystem name=sparky01 params_Script=apm_NO_sparks01_fast_particle_params attachobjid=Trg_spin_sign_03 
+    skater:getspeed 
+    if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps17 {
+        GoalManager_SetGoalFlag name=NO_Goal_Gaps17 got_3 1 
+    } 
+    Trg_spin_sign_03:Obj_RotZ angle=1620 speed=(<speed>) flag_max_coords 
+    Trg_spin_sign_03:Obj_WaitRotate 
+    goto NO_Sign_Waiting3 
+} 
+script NO_spinsign_trigger {
+    BroadcastEvent Type=NO_EV_spinsign 
+} 
+script NO_spinsign_waiting {
+    JM_sign_spincount = 0 
+    ClearExceptionGroup NO_SpinSign 
+    SetException ex=NO_EV_spinsign scr=NO_spinsign_action group=NO_SpinSign 
+    block 
+} 
+script NO_spinsign_action {
+    SpawnScript NO_neon_burst 
+    ClearExceptionGroup NO_SpinSign 
+    skater:getspeed 
+    CreateFastParticleSystem name=sparky01 params_Script=apm_NO_sparks01_fast_particle_params attachobjid=Trg_spin_sign_01 
+    TODManager_SetTempBloomParams On=1 
+    TODManager_SetTempBloomParams color=[100 100 80] 
+    TODManager_SetTempBloomParams bloom1=20 
+    TODManager_SetTempBloomParams bloom2=80 
+    TODManager_SetTempBloomParams Strength=[200 200 255] 
+    wait 15 frames 
+    TODManager_SetTempBloomParams On=0 
+    spins = (<speed> * 0.01) 
+    casttointeger spins 
+    change JM_sign_spincount=<spins> 
+    
+    SpawnScript NO_spinsign_score 
+    Trg_spin_sign_01:Obj_RotZ angle=1080 speed=(<speed>) flag_max_coords 
+    Trg_spin_sign_01:Obj_WaitRotate 
+    goto NO_spinsign_waiting 
+} 
+script NO_spinsign_score {
+    
+    switch JM_sign_spincount
+        case 0 {
+            change JM_sign_spincount=1 
+        }
+        case 1 {
+            change JM_sign_spincount=random { 1 { 1 } 1 { (JM_sign_spincount + 1) } } 
+        }
+        case 2 {
+            change JM_sign_spincount=random { 1 { 2 } 1 { (JM_sign_spincount + 1) } 1 { (JM_sign_spincount - 1) } } 
+        }
+        case 3 {
+            change JM_sign_spincount=random { 1 { 3 } 1 { (JM_sign_spincount + 1) } 1 { (JM_sign_spincount - 1) } 1 { (JM_sign_spincount + 2) } 1 { (JM_sign_spincount - 2) } } 
+        }
+        default {
+            change JM_sign_spincount=random { 1 { (JM_sign_spincount - 1) } 1 { (JM_sign_spincount + 1) } 1 { (JM_sign_spincount + 2) } 1 { (JM_sign_spincount - 2) } 1 { (JM_sign_spincount - 3) } 1 { (JM_sign_spincount + 3) } } 
+        }
+    endswitch    
+    
+    while {
+        wait 10 frames 
+        skater:GetGap score=1 text="Nawlins Sign" 
+    } JM_sign_spincount 
+    if (JM_sign_spincount > 32) {
+        FormatText TextName=sign_spun_text "'NAWLINS' x %c Good!" c=JM_sign_spincount 
+        create_panel_message id=message_sign_spun text=<sign_spun_text> style=style_NO_signspin z_priority=-30 
+    } else {
+        FormatText TextName=sign_spun_text "'NAWLINS' x %c" c=JM_sign_spincount 
+        create_panel_message id=message_sign_spun text=<sign_spun_text> style=style_NO_signspin z_priority=-30 
+    } 
+    wait 2 seconds 
+    kill_panel_message_if_it_exists id=message_sign_spun 
+} 
+script style_NO_signspin {
+    SetProps just=[center center] rgba=[50 120 50 255] 
+    DoMorph time=0.5 pos=(140.0, 170.0) scale=1.5 alpha=100 
+} 
+script NO_spike_shatter {
+    PlaySound SK6_NO_BreakFence01 pitch=random2 { 1 { 90 } 1 { 95 } 1 { 100 } 1 { 106 } 1 { 112 } 1 { 118 } } 
+    ShatterAndDie name=<spike> area=1000 variance=4 vel_x=200 vel_y=200 vel_z=200 spread=100 
+} 
+script NO_boatsink {
+    kill name=trp_grv_boatsink 
+    wait 5 seconds 
+    PlayStream SK6_NO_BoatSink vol=120 priority=StreamPriorityHigh 
+    trg_grv_boat:Obj_MoveToNode name=TRG_grvboat_sink speed=5 
+    wait 2 seconds 
+    trg_grv_boat:Obj_MoveToNode name=TRG_grvboat_sink speed=25 
+    kill name=trg_grv_boat 
+} 
+script NO_gravegate {
+    
+    skater:getspeed 
+    
+    trigger_speed_boost multi=1.25 
+    trg_grvgate_riv:Obj_RotX angle=-180 speed=(<speed>) flag_max_coords 
+    trg_grvgate_riv:Obj_WaitRotate 
+} 
+script NO_gravegate_2 {
+    skater:getspeed 
+    
+    
+    trigger_speed_boost multi=1.25 
+    trg_grvgate_riv:Obj_RotX angle=180 speed=(<speed>) flag_max_coords 
+    trg_grvgate_riv:Obj_WaitRotate 
+} 
+script NO_gravegate_3 {
+    
+    skater:getspeed 
+    
+    trigger_speed_boost multi=1.25 
+    trg_grvgate_alley:Obj_RotX angle=-180 speed=(<speed>) flag_max_coords 
+    trg_grvgate_alley:Obj_WaitRotate 
+} 
+script NO_gravegate_4 {
+    
+    skater:getspeed 
+    trigger_speed_boost multi=1.25 
+    trg_grvgate_alley:Obj_RotX angle=180 speed=(<speed>) flag_max_coords 
+    trg_grvgate_alley:Obj_WaitRotate 
+} 
+script NO_boost {
+    trigger_speed_boost multi=6.6 
+    trigger_jump_boost multi=0.9 
+    NO_GotEscapeGap 
+} 
+script NO_sewer_sound {
+} 
+script NO_skullhit_1 {
+    if ! Obj_FlagSet FLAG_SKULL {
+        KillSpawnedScript name=NO_Skull_timer 
+        Obj_SetFlag FLAG_SKULL 
+        change jm_skullcount=(jm_skullcount + 1) 
+        PlaySound Ricco2_11 pitch=100 
+        SpawnScript NO_Crypt_counter_1 
+        KillSpawnedScript name=NO_Skull_reset 
+        SpawnScript NO_Skull_reset 
+    } 
+} 
+script NO_skullhit_2 {
+    if ! Obj_FlagSet FLAG_SKULL {
+        KillSpawnedScript name=NO_Skull_timer 
+        Obj_SetFlag FLAG_SKULL 
+        change jm_skullcount=(jm_skullcount + 1) 
+        PlaySound Ricco2_11 pitch=100 
+        SpawnScript NO_Crypt_counter_2 
+        KillSpawnedScript name=NO_Skull_reset 
+        SpawnScript NO_Skull_reset 
+    } 
+} 
+script NO_skullhit_3 {
+    if ! Obj_FlagSet FLAG_SKULL {
+        KillSpawnedScript name=NO_Skull_timer 
+        Obj_SetFlag FLAG_SKULL 
+        change jm_skullcount=(jm_skullcount + 1) 
+        PlaySound Ricco2_11 pitch=100 
+        SpawnScript NO_Crypt_counter_3 
+        KillSpawnedScript name=NO_Skull_reset 
+        SpawnScript NO_Skull_reset 
+    } 
+} 
+script NO_skullhit_4 {
+    if ! Obj_FlagSet FLAG_SKULL {
+        KillSpawnedScript name=NO_Skull_timer 
+        Obj_SetFlag FLAG_SKULL 
+        change jm_skullcount=(jm_skullcount + 1) 
+        PlaySound Ricco2_11 pitch=100 
+        SpawnScript NO_Crypt_counter_4 
+        KillSpawnedScript name=NO_Skull_reset 
+        SpawnScript NO_Skull_reset 
+    } 
+} 
+script NO_skullhit_5 {
+    if ! Obj_FlagSet FLAG_SKULL {
+        KillSpawnedScript name=NO_Skull_timer 
+        Obj_SetFlag FLAG_SKULL 
+        change jm_skullcount=(jm_skullcount + 1) 
+        PlaySound Ricco2_11 pitch=100 
+        SpawnScript NO_Crypt_counter_5 
+        KillSpawnedScript name=NO_Skull_reset 
+        SpawnScript NO_Skull_reset 
+    } 
+} 
+script NO_Skull_reset {
+    KillSpawnedScript name=NO_Skull_timer 
+    kill_panel_message_if_it_exists id=message_skulltime 
+    SpawnScript NO_Skull_timer 
+    wait 10 seconds 
+    if ! GetFlag flag=FLAG_CRYPT_1 {
+        kill prefix="trg_skull1" 
+        wait 1 frame 
+        Create prefix="trg_skull1_" 
+    } 
+    if ! GetFlag flag=FLAG_CRYPT_2 {
+        kill prefix="trg_skull2" 
+        wait 1 frame 
+        Create prefix="trg_skull2_" 
+    } 
+    if ! GetFlag flag=FLAG_CRYPT_3 {
+        kill prefix="trg_skull3" 
+        wait 1 frame 
+        Create prefix="trg_skull3_" 
+    } 
+    if ! GetFlag flag=FLAG_CRYPT_4 {
+        kill prefix="trg_skull4" 
+        wait 1 frame 
+        Create prefix="trg_skull4_" 
+    } 
+    if ! GetFlag flag=FLAG_CRYPT_5 {
+        kill prefix="trg_skull5" 
+        wait 1 frame 
+        Create prefix="trg_skull5_" 
+    } 
+    change jm_skullcount=0 
+    kill_panel_message_if_it_exists id=message_skulls 
+} 
+script NO_Skull_timer {
+    skull_secs = 10 
+    while {
+        FormatText TextName=skulltime_text "SKULLTIME %s" s=<skull_secs> 
+        create_panel_message id=message_skulltime text=<skulltime_text> style=style_NO_skulltimer z_priority=-30 
+        wait 1 second 
+        skull_secs = (<skull_secs> -1) 
+    } 10 
+    FormatText TextName=skulltime_text " RESET " 
+    create_panel_message id=message_skulltime text=<skulltime_text> style=style_NO_skulltimer2 z_priority=-30 
+    wait 1 second 
+    kill_panel_message_if_it_exists id=message_skulltime 
+} 
+script NO_Crypt_counter_1 {
+    if Queryflag FLAG_SKULL name=trg_skull1_01 {
+        if Queryflag FLAG_SKULL name=trg_skull1_02 {
+            if Queryflag FLAG_SKULL name=trg_skull1_03 {
+                if Queryflag FLAG_SKULL name=trg_skull1_04 {
+                    KillSpawnedScript name=NO_Skull_reset 
+                    KillSpawnedScript name=NO_Skull_timer 
+                    kill_panel_message_if_it_exists id=message_skulltime 
+                    SetFlag flag=FLAG_CRYPT_1 
+                    if GoalManager_GoalExists name=NO_Goal_Gaps6 {
+                        GoalManager_SetGoalFlag name=NO_Goal_Gaps6 got_1 1 
+                    } 
+                    SpawnSound NO_SFX_Crypt01_First_Rumble 
+                    Create name=TRG_SFX_TrigBox_CryptConstRumble01 
+                    FormatText TextName=skulls_text "CRYPT OPEN" 
+                    create_panel_message id=message_skulls text=<skulls_text> style=style_NO_smoked z_priority=-30 
+                    kill prefix="trg_skull1_" 
+                    Create name=g_grv_crypt1_smoke 
+                    g_grv_event_dome:obj_spawnscript NO_Crypt1_open1 
+                    wait 3 seconds 
+                    kill_panel_message_if_it_exists id=message_skulls 
+                    if GetFlag flag=FLAG_CRYPT_1 {
+                        if GetFlag flag=FLAG_CRYPT_2 {
+                            if GetFlag flag=FLAG_CRYPT_3 {
+                                if GetFlag flag=FLAG_CRYPT_4 {
+                                    if GetFlag flag=FLAG_CRYPT_5 {
+                                        SpawnScript NO_play_vortex_anim 
+                                    } 
+                                } 
+                            } 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_Crypt_counter_2 {
+    if Queryflag FLAG_SKULL name=trg_skull2_01 {
+        if Queryflag FLAG_SKULL name=trg_skull2_02 {
+            if Queryflag FLAG_SKULL name=trg_skull2_03 {
+                if Queryflag FLAG_SKULL name=trg_skull2_04 {
+                    if Queryflag FLAG_SKULL name=trg_skull2_05 {
+                        if Queryflag FLAG_SKULL name=trg_skull2_06 {
+                            KillSpawnedScript name=NO_Skull_reset 
+                            KillSpawnedScript name=NO_Skull_timer 
+                            kill_panel_message_if_it_exists id=message_skulltime 
+                            SetFlag flag=FLAG_CRYPT_2 
+                            if GoalManager_GoalExists name=NO_Goal_Gaps6 {
+                                GoalManager_SetGoalFlag name=NO_Goal_Gaps6 got_2 1 
+                            } 
+                            SpawnSound NO_SFX_Crypt02_First_Rumble 
+                            Create name=TRG_SFX_TrigBox_CryptConstRumble02 
+                            FormatText TextName=skulls2_text "CRYPT OPEN" 
+                            create_panel_message id=message_skulls2 text=<skulls2_text> style=style_NO_smoked z_priority=-30 
+                            kill prefix="trg_skull2_" 
+                            Create name=g_grv_crypt2_smoke 
+                            trg_crypt2_coverA:obj_spawnscript NO_Crypt2_openA 
+                            trg_crypt2_coverB:obj_spawnscript NO_Crypt2_openB 
+                            wait 3 seconds 
+                            kill_panel_message_if_it_exists id=message_skulls2 
+                            if GetFlag flag=FLAG_CRYPT_1 {
+                                if GetFlag flag=FLAG_CRYPT_2 {
+                                    if GetFlag flag=FLAG_CRYPT_3 {
+                                        if GetFlag flag=FLAG_CRYPT_4 {
+                                            if GetFlag flag=FLAG_CRYPT_5 {
+                                                SpawnScript NO_play_vortex_anim 
+                                            } 
+                                        } 
+                                    } 
+                                } 
+                            } 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_Crypt_counter_3 {
+    if Queryflag FLAG_SKULL name=trg_skull3_01 {
+        if Queryflag FLAG_SKULL name=trg_skull3_02 {
+            KillSpawnedScript name=NO_Skull_reset 
+            KillSpawnedScript name=NO_Skull_timer 
+            kill_panel_message_if_it_exists id=message_skulltime 
+            SetFlag flag=FLAG_CRYPT_3 
+            if GoalManager_GoalExists name=NO_Goal_Gaps6 {
+                GoalManager_SetGoalFlag name=NO_Goal_Gaps6 got_3 1 
+            } 
+            SpawnSound NO_SFX_Crypt03_First_Rumble 
+            Create name=TRG_SFX_TrigBox_CryptConstRumble03 
+            FormatText TextName=skulls2_text "CRYPT OPEN" 
+            create_panel_message id=message_skulls2 text=<skulls2_text> style=style_NO_smoked z_priority=-30 
+            kill prefix="trg_skull3_" 
+            Create name=g_grv_crypt3_smoke 
+            trg_crypt3_cover:obj_spawnscript NO_Crypt3_open 
+            wait 3 seconds 
+            kill_panel_message_if_it_exists id=message_skulls2 
+            if GetFlag flag=FLAG_CRYPT_1 {
+                if GetFlag flag=FLAG_CRYPT_2 {
+                    if GetFlag flag=FLAG_CRYPT_3 {
+                        if GetFlag flag=FLAG_CRYPT_4 {
+                            if GetFlag flag=FLAG_CRYPT_5 {
+                                SpawnScript NO_play_vortex_anim 
+                            } 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_Crypt_counter_4 {
+    if Queryflag FLAG_SKULL name=trg_skull4_01 {
+        if Queryflag FLAG_SKULL name=trg_skull4_02 {
+            if Queryflag FLAG_SKULL name=trg_skull4_03 {
+                KillSpawnedScript name=NO_Skull_reset 
+                KillSpawnedScript name=NO_Skull_timer 
+                kill_panel_message_if_it_exists id=message_skulltime 
+                SetFlag flag=FLAG_CRYPT_4 
+                if GoalManager_GoalExists name=NO_Goal_Gaps6 {
+                    GoalManager_SetGoalFlag name=NO_Goal_Gaps6 got_4 1 
+                } 
+                SpawnSound NO_SFX_Crypt04_First_Rumble 
+                Create name=TRG_SFX_TrigBox_CryptConstRumble04 
+                FormatText TextName=skulls2_text "CRYPT OPEN" 
+                create_panel_message id=message_skulls2 text=<skulls2_text> style=style_NO_smoked z_priority=-30 
+                kill prefix="trg_skull4_" 
+                Create name=g_grv_crypt4_smoke 
+                trg_crypt4_cover:obj_spawnscript NO_Crypt4_open 
+                wait 3 seconds 
+                kill_panel_message_if_it_exists id=message_skulls2 
+                if GetFlag flag=FLAG_CRYPT_1 {
+                    if GetFlag flag=FLAG_CRYPT_2 {
+                        if GetFlag flag=FLAG_CRYPT_3 {
+                            if GetFlag flag=FLAG_CRYPT_4 {
+                                if GetFlag flag=FLAG_CRYPT_5 {
+                                    SpawnScript NO_play_vortex_anim 
+                                } 
+                            } 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_Crypt_counter_5 {
+    if Queryflag FLAG_SKULL name=trg_skull5_01 {
+        if Queryflag FLAG_SKULL name=trg_skull5_02 {
+            if Queryflag FLAG_SKULL name=trg_skull5_03 {
+                KillSpawnedScript name=NO_Skull_reset 
+                KillSpawnedScript name=NO_Skull_timer 
+                kill_panel_message_if_it_exists id=message_skulltime 
+                SetFlag flag=FLAG_CRYPT_5 
+                if GoalManager_GoalExists name=NO_Goal_Gaps6 {
+                    GoalManager_SetGoalFlag name=NO_Goal_Gaps6 got_5 1 
+                } 
+                SpawnSound NO_SFX_Crypt05_First_Rumble 
+                Create name=TRG_SFX_TrigBox_CryptConstRumble05 
+                FormatText TextName=skulls2_text "CRYPT OPEN" 
+                create_panel_message id=message_skulls2 text=<skulls2_text> style=style_NO_smoked z_priority=-30 
+                kill prefix="trg_skull5_" 
+                Create name=g_grv_crypt5_smoke 
+                trg_crypt5_cover:obj_spawnscript NO_Crypt5_open 
+                wait 3 seconds 
+                kill_panel_message_if_it_exists id=message_skulls2 
+                if GetFlag flag=FLAG_CRYPT_1 {
+                    if GetFlag flag=FLAG_CRYPT_2 {
+                        if GetFlag flag=FLAG_CRYPT_3 {
+                            if GetFlag flag=FLAG_CRYPT_4 {
+                                if GetFlag flag=FLAG_CRYPT_5 {
+                                    SpawnScript NO_play_vortex_anim 
+                                } 
+                            } 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_FakeLights_Off {
+    Fakelights percent=0 id=JOW_VoodooLight01 time=0 
+} 
+script NO_FakeLights_On {
+    Fakelights percent=100 id=JOW_VoodooLight01 time=0 
+} 
+script NO_play_vortex_anim {
+    SpawnScript NO_FakeLights_On 
+    wait 1 frame 
+    if ! GetFlag flag=FLAG_VORTEX {
+        play_cutscene name="cutscenes\\NO_LevelEvent1.cut" RestartNode=TRG_Restart_Graveyard restore_skater_camera 
+    } 
+    SetFlag flag=FLAG_VORTEX 
+} 
+script NO_Crypt1_open1 {
+    Obj_RotX speed=10 angle=2 flag_max_coords 
+    Obj_WaitRotate 
+    while {
+        Obj_RotX speed=10 angle=-4 flag_max_coords 
+        Obj_WaitRotate 
+        Obj_RotX speed=10 angle=4 flag_max_coords 
+        Obj_WaitRotate 
+    } 
+} 
+script NO_Crypt2_openA {
+    Obj_RotX speed=15 angle=2 flag_max_coords 
+    Obj_WaitRotate 
+    while {
+        Obj_RotX speed=15 angle=-4 flag_max_coords 
+        Obj_WaitRotate 
+        Obj_RotX speed=15 angle=4 flag_max_coords 
+        Obj_WaitRotate 
+    } 
+} 
+script NO_Crypt2_openB {
+    Obj_RotY speed=30 angle=2 flag_max_coords 
+    Obj_WaitRotate 
+    while {
+        Obj_RotY speed=30 angle=-4 flag_max_coords 
+        Obj_WaitRotate 
+        Obj_RotY speed=30 angle=4 flag_max_coords 
+        Obj_WaitRotate 
+    } 
+} 
+script NO_Crypt3_open {
+    Obj_RotY speed=30 angle=2 flag_max_coords 
+    Obj_WaitRotate 
+    while {
+        Obj_RotY speed=30 angle=-4 flag_max_coords 
+        Obj_WaitRotate 
+        Obj_RotY speed=30 angle=4 flag_max_coords 
+        Obj_WaitRotate 
+    } 
+} 
+script NO_Crypt4_open {
+    Obj_MoveToRelPos (0.0, -2.0, 0.0) speed=1 
+    Obj_WaitMove 
+    while {
+        Obj_MoveToRelPos (0.0, 2.0, 0.0) speed=1 
+        Obj_WaitMove 
+        Obj_MoveToRelPos (0.0, -2.0, 0.0) speed=1 
+        Obj_WaitMove 
+    } 
+} 
+script NO_Crypt5_open {
+    Obj_RotY speed=30 angle=2 flag_max_coords 
+    Obj_WaitRotate 
+    while {
+        Obj_RotY speed=30 angle=-4 flag_max_coords 
+        Obj_WaitRotate 
+        Obj_RotY speed=30 angle=4 flag_max_coords 
+        Obj_WaitRotate 
+    } 
+} 
+script NO_Hurricane_Acid_Got {
+    GetNumberOfTrickOccurrences TrickText="Acid Drop" 
+    
+    if (<Number_Of_Occurrences> > 0) {
+        
+        if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps14 {
+            GoalManager_SetGoalFlag name=NO_Goal_Gaps14 got_1 1 
+        } 
+    } 
+} 
+script NO_Natas_Check {
+    ClearExceptionGroup Natas 
+    GetTriggerArray spin onto 
+    
+    if Triggertype <trigger_array> {
+        
+        SetException ex=SkaterJump scr=NO_Natas_Done 
+        SetException ex=SkaterBailed scr=NO_Natas_Done 
+        SetException ex=SkaterEnterAir scr=NO_Natas_Done 
+        if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps18 {
+            if GoalManager_GoalExists name=NO_Goal_Gaps18 {
+                if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps18 {
+                    if ! GoalManager_HasWonGoal name=NO_Goal_Gaps18 {
+                        create_panel_message {text="10 seconds" style=goal_collect_text} 
+                        wait 1 second 
+                        create_panel_message {text="9 seconds" style=goal_collect_text} 
+                        wait 1 second 
+                        create_panel_message {text="8 seconds" style=goal_collect_text} 
+                        wait 1 second 
+                        create_panel_message {text="7 seconds" style=goal_collect_text} 
+                        wait 1 second 
+                        create_panel_message {text="6 seconds" style=goal_collect_text} 
+                        wait 1 second 
+                        create_panel_message {text="5 seconds" style=goal_collect_text} 
+                        wait 1 second 
+                        create_panel_message {text="4 seconds" style=goal_collect_text} 
+                        wait 1 second 
+                        create_panel_message {text="3 seconds" style=goal_collect_text} 
+                        wait 1 second 
+                        create_panel_message {text="2 seconds" style=goal_collect_text} 
+                        wait 1 second 
+                        create_panel_message {text="1 second" style=goal_collect_text} 
+                        wait 1 second 
+                        
+                        GoalManager_SetGoalFlag name=NO_Goal_Gaps18 got_1 1 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script NO_Natas_Done {
+    ClearExceptionGroup Natas 
+    
+} 
+script NO_GapStart_DanceFloor {
+    StartGap GapID=DanceFloor flags=[PURE_AIR] 
+} 
+script NO_GapEnd_DanceFloor {
+    EndGap GapID=DanceFloor score=250 text="Dance Floor Skillz" 
+} 
+script NO_Gap_Start_SuperDuper_Lip {
+    StartGap GapID=SuperDuper flags=[CANCEL_GROUND] 
+} 
+script NO_Gap_End_SuperDuper_Lip {
+    GetTriggerArray lip onto 
+    if Triggertype <trigger_array> {
+        EndGap GapID=SuperDuper score=500 text="Super Duper Lip" 
+    } 
+} 
+script NO_Gap_Start_Humidity_Lip {
+    StartGap GapID=HumidityLip flags=[CANCEL_GROUND] 
+} 
+script NO_Gap_End_Humidity_Lip {
+    GetTriggerArray lip onto 
+    if Triggertype <trigger_array> {
+        EndGap GapID=HumidityLip score=250 text="Humidity Lip" 
+    } 
+} 
+script NO_Gap_Start_OBrienManual {
+    StartGap GapID=OBrienManual flags=[CANCEL_RAIL, CANCEL_GROUND] 
+} 
+script NO_Gap_End_OBrienManual {
+    EndGap GapID=OBrienManual score=500 text="OBrien's Balcony Manual" 
+} 
+script NO_Gap_Start_HipBone {
+    StartGap GapID=HipBone1 flags=[PURE_AIR] 
+    EndGap GapID=HipBone2 score=500 text="Hip Bone" 
+} 
+script NO_Gap_End_HipBone {
+    StartGap GapID=HipBone2 flags=[PURE_AIR] 
+    EndGap GapID=HipBone1 score=500 text="Hip Bone" 
+} 
+script NO_Gap_Start_Wire_Lip {
+    StartGap GapID=WireLip flags=[CANCEL_GROUND] 
+} 
+script NO_Gap_End_Wire_Lip {
+    GetTriggerArray lip onto 
+    if Triggertype <trigger_array> {
+        EndGap GapID=WireLip score=250 text="Wire Lip" 
+    } 
+} 
+script NO_Gap_StreetManual1 {
+    StartGap GapID=StreetManual1 flags=[PURE_MANUAL] 
+    EndGap GapID=StreetManual2 score=500 text="Nawlins Street Manual" 
+} 
+script NO_Gap_StreetManual2 {
+    StartGap GapID=StreetManual2 flags=[PURE_MANUAL] 
+    EndGap GapID=StreetManual1 score=500 text="Nawlins Street Manual" 
+} 
+script NO_GapStart_SmokeBomb {
+    StartGap GapID=SmokeBomb flag=[CANCEL_GROUND, CANCEL_RAIL, CANCEL_MANUAL] 
+} 
+script NO_GapEnd_SmokeBomb {
+    EndGap GapID=SmokeBomb score=1000 text="Smoke Bomb" 
+} 
+script NO_GapStart_Humidity1 {
+    StartGap GapID=Humidity1 flags=[CANCEL_GROUND, CANCEL_RAIL, CANCEL_MANUAL] 
+} 
+script NO_GapEnd_Humidity1 {
+    EndGap GapID=Humidity1 score=250 text="Humidity Drop" 
+} 
+script NO_GapStart_Humidity2 {
+    StartGap GapID=Humidity2 flags=[CANCEL_GROUND, CANCEL_RAIL, CANCEL_MANUAL] 
+} 
+script NO_GapEnd_Humidity2 {
+    EndGap GapID=Humidity2 score=250 text="Humidity Drop" 
+} 
+script NO_Gap_AirBoat {
+    GetTriggerArray wallplant onto 
+    if Triggertype <trigger_array> {
+        GetGap score=500 text="Air Boat Sign Slap" 
+    } 
+} 
+script NO_Gap_Dumpster1 {
+    StartGap GapID=Dumpster1 flags=[PURE_AIR] TrickText="Superman Seatgrab" Trickscript=NO_Superman_Got 
+    EndGap GapID=Dumpster2 score=100 text="Dumpster Dive" 
+} 
+script NO_Gap_Dumpster2 {
+    StartGap GapID=Dumpster2 flags=[PURE_AIR] TrickText="Superman Seatgrab" Trickscript=NO_Superman_Got 
+    EndGap GapID=Dumpster1 score=100 text="Dumpster Dive" 
+} 
+script NO_Superman_Got {
+    
+    if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps16 {
+        GoalManager_SetGoalFlag name=NO_Goal_Gaps16 got_1 1 
+    } 
+} 
+script NO_Gap_Start_Street1 {
+    StartGap GapID=Street1 flags=[PURE_AIR] 
+    EndGap GapID=Street2 score=100 text="Big Easy Roof Gap" 
+    if skater:IsSkaterFocused {
+        StartGap GapID=CleanStreet1 flags=[PURE_AIR] TrickText="Kickflip" Trickscript=NO_Flip_Got 
+        
+    } 
+    EndGap GapID=CleanStreet2 
+} 
+script NO_Gap_Start_Street2 {
+    StartGap GapID=Street2 flags=[PURE_AIR] 
+    EndGap GapID=Street1 score=100 text="Big Easy Roof Gap" 
+    if skater:IsSkaterFocused {
+        StartGap GapID=CleanStreet2 flags=[PURE_AIR] TrickText="Kickflip" Trickscript=NO_Flip_Got 
+        
+    } 
+    EndGap GapID=CleanStreet1 
+} 
+script NO_Flip_Got {
+    ClearExceptionGroup NO_BigEasy 
+    
+    SetException ex=SkaterExitFocus group=NO_BigEasy scr=NO_Flip_NotClean 
+    SetException ex=SkaterLandedClean group=NO_BigEasy scr=NO_Flip_NotClean 
+} 
+script NO_Flip_NotClean {
+    ClearExceptionGroup NO_BigEasy 
+    
+} 
+script NO_Flip_Clean {
+    ClearExceptionGroup NO_BigEasy 
+    
+} 
+script NO_Gap_Start_HeliSpine1 {
+    StartGap GapID=HeliSpine1 flags=[PURE_AIR] TrickText="Spine Transfer" 
+} 
+script NO_Gap_End_HeliSpine1 {
+    EndGap GapID=HeliSpine1 score=50 text="Helipad Spine1" gapscript=NO_Got_HeliSpine1 
+} 
+script NO_Got_HeliSpine1 {
+    
+    GoalManager_SetGoalFlag name=NO_Goal_SkateTheLine2 got_1 1 
+} 
+script NO_Gap_Start_HeliSpine2 {
+    StartGap GapID=HeliSpine2 flags=[PURE_AIR] TrickText="Spine Transfer" 
+} 
+script NO_Gap_End_HeliSpine2 {
+    EndGap GapID=HeliSpine2 score=50 text="Helipad Spine2" gapscript=NO_Got_HeliSpine2 
+} 
+script NO_Got_HeliSpine2 {
+    
+    GoalManager_SetGoalFlag name=NO_Goal_SkateTheLine2 got_2 1 
+} 
+script NO_Gap_Start_HeliSpine3 {
+    StartGap GapID=HeliSpine3 flags=[PURE_AIR] TrickText="Spine Transfer" 
+} 
+script NO_Gap_End_HeliSpine3 {
+    EndGap GapID=HeliSpine3 score=50 text="Helipad Spine3" gapscript=NO_Got_HeliSpine3 
+} 
+script NO_Got_HeliSpine3 {
+    
+    GoalManager_SetGoalFlag name=NO_Goal_SkateTheLine2 got_3 1 
+} 
+script NO_Gap_PolePop1 {
+    GetTriggerArray grind onto 
+    if Triggertype <trigger_array> {
+        StartGap GapID=PolePop1 flags=[PURE_AIR] 
+        EndGap GapID=PolePop2 score=50 text="Pole Pop" 
+    } 
+} 
+script NO_Gap_PolePop2 {
+    GetTriggerArray grind onto 
+    if Triggertype <trigger_array> {
+        StartGap GapID=PolePop2 flags=[PURE_AIR] 
+        EndGap GapID=PolePop1 score=50 text="Pole Pop" 
+    } 
+} 
+script NO_Gap_Crypt1 {
+    StartGap GapID=Crypt1 flags=[PURE_AIR] KeyCombo=Air_CircleUL Trickscript=NO_Got_Crypt 
+    EndGap GapID=Crypt2 score=100 text="Crypt Keeper" 
+} 
+script NO_Gap_Crypt2 {
+    StartGap GapID=Crypt2 flags=[PURE_AIR] KeyCombo=Air_CircleUL Trickscript=NO_Got_Crypt 
+    EndGap GapID=Crypt1 score=100 text="Crypt Keeper" 
+} 
+script NO_Got_Crypt {
+    
+    GoalManager_SetGoalFlag name=no_classic_goal_gaps got_1 1 
+} 
+script NO_Gap_StreetSpine1 {
+    StartGap GapID=NO_stspine1 flags=[PURE_AIR] 
+    EndGap GapID=NO_stspine2 text="Nawlins Street Spine" score=25 gapscript=NO_gapscript_Nawlins 
+} 
+script NO_Gap_StreetSpine2 {
+    StartGap GapID=NO_stspine2 flags=[PURE_AIR] 
+    EndGap GapID=NO_stspine1 text="Nawlins Street Spine" score=25 gapscript=NO_gapscript_Nawlins 
+} 
+script NO_gapscript_Nawlins {
+    if ! GoalManager_GoalIsLocked name=NO_Goal_Gaps13 {
+        GoalManager_SetGoalFlag name=NO_Goal_Gaps13 got_1 1 
+    } 
+    GoalManager_SetGoalFlag name=NO_goal_skatetheline3 got_3 1 
+} 
+script NO_Gap_Vfer_GraveBowl1 {
+    StartGap GapID=NO_vfer_grave1 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grave2 text="Graveyard transfer" score=100 gapscript=NO_gapscript_vfer 
+} 
+script NO_Gap_Vfer_GraveBowl2 {
+    StartGap GapID=NO_vfer_grave2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grave1 text="Graveyard transfer" score=100 gapscript=NO_gapscript_vfer 
+} 
+script NO_Gap_Vfer_GrvWall_int1 {
+    StartGap GapID=NO_vfer_grvwall_in1 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_in2 text="Grave Wall Transfer" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_grvwall_spine1 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_spine2 text="Grave Wall Transfer" score=100 gapscript=NO_gapscript_spine 
+} 
+script NO_Gap_Vfer_GrvWall_int2 {
+    StartGap GapID=NO_vfer_grvwall_in2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_in1 text="Grave Wall Transfer" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_grvwall_spine1 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_spine2 text="Grave Wall Spine" score=100 gapscript=NO_gapscript_spine 
+} 
+script NO_Gap_Vfer_GrvWall_int3 {
+    StartGap GapID=NO_vfer_grvwall_in1 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_in2 text="Grave Wall Transfer" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_grvwall_spine1 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_spine2 text="Grave Wall Spine" score=100 gapscript=NO_gapscript_spine 
+} 
+script NO_Gap_Vfer_GrvWall_ex1 {
+    StartGap GapID=NO_vfer_grvwall_ex1 flags=[PURE_AIR] 
+    StartGap GapID=NO_vfer_grvwall_ex3 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_ex2 text="Grave Gate Transfer" score=50 gapscript=NO_gapscript_vfer 
+    EndGap GapID=NO_vfer_grvwall_ex4 text="Grave Gates Transfer" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_grvwall_spine2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_spine1 text="Grave Wall Spine" score=100 gapscript=NO_gapscript_spine 
+} 
+script NO_Gap_Vfer_GrvWall_ex2 {
+    StartGap GapID=NO_vfer_grvwall_ex2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_ex1 text="Grave Gate Transfer" score=50 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_grvwall_spine2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_spine1 text="Grave Wall Spine" score=100 gapscript=NO_gapscript_spine 
+} 
+script NO_Gap_Vfer_GrvWall_ex3 {
+    StartGap GapID=NO_vfer_grvwall_ex1 flags=[PURE_AIR] 
+    StartGap GapID=NO_vfer_grvwall_ex4 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_ex2 text="Grave Gate Transfer" score=50 gapscript=NO_gapscript_vfer 
+    EndGap GapID=NO_vfer_grvwall_ex3 text="Grave Gates Transfer" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_grvwall_spine2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grvwall_spine1 text="Grave Wall Spine" score=100 gapscript=NO_gapscript_spine 
+} 
+script NO_Gap_Vfer_GreenGoddess1 {
+    StartGap GapID=NO_vfer_grngod1 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grngod2 text="Green Goddess Door Transfer" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_goddesalley1 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_goddesalley2 text="Alley Transfer" score=100 gapscript=NO_gapscript_vfer 
+} 
+script NO_Gap_Vfer_GreenGoddess2 {
+    StartGap GapID=NO_vfer_grngod2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_grngod1 text="Green Goddess Door Transfer" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_goddesalley1 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_goddesalley2 text="Alley Transfer" score=100 gapscript=NO_gapscript_vfer 
+} 
+script NO_Gap_Vfer_VegasShow1 {
+    StartGap GapID=NO_vfer_vegasshow1 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_vegasshow2 text="VegasShow Door Transfer" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_goddesalley2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_goddesalley1 text="Alley Transfer" score=100 gapscript=NO_gapscript_vfer 
+} 
+script NO_Gap_Vfer_VegasShow2 {
+    StartGap GapID=NO_vfer_vegasshow2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_vegasshow1 text="VegasShow Door Transfer" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_goddesalley2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_goddesalley1 text="Alley Transfer" score=100 gapscript=NO_gapscript_vfer 
+} 
+script NO_Gap_Vfer_HouseVoodoo {
+    StartGap GapID=NO_vfer_vegasshow2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_vegasshow1 text="VegasShow Door Transfer" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_goddesalley2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_goddesalley1 text="Alley Transfer" score=100 gapscript=NO_gapscript_vfer 
+} 
+script NO_Gap_Vfer_ActLoveRoof1 {
+    StartGap GapID=NO_vfer_actlove1 flags=[PURE_AIR] 
+    StartGap GapID=NO_vfer_actlove2 flags=[PURE_AIR] 
+} 
+script NO_Gap_Vfer_theNawlinsRoof {
+    EndGap GapID=NO_vfer_actlove1 text="Over The Alley Transfer" score=200 gapscript=NO_gapscript_vfer 
+} 
+script NO_Gap_Alley1 {
+    EndGap GapID=NO_vfer_actlove2 text="Huge Alley Drop !" score=500 gapscript=NO_gapscript_vfer 
+} 
+script NO_Gap_GoddessRoof_ramp1 {
+    StartGap GapID=NO_vfer_greenramp1 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_greenramp2 text="Over the Roof Ramp" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_greenramp4 flags=[PURE_AIR] 
+} 
+script NO_Gap_GoddessRoof_ramp2 {
+    EndGap GapID=NO_vfer_greenramp4 text="Onto the Roof Ramp" score=100 gapscript=NO_gapscript_vfer 
+} 
+script NO_Gap_GoddessRoof_ramp3 {
+    StartGap GapID=NO_vfer_greenramp2 flags=[PURE_AIR] 
+    EndGap GapID=NO_vfer_greenramp1 text="Over the Roof Ramp" score=100 gapscript=NO_gapscript_vfer 
+    StartGap GapID=NO_vfer_greenramp4 flags=[PURE_AIR] 
+} 
+script NO_gapscript_vfer {
+    
+} 
+script NO_gapscript_spine {
+    
+} 
+script NO_StartGap_VortexSpine {
+    StartGap GapID=NO_VortexSpine flags=[PURE_AIR] 
+} 
+script NO_EndGap_VortexSpine {
+    random {
+1 { PlayStream SK6_NO_CryptYell01 vol=200 
+ } 1 { PlayStream SK6_NO_CryptYell02 vol=200 
+ } 1 { PlayStream SK6_NO_CryptYell03 vol=200 
+ } } 
+    EndGap GapID=NO_VortexSpine text="Into the Underworld" score=25 gapscript=NO_GotVortexSpine 
+} 
+script NO_GotVortexSpine {
+    GoalManager_SetGoalFlag name=NO_Goal_SkateTheLine got_1 1 
+    if GoalManager_HasWonGoal name=NO_Goal_SkateTheLine {
+        if ! GetFlag flag=FLAG_JESUS {
+            SetFlag flag=FLAG_JESUS 
+        } 
+    } 
+} 
+script NO_GotVortexGrind {
+    GoalManager_SetGoalFlag name=NO_Goal_SkateTheLine got_2 1 
+    if GoalManager_HasWonGoal name=NO_Goal_SkateTheLine {
+    } 
+} 
+script NO_GotEscapeGap {
+    GoalManager_SetGoalFlag name=NO_Goal_SkateTheLine got_3 1 
+    if GoalManager_HasWonGoal name=NO_Goal_SkateTheLine {
+        if ! GetFlag flag=FLAG_JESUS {
+            SetFlag flag=FLAG_JESUS 
+        } 
+    } 
+} 
+script NO_Gap_Jesus1 {
+    
+    StartGap GapID=NO_vferjesus1 flags=[PURE_AIR] KeyCombo=Air_CircleDR Trickscript=NO_gapscript_jesus 
+    EndGap GapID=NO_vferjesus2 text="Church Statue" score=25 
+} 
+script NO_Gap_Jesus2 {
+    
+    StartGap GapID=NO_vferjesus2 flags=[PURE_AIR] KeyCombo=Air_CircleDR Trickscript=NO_gapscript_jesus 
+    EndGap GapID=NO_vferjesus1 text="Church Statue" score=25 
+} 
+script NO_gapscript_jesus {
+    GoalManager_SetGoalFlag name=NO_Goal_SkateTheLine got_4 1 
+    if GoalManager_HasWonGoal name=NO_Goal_SkateTheLine {
+        if GetFlag flag=FLAG_JESUS {
+            UnSetFlag flag=FLAG_JESUS 
+            NO_voodoo_vortex_end 
+        } 
+    } 
+} 
+script NO_skulls {
+    kill name=TRG_veh_heli 
+    wait 1 frame 
+    Create name=TRG_veh_heli 
+    KillSpawnedScript name=NO_helicopter_init 
+    KillSpawnedScript name=NO_heli_move1 
+    KillSpawnedScript name=NO_heli_move2 
+    UnSetFlag flag=FLAG_HELIPAD 
+    UnSetFlag flag=FLAG_HELIPAD2 
+} 
+script NO_Heli_Rotor {
+    Obj_LockToObject ObjectName=TRG_veh_heli (0.0, 75.0, 125.0) NoRotation 
+} 
+script NO_helicopter_init {
+    kill_panel_message_if_it_exists id=Current_Goal 
+    create_panel_block id=skate_the_line_message text="Walk up to the helicopter, jump and grab (\\bf) the skid" style=panel_message_goal 
+    if ! GetFlag flag=FLAG_HELIPAD {
+        SetFlag flag=FLAG_HELIPAD 
+        TRG_veh_heli:Obj_MoveToNode name=TRG_waypoint_heli_01 speed=7 
+        TRG_veh_heli:Obj_WaitMove 
+    } 
+} 
+script NO_Reset_Equalizer {
+    kill name=TRG_veh_heli 
+    wait 1 frame 
+    Create name=TRG_veh_heli 
+    KillSpawnedScript name=NO_helicopter_init 
+    KillSpawnedScript name=NO_heli_move1 
+    KillSpawnedScript name=NO_heli_move2 
+    UnSetFlag flag=FLAG_HELIPAD 
+    UnSetFlag flag=FLAG_HELIPAD2 
+} 
+script NO_Reset_Equalizer_Die {
+    skater:Sk3_KillSkater nodename=TRG_Restart_Equalizer 
+    create_panel_block id=Current_Goal text="Avoid security and get up to the helicopter on the roof." style=panel_message_goal 
+} 
+script NO_heli_lip {
+    GetTriggerArray climb onto 
+    if Triggertype <trigger_array> {
+        if ! GetFlag flag=FLAG_HELIPAD2 {
+            GoalManager_SetGoalFlag name=NO_goal_skatetheline3 got_1 1 
+            SpawnScript NO_heli_move1 
+            SpawnScript NO_heli_lip_off_check 
+        } 
+        if GetFlag flag=FLAG_HELIPAD2 {
+            GoalManager_SetGoalFlag name=NO_goal_skatetheline3 got_2 1 
+            SpawnScript NO_heli_move2 
+            SpawnScript NO_heli_lip_off_check2 
+        } 
+    } 
+} 
+script NO_heli_move1 {
+    skater:setSkaterCamOverride heading=0 tilt=1.1 time=0.1 zoom=2 
+    SetFlag flag=FLAG_HELIPAD2 
+    TRG_veh_heli:Obj_MoveToNode name=TRG_waypoint_heli_05 speed=50 
+    TRG_veh_heli:Obj_WaitMove 
+    TRG_veh_heli:Obj_MoveToNode name=TRG_waypoint_heli_04 speed=50 
+    TRG_veh_heli:Obj_WaitMove 
+    kill_panel_message_if_it_exists id=Current_Goal 
+    create_panel_block id=skate_the_line_message text="Now Acid drop (\\ml) onto the flashing ramp below.\\nair up the other side, switch to walk (\\mm), and then grab (\\bf) the helicopter" style=panel_message_goal 
+} 
+script NO_heli_move2 {
+    skater:setSkaterCamOverride heading=0 tilt=1.1 time=0.1 zoom=2 
+    TRG_veh_heli:Obj_MoveToNode name=TRG_waypoint_heli_08 speed=100 
+    TRG_veh_heli:Obj_RotZ angle=90 speed=100 flag_max_coords 
+    TRG_veh_heli:Obj_WaitMove 
+} 
+script NO_heli_lip_off_check {
+    ClearExceptionGroup NO_helioff_check 
+    SetException ex=SkaterExitHang scr=NO_heli_lip_off group=NO_helioff_check 
+    block 
+} 
+script NO_heli_lip_off {
+    TRG_veh_heli:Obj_MoveToNode name=TRG_waypoint_heli_07 speed=100 
+    ClearExceptionGroup NO_helioff_check 
+    skater:ClearSkaterCamOverride 
+    SetLightAmbientColor r=255 g=255 b=255 
+    kill_panel_message_if_it_exists id=message_savedgoal 
+    wait 15 frames 
+    SetLightAmbientColor r=50 g=50 b=50 
+} 
+script NO_heli_lip_off_check2 {
+    ClearExceptionGroup NO_helioff_check 
+    SetException ex=SkaterExitHang scr=NO_heli_lip_off2 group=NO_helioff_check 
+    block 
+} 
+script NO_heli_lip_off2 {
+    TRG_veh_heli:Obj_MoveToNode name=TRG_waypoint_heli_09 speed=100 
+    ClearExceptionGroup NO_helioff_check 
+    skater:ClearSkaterCamOverride 
+    SetLightAmbientColor r=255 g=255 b=255 
+    kill_panel_message_if_it_exists id=message_savedgoal 
+    wait 15 frames 
+    SetLightAmbientColor r=50 g=50 b=50 
+} 
+script NO_Ped_Tricycle {
+    Obj_ClearExceptions 
+    Obj_PlayAnim anim=tricycle_stand cycle 
+    setup_ped_speech {ped_id=<current_node> 
+        accept_text="Press \\m5 to switch to VooDoo Rider." 
+        activation_script=NO_SwitchToTricycle 
+        activation_script_params=<...> 
+    } 
+} 
+script NO_SwitchToTricycle {
+    if ScreenElementExists id=ped_speech_dialog {
+        DestroyScreenElement id=ped_speech_dialog 
+    } 
+    Get_Current_Skater_name 
+    load_pro_skater name=voodoo 
+    UnPauseGame 
+    ResetSkaters node_name=<switch_node> 
+    kill name=<current_node> 
+    switch <name>
+        case custom {
+            Create name=<you_node> 
+        }
+        default {
+        }
+    endswitch    
+    Vehicle_Start params=tricycle_params 
+    Takeover_VO 
+} 
+script style_NO_smoked {
+    SetProps just=[center center] rgba=[255 255 255 255] 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=0 alpha=0 rot_angle=0 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.8 alpha=100 rot_angle=3 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.6 alpha=100 rot_angle=-3 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=2.1 alpha=100 rot_angle=2 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.6 alpha=100 rot_angle=0 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.9 alpha=100 rot_angle=3 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.7 alpha=100 rot_angle=-3 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=2.1 alpha=100 rot_angle=2 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.5 alpha=100 rot_angle=0 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.8 alpha=100 rot_angle=3 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.6 alpha=100 rot_angle=-3 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=2.1 alpha=100 rot_angle=2 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.6 alpha=100 rot_angle=0 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.9 alpha=100 rot_angle=3 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.7 alpha=100 rot_angle=-3 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=2.1 alpha=100 rot_angle=2 
+    DoMorph time=0.1 pos=(320.0, 80.0) scale=1.5 alpha=100 rot_angle=0 
+    DoMorph time=0.3 pos=(320.0, 80.0) scale=0 alpha=0 rot_angle=0 
+} 
+script style_NO_saved {
+    SetProps just=[center center] rgba=[255 55 205 255] 
+    DoMorph time=0.1 pos=(140.0, 140.0) scale=2 alpha=100 
+} 
+script style_NO_skulltimer {
+    SetProps just=[center center] rgba=[255 255 255 255] 
+    DoMorph time=0 pos=(320.0, 80.0) scale=0.7 alpha=0 rot_angle=2 
+    DoMorph time=0.2 pos=(320.0, 80.0) scale=0.9 alpha=100 rot_angle=-2 
+} 
+script style_NO_skulltimer2 {
+    SetProps just=[center center] rgba=[255 255 255 255] 
+    DoMorph time=0 pos=(320.0, 80.0) scale=0 alpha=0 rot_angle=0 
+    DoMorph time=0.3 pos=(320.0, 80.0) scale=0.7 alpha=100 rot_angle=2 
+    DoMorph time=0.2 pos=(320.0, 80.0) scale=1.5 alpha=100 rot_angle=-2 
+    DoMorph time=0.1 scale=1.0 alpha=100 rot_angle=2 
+    DoMorph time=0.1 scale=1.1 alpha=100 rot_angle=0 
+} 
+script NO_chimney_smoke_Particles {
+    CreateFastParticleSystem name=chimney01 params_Script=apm_NO_Chimsmoke01_fast_particle_params 
+    chimney01:obj_setposition position=(901.0, 752.0, -1778.0) 
+    CreateFastParticleSystem name=chimney02 params_Script=apm_NO_Chimsmoke01_fast_particle_params 
+    chimney02:obj_setposition position=(-1253.0, 683.0, -1706.0) 
+    CreateFastParticleSystem name=chimney03 params_Script=apm_NO_Chimsmoke01_fast_particle_params 
+    chimney03:obj_setposition position=(998.0, 930.0, 713.0) 
+} 
+script NO_WaterTower_Particles {
+    CreateFastParticleSystem name=Watertower01 params_Script=apm_NO_watertower01_fast_particle_params 
+    Watertower01:obj_setposition position=(1548.0, 828.0, -967.0) 
+    CreateFastParticleSystem name=Watertower02 params_Script=apm_NO_watertower02_fast_particle_params 
+    Watertower02:obj_setposition position=(1548.0, 828.0, -967.0) 
+    CreateFastParticleSystem name=Watertower03 params_Script=apm_NO_watertower03_fast_particle_params 
+    Watertower03:obj_setposition position=(1548.0, 648.0, -967.0) 
+} 
+script NO_2d_sign_element_create {parent = menu3d_anchor 
+    if GetGlobalFlag flag=SCREEN_MODE_WIDE {
+        <offset> = (-8.0, 0.0) 
+    } else {
+        <offset> = (0.0, 0.0) 
+    } 
+    CreateScreenElement {
+        Type=SpriteElement 
+        parent=<parent> 
+        texture=NO_icon_1 
+        id=NO_lemon 
+        scale=1.5 
+        rgba=[128 128 128 50] 
+        pos=((9.0, 148.0) + <offset>) 
+        rot_angle=0 
+        just=[left top] 
+        z_priority=-51 
+    } 
+    CreateScreenElement {
+        Type=SpriteElement 
+        parent=<parent> 
+        texture=NO_icon_2 
+        id=NO_bubbles 
+        scale=(1.5, 1.5) 
+        rgba=[128 128 128 60] 
+        pos=((16.0, 184.0) + <offset>) 
+        rot_angle=0 
+        just=[center center] 
+        z_priority=-51 
+    } 
+    RunScriptOnScreenElement id=NO_lemon do_random_effect_paused params={id=<id>} 
+    RunScriptOnScreenElement id=NO_bubbles NO_bubbles_anim 
+} 
+script NO_bubbles_anim {
+    while {
+        DoMorph time=0 pos=(53.0, 300.0) scale=1.2 rot_angle=-90 alpha=1 
+        DoMorph time=1 pos=(53.0, 275.0) rot_angle=-98 alpha=0.5 
+        DoMorph time=2 pos=(53.0, 230.0) rot_angle=-80 alpha=0 
+        wait random { 1 { 2 } 1 { 3 } 1 { 4 } } seconds 
+    } 
+} 
+NO_MardisGras_F_Table = {
+    NO_STATE_F_MardisGras_Dance={
+        script_ped_state=NO_STATECONTROL_F_MardisGras_Dance 
+        exit_state_action=wait_anim_finished 
+    } 
+    STATE_GetAttention={
+        script_ped_state=NO_STATECONTROL_F_MardisGras_GetAttention 
+        exit_state_action=wait_anim_finished 
+    } 
+    STATE_shot={
+        high_priority 
+        script_ped_state=NO_STATECONTROL_F_MardisGras_ShowEm 
+        exit_state_action=NO_STATE_ShowEm_Reset 
+    } 
+    STATE_avoidstop={
+        high_priority 
+        script_ped_state=STATECONTROL_avoidstop_custom01 
+        exit_state_action=wait_anim_finished 
+    } 
+    STATE_avoidland={
+        script_ped_state=STATECONTROL_avoidland_custom01 
+    } 
+} 
+script NO_Musicplay {
+    trg_ped_jazz_00:Ped_SetLogicState NO_STATE_Jazzman_playing Table=NO_StateLogic_Table 
+    trg_ped_jazz_02:Ped_SetLogicState NO_STATE_fluteguy_playing Table=NO_StateLogic_Table 
+    trg_ped_jazz_01:Ped_SetLogicState ALL_STATE_guitarist_playing Table=ALL_StateLogic_Table 
+    UnPauseSkaters 
+} 
+script NO_MusicStop {
+    trg_ped_jazz_00:Ped_SetLogicState NO_STATE_Jazzman Table=NO_StateLogic_Table 
+    trg_ped_jazz_02:Ped_SetLogicState NO_STATE_fluteguy Table=NO_StateLogic_Table 
+    trg_ped_jazz_01:Ped_SetLogicState ALL_STATE_guitarist Table=ALL_StateLogic_Table 
+    UnPauseSkaters 
+} 
+script NO_STATECONTROL_F_MardisGras_Dance {
+    obj_getid 
+    <objid>:SwitchOffAtomic ped_f_accessories 
+    while {
+        random {
+3 { PlayAnimWithPartialAnimIfExists anim=Ped_F_Dance1 speed=0.75 
+ } 1 { PlayAnimWithPartialAnimIfExists anim=Ped_F_Dance2 speed=0.75 
+ } 1 { PlayAnimWithPartialAnimIfExists anim=Ped_F_Dance3 speed=0.9 
+ } } 
+        Obj_WaitAnimFinished 
+    } 
+} 
+script NO_STATECONTROL_F_MardisGras_GetAttention {
+    ped_rotate_to_skater_from_idle 
+    while {
+        if ! Obj_ObjectInAttentionRadius {
+            break 
+        } 
+        PlayAnimWithPartialAnimIfExists anim=Ped_F_Dance_GetAttention speed=0.9 
+        Obj_WaitAnimFinished 
+    } 1 
+    Ped_Utils_SetMiscEventHandlers 
+    Ped_StateLogic_SetDefaultState 
+} 
+script NO_STATECONTROL_F_MardisGras_ShowEm {
+    ped_initialize_projectile_exceptions 
+    ped_standing_look_at_skater 
+    if ! IsStreamPlaying GirlShowStream {
+        random2 {
+1 { Obj_PlayStream NO_Female1_Flash01 vol=200 dropoff=150 priority=StreamPriorityLowMid id=GirlShowStream 
+ } 1 { Obj_PlayStream NO_Female1_Flash02 vol=200 dropoff=150 priority=StreamPriorityLowMid id=GirlShowStream 
+ } 1 { Obj_PlayStream NO_Female1_Flash03 vol=200 dropoff=150 priority=StreamPriorityLowMid id=GirlShowStream 
+ } 1 { Obj_PlayStream NO_Female1_Flash04 vol=200 dropoff=150 priority=StreamPriorityLowMid id=GirlShowStream 
+ } 1 { Obj_PlayStream NO_Female1_Flash05 vol=200 dropoff=150 priority=StreamPriorityLowMid id=GirlShowStream 
+ } 1 { Obj_PlayStream NO_Female1_Flash06 vol=200 dropoff=150 priority=StreamPriorityLowMid id=GirlShowStream 
+ } 1 { Obj_PlayStream NO_Female1_Flash07 vol=200 dropoff=150 priority=StreamPriorityLowMid id=GirlShowStream 
+ } 1 { Obj_PlayStream NO_Female1_Flash08 vol=200 dropoff=150 priority=StreamPriorityLowMid id=GirlShowStream 
+ } 1 { Obj_PlayStream NO_Female1_Flash09 vol=200 dropoff=150 priority=StreamPriorityLowMid id=GirlShowStream 
+ } 1 { Obj_PlayStream NO_Female1_Flash10 vol=200 dropoff=150 priority=StreamPriorityLowMid id=GirlShowStream 
+ } } 
+    } 
+    PlayAnimWithPartialAnimIfExists anim=Ped_F_ShowEm 
+    wait 40 frames 
+    obj_getid 
+    <objid>:SwitchOnAtomic ped_f_accessories 
+    wait 64 frames 
+    <objid>:SwitchOffAtomic ped_f_accessories 
+    Obj_WaitAnimFinished 
+    Ped_Utils_SetMiscEventHandlers 
+    ped_initialize_collision_exceptions 
+    Ped_StateLogic_SetDefaultState 
+} 
+script NO_STATE_ShowEm_Reset {
+    obj_getid 
+    <objid>:SwitchOffAtomic ped_f_accessories 
+} 
+__register_checksums__ Ped_M_Talk2_RightHere NO_bailcleaned_garbage b NO_BigBillboard_View_Goal_Text goal_collect_text NO_FindJester_View_Goal_Description create_panel_block NO_SFX_Crypt05_First_Rumble NO_Classic_Easy_HighScore_Text FLAG_SKULL Ped_Utils_EndPlayerChase TRG_COMBO_M Die NO_BeatBox_start_goal TRG_veh_float1 goal_success_script nullscript KillSpawnedScript NO_Capstone_Story_goals SkaterEnterFocus Obj_WaitMove NO_Trashman_View_Goal_Text NO_Sewer_Off top g_grv_crypt5_smoke g_vortex_base01 TRG_natchez_wheelspot2 NO_veh_path01_end NO_vator_ladafly NO_Goal_Gaps2 NO_STATECONTROL_F_MardisGras_ShowEm trigger_obj_id NO_Goal_TrickBeat heading JG_BO_Shatter_SHFence NO_helioff_check Ped_F_Dance2 give_skater_ammo exponential NO_Equalizer_Intro_Text3 NO_BigFocus_View_Goal_Text apm_NO_waterhead01_fast_particle_params exit_state_action reward_points NO_Gap_StreetManual2 TRG_549 StreetManual2 goingup_B_params r got_6 NO_spinsign_score wait_anim_finished no_fail_messages vel_x NO_Goal_Gaps menu3d_anchor style_NO_skulltimer Stinky01 AddGoal_HighCombo TRG_Switchable_Jester g_blockD_04 SCREEN_MODE_WIDE SwitchOffAtomic NO_FakeLights_On NO_SignSpinner_View_Goal_Text g_vortex_cone NO_Heli_Rotor NO_gapscript_vfer NO_Ped_Cop_Chase NO_WallieTrolley_View_Goal_Text c num BO_MUSIC_KickDrumVolume g_grv_event_dome goingup_Ajump_params NO_Gap_PolePop1 NO_SaveNawlins_View_Goal_Text RestartNode NO_MusicStop NO_Goal_Gaps3 NO_wallplant_WaterTower TRG_natchez_wheelspot3 trg_skull5_01 Ped_F_ShowEm Table g_vortex_spin_lamp01 NO_Goal_Classic_Voodoo_Deactivate TRG_tele_A_upjump NO_vortex_spin_plant2 Obj_SetOuterRadius NO_Crypt_counter_1 TRG_548 NO_killCars NO_vfer_greenramp2 NO_VortexSpine g_grv_dome_invis TRG_SFX_TrigBox_CryptConstRumble01 Ped_F_Dance3 SkaterExitAir NO_Equalizer_Intro_Text2 NO_Gap_Start_HipBone No_SpinSign_Go1 NO_GasLamps_Description "models\\gameobjects\\projectiles\\beads\\beads.tex" dropoff avoid got_7 fall s ClearExceptionGroup NO_vfer_grvwall_in1 vel_y CatchScript goingup_C_params life speed SpriteElement trg_skull5_02 params TRG_COMBO_O SkaterLanded Air_CircleL SkaterEnterSpecialTrick TRG_parkvator_roof NO_NatasNeversoft_Tip NO_Gap_PolePop2 jm_natchez_move style_NO_broken_panel pitch SwitchOnAtomic TRG_Ped_Jester_Intro GoalManager_UnlockGoal TRG_SFX_Ghost_TrainSparks01 NO_gravegate_2 WaitForEvent objectexists IsCareerMode NO_inmanual TRG_ped_voodoo_tricycle Obj_StopLastFam F_MardisGras_Dance NO_Goal_Secret_Success Get_Current_Skater_name CreateScreenElement vel_z NO_vfer_grvwall_in2 NO_AddGoal_WaterTower NO_Classic_Goal_Collect Shatter got_4 OBrienManual NO_AddGoal_Gap g_natchez_wheel NO_jump_fan_deactivate message_skulls2 trg_grvgate_alley goal_fail_script No_SpinSign_Go2 NO_Peds_Eventstart NO_Equalizer_Intro_Text1 NO_AddGoal_Parade TRG_SFX_TrigBox_CryptConstRumble02 NO_SFX_Crypt04_First_Rumble NO_vfer_greenramp1 restart_node TRG_Church_Dummy TRG_sewer_grv NO_Crypt_counter_2 GotParam NO_cleaned_garbage NO_Crypt5_open TRG_natchez_wheelspot1 JG_Swr_Chandalier PURE_MANUAL AddGoal_gaps trg_crypt5_cover TRG_NO_Secret_Tape TRG_veh_float2 apm_NO_Flys01_fast_particle_params NO_Unlock_Voodoo_Goals trg_skull5_03 ShatterAndDie NO_ZombieHunter_View_Goal_Text message_panels_broken NO_BalconyBreaker_Description onto gapscript NO_manualcheck_init letter_info NO_WaterTower_Particles NO_gravegate_3 NO_TimedScoreRun_Goal_Description NO_jumpfan NO_Classic_Voodoo_Doll No_SpinSign_Go3 is_creategoals NO_Ped_BirdsHint NO_BigEasy NO_cleaned got_5 UnPauseGame change g_vortex_spin_happyhour01 StreetManual1 NO_Gap_StreetManual1 NO_sign_obriens NO_RaiseTheDead_View_Goal_Text NO_Crypt_counter_3 classic_mode_goal goal_objects Ped_F_Dance1 NO_TrickToTheBeat_View_Goal_Description use_hud_counter NO_Goal_Classic_CrystalBall_Init SK6_NO_BirdDeath name TRG_SFX_TrigBox_CryptConstRumble03 setSkaterCamOverride SkaterExitCombo NO_Classic_Easy_HighCombo NO_cleantimer_smoke MRfreeze01 TRG_54 NO_Equalizer_Success goingdown_B_params NO_sound_glassbreak NO_NatasNeversoft_Description TRG_waypoint_heli_05 obj_getid NO_Crypt4_open NO_Equalizer_Start sewer_riv_params panel_message_goal NO_Gap_Vfer_VegasShow1 just NO_manual_spot Obj_PlayStream g_blockD_62 g_church_vfer1_01 NO_Goal_Gaps12 create_panel_message NO_sewer_sound chimney02 nightvision_hud g_manspot_01 goingup_A1_params NO_BalconyBreaker_Tip NO_vator_updown TRG_SKATE_A NO_STATE_F_MardisGras_Dance manhole_old NO_Classic_Easy_ProScore unlocked_by_another goal_collect_got_object inner_radius NO_voodoo_vortex_end SkaterLandedClean SKATER_UNLOCKED_JESTER NO_ManHoleManual_Deactivate NO_boatsink NO_Gap_Alley1 NO_Intro_Line2 success_node NO_Gap_Vfer_theNawlinsRoof key_combo AddGoal_TrickTheObjects TRG_55 NO_Car02 goingdown_C_params TRG_waypoint_heli_04 texture style_NO_vfer2 Special_Tricks area play_swappable_pro_intro_cameras ObjectInRadius NO_Crypt3_open view_goals_text NO_Goal_Gaps13 NO_vfer_vegasshow1 TRG_Restart_player1 chimney03 style_NO_skulltimer2 PlaySound Trg_spin_sign_01 play_cutscene off targetOffset skippable apm_NO_watertower03_fast_particle_params GUEST_FOUND_JESTER g_vortex_spin_umbrella01 unlimited_time Obj_StopSound AddGoal_Combo JOW_NO_CrystalBall03_fast_particle_params NO_Gap_Vfer_GraveBowl1 success_cam_anims FLAG_SMOKE2 CS_NO_TunnelGlow NO_vfer_actlove1 TRG_ped_voodoo_tricycle01 NO_Gap_Crypt1 Trg_spin_sign_02 NO_EndGap_VortexSpine TRGP_Equalizer_Start NO_Ped_Cop_Chase_End NO_skullhit_4 SetGlobalFlag AwardNewSpecialTrickToProfile TRG_SKATE_S NO_GotEscapeGap SK6_BA_ElevatorDing NO_SignSpinnder_Description g_manspot_03 tricycle_params restore_skater_camera NO_Goal_Gaps10 NO_vfer_vegasshow2 NO_jump_fan NO_Televator_vortex message_skulltime NO_Reset_Equalizer_Die Obj_MoveToRelPos Amp water_node TRG_waypoint_heli_07 frame NO_combo_panels_start SpawnScript TRG_56 ped_rotate_to_skater_from_idle NO_Car01 LoadSkeleton NO_Gap_Crypt2 NO_vfer_actlove2 NO_Float_Proxim_Near FLAG_SMOKE1 trick_object_prefix no_classic_goal_gaps NO_Got_Crypt death_message NO_Gap_Vfer_GraveBowl2 TRG_SFX_TrigBox_LG_CajunBand01 trg_skull1_04 NO_Crazy_Girl GetNumberOfTrickOccurrences g_natchez_main NO_helicopter_init NO_Ammo_Got FLAG_SKATER_ON_FLOAT GoalManager_GoalExists g_manspot_11 goto Triggertype CAM_NO_Classic_Intro NO_STATE_Jazzman_playing g_manspot_02 chimney01 g_church_vfer1_02 NO_Goal_Gaps11 NO_AddGoal_GasLamps Trg_spin_sign_03 NO_Gap_Vfer_VegasShow2 NO_ManholeManual_Description NO_Flip_Got NO_skullhit_5 CS_NO_List NO_Goal_SkateTheLine FLAG_VORTEX secret_tape_id NO_Bird TRG_Ped_TricycleScript StreamPriorityHighest NO_Unlock_Pro_Goals NO_Voodoo_Goal_Intro_Cameras NO_Intro_Line1 NO_GotVortexGrind NO_bubbles_anim priority NO_ZombieManager NO_startup NO_ZombieHunter_Description NO_AddGoal_Equalizer g_blockC_fire_hydrant_water01 ALL_STATE_guitarist g_manspot_10 ScreenElementExists trigger_jump_boost NO_GasLamps_View_Goal_Text NO_AddGoal_Signs NO_BigFocus_Score_Hard sk3_teleporttonode NO_TrashMan_Description apm_NO_Freeze01_fast_particle_params SK6_NO_BoatSink NO_AS_MasterPiece_final01 TextName NO_AddGoal_TrolleyWallie SkaterExitHang NO_BalconyBreaker_View_Goal_Text NO_Main_Story_goals style_NO_smoked object NO_gravegate_4 accept_text NO_StreetTransfer_View_Goal_Text NO_AddGoal_BigBillboard Mullen NO_Goal_Gaps6 Obj_SetFlag StinkyF01 g_grv_crypt1_smoke FormatText g_funkhole_cover sewer_grv_params AddGoal_TimedScoreRun NO_Crypt1_open1 jm_sewer_escape vortex_tornado_particlebox_01_Start NO_boost HeliSpine2 T_obj_id NO_Crypt_counter_4 NO_Equalizer_Intro_Setup TRG_Restart_Equalizer TRG_SFX_TrigBox_CryptConstRumble04 NO_Goal_TrickObjects g_vortex_spin_planter01 HipBone2 NO_spike_shatter PURE_AIR spins NO_cleancheck flag KeyCombo NO_Pro_Goal_Intro_Cameras NO_Clean_Bail Street1 got_2 horiz_vel ObjectName collect_type g TRG_SFX_TrigBox_MS_SmallCajunMusic AddGoal_collect tempo NO_Gap_Dumpster2 NO_Ped_SpineHint GlobalHintVOVol NO_TrashMan_Tip NO_Gap_StreetSpine1 NO_Spawn_SwitchSkaters NO_AddGoal_Dumpster NO_Gap_End_Humidity_Lip NO_Goal_Gaps7 trg_crypt3_cover NO_gapscript_jesus UnPauseSkaters Air_CircleUL Burnquist NO_Ped_Hint_Birds_VO HitGlassPane2X NO_cleantimer_garbage NO_Tony_Advance beads TRG_SFX_TrigBox_CryptConstRumble05 NO_AddGoal_Birds goal NO_Gap_Vfer_GrvWall_ex1 HeliSpine3 NO_Natas_Done NO_Crypt_counter_5 bloom1 trp_grv_boatsink center NO_SkaterOffFloat NO_Classic_Voodoo_Got Trickscript got_3 NO_STATE_fluteguy_playing path NO_Float_Proxim NO_shatter_freeze2 TRG_Ped_Hint_Skulls NO_heli_lip_off_check NO_STATECONTROL_F_MardisGras_Dance NO_BigFocus_Score_Normal goal_id intro_cameras tricycle_stand NO_gravegate trg_obj_parkvator NO_Classic_ProScore NO_Goal_Gaps4 dropoff_function g_grv_crypt3_smoke you_node Obj_ShadowOff key_combos NO_Gap_StreetSpine2 outer_radius NO_Setup NO_Exit_ChurchArea TrickText RunScriptOnScreenElement NO_heli_lip_off2 pulse SkaterEnterManual jm_panels_broken load_pro_skater TRG_Restart_Billboard NO_Gap_Dumpster1 offset NO_Equalizer_Intro_CleanUp init_script Ped_F_Dance_GetAttention TODManager_SetTempBloomParams NO_voodoo_vortex num_flags_to_win goal_intro_cameras TRG_SFX_TrigBox_SmallDixie bloom2 g_vortex_spin_plantbox02 NO_BoatSlapper_View_Goal_Tip NO_Gap_Vfer_GrvWall_ex2 SK6_NO_Hit_Zombie spike Sk3_KillSkater lip g_blockD_vfer_00 Ped_M_Talk2_SureThing TRG_278 NO_sound_gratesopen SkaterCurrentScorePotLessThan recreate_panel PedHitByProjectile NO_Goal_Gaps5 style_NO_signspin NO_Graf_Tag ClearSkaterCamOverride NO_AddGoal_Zombies HeloLoopSound NO_Hurricane_Acid_Got NO_SFX_Hit_AC_Unit jm_hurricane Ped_Utils_SetMiscEventHandlers obj_spawnscript NO_AddGoal_BigFocus Street2 got_1 TRG_60 Zombie setup_ped_speech NO_Gap_Vfer_ActLoveRoof1 jm_skullcount NO_skulls NO_Float_Jester_Found trigger_start_script NO_WallieTrolley_Description HipBone1 NO_Equalizer_Intro_Text4 NO_Ped_Jester_VO_Lip NO_Peds_Eventend NO_GapEnd_DanceFloor NO_Gap_Start_SuperDuper_Lip E_obj_id goingdown_A_params view_goals_cameras Sooty01 TRG_Restart_BeatBox NO_Equalizer_Intro_Text1_Lip NO_vfer_greenramp4 NO_Gap_Vfer_GrvWall_ex3 HeliSpine1 apm_NO_watertower02_fast_particle_params TRG_waypoint_heli_01 NO_Gap_End_Wire_Lip tilt TRG_50 SkaterExitManual printf BO_MUSIC_SnareDrumVolume SetLightAmbientColor NO_SFX_Train_Electrics seconds JOW_NO_CrystalBall02_fast_particle_params trg_sign_obriens1 g_manspot_05 NO_StreetTransfer_Description G_grv_event_bowl_soup01 NO_Elevator NO_Goal_Gaps16 JOW_VoodooLight01 NO_MardisGras_F_Table On NO_Goal_RaiseTheDead_Success HumidityLip SkaterJump vortex_particlebox_start_start NO_skullhit_2 TRG_grvboat_sink NO_Female1_Flash08 StopStream NO_Goal_TimedScoreRun NO_vfer_grave1 NO_Classic_HighCombo_Text kill_panel_message_if_it_exists SetFlag trg_skull1_02 TRG_SKATE_E NO_Intro_02_Lip NO_cleantimer NO_Gap_End_OBrienManual trg_skull4_02 skull_secs Watertower03 NO_2d_sign_element_create NJ_woodbreak01 NO_Jester_Goal_Intro_Cameras NO_Got_HeliSpine3 zoom arcade_machine_start_goal NO_Equalizer_Intro_Cameras alpha NO_Classic_SickScore_Text NO_Equalizer_Intro_Text3_Lip TRG_51 NO_Church_Dummy_Landed NO_skullhit_3 GetAttention TRG_SKATE_T panels_broken_text apm_Crate02_xploder02 g_manspot_04 NO_BigFocus_Score_Easy wallplant MB_HiHat_01 NO_Goal_Gaps17 g_blockD_67 NO_veh_path01_spawncar NO_EV_SpinSign1 frames trg_skull1_03 NO_bailcleaned_smoke pro_teammate NO_TrickToTheBeat_Goal_Text GirlShowStream NO_Ammo_Node NO_Female1_Flash09 NO_Clean_Focus nighton_10_g_blockD_satellite_blinker trick SK6_NO_HeloLoop can_retry_goal Watertower02 TRG_ladafly NO_Classic_Easy_HighScore g_vortex_spin_signs01 hint_text_time NO_Got_HeliSpine2 Veh_NO_Heli_Blades NO_Enter_ChurchArea trg_skull4_03 activation_script_params NO_skater_manual g_vortex_base DefBoostSound NO_Goal_Gaps14 g_blockD_64 g_manspot_07 Default_jester_anim_assets NO_CreateZombies GoalManager_SetGoalFlag SuperDuper NO_Initializer color TRG_Ped_Hawk TRG_52 NO_RaiseTheDead_View_Goal_Description NO_BeadManager horiz_amp swap_skaters_get_current_name NO_GirlsGoneCrazy_View_Goal_Text NO_garbage trigger_success_script difficulty_level TRG_tele_D_up stand CANCEL_GROUND NO_WallieTrolley_Tip NO_combo_panels NO_Goal_Spines_Success NO_Got_HeliSpine1 TRG_Restart_Jester_Found Watertower01 SkaterEnterAir NO_SmackBirds_Description priorty NO_Gap_End_SuperDuper_Lip Require_Combo Ped_M_Talk2_Idle2 Ped_SetLogicState AddGoal_HighScore corner_params TRG_SFX_TrigBox_Tornado TRG_tele_A_up NO_vortex_spin_happy NO_EV_SpinSign2 Muska_FirstSwap_Lip NO_foghorn goingup_A_params TRG_sewer_church NO_skullhit_1 trigger_array GUEST_FOUND_VOODOO NO_Classic_Crystal_Ball_Got g_blockD_65 style NO_Goal_Gaps15 trg_sign_obriens2 g_manspot_06 SkaterLastScoreLandedGreaterThan visible NO_Goal_Classic_CrystalBall_Deactivate NO_STATE_fluteguy AddGoal_Skate TRG_53 TRG_Restart_SpineTingler NO_Classic_SickScore node time ResetSkaters WireLip g_blockD_qp02 K_obj_id TRG_COMBO_O01 SetProps box Obj_LockToObject NO_play_vortex_anim NO_NatasNeversoft_View_Goal_Text GoalManager_ActivateGoal Air_SquareL JM_sign_spincount trg_skull4_01 ped_id NO_ManholeManual_View_Goal_Text trg_skull1_01 NO_EV_SpinSign3 NO_Kill_Water NO_vfer_grave2 NO_SFX_NeonSignBreak NO_water TRG_553 NO_SFX_Manual_Over_Manhole NO_streetcar_move trg_skull2_01 JOW_NO_CrystalBall01 FLAG_TRASH1 vol ped_f_accessories NO_GapEnd_SmokeBomb TRG_277 NO_Beads NO_GapStart_DanceFloor NO_BeadManager_Check style_NO_saved cam_start_script silent_activation GetGap text NO_CreatePeds g_church_47 NO_Flip_Clean Takeover_VO NO_icon_2 createflexibleparticlesystem apm_NO_Sooty01_fast_particle_params NO_TrickToTheBeat_View_Goal_Tip skate_the_line_message g_blockB_extra_02 JOW_NO_CrystalBall05_fast_particle_params grind Obj_SetInnerRadius NO_Gap_Vfer_GrvWall_int3 skater Obj_WaitRotate got_10 trg_ped_jazz_02 NO_EV_spinsign vert_vel TRG_276 NO_TeamChallenge_Description APM_flamingBOARD_particle_params scr NO_StartGap_VortexSpine TRG_tele_B_up left TRG_552 switch_node is_classic beat_window_time NO_Musicplay NO_Gap_Start_Street1 score NO_Sewer_On id STATECONTROL_avoidland_custom01 NO_jump_fan_level2 NO_vfer_grvwall_ex4 NO_Classic_Easy_ProScore_Text Type CreateFastParticleSystem Obj_SetAttentionRadius block NO_Gap_Vfer_GrvWall_int2 NO_SFX_BreakObrienFence leaving_message got_11 NO_Bird_Die climb ALL_StateLogic_Table NO_AddGoal_Balconies invisible pro NO_STATECONTROL_F_MardisGras_GetAttention Obj_ObjectInAttentionRadius NO_Ped_Hint_Skulls_VO NO_GapStart_SmokeBomb sounds NO_Gap_Start_Street2 GrindMetalOn02 NO_SwitchToTricycle GameModeEquals NO_Goal_Gaps8 trg_skull2_03 JOW_NO_CrystalBall03 Air_CircleD TRG_551 NO_SFX_HitObriensSign TRG_275 apm_NO_Stinky01_particle_params STATE_avoidstop cover GoToLoadLevel TRG_543 NO_Dish_Collide NO_Clean_Land_Score trg_ped_jazz_00 pos sewer_church_params Obj_WaitAnimFinished NO_Gap_Vfer_GrvWall_int1 apm_NO_Chimsmoke01_fast_particle_params SkaterBailed custom NO_AddGoal_Secret NO_SpineTingler_Description PRO_FOUND_05 NO_shatter_freeze prefix TRG_Restart_Graveyard Ped_M_Talk2_MixIt ChapterAdvanceDialog Ped_StateLogic_SetDefaultState AddGoal_ProScore Obj_FlagSet TRG_parkvator_floor virtual_cam UnSetFlag SpMan_U_D_Triangle kill NO_heli_lip_off NO_Ped_SkullsHint TRG_274 NO_SpineTingler_View_Goal_Text JOW_NO_CrystalBall02 trg_skull2_02 NO_AddGoal_RaiseTheDead NO_Goal_Gaps9 FLAG_TRASH2 DestroyScreenElement TRG_550 NO_vortex_spin_plant trg_ped_jazz_01 NO_AddGoal_Natas NO_SpatTags_View_Goal_Description NO_SFX_Go_Through_Smoke PlayAnimWithPartialAnimIfExists Air_CircleU TRG_542 FLAG_HELIPAD2 ped_initialize_projectile_exceptions goingup_D_params block_size dont_deactivate_goals NO_Float_Ghost skulltime_text NO_neonsign skaterdestroyfastparticlesystem NO_icon_1 Dumpster2 Classic_CrystalBall02 GoalManager_GetDifficultyLevel TRG_veh_jester1 NO_lemon Car_Generic01 NO_GirlsGoneCrazy_Description Obj_RotY g_manspot_09 NO_SFX_PaddleWheel01 activation_script NO_Gap_GoddessRoof_ramp2 DefaultSpeed sootpoof01 NO_Goal_Gaps7_Success NO_Flip_NotClean NO_GapStart_Humidity1 casttointeger TRG_streetcar_01 NO_Goal_BigBillboard NO_Gap_StreetCar Crypt2 NO_Classic_Easy_HighCombo_Text trg_crypt4_cover goal_trick_beat_key_combos NO_AcidHurricane_Description Freq Preen jester trick_objects NO_smoke NO_Reset_Equalizer STATE_avoidland NO_vfer_grvwall_spine2 g_blockA_fire_hydrant_water01 NO_Female1_Flash04 NO_SFX_HydrantPop1 obj_setposition SK6_BO_TrainLoop02 Trick_JesterJuggle Zombie_Death02 is_singlesession start nodename NO_wallplant_sign scale turndist NO_Skull_reset Queryflag FLAG_JESUS TRG_G_grv_event_dome GoalManager_HasWonGoal NO_Gap_GoddessRoof_ramp3 chick NO_GotVortexSpine sign_spun_text SkaterEnterCombo NO_Equalizer_Intro_Text4_Lip NO_GapEnd_Humidity2 apm_NO_freeze01_particle_params Classic_CrystalBall03 SmokeyMoFo TRG_tele_corner g_manspot_08 Vehicle_Start Obj_RotX StickToGround NoRotation Air_SquareR Air_CircleDR NO_Classic_HighCombo difficulty_level_params NO_jump_vator Fakelights NO_Equalizer_Intro_Line4 NO_vfer_goddesalley1 PlayStream skate width NO_StateLogic_Table NO_Superman_Got NO_Goal_Intro_Cameras NO_SFX_Crypt02_First_Rumble IsStreamPlaying trg_crypt2_coverA TRG_Ped_Hint_Birds CANCEL_MANUAL NO_NatasSpin NO_Classic_Easy_SickScore_Text flysF01 NO_WaterTower_View_Goal_Text height NO_BigFocus_Hard_Description NO_Female1_Flash05 KillAllTextureSplats angle TRG_SFX_TrigBox_DixieBandMusicOff manhole Zombie_Death03 TRG_Ped_Voodoo_Intro position A_obj_id NO_Skull_timer NO_Goal_Gaps18 vert_amp NO_GapEnd_Humidity1 goal_start_script jm_skaterinmanual group NO_SFX_PaddleWheel03 NO_AddGoal_Hurricane apm_NO_watertower01_fast_particle_params Natas NO_Female1_Flash06 TRG_SKATE_K JOW_NO_CrystalBall01_fast_particle_params Zombie_Explode graffiti SkaterExitFocus NO_STATE_ShowEm_Reset AddGoal_SecretTape trg_crypt2_coverB FLAG_CRYPT_5 NO_SkaterOnFloat cam_anim_text NO_bubbles waterhead01 spin message_sign_spun NO_SaveNawlins_View_Goal_Description NO_vfer_goddesalley2 vehicle TRG_sewer_riv g_grv_crypt4_smoke GoalManager_GoalIsLocked SK6_NO_BreakFence01 BirdDeathStream Crypt1 ShakeCamera NO_SFX_Breakout_Ice goingdown_D_params IsSkaterFocused isAlive TRG_streetcar_02 NO_GapStart_Humidity2 SkaterExitWallplant Obj_Hover ThisSkaterFliesSFX anim bounce NO_Gap_GoddessRoof_ramp1 NO_SmackBirds_View_Goal_Text NO_SFX_PaddleWheel02 NO_SFX_Crypt03_First_Rumble NO_spawncar Obj_RotZ NO_SwitchSkaters trg_grv_boat Dumpster1 style_NO_vfer Classic_CrystalBall01 NO_RaiseTheDead_View_Goal_Tip StreamPriorityHigh NO_Goal_Gaps19 NO_Unlock_Jester_Goals TRG_veh_jester2 apm_OILYsmoke_particle_params Obj_SetException dont_kill_trigger_on_success trigger_wait_script Zombie_Death01 hint_text NO_Female1_Flash07 NO_SFX_HydrantPop2 NO_manual_active NO_heli_lip_off_check2 NO_vfer_grvwall_spine1 apm_NO_StinkyPoof01_fast_particle_params NO_Classic_Crystal_Ball ex FLAG_CRYPT_4 high_priority TRG_273 apm_NO_Sootpoof01_fast_particle_params NO_Sign_Waiting3 trg_skull2_05 JOW_NO_CrystalBall05 NO_heli_move1 message_savedgoal wait NO_spinsign_action NO_TeamChallenge_View_Goal_Text SK6_NO_CryptYell01 NO_SFX_FliesOnSkater TRG_tele_up01 StinkyPoof01 TRG_Restart_Arcade Ped_Utils_BeginPlayerChase StartGap version TRG_tele_D_down NO_heli_lip NO_Gap_Start_Wire_Lip getspeed NO_vfer_grvwall_ex1 Fly BO_MUSIC_HiHatVolume GetTriggerArray NO_panelbreak TRG_SFX_TrigBox_LG_CajunBandMusicOff NO_Classic_HighScore_Text Zombie_SFX_Die node_name apm_NO_Stinky01_fast_particle_params ped_initialize_collision_exceptions TRG_545 Air_CircleR NO_SmackBirds_View_Goal_Tip sound Obj_PlayFam JOW_NO_CrystalBall04 trg_skull2_04 SmokeBomb TODManager_MarkPermanentlyDead sparky01 TRG_veh_heli TRG_272 PlayIntroCameras NO_Sign_Waiting2 JOW_NO_CrystalBall04_fast_particle_params NO_Talking message_skulls LoadAsset TRG_Ped_Equalizer_Intro02 texture_swap objid trick_object_light_group NO_Intro_01_Lip NO_SpinSign_Trigger1 obj_id NO_BoatSlapper_View_Goal_Description NO_wallplant_natchez NO_STATE_Jazzman NO_Manhole_Counter goal_flags InMultiplayerGame NO_Gap_Vfer_GreenGoddess1 cluster_id NO_vferjesus1 TRG_544 NO_cleaned_smoke apm_NO_Sooty01_particle_params CANCEL_RAIL NO_Gap_Jesus1 NO_Classic_Easy_SickScore g_blockB_vfer_00 TRG_tele_C_down multi TRG_BeatBox script_ped_state NO_Intro_Text1 NO_neon_burst NO_Goals pre_anim_script all_profiles Obj_PlayAnim NO_cleancheck_garbage Burnquist_FirstSwap_Lip SK6_NO_CryptYell03 NO_SpinSign_Trigger2 TRG_Ped_Equalizer_Intro01 ObjectOutofRadius WaterTowerSLAP_spray01 NO_float_jester NO_Sign_Waiting1 TRG_COMBO_C targetid TRG_271 NO_BigBillboard_View_Goal_Description g_grv_event_bowl NO_Gap_Start_Humidity_Lip TRG_restart_swamp Ped_InitAI NO_CreateCars Destroyflexibleparticlesystem NO_Intro_Text2 ped_speech_dialog g_blockB_vfer_03 DanceFloor NO_spinsign_trigger NO_Gap_Jesus2 pulse_blur NO_vferjesus2 TRG_547 S_obj_id trigger_speed_boost got_8 NO_vfer_grvwall_ex3 NO_Gap_Vfer_GreenGoddess2 positionOffset view_goals_tip SetExceptionHandler NO_SpinSign NO_combo_panels_end AddGoal_SickScore StreamPriorityLowMid Obj_MoveToNode NO_Natas_Check ALL_STATE_guitarist_playing SK6_NO_CryptYell02 NO_SpinSign_Trigger3 goal_text NO_shatter SkaterCheckOffset NO_Classic_HighScore trg_skull2_06 Number_Of_Occurrences NO_heli_move2 NO_vortex_spin_lamp NO_AddGoal_SkatetheLine TRG_COMBO_B TRG_Ped_Hint_Spine TRG_Veh_Float_ghost Current_Goal rgba hud_counter_caption NO_Gap_Vfer_HouseVoodoo outdoor GetBonus flag_max_coords TRG_546 NO_AddGoal_Nawlins shadow NO_ZombieHunter_Tip letterbox variance NO_Classic_ProScore_Text MRfreezeF01 NO_vfer_grvwall_ex2 TRG_tele_A_down DoMorph got_9 TRG_Ped_TeammatePro NO_TrickToTheBeat_View_Goal_Text NO_TimedScoreRun_View_Goal_Text BurnMoFo Obj_PlaySound Humidity2 NO_ProSwitch_Line1 NO_BigFocus_View_Goal_Tip rot_angle Muska NO_Jester NO_SpatTags_View_Goal_Text GapID apm_NO_sparks01_fast_particle_params Strength NO_vortex_spin_sign Obj_ClearExceptions TRG_waypoint_heli_09 NO_AcidHurricane_View_Goal_Text NO_AddGoal_TimedScoreRun NO_Gap_Start_HeliSpine3 ped_standing_look_at_skater NO_TimedScoreRun_Goal_Text NO_AddGoal_Spines flags NO_BigFocus_Normal_Description direction NO_Equalizer_Intro_Line1 NO_KillZombies NO_ShatteringGate FLAG_CRYPT_3 InSplitScreenGame NO_SaveNawlins_View_Goal_Tip g_natchez_trigger2 goal_description cycle beat_pattern NO_vfer_grngod2 do_random_effect_paused Cop_Ticketing STATE_shot NO_FindJester_View_Goal_Text printstruct NO_AddGoal_Manhole GetFlag CleanStreet2 NO_AddGoal_TrickToTheBeat always_initialize_goal second Destroyfastparticlesystem NO_Church_Dummy_Special TRG_waypoint_heli_08 skulls2_text is_career params_Script Vallely_FirstSwap_Lip GoalManager_GoalFlagSet NO_Goal_Birds_Success Ricco2_11 TRG_veh_donkey2 NO_Gap_End_HeliSpine1 g_grv_crypt2_smoke world NO_gapscript_Nawlins NO_Church_Dummy FLAG_CRYPT_2 Mullen_FirstSwap_Lip TRG_Ped_TeammateIntroPro NO_Ped_Hint_Spine_VO NO_Church_Dummy_Bailed NO_AddGoal_Team really_kill_flicker_nightvision_hud NO_Gap_Start_HeliSpine2 trg_skull3_02 current_node PolePop2 NO_stspine1 Ped_Utils_SetupHintSpeech NO_Female1_Flash01 TRG_natchez_spot1 NO_gapscript_spine SpawnSound TRG_Arcade_Machine NO_jump_fan_ollie NO_Gap_AirBoat g_natchez_trigger3 NO_Crypt2_openB NO_Gap_End_HeliSpine2 NO_SFX_Crypt01_First_Rumble Create should_look_at_skater dist vibrate Air_SquareU NO_goal_skatetheline3 TRG_veh_donkey1 NO_jump_vator_ollie voodoo NO_ManHoleManual_Start TRG_sewer_alley SootyF01 NO_Goal_Classic_Voodoo_Init apm_NO_WaterTower_slap01_fast_particle_params NO_Equalizer_Intro_Text2_Lip CleanStreet1 trg_grvgate_riv z_priority NO_AddGoal_Spat NO_jump_fan_ollie_level2 skulls_text Classic_CrystalBall04 NO_Female1_Flash10 NO_Televator duration NO_Ped_Tricycle NO_FireParticlesOn GetGlobalFlag SK6_BO_RevolutionaryDrum01 NO_Crypt2_openA NO_flame NO_Clean_Checker RatDeathSquish goal_deactivate_script TRG_natchez_spot2 NO_Female1_Flash02 skitchspeed PolePop1 TRG_tele_B_down NO_stspine2 Vallely NO_KillCreate_NetGeo NO_Equalizer_Intro_Line3 recreate_balcs BroadcastEvent SpawnSkaterScript NO_Gap_Start_HeliSpine1 trg_skull3_01 FLAG_CRYPT_1 NO_SetFlameFlags AddGoal_TrickBeat NO_BigFocus_Easy_Description NO_Gap_End_HipBone FirstSwap_VO NO_BoatSlapper_View_Goal_Text NO_chimney_smoke_Particles spread sewer_alley_params total_to_win NO_WaterTower_View_Goal_Description NO_Gap_End_HeliSpine3 FLAG_HELIPAD add_multiplayer_mode_goals NO_Goal_SkateTheLine2 Classic_CrystalBall05 NO_spinsign_waiting Humidity1 parent EndGap NO_FireParticlesOff vo NO_FakeLights_Off NO_Female1_Flash03 STATE_GetAttention NO_Ped_Cop TRG_natchez_spot3 NO_vfer_grngod1 percent trg_lada NO_SetBeadFlags SetException g_natchez_trigger1 NO_vortex_spin_umbrella TRG_SFX_TrigBox_DixieBand01 NO_Classic_Goal_Collect2 InNetGame STATECONTROL_avoidstop_custom01 NO_Gap_Start_OBrienManual TRG_tele_C_up NO_Equalizer_Intro_Line2 attachobjid light_group AddGoal_SkateTheLine Air_SquareD

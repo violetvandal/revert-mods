@@ -1,0 +1,3670 @@
+
+AU_Goal_Intro_Cameras = [{virtual_cam 
+        targetid=world 
+        targetOffset=(4531.9, 38.5, 189.1) 
+        positionOffset=(-1914.2, 235.4, 7831.6) 
+        frames=420 
+        skippable=1 
+        text=AU_Intro_Text1 
+        cam_start_script=AU_Intro_Line1 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(4531.9, 38.5, 189.1) 
+        positionOffset=(-1914.2, 235.4, 7831.6) 
+        frames=300 
+        skippable=1 
+        text=AU_Intro_Text2 
+        cam_start_script=AU_Intro_Line2 
+        time=5000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-7217.0, -5298.1, 16669.1) 
+        positionOffset=(-2213.5, 525.0, 10262.0) 
+        frames=375 
+        skippable=1 
+        goal=AU_Goal_TimedScoreRun 
+        time=3000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-701.3, -5093.1, 13528.5) 
+        positionOffset=(414.3, 241.3, 5144.1) 
+        frames=375 
+        skippable=1 
+        goal=AU_Goal_TrickObjects 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-549.2, -3686.5, 15342.8) 
+        positionOffset=(462.3, 245.2, 6204.2) 
+        frames=375 
+        skippable=1 
+        goal=AU_Goal_Gaps 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(11832.9, 2157.5, 13946.6) 
+        positionOffset=(8125.0, -814.6, 5148.0) 
+        frames=370 
+        skippable=1 
+        goal=AU_Goal_Gaps3 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-3250.3, -4480.3, 13056.0) 
+        positionOffset=(-5193.3, 177.2, 4423.4) 
+        frames=370 
+        skippable=1 
+        goal=AU_Goal_Gaps5 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-7476.9, -2825.0, 17158.9) 
+        positionOffset=(-1490.4, 737.8, 9985.1) 
+        frames=370 
+        skippable=1 
+        goal=AU_Goal_Gaps12 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(10073.1, 67.3, 5055.1) 
+        positionOffset=(82.0, -139.4, 5420.4) 
+        frames=370 
+        skippable=1 
+        goal=AU_Goal_Gaps11 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(983.7, -3285.6, 2947.5) 
+        positionOffset=(-4678.5, 536.5, 10250.2) 
+        frames=375 
+        skippable=1 
+        goal=AU_Goal_Gaps2 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(4531.9, 38.5, 189.1) 
+        positionOffset=(-1914.2, 235.4, 7831.6) 
+        frames=310 
+        skippable=1 
+        text="Come and see me when you're ready to move on." 
+        time=5000 
+    } 
+] 
+AU_Pro_Goal_Intro_Cameras = [{virtual_cam 
+        targetid=world 
+        targetOffset=(9441.4, 2432.3, 13724.5) 
+        positionOffset=(486.4, 215.6, 9865.6) 
+        frames=615 
+        skippable=1 
+        text="New goal list unlocked.  Pro goals!" 
+        time=10000 
+        cam_start_script=FirstSwap_VO 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-2279.8, -7072.3, 2486.8) 
+        positionOffset=(-5768.9, 1629.7, 5964.3) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps4 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-14481.4, -1002.6, 5319.5) 
+        positionOffset=(-5189.0, 1348.3, 8169.6) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps6 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-5640.4, -3287.9, -1021.1) 
+        positionOffset=(-412.8, 57.2, 6819.9) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps13 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(4720.2, -163.5, 14808.4) 
+        positionOffset=(-3497.1, 219.3, 9122.8) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps7 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-13847.2, -3482.0, 11132.0) 
+        positionOffset=(-4897.0, 760.8, 9757.8) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps21 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(5035.0, 1897.9, 10866.7) 
+        positionOffset=(-4214.5, 256.1, 7438.7) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps19 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-11932.0, -4377.9, 9139.0) 
+        positionOffset=(-3954.4, 720.5, 5920.3) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps8 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-4440.2, -6778.5, 3261.6) 
+        positionOffset=(-1848.5, 981.0, 9012.0) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps9 
+        time=6000 
+    } 
+] 
+AU_Shrimp_Goal_Intro_Cameras = [{virtual_cam 
+        targetid=world 
+        targetOffset=(4213.1, -1504.8, 2564.6) 
+        positionOffset=(-2055.9, 456.9, 10104.6) 
+        frames=615 
+        skippable=1 
+        text="New goal list unlocked.  Guest goals!\\nNew Special Trick - The Rotisserie" 
+        time=10000 
+        cam_start_script=FirstSwap_VO 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-11386.7, -182.5, 7331.3) 
+        positionOffset=(-1540.0, -231.8, 5588.6) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps18 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-4997.6, -3919.3, 14512.1) 
+        positionOffset=(-1543.9, 1282.2, 6700.9) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps15 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-11902.3, -2818.9, 10114.4) 
+        positionOffset=(-2837.5, 246.2, 7210.6) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps16 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(616.5, 150.5, 16342.0) 
+        positionOffset=(-2734.6, 41.6, 6921.1) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps14 
+        time=6000 
+    } 
+] 
+AU_Minikart_Goal_Intro_Cameras = [{virtual_cam 
+        targetid=world 
+        targetOffset=(2021.1, 2030.2, 2034.9) 
+        positionOffset=(-4770.1, 446.1, 9202.1) 
+        frames=615 
+        skippable=1 
+        text="New goal list unlocked.  Secret goals!" 
+        time=10000 
+        cam_start_script=FirstSwap_VO 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-12975.4, 790.5, 4894.6) 
+        positionOffset=(-3812.2, 246.2, 8861.3) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps17 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(13484.6, -2375.5, 12709.7) 
+        positionOffset=(7318.1, -663.1, 5026.1) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_TrickObjects2 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-9712.8, 783.9, 14785.4) 
+        positionOffset=(-1546.3, 270.9, 9037.1) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps20 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(2440.1, -5951.7, 15448.3) 
+        positionOffset=(-2922.5, 560.3, 10079.0) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps10 
+        time=6000 
+    } 
+] 
+AU_Elimination_Intro_Cameras = [{virtual_cam 
+        targetid=world 
+        targetOffset=(-3618.0, 159.2, 15993.3) 
+        positionOffset=(-1909.0, -202.4, 6147.1) 
+        frames=615 
+        skippable=1 
+        text=AU_Elimination_Text1 
+        cam_start_script=AU_Elimination_Line1 
+        time=10000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-11696.4, -472.9, 4044.7) 
+        positionOffset=(-1922.7, -209.0, 6143.4) 
+        frames=615 
+        skippable=1 
+        text=AU_Elimination_Text2 
+        cam_start_script=AU_Elimination_Line2 
+        time=10000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-10622.6, -2102.2, 10660.2) 
+        positionOffset=(-1776.2, -138.2, 6431.3) 
+        frames=100 
+        skippable=1 
+        cam_start_script=AU_Elimination_Line2A 
+        text="..." 
+        time=3500 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-10622.6, -2102.2, 10660.2) 
+        positionOffset=(-1776.2, -138.2, 6431.3) 
+        frames=615 
+        skippable=1 
+        text=AU_Elimination_Text3 
+        cam_start_script=AU_Elimination_Line3 
+        time=10000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(4829.6, -5861.2, 7472.2) 
+        positionOffset=(-2806.7, 244.7, 5377.0) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps23 
+        time=6000 
+    } 
+    {virtual_cam 
+        targetid=world 
+        targetOffset=(-14170.2, 587.2, 13521.8) 
+        positionOffset=(-5308.0, 443.7, 8891.5) 
+        frames=200 
+        skippable=1 
+        goal=AU_Goal_Gaps22 
+        time=6000 
+    } 
+] 
+script AU_Setup {
+    AU_CreatePeds All 
+    AU_Initializer 
+} 
+script AU_Initializer {
+    AU_SecretArea_Off 
+    if GameModeEquals Is_Career {
+        if GoalManager_HasWonGoal Name=AU_Goal_Gaps6 {
+            Create Name=AU_AS_MasterPiece_Final01 
+        } 
+        if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps {
+            Create Name=TRG_Ped_Hint_RampKid01 
+            Kill Name=TRG_Ped_RampKid_Skate01 
+        } 
+        if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps11 {
+            Create Name=TRG_Ped_CornGuy01 
+        } else {
+            Create Name=TRG_Ped_CornGuy02 
+        } 
+        if ! GoalManager_HasWonGoal Name=Gaps13 {
+            Create Name=TRG_Ped_Detector01 
+        } else {
+            Create Name=TRG_Ped_Detector03 
+        } 
+        if ! GoalManager_GoalIsLocked Name=AU_Goal_Gaps6 {
+            if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps6 {
+                Create Name=TRG_Ped_GrafPunk01 
+            } else {
+                Create Name=TRG_Ped_GrafPunk02 
+            } 
+        } else {
+            Create Name=TRG_Ped_GrafPunk02 
+        } 
+        if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps10 {
+            Create Prefix="TRG_Ped_Busted" 
+        } 
+        if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps2 {
+            Create Name=TRG_Ped_Foreman01 
+        } else {
+            if GoalManager_HasWonGoal Name=AU_Goal_Gaps10 {
+            } else {
+                if GoalManager_HasWonGoal Name=AU_Goal_Gaps3 {
+                    Create Name=TRG_Ped_Foreman02 
+                } 
+            } 
+        } 
+        Create Name=TRG_Ped_Hawk01 
+        Create Name=TRG_Ped_TeammatePro 
+        if GoalManager_HasWonGoal Name=AU_Goal_Gaps11 {
+            Create Name=TRG_Ped_ShrimpVendor 
+        } else {
+            Create Name=TRG_Ped_ShrimpVendorChill01 
+        } 
+        if GoalManager_HasWonGoal Name=AU_Goal_Gaps3 {
+            Create Name=TRG_Ped_MiniKart01 
+        } else {
+            Create Name=TRG_Ped_Secret01 
+        } 
+        SpawnScript AU_ShrimpSlap_Counter Params={LastPedHit=asswipe} 
+        CreateFastParticleSystem Name=JOW_AU_HydrantDrip01 params_Script=JOW_AU_HydrantDrip01_fast_particle_params 
+    } 
+    if InMultiPlayerGame {
+        Kill Name=Geo_Crane_Obj_Arm 
+        Kill Name=Geo_Crane_Obj_KennyHead 
+        Kill Name=Geo_Crane_Obj_Chain 
+        Create Name=Geo_NetGeo_CraneArm 
+        Create Name=Geo_NetGeo_KennyHead 
+        Create Name=Geo_NetGeo_Chain 
+        Kill Name=Geo_ProximBox01 
+        Kill Prefix="Geo_Secret" 
+        Kill Prefix="TRG_L_Secret" 
+        Kill Prefix="TRG_L_SecretFallsLip" 
+        Kill Prefix="TRG_L_SecretPool" 
+        Kill Prefix="TRG_R_SecretEntry" 
+        Kill Prefix="TRG_R_SecretLadder" 
+        Kill Name="Geo_TrashSpin01_Obj" 
+        Kill Name="Geo_TrashSpin02_Obj" 
+        Kill Name="Geo_TrashSpin03_Obj" 
+        Create Prefix="Geo_MultiOn_TrashSpin" 
+    } 
+} 
+script AU_Startup {
+    SetFlag flag=FLAG_EVENT_A_PRE_STATE 
+    LoadAsset "models\\gameobjects\\projectiles\\shrimp\\shrimp.tex" 
+    LoadAsset "models\\gameobjects\\projectiles\\shrimp\\shrimp.mdl" parent=#a48d7426 
+    LoadParticleTexture "bits\\CG_AU_Shatter_Pot" 
+    LoadParticleTexture "bits\\CG_AU_Shatter_BlueFence" 
+    LoadParticleTexture "bits\\CG_AU_Shatter_BeachSign" 
+    LoadParticleTexture "bits\\CG_AU_Shatter_KangEar" 
+    LoadParticleTexture "bits\\CG_AU_Shatter_KennyFinger" 
+} 
+script AU_Goals {
+    if ! InMultiPlayerGame {
+    } 
+    if InMultiPlayerGame {
+        Add_MultiPlayer_Mode_Goals 
+    } 
+    if ! InSplitScreenGame {
+        if ((GameModeEquals is_classic) or (InNetGame)) {
+            AddGoal_HighScore {
+                unlimited_time 
+                Score=AU_Classic_HighScore 
+                Goal_Text=AU_Classic_HighScore_Text 
+                View_Goals_Text=AU_Classic_HighScore_Text 
+                Difficulty_Level_Params=[
+                    {
+                        Score=AU_Classic_Easy_HighScore 
+                        Goal_Text=AU_Classic_Easy_HighScore_Text 
+                        View_Goals_Text=AU_Classic_Easy_HighScore_Text 
+                    } 
+                    {
+                        Score=AU_Classic_HighScore 
+                        Goal_Text=AU_Classic_HighScore_Text 
+                        View_Goals_Text=AU_Classic_HighScore_Text 
+                    } 
+                ] 
+                view_goals_cameras=[{
+                        Name=CAM_Classic_Intro01 
+                        frames=301 
+                        skippable=1 
+                    } 
+                ] 
+                classic_mode_goal 
+            } 
+            AddGoal_ProScore {
+                unlimited_time 
+                Score=AU_Classic_ProScore 
+                Goal_Text=AU_Classic_ProScore_Text 
+                View_Goals_Text=AU_Classic_ProScore_Text 
+                Difficulty_Level_Params=[
+                    {
+                        Score=AU_Classic_Easy_ProScore 
+                        Goal_Text=AU_Classic_Easy_ProScore_Text 
+                        View_Goals_Text=AU_Classic_Easy_ProScore_Text 
+                    } 
+                    {
+                        Score=AU_Classic_ProScore 
+                        Goal_Text=AU_Classic_ProScore_Text 
+                        View_Goals_Text=AU_Classic_ProScore_Text 
+                    } 
+                ] 
+                classic_mode_goal 
+            } 
+            AddGoal_SickScore {
+                unlimited_time 
+                Score=AU_Classic_SickScore 
+                Goal_Text=AU_Classic_SickScore_Text 
+                View_Goals_Text=AU_Classic_SickScore_Text 
+                Difficulty_Level_Params=[
+                    {
+                        Score=AU_Classic_Easy_SickScore 
+                        Goal_Text=AU_Classic_Easy_SickScore_Text 
+                        View_Goals_Text=AU_Classic_Easy_SickScore_Text 
+                    } 
+                    {
+                        Score=AU_Classic_SickScore 
+                        Goal_Text=AU_Classic_SickScore_Text 
+                        View_Goals_Text=AU_Classic_SickScore_Text 
+                    } 
+                ] 
+                classic_mode_goal 
+            } 
+            AddGoal_HighCombo {
+                unlimited_time 
+                Score=AU_Classic_HighCombo 
+                Goal_Text=AU_Classic_HighCombo_Text 
+                View_Goals_Text=AU_Classic_HighCombo_Text 
+                Difficulty_Level_Params=[
+                    {
+                        Score=AU_Classic_Easy_HighCombo 
+                        Goal_Text=AU_Classic_Easy_HighCombo_Text 
+                        View_Goals_Text=AU_Classic_Easy_HighCombo_Text 
+                    } 
+                    {
+                        Score=AU_Classic_HighCombo 
+                        Goal_Text=AU_Classic_HighCombo_Text 
+                        View_Goals_Text=AU_Classic_HighCombo_Text 
+                    } 
+                ] 
+                classic_mode_goal 
+            } 
+            AddGoal_Skate {
+                unlimited_time 
+                S_obj_id=TRG_SKATE_S 
+                K_obj_id=TRG_SKATE_K 
+                A_obj_id=TRG_SKATE_A 
+                T_obj_id=TRG_SKATE_T 
+                E_obj_id=TRG_SKATE_E 
+                view_goals_cameras=[{virtual_cam 
+                        targetid=world 
+                        targetOffset=(-12354.8, -1004.1, 10510.0) 
+                        positionOffset=(-2833.4, 650.3, 7939.6) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+                classic_mode_goal 
+            } 
+            AddGoal_Combo {
+                unlimited_time 
+                letter_info=[
+                    {obj_id=TRG_COMBO_C text="C"} 
+                    {obj_id=TRG_COMBO_O text="O"} 
+                    {obj_id=TRG_COMBO_M text="M"} 
+                    {obj_id=TRG_COMBO_B text="B"} 
+                    {obj_id=TRG_COMBO_O01 text="O"} 
+                ] 
+                view_goals_cameras=[{virtual_cam 
+                        targetid=world 
+                        targetOffset=(7275.5, -3435.2, 10185.1) 
+                        positionOffset=(-1250.7, 544.2, 6798.9) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+                classic_mode_goal} 
+            AddGoal_collect {
+                unlimited_time 
+                collect_type="Flower Pots" 
+                Goal_Text="Smash 5 Flower Pots" 
+                View_Goals_Text="Smash 5 Flower Pots" 
+                goal_description="Find and smash 5 Flower Pots" 
+                use_hud_counter 
+                hud_counter_caption="Pots Smashed" 
+                goal_flags=[
+                    got_1 
+                    got_2 
+                    got_3 
+                    got_4 
+                    got_5 
+                ] 
+                view_goals_cameras=[
+                    {
+                        virtual_cam 
+                        targetid=world 
+                        targetOffset=(6818.9, -3169.8, 12912.0) 
+                        positionOffset=(1629.5, 351.8, 5124.0) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+                Init_Script=AU_Classic_FlowerPots_Create 
+                Goal_Deactivate_Script=AU_Classic_FlowerPots_Kill 
+                classic_mode_goal} 
+            AddGoal_SecretTape {
+                Goal_Text="Find the secret tape" 
+                View_Goals_Text="Find the secret tape" 
+                goal_description="Find the secret tape" 
+                secret_tape_id=TRG_AU_Secret_Tape 
+                view_goals_cameras=[{virtual_cam 
+                        targetid=world 
+                        targetOffset=(-9251.5, 770.9, 18701.2) 
+                        positionOffset=(-5856.5, 1621.9, 9334.6) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+                classic_mode_goal} 
+            AddGoal_gaps {
+                unlimited_time 
+                collect_type="G'Day Gaps" 
+                use_hud_counter 
+                hud_counter_caption="G'Day Gaps" 
+                Goal_Text="Find and Hit 5 G'Day Ramp Transfers" 
+                View_Goals_Text="Find and Hit 5 G'Day Ramp Transfers" 
+                goal_description="Find and Hit 5 G'Day Ramp Transfers" 
+                goal_flags=[
+                    got_1 
+                    got_2 
+                    got_3 
+                    got_4 
+                    got_5 
+                ] 
+                view_goals_cameras=[{virtual_cam 
+                        targetid=world 
+                        targetOffset=(9019.5, -2394.6, 13980.7) 
+                        positionOffset=(190.2, 380.2, 10194.0) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+                classic_mode_goal 
+            } 
+            AddGoal_collect {
+                unlimited_time 
+                version=2 
+                collect_type="Street Lamps" 
+                use_hud_counter 
+                hud_counter_caption="Street Lamps" 
+                Goal_Text="Bust All 6 Street Lamps" 
+                View_Goals_Text="Bust All 5 Yellow Street Lamps" 
+                goal_description="Bust All 5 Yellow Street Lamps" 
+                goal_flags=[got_1 
+                    got_2 
+                    got_3 
+                    got_4 
+                    got_5 
+                ] 
+                view_goals_cameras=[{virtual_cam 
+                        targetid=world 
+                        targetOffset=(-10371.0, -3756.4, 11589.5) 
+                        positionOffset=(-1683.1, 775.3, 9594.5) 
+                        frames=200 
+                        skippable=1 
+                    } 
+                ] 
+                classic_mode_goal 
+            } 
+        } else {
+            if ! ((GameModeEquals Is_SingleSession) or (GameModeEquals Is_CreateGoals)) {
+                if ! InNetGame {
+                } 
+            } 
+        } 
+    } 
+} 
+script AU_Main_Story_goals {
+    AU_AddGoal_TimedScoreRun 
+    AU_AddGoal_TrickTheObjects 
+    AU_AddGoal_MiniRamp 
+    AU_AddGoal_Aborigine 
+    AU_AddGoal_TidePool 
+    AU_AddGoal_Meal 
+    AU_AddGoal_ShrimpVendor 
+    AU_AddGoal_Crane 
+    AU_AddGoal_BigAcid 
+    AU_AddGoal_EmuGraf 
+    AU_AddGoal_Trash 
+    AU_AddGoal_Focus 
+    AU_AddGoal_KennyFingers 
+    AU_AddGoal_Team 
+    AU_AddGoal_Bigguns 
+    AU_AddGoal_BridgeManual 
+    AU_AddGoal_Signs 
+    AU_AddGoal_SecretAreaCombo 
+    AU_AddGoal_540Bridge 
+    AU_AddGoal_KennyHead 
+    AU_AddGoal_ShrimpSlap 
+    AU_AddGoal_LoftyGap 
+    AU_AddGoal_Gulls 
+    AU_AddGoal_Focus2 
+} 
+script AU_Capstone_Story_goals {
+    AU_AddGoal_BeverHausen 
+    AU_AddGoal_BeverHausen2 
+} 
+script AU_CreateAllCars {
+    AU_CreateMovingCars 
+} 
+script AU_CreateMovingCars {
+    Create Name=TRG_Car01 
+    Wait random { 1 { 3 Seconds } 1 { 4 Seconds } 1 { 5 Seconds } 1 { 6 Seconds } } 
+    Create Name=TRG_Car02 
+    Wait random { 1 { 3 Seconds } 1 { 4 Seconds } 1 { 5 Seconds } 1 { 6 Seconds } } 
+    Create Name=TRG_Car03 
+    Wait random { 1 { 3 Seconds } 1 { 4 Seconds } 1 { 5 Seconds } 1 { 6 Seconds } } 
+    Create Name=TRG_Car04 
+} 
+script AU_CreatePeds {
+} 
+script AU_Classic_FlowerPots_Create {
+    Create Prefix="AU_Classic_FlowerPot" 
+    Create Prefix="AU_Classic_FlowerPotPlant" 
+} 
+script AU_Classic_FlowerPots_Kill {
+    Kill Prefix="AU_Classic_FlowerPot" 
+    Kill Prefix="AU_Classic_FlowerPotPlant" 
+} 
+script AU_AddGoal_TimedScoreRun {
+    AddGoal_TimedScoreRun {
+        Reward_Points=25 
+        View_Goals_Text=AU_TSR_Text 
+        Goal_Text=AU_TSR_Text 
+        goal_description=AU_TSR_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-7217.0, -5298.1, 16669.1) 
+                positionOffset=(-2213.5, 525.0, 10262.0) 
+            } 
+        ] 
+        time=60 
+        Skater=Custom 
+        Trigger_Obj_ID=TRG_Arcade_Machine 
+        Pro="Arcade Machine" 
+        Trigger_Wait_Script=NullScript 
+        Trigger_Start_Script=Arcade_Machine_Start_Goal 
+        Trigger_Success_Script=NullScript 
+        Restart_Node=TRG_Restart_Arcade 
+        Always_Initialize_Goal 
+        dont_kill_trigger_on_success} 
+} 
+script AU_AddGoal_TrickTheObjects {
+    AddGoal_TrickTheObjects {
+        Reward_Points=25 
+        Silent_Activation 
+        Skater=Custom 
+        View_Goals_Text=AU_TTO_Text 
+        Difficulty_Level_Params=[
+            {
+                goal_description=AU_TTO_Desc_Easy 
+                Required_Score=AU_TTO_Score_Easy 
+            } 
+            {
+                goal_description=AU_TTO_Desc_Med 
+                Required_Score=AU_TTO_Score_Normal 
+            } 
+            {
+                goal_description=AU_TTO_Desc_Hard 
+                Required_Score=AU_TTO_Score_Hard 
+            } 
+        ] 
+        view_goals_cameras=[
+            {
+                targetOffset=(-701.3, -5093.1, 13528.5) 
+                positionOffset=(414.3, 241.3, 5144.1) 
+                time=2 
+            } 
+            {
+                targetOffset=(-5602.7, -5857.3, 12580.8) 
+                positionOffset=(-1221.8, 326.0, 6056.1) 
+                time=2 
+            } 
+            {
+                targetOffset=(-9263.4, -5506.1, 10711.8) 
+                positionOffset=(-2801.3, 536.6, 6051.2) 
+                time=2 
+            } 
+        ] 
+        Goal_Objects=[
+            {cluster_id=Geo_ComboRail01 flag=got_1} 
+            {cluster_id=Geo_ComboRail02 flag=got_2} 
+            {cluster_id=Geo_ComboRail03 flag=got_3} 
+        ] 
+        goal_flags=[
+            got_1 
+            got_2 
+            got_3 
+        ] 
+        Trick_Object_Prefix="Geo_ComboRail" 
+        Trick_Object_Light_Group=Outdoor 
+        Require_Combo 
+        No_Fail_Messages} 
+} 
+script AU_AddGoal_MiniRamp {
+    AddGoal_gaps {
+        Reward_Points=25 
+        Skater=Custom 
+        Silent_Activation 
+        View_Goals_Text=AU_Mini_Text 
+        View_Goals_Tip=AU_Mini_Tip 
+        Difficulty_Level_Params=[
+            {goal_description=AU_Mini_Desc_Easy} 
+            {goal_description=AU_Mini_Desc_Med} 
+            {goal_description=AU_Mini_Desc_Hard} 
+        ] 
+        view_goals_cameras=[
+            {
+                targetOffset=(-549.2, -3686.5, 15342.8) 
+                positionOffset=(462.3, 245.2, 6204.2) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_MiniLip {
+    GetTriggerArray Lip Onto 
+    if Triggertype <trigger_array> {
+        Printf "CR CR CR GOT LIP ONTO...Setting Exceptions." 
+        ClearExceptionGroup AU_MiniLipGroup 
+        SetException Ex=SkaterLanded Scr=AU_MiniLip_Got Group=AU_MiniLipGroup 
+        SetException Ex=SkaterBailed Scr=AU_MiniLip_Fail Group=AU_MiniLipGroup 
+        Block 
+    } 
+} 
+script AU_MiniLip_Got {
+    ClearExceptionGroup AU_MiniLipGroup 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps {
+        if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps {
+            GoalManager_GetDifficultyLevel 
+            if (<Difficulty_Level> = 0) {
+                
+                MiniScore = AU_Mini_Score_Easy 
+                
+            } else {
+                if (<Difficulty_Level> = 1) {
+                    
+                    MiniScore = AU_Mini_Score_Normal 
+                    
+                } else {
+                    if (<Difficulty_Level> = 2) {
+                        
+                        MiniScore = AU_Mini_Score_Hard 
+                        
+                    } 
+                } 
+            } 
+            if SkaterLastScoreLandedGreaterThan <MiniScore> {
+                GoalManager_SetGoalFlag Name=AU_Goal_Gaps got_1 1 
+                Create Name=TRG_Ped_RampKid_Skate01 
+                Kill Name=TRG_Ped_Hint_RampKid01 
+            } 
+        } 
+    } 
+} 
+script AU_MiniLip_Fail {
+    ClearExceptionGroup AU_MiniLipGroup 
+} 
+script AU_AddGoal_Crane {
+    AddGoal_gaps {
+        Reward_Points=75 
+        version=2 
+        Skater=Custom 
+        Silent_Activation 
+        View_Goals_Text=AU_Crane_Text 
+        View_Goals_Tip=AU_Crane_Tip 
+        goal_description=AU_Crane_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(983.7, -3285.6, 2947.5) 
+                positionOffset=(-4678.5, 536.5, 10250.2) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_AddGoal_Aborigine {
+    AddGoal_gaps {
+        version=3 
+        Skater=Custom 
+        Silent_Activation 
+        Reward_Points=25 
+        View_Goals_Text=AU_Aborigine_Text 
+        View_Goals_Tip=AU_Aborigine_Tip 
+        goal_description=AU_Aborigine_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(11832.9, 2157.5, 13946.6) 
+                positionOffset=(8125.0, -814.6, 5148.0) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_AborigineGap {
+    if IsAlive Name=TRG_Ped_Secret01 {
+        TRG_Ped_Secret01:Obj_RotZ Angle=180 Speed=1000 FLAG_MAX_COORDS 
+    } 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps3 {
+        if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps3 {
+            GoalManager_SetGoalFlag Name=AU_Goal_Gaps3 got_1 1 
+            if ! IsAlive Name=TRG_Ped_MiniKart01 {
+                Create Name=TRG_Ped_MiniKart01 
+            } 
+            if IsAlive Name=TRG_Ped_Foreman01 {
+                Kill Name=TRG_Ped_Foreman01 
+            } 
+            if ! IsAlive Name=TRG_Ped_Foreman02 {
+                Create Name=TRG_Ped_Foreman02 
+            } 
+        } 
+    } 
+} 
+script AU_AddGoal_TidePool {
+    AddGoal_gaps {
+        version=5 
+        Skater=Custom 
+        Silent_Activation 
+        Reward_Points=25 
+        View_Goals_Text=AU_TidePool_Text 
+        View_Goals_Tip=AU_TidePool_Tip 
+        goal_description=AU_TidePool_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-3250.3, -4480.3, 13056.0) 
+                positionOffset=(-5193.3, 177.2, 4423.4) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_AddGoal_Meal {
+    AddGoal_gaps {
+        version=12 
+        Skater=Custom 
+        Silent_Activation 
+        Reward_Points=25 
+        View_Goals_Text=AU_Meal_Text 
+        goal_description=AU_Meal_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-7476.9, -2825.0, 17158.9) 
+                positionOffset=(-1490.4, 737.8, 9985.1) 
+            } 
+        ] 
+        goal_flags=[
+            got_1 
+            got_2 
+            got_3 
+            got_4 
+            got_5 
+            Got_6 
+        ] 
+        collect_type="Tables Trashed"} 
+} 
+script AU_Table_Knock {
+    if GoalManager_GoalExists Name=AU_Goal_Gaps12 {
+        Printstruct <...> 
+        Printf "CR CR CR --- MEAL GOAL EXISTS!" 
+        if ! GoalManager_GoalFlagSet Name=AU_Goal_Gaps12 flag=<flag> {
+            SpawnScript AU_SFX_ScreamingpeopleAtCafe 
+            GoalManager_SetGoalFlag Name=AU_Goal_Gaps12 <flag> 1 
+        } 
+        Printf "CR CR CR --- MEAL GOAL DOESN'T EXIST, MEATHEAD!" 
+    } 
+} 
+Table01 = {flag=got_1} 
+Table02 = {flag=got_2} 
+Table03 = {flag=got_3} 
+Table04 = {flag=got_4} 
+Table05 = {flag=got_5} 
+Table06 = {flag=Got_6} 
+script AU_AddGoal_ShrimpVendor {
+    AddGoal_gaps {
+        version=11 
+        Skater=Custom 
+        Silent_Activation 
+        Reward_Points=25 
+        View_Goals_Text=AU_Shrimp_Text 
+        goal_description=AU_Shrimp_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(10073.1, 67.3, 5055.1) 
+                positionOffset=(82.0, -139.4, 5420.4) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_AddGoal_Focus {
+    AddGoal_gaps {
+        version=7 
+        Silent_Activation 
+        Skater=Pro 
+        Unlocked_By_Another 
+        Reward_Points=50 
+        View_Goals_Text=AU_2Cars_Text 
+        View_Goals_Tip=AU_2Cars_Tip 
+        goal_description=AU_2Cars_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(4720.2, -163.5, 14808.4) 
+                positionOffset=(-3497.1, 219.3, 9122.8) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_Gap_DoubleCar_Start {
+    if Skater:IsSkaterFocused {
+        StartGap GapID=<ID1> Flags=[PURE_AIR] TrickText="Double Kickflip" TrickScript=AU_DoubleFlip_Got 
+    } 
+} 
+script AU_Gap_DoubleCar_End {
+    EndGap GapID=<ID1> 
+    SetException Ex=SkaterLandedClean Scr=AU_DoubleFlip_Clean Group=AU_DoubleFlip_Group 
+    Wait 1 Second 
+    ClearExceptionGroup AU_DoubleFlip_Group 
+    UnSetFlag flag=FLAG_DOUBLEFLIP_GOT 
+} 
+script AU_DoubleFlip_Got {
+    SetFlag flag=FLAG_DOUBLEFLIP_GOT 
+} 
+script AU_DoubleFlip_Clean {
+    ClearExceptionGroup AU_DoubleFlip_Group 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps7 {
+        if ! GoalManager_GoalIsLocked Name=AU_Goal_Gaps7 {
+            if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps7 {
+                Wait 0.75 Second 
+                if GetFlag flag=FLAG_DOUBLEFLIP_GOT {
+                    GoalManager_SetGoalFlag Name=AU_Goal_Gaps7 got_1 1 
+                } 
+            } 
+        } 
+    } 
+} 
+script AU_AddGoal_Bigguns {
+    AddGoal_gaps {
+        version=8 
+        Silent_Activation 
+        Skater=Pro 
+        Unlocked_By_Another 
+        Reward_Points=75 
+        View_Goals_Text=AU_Bigguns_Text 
+        View_Goals_Tip=AU_Bigguns_Tip 
+        goal_description=AU_Bigguns_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-11932.0, -4377.9, 9139.0) 
+                positionOffset=(-3954.4, 720.5, 5920.3) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_BiggunsGap_Got {
+    ClearExceptionGroup AU_Bigguns 
+    SetException Ex=SkaterBailed Scr=AU_BiggunsGap_Bailed Group=AU_Bigguns 
+    SetException Ex=SkaterLanded Scr=AU_BiggunsGap_Landed Group=AU_Bigguns 
+    Block 
+} 
+script AU_BiggunsGap_Landed {
+    ClearExceptionGroup AU_Bigguns 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps8 {
+        if ! GoalManager_GoalIsLocked Name=AU_Goal_Gaps8 {
+            if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps8 {
+                GoalManager_SetGoalFlag Name=AU_Goal_Gaps8 got_1 1 
+            } 
+        } 
+    } 
+} 
+script AU_BiggunsGap_Bailed {
+    ClearExceptionGroup AU_Bigguns 
+} 
+script AU_AddGoal_BridgeManual {
+    AddGoal_gaps {
+        version=9 
+        Silent_Activation 
+        Skater=Pro 
+        Unlocked_By_Another 
+        Reward_Points=75 
+        View_Goals_Text=AU_BridgeMan_Text 
+        View_Goals_Tip=AU_BridgeMan_Tip 
+        goal_description=AU_BridgeMan_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-4440.2, -6778.5, 3261.6) 
+                positionOffset=(-1848.5, 981.0, 9012.0) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_BridgeManGap_Got {
+    if GoalManager_GoalExists Name=AU_Goal_Gaps9 {
+        Printf "CR CR CR --- BRIDGE MANUAL GOAL EXISTS!!!" 
+        GoalManager_SetGoalFlag Name=AU_Goal_Gaps9 got_1 1 
+    } else {
+        Printf "CR CR CR --- BRIDGE MANUAL GOAL DOESN'T EXIST, ASS MONKEY!!!" 
+    } 
+} 
+script AU_AddGoal_KennyFingers {
+    AddGoal_gaps {
+        version=21 
+        Silent_Activation 
+        Skater=Pro 
+        Unlocked_By_Another 
+        Reward_Points=50 
+        View_Goals_Text=AU_KnyFngr_Text 
+        View_Goals_Tip=AU_KnyFngr_Tip 
+        goal_description=AU_KnyFngr_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-13847.2, -3482.0, 11132.0) 
+                positionOffset=(-4897.0, 760.8, 9757.8) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_AddGoal_BigAcid {
+    AddGoal_gaps {
+        version=4 
+        Silent_Activation 
+        Skater=Pro 
+        Unlocked_By_Another 
+        Reward_Points=25 
+        View_Goals_Text=AU_Acid_Text 
+        View_Goals_Tip=AU_Acid_Tip 
+        goal_description=AU_Acid_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-2279.8, -7072.3, 2486.8) 
+                positionOffset=(-5768.9, 1629.7, 5964.3) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_StartGap_BigAcid {
+    StartGap GapID=BigAcid Flags=[PURE_AIR] TrickText="Acid Drop" TrickScript=AU_GotAcidDrop 
+} 
+script AU_EndGap_BigAcid {
+    EndGap GapID=BigAcid text="Check Your Pants!" Score=250 
+} 
+script AU_GotAcidDrop {
+    if GoalManager_GoalExists Name=AU_Goal_Gaps4 {
+        Printf "CR CR CR Goal exists, setting goal flag" 
+        GoalManager_SetGoalFlag Name=AU_Goal_Gaps4 got_1 1 
+    } else {
+        Printf "GOAL DOESN'T EXIST, ASS MONKEY!!!" 
+    } 
+} 
+script AU_AddGoal_EmuGraf {
+    AddGoal_gaps {
+        version=6 
+        Silent_Activation 
+        Skater=Pro 
+        Unlocked_By_Another 
+        Reward_Points=25 
+        View_Goals_Text=AU_Graf_Text 
+        goal_description=AU_Graf_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-14481.4, -1002.6, 5319.5) 
+                positionOffset=(-5189.0, 1348.3, 8169.6) 
+            } 
+        ] 
+        goal_flags=[got_1] 
+        Goal_Success_Script=AU_EmuBomb_Success} 
+} 
+script AU_Graf_EmuBomb {
+    GetTriggerArray Graffiti Onto 
+    if Triggertype <trigger_array> {
+        Printf "CR CR CR --- GRAF ON THE EMU BOARD!!!" 
+        if GoalManager_GoalExists Name=AU_Goal_Gaps6 {
+            Printf "CR CR CR --- EMU BOARD GOAL EXISTS!!!" 
+            if ! GoalManager_GoalIsLocked Name=AU_Goal_Gaps6 {
+                if ! GoalManager_GoalFlagSet Name=AU_Goal_Gaps6 flag=got_1 {
+                    Play_Cutscene Name="Cutscenes\\AU_SmallEvent_Billboard.Cut" RestartNode=TRG_Restart_Billboard 
+                    GoalManager_SetGoalFlag Name=AU_Goal_Gaps6 got_1 1 
+                } 
+            } 
+        } else {
+            Printf "CR CR CR --- EMU BOARD GOAL DOESN'T EXIST, ASS MONKEY!!!" 
+        } 
+    } 
+} 
+script AU_EmuBomb_Success {
+    if ! IsAlive Name=AU_AS_MasterPiece_Final01 {
+        Create Name=AU_AS_MasterPiece_Final01 
+    } 
+    if IsAlive Name=TRG_Ped_GrafPunk01 {
+        Kill Name=TRG_Ped_GrafPunk01 
+        Create Name=TRG_Ped_GrafPunk02 
+    } 
+} 
+script AU_AddGoal_Trash {
+    AddGoal_gaps {
+        version=13 
+        Silent_Activation 
+        Skater=Pro 
+        Unlocked_By_Another 
+        Reward_Points=25 
+        View_Goals_Text=AU_Trash_Text 
+        goal_description=AU_Trash_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-5640.4, -3287.9, -1021.1) 
+                positionOffset=(-412.8, 57.2, 6819.9) 
+            } 
+        ] 
+        goal_flags=[
+            got_1 
+            got_2 
+            got_3 
+            got_4 
+        ] 
+        No_Gap_Messages} 
+} 
+script AU_AddGoal_Signs {
+    AddGoal_gaps {
+        version=17 
+        Silent_Activation 
+        Skater=MiniKartDriver 
+        Unlocked_By_Another 
+        Reward_Points=25 
+        View_Goals_Text=AU_Signs_Text 
+        goal_description=AU_Signs_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-12975.4, 790.5, 4894.6) 
+                positionOffset=(-3812.2, 246.2, 8861.3) 
+            } 
+        ] 
+        goal_flags=[
+            got_1 
+            got_2 
+            got_3 
+            got_4 
+            got_5 
+        ] 
+        collect_type="Signs Smashed"} 
+} 
+script AU_AddGoal_SecretAreaCombo {
+    AddGoal_TrickTheObjects {
+        version=2 
+        Silent_Activation 
+        Skater=MiniKartDriver 
+        Unlocked_By_Another 
+        Reward_Points=25 
+        View_Goals_Text=AU_SecCombo_Text 
+        goal_description=AU_SecCombo_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(13484.6, -2375.5, 12709.7) 
+                positionOffset=(7318.1, -663.1, 5026.1) 
+                time=1.5 
+            } 
+            {
+                targetOffset=(15229.7, -1590.9, -1908.9) 
+                positionOffset=(8789.4, -618.6, 5678.8) 
+                time=1.5 
+            } 
+            {
+                targetOffset=(14776.3, -3142.1, -1464.6) 
+                positionOffset=(7747.6, -634.1, 5191.2) 
+                time=1.5 
+            } 
+        ] 
+        Goal_Objects=[
+            {cluster_id=Geo_Sec_Ledges01 flag=got_1} 
+            {cluster_id=Geo_Sec_Ledges02 flag=got_2} 
+            {cluster_id=Geo_Sec_Ledges04 flag=got_3} 
+        ] 
+        goal_flags=[
+            got_1 
+            got_2 
+            got_3 
+        ] 
+        Trick_Object_Prefix="Geo_Sec_Ledges" 
+        Trick_Object_Light_Group=Outdoor 
+        Require_Combo 
+        No_Fail_Messages 
+    } 
+} 
+script AU_AddGoal_KennyHead {
+    AddGoal_gaps {
+        version=10 
+        Silent_Activation 
+        Skater=MiniKartDriver 
+        Unlocked_By_Another 
+        Reward_Points=75 
+        View_Goals_Text=AU_KnyHd_Text 
+        View_Goals_Tip=AU_KnyHd_Tip 
+        goal_description=AU_KnyHd_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(2440.1, -5951.7, 15448.3) 
+                positionOffset=(-2922.5, 560.3, 10079.0) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_AddGoal_540Bridge {
+    AddGoal_gaps {
+        version=20 
+        Silent_Activation 
+        Skater=MiniKartDriver 
+        Unlocked_By_Another 
+        Reward_Points=25 
+        View_Goals_Text=AU_540_Text 
+        goal_description=AU_540_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-9712.8, 783.9, 14785.4) 
+                positionOffset=(-1546.3, 270.9, 9037.1) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_AddGoal_Focus2 {
+    AddGoal_gaps {
+        version=14 
+        Silent_Activation 
+        Skater=ShrimpVendor 
+        Unlocked_By_Another 
+        Reward_Points=75 
+        View_Goals_Text=AU_Stairs_Text 
+        View_Goals_Tip=AU_Stairs_Tip 
+        goal_description=AU_Stairs_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(616.5, 150.5, 16342.0) 
+                positionOffset=(-2734.6, 41.6, 6921.1) 
+            } 
+        ] 
+        goal_flags=[got_1]} 
+} 
+script AU_Gap_BigStairs_Start {
+    if Skater:IsSkaterFocused {
+        StartGap GapID=BigStairs Flags=[PURE_AIR] TrickText="Double Heelflip" TrickScript=AU_DoubleHeel_Got 
+    } else {
+        StartGap GapID=BigStairs Flags=[PURE_AIR] 
+    } 
+} 
+script AU_Gap_BigStairs_End {
+    EndGap GapID=BigStairs Score=50 text="Big Stair Set" 
+    Wait 30 frames 
+    UnSetFlag flag=FLAG_360_GOT 
+    UnSetFlag flag=FLAG_DOUBLEHEEL_GOT 
+} 
+script AU_DoubleHeel_Got {
+    SetFlag flag=FLAG_DOUBLEHEEL_GOT 
+} 
+script AU_DoubleHeel_SpinCheck {
+    if GoalManager_GoalExists Name=AU_Goal_Gaps14 {
+        if ! GoalManager_GoalIsLocked Name=AU_Goal_Gaps14 {
+            if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps14 {
+                Skater:GetSpin 
+                if (<spin> = 360) {
+                    SetFlag flag=FLAG_360_GOT 
+                    SetException Ex=SkaterLandedClean Scr=AU_DoubleHeel_Clean Group=AU_DoubleHeel_Group 
+                    Wait 30 frames 
+                } 
+            } 
+        } 
+    } 
+    ClearExceptionGroup AU_DoubleHeel_Group 
+} 
+script AU_DoubleHeel_Clean {
+    ClearExceptionGroup AU_DoubleHeel_Group 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps14 {
+        if ! GoalManager_GoalIsLocked Name=AU_Goal_Gaps14 {
+            if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps14 {
+                if GetFlag flag=FLAG_360_GOT {
+                    Wait 15 frames 
+                    if GetFlag flag=FLAG_DOUBLEHEEL_GOT {
+                        GoalManager_SetGoalFlag Name=AU_Goal_Gaps14 got_1 1 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script AU_AddGoal_LoftyGap {
+    AddGoal_gaps {
+        version=15 
+        Silent_Activation 
+        Skater=ShrimpVendor 
+        Unlocked_By_Another 
+        Reward_Points=50 
+        View_Goals_Text=AU_Lofty_Text 
+        View_Goals_Tip=AU_Lofty_Tip 
+        goal_description=AU_Lofty_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-4997.6, -3919.3, 14512.1) 
+                positionOffset=(-1543.9, 1282.2, 6700.9) 
+            } 
+        ] 
+        goal_flags=[got_1] 
+        can_retry_goal 
+        view_goals_notify_trick=Trick_Rotisserie} 
+} 
+script AU_Gap_JumpFan_Start {
+    StartGap GapID=JumpFan Flags=[PURE_AIR] 
+    UnSetFlag flag=FLAG_LOFTY_GAP_GOT 
+    UnSetFlag flag=FLAG_LOFTY_GAP_TRICK_GOT 
+    GoTo AU_LoftyGap_TrickWait 
+} 
+script AU_Gap_JumpFan_End {
+    EndGap GapID=JumpFan Score=150 text="Lofty Roof Gap" 
+    SetFlag flag=FLAG_LOFTY_GAP_GOT 
+} 
+script AU_LoftyGap_TrickWait {
+    ClearExceptionGroup LoftyGapGroup 
+    SetException Ex=SkaterTrickDisplayed Scr=AU_LoftyGap_TrickCheck Group=LoftyGapGroup 
+    SetException Ex=SkaterEnterManual Scr=AU_LoftyGap_Landed Group=LoftyGapGroup 
+    SetException Ex=SkaterEnterRevert Scr=AU_LoftyGap_Landed Group=LoftyGapGroup 
+    SetException Ex=SkaterEnterGround Scr=AU_LoftyGap_Landed Group=LoftyGapGroup 
+    SetException Ex=SkaterBailed Scr=AU_LoftyGap_Bailed Group=LoftyGapGroup 
+    Block 
+} 
+script AU_LoftyGap_TrickCheck {
+    ClearExceptionGroup LoftyGapGroup 
+    GetNumberOfTrickOccurrences TrickText="Rotisserie" 
+    if (<Number_Of_Occurrences> > 1) {
+        SetFlag flag=FLAG_LOFTY_GAP_TRICK_GOT 
+        SetException Ex=SkaterEnterManual Scr=AU_LoftyGap_Landed Group=LoftyGapGroup 
+        SetException Ex=SkaterEnterRevert Scr=AU_LoftyGap_Landed Group=LoftyGapGroup 
+        SetException Ex=SkaterEnterGround Scr=AU_LoftyGap_Landed Group=LoftyGapGroup 
+        SetException Ex=SkaterBailed Scr=AU_LoftyGap_Bailed Group=LoftyGapGroup 
+        Block 
+    } 
+    GoTo AU_LoftyGap_TrickWait 
+} 
+script AU_LoftyGap_Landed {
+    ClearExceptionGroup LoftyGapGroup 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps15 {
+        Wait 10 frames 
+        if GetFlag flag=FLAG_LOFTY_GAP_GOT {
+            if GetFlag flag=FLAG_LOFTY_GAP_TRICK_GOT {
+                GoalManager_SetGoalFlag Name=AU_Goal_Gaps15 got_1 1 
+            } 
+        } 
+    } 
+    UnSetFlag flag=FLAG_LOFTY_GAP_GOT 
+    UnSetFlag flag=FLAG_LOFTY_GAP_TRICK_GOT 
+} 
+script AU_LoftyGap_Bailed {
+    ClearExceptionGroup LoftyGapGroup 
+    UnSetFlag flag=FLAG_LOFTY_GAP_GOT 
+    UnSetFlag flag=FLAG_LOFTY_GAP_TRICK_GOT 
+} 
+script AU_AddGoal_ShrimpSlap {
+    AddGoal_gaps {
+        version=18 
+        Silent_Activation 
+        Skater=ShrimpVendor 
+        Reward_Points=25 
+        Unlocked_By_Another 
+        collect_type="Life Guards Shrimp Slapped" 
+        View_Goals_Text=AU_Slap_Text 
+        goal_description=AU_Slap_Desc 
+        View_Goals_Tip=AU_Slap_Tip 
+        view_goals_cameras=[
+            {
+                targetOffset=(-11386.7, -182.5, 7331.3) 
+                positionOffset=(-1540.0, -231.8, 5588.6) 
+            } 
+        ] 
+        goal_flags=[
+            got_1 
+            got_2 
+            got_3 
+            got_4 
+            got_5 
+        ] 
+    } 
+} 
+script AU_ShrimpSlap_Counter {
+    Printstruct <...> 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps18 {
+        Printf "CR CR CR CR --- SHRIMP SLAP GOAL EXISTS!" 
+        ClearExceptionGroup Projectile 
+        SetException Ex=PedHitByProjectile Scr=AU_ShrimpSlap_Check Group=Projectile Params={<...>} 
+        Block 
+    } 
+} 
+script AU_ShrimpSlap_Check {
+    ClearExceptionGroup Projectile 
+    Printstruct <...> 
+    if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps18 {
+        if (Projectile_Last_Ped_ID = TRG_Ped_LifeGuard01) {
+            GoalManager_SetGoalFlag Name=AU_Goal_Gaps18 got_1 1 
+        } else {
+            if (Projectile_Last_Ped_ID = TRG_Ped_LifeGuard02) {
+                GoalManager_SetGoalFlag Name=AU_Goal_Gaps18 got_2 1 
+            } else {
+                if (Projectile_Last_Ped_ID = TRG_Ped_LifeGuard03) {
+                    GoalManager_SetGoalFlag Name=AU_Goal_Gaps18 got_3 1 
+                } else {
+                    if (Projectile_Last_Ped_ID = TRG_Ped_LifeGuard04) {
+                        GoalManager_SetGoalFlag Name=AU_Goal_Gaps18 got_4 1 
+                    } else {
+                        if (Projectile_Last_Ped_ID = TRG_Ped_LifeGuard05) {
+                            GoalManager_SetGoalFlag Name=AU_Goal_Gaps18 got_5 1 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
+    GoToPreserveParams AU_ShrimpSlap_Counter 
+} 
+script AU_AddGoal_Gulls {
+    AddGoal_gaps {
+        version=16 
+        Silent_Activation 
+        Skater=ShrimpVendor 
+        Unlocked_By_Another 
+        Reward_Points=75 
+        View_Goals_Text=AU_Gulls_Text 
+        goal_description=AU_Gulls_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(-11902.3, -2818.9, 10114.4) 
+                positionOffset=(-2837.5, 246.2, 7210.6) 
+            } 
+        ] 
+        goal_flags=[
+            got_1 
+            got_2 
+            got_3 
+            got_4 
+            got_5 
+            Got_6 
+            Got_7 
+            Got_8 
+            Got_9 
+            Got_10 
+            Got_11 
+            Got_12 
+            Got_13 
+            Got_14 
+            Got_15 
+            Got_16 
+            Got_17 
+            Got_18 
+            Got_19 
+            Got_20 
+        ] 
+        Num_Flags_To_Win=10 
+        can_retry_goal 
+        No_Gap_Messages} 
+} 
+script AU_AddGoal_Team {
+    AddGoal_gaps {
+        version=19 
+        Silent_Activation 
+        Skater=Pro 
+        Unlocked_By_Another 
+        Reward_Points=50 
+        View_Goals_Text=AU_Team_Text 
+        goal_description=AU_Team_Desc 
+        view_goals_cameras=[
+            {
+                targetOffset=(5035.0, 1897.9, 10866.7) 
+                positionOffset=(-4214.5, 256.1, 7438.7) 
+            } 
+        ] 
+        goal_flags=[
+            {Skater=Pro goal_flags=[got_1]} 
+            {Skater=Custom goal_flags=[got_1]} 
+            {Skater=ShrimpVendor goal_flags=[got_1]} 
+        ] 
+        collect_type="Team Grinds"} 
+} 
+script AU_CarOnPath_A {
+    Car_Generic01 StickToGround TurnDist=20 DefaultSpeed=35 <...> 
+    Obj_WaitMove 
+    SpawnScript AU_CreateNewCar Params={nodename=<nodename>} ID=VehicleScript 
+    Die 
+} 
+script AU_CreateNewCar {
+    Wait random { 1 { 1 Seconds } 1 { 1.5 Seconds } 1 { 2 Seconds } } 
+    Create Name=<nodename> 
+} 
+script AU_CraneHead_Pre {
+    Obj_RotZ Angle=-94 Speed=5000 FLAG_MAX_COORDS 
+    Obj_SetException Ex=CRANE_POST_SPOT Scr=AU_CraneHead_Post 
+} 
+script AU_CraneHead_Post {
+    Obj_RotZ Angle=-179 Speed=5000 FLAG_MAX_COORDS 
+} 
+script AU_TrashCanRotate_Signal {
+    if InMultiPlayerGame {
+    } else {
+        SendException CAN_SPIN_START Name=<Can> 
+    } 
+} 
+script AU_TrashCanRotate_Wait {
+    Obj_ClearExceptions 
+    Obj_SetException Ex=CAN_SPIN_START Scr=AU_TrashCanRotate Params=<...> 
+} 
+script AU_TrashCanRotate {
+    Obj_RotZ Angle=2160 Speed=360 FLAG_MAX_COORDS 
+    if ! InMultiPlayerGame {
+        if IsAlive Name=<Trash1> {
+            Kill Name=<Trash1> 
+        } 
+        if IsAlive Name=<Trash2> {
+            Kill Name=<Trash2> 
+        } 
+        if IsAlive Name=<Trash3> {
+            Kill Name=<Trash3> 
+        } 
+        if GoalManager_GoalIsLocked Name=AU_Goal_Gaps13 {
+            Printf "CR CR CR --- TRASH GOAL IS LOCKED SO SODA CAN OK" 
+            Create Name=<Trash1> 
+            <Trash1>:Rigidbody_DisablePlayerCollision 
+            <Trash1>:Rigidbody_Kick Vel=(0.0, 15.0, 5.0) RotVel=(5.0, 5.0, 5.0) 
+            <Trash1>:Rigidbody_MatchVelocityTo Skater ApplyRandomAdjustment 
+        } 
+        Create Name=<Trash2> 
+        <Trash2>:Rigidbody_DisablePlayerCollision 
+        <Trash2>:Rigidbody_Kick Vel=(20.0, 30.0, 0.0) RotVel=(7.0, 7.0, 7.0) 
+        <Trash2>:Rigidbody_MatchVelocityTo Skater ApplyRandomAdjustment 
+        Create Name=<Trash3> 
+        <Trash3>:Rigidbody_DisablePlayerCollision 
+        <Trash3>:Rigidbody_Kick Vel=(20.0, 30.0, 0.0) RotVel=(7.0, 7.0, 7.0) 
+        <Trash3>:Rigidbody_MatchVelocityTo Skater ApplyRandomAdjustment 
+        SpawnScript AU_CanPickup Params=<...> 
+    } 
+    Obj_WaitRotate 
+    GoToPreserveParams AU_TrashCanRotate_Wait 
+} 
+script AU_CanPickup {
+    if GoalManager_GoalExists Name=AU_Goal_Gaps13 {
+        <TinCans> = 0 
+        if ! GoalManager_GoalIsLocked Name=AU_Goal_Gaps13 {
+            if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps13 {
+                if ! GoalManager_GoalFlagSet Name=AU_Goal_Gaps13 flag=<flag> {
+                    GoalManager_SetGoalFlag Name=AU_Goal_Gaps13 <flag> 1 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps13 flag=got_1 {
+                        <TinCans> = (<TinCans> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps13 flag=got_2 {
+                        <TinCans> = (<TinCans> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps13 flag=got_3 {
+                        <TinCans> = (<TinCans> + 1) 
+                    } 
+                    if (<TinCans> = 0) {
+                        
+                        Printf "CR CR CR --- NUM CANS = 0" 
+                        
+                    } else {
+                        if (<TinCans> = 1) {
+                            
+                            Printf "CR CR CR --- NUM CANS = 1" 
+                            Create_Panel_Message {text="1 of 3 Cans Collected" Style=Goal_Collect_Text} 
+                            
+                        } else {
+                            if (<TinCans> = 2) {
+                                
+                                Printf "CR CR CR --- NUM CANS = 2" 
+                                Create_Panel_Message {text="2 of 3 Cans Collected" Style=Goal_Collect_Text} 
+                                
+                            } else {
+                                if (<TinCans> = 3) {
+                                    
+                                    Printf "CR CR CR --- NUM CANS = 3" 
+                                    Create_Panel_Message {text="3 Cans! Now Go See Hank!" Style=Goal_Collect_Text} 
+                                    Kill Name=TRG_Ped_Detector01 
+                                    Create Name=TRG_Ped_Detector02 
+                                    
+                                } else {
+                                    break 
+                                    
+                                } 
+                            } 
+                        } 
+                    } 
+                } 
+            } else {
+                Printf "CR CR CR --- Trash Goal HAS been beaten" 
+            } 
+        } else {
+            Printf "CR CR CR --- Trash Goal IS locked" 
+        } 
+    } 
+} 
+script AU_SignSlam {
+    if GoalManager_GoalExists Name=AU_Goal_Gaps17 {
+        GoalManager_SetGoalFlag Name=AU_Goal_Gaps17 <flag> 1 
+    } 
+    PlaySound AU_HitHandiSign vol=150 
+    Kill Name=<Sign> 
+    Kill Name=<Shadow> 
+    Create Name=<Jacked> 
+    <Jacked>:Rigidbody_DisablePlayerCollision 
+    <Jacked>:Rigidbody_Kick Vel=(0.0, 15.0, 5.0) RotVel=(5.0, 5.0, 5.0) 
+    <Jacked>:Rigidbody_MatchVelocityTo Skater ApplyRandomAdjustment 
+} 
+script AU_SwitchSkaters {
+    KillSpawnedScript Name=AU_Spawn_SwitchSkaters 
+    SpawnSkaterScript AU_Spawn_SwitchSkaters 
+} 
+script AU_Spawn_SwitchSkaters {
+    Wait 2 frames 
+    Pulse_Blur 
+    swap_skaters_get_current_name 
+    if (<Name> = Custom) {
+        
+        Skater:Obj_StopStream ShrimperCooking 
+        TakeOver_VO 
+        
+    } else {
+        if (<Name> = MiniKartDriver) {
+            
+            Skater:Obj_StopStream ShrimperCooking 
+            SetGlobalFlag flag=GUEST_FOUND_ABORIGINE 
+            AU_Unlock_Aborigine_Goals 
+            
+        } else {
+            if (<Name> = pro_teammate) {
+                
+                SetGlobalFlag flag=PRO_FOUND_04 
+                AU_Unlock_Pro_Goals 
+                
+            } else {
+                if (<Name> = ShrimpVendor) {
+                    
+                    SetGlobalFlag flag=GUEST_FOUND_SHRIMPVENDOR 
+                    SetGlobalFlag flag=SKATER_UNLOCKED_SHRIMPVENDOR 
+                    AU_Unlock_Shrimp_Goals 
+                    
+                } 
+            } 
+        } 
+    } 
+} 
+script AU_Unlock_Pro_Goals {
+    if ! IsAlive Name=TRG_Ped_GrafPunk01 {
+        Create Name=TRG_Ped_GrafPunk01 
+        if IsAlive Name=TRG_Ped_GrafPunk02 {
+            Kill Name=TRG_Ped_GrafPunk02 
+        } 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps7 {
+        if ScreenElementExists ID=ped_speech_dialog {
+            DestroyScreenElement ID=ped_speech_dialog 
+        } 
+        Printf "play cameras" 
+        play_swappable_pro_intro_cameras intro_cameras=AU_Pro_Goal_Intro_Cameras 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps7 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps8 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps9 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps21 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps4 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps6 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps13 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps19 
+    } else {
+        TakeOver_VO 
+    } 
+} 
+script AU_Unlock_Shrimp_Goals {
+    DestroyFlexibleParticleSystem Name=GrillFireParticleSystemLow 
+    DestroyFlexibleParticleSystem Name=GrillFireParticleSystem 
+    DestroyFlexibleParticleSystem Name=GrillSmokeParticleSystem 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps14 {
+        if ScreenElementExists ID=ped_speech_dialog {
+            DestroyScreenElement ID=ped_speech_dialog 
+        } 
+        Printf "play cameras" 
+        Create Name=TRG_Ped_ShrimpVendor_Intro 
+        PlayIntroCameras goal_intro_cameras=AU_Shrimp_Goal_Intro_Cameras letterbox 
+        Kill Name=TRG_Ped_ShrimpVendor_Intro 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps14 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps15 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps18 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps16 
+        AwardNewSpecialTrickToProfile {
+            all_profiles 
+            trick=Trick_Rotisserie 
+            key_combo=SpAir_L_D_Circle 
+        } 
+    } else {
+        TakeOver_VO 
+    } 
+} 
+script AU_Unlock_Aborigine_Goals {
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps17 {
+        if ScreenElementExists ID=ped_speech_dialog {
+            DestroyScreenElement ID=ped_speech_dialog 
+        } 
+        Printf "play cameras" 
+        Create Name=TRG_Ped_MiniKart_Intro 
+        PlayIntroCameras goal_intro_cameras=AU_Minikart_Goal_Intro_Cameras letterbox 
+        Kill Name=TRG_Ped_MiniKart_Intro 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps17 
+        GoalManager_UnlockGoal Name=AU_Goal_TrickObjects2 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps10 
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps20 
+    } else {
+        TakeOver_VO 
+    } 
+} 
+script AU_ShrimpVendorChill {
+    Obj_ClearExceptions 
+    SetEventHandler Ex=ObjectInRadius Scr=AU_ShrimpVendorRun Params=<...> 
+    Obj_SetInnerRadius 30 
+    Ped_InitAI Stand GetAttention Fall Griller 
+} 
+script AU_ShrimpVendorChillInside {
+    Obj_ClearExceptions 
+    SetEventHandler Ex=ObjectOutOfRadius Scr=AU_ShrimpVendorRun Params=<...> 
+    Obj_SetOuterRadius 50 
+    Ped_InitAI Stand GetAttention Fall Griller 
+} 
+script AU_ShrimpVendorRun {
+    Obj_ClearExceptions 
+    Obj_PlayAnim Anim=WStandToRun 
+    Obj_LookAtNode Name=<To> Speed=500 
+    Obj_PlayAnim Anim=WRun Cycle 
+    Obj_WaitMove 
+    Obj_MoveToNode Name=<To> Speed=15 
+    Obj_WaitMove 
+    Create Name=<Stander> 
+    Die 
+} 
+script AU_JumpFan01 {
+    GetCurrentSkaterProfileIndex 
+    GetSkaterProfileInfo Player=<CurrentSkaterProfileIndex> 
+    if (<Name> = MiniKartDriver) {
+    } else {
+        GetTriggerArray [{skate offegdge} {jump off}] 
+        if Triggertype <trigger_array> {
+            Trigger_Speed_Boost Speed=3200 DefSkaterVO=1 
+        } 
+    } 
+} 
+script AU_Warp2Secret {
+    TeleportSkaterToNode nodename=<Node> Orient 
+} 
+script AU_SandWarning {
+    if ! ScreenElementExists ID=wetwarning {
+        Create_Panel_Message {text=random { 1 { "Gonna get wet!!!" } 1 { "Where are you going??" } 1 { "Heading for trouble!" } } Style=Goal_Collect_Text ID=wetwarning} 
+        TRG_SFX_Ghost_LifeguardYelling:Obj_StopStream LifeguardStream 
+        random {
+1 { TRG_SFX_Ghost_LifeguardYelling:Obj_PlayStream AU_LifeguardYell01 priority=StreamPriorityHigh vol=200 dropoff=600 ID=LifeguardStream 
+ } 1 { TRG_SFX_Ghost_LifeguardYelling:Obj_PlayStream AU_LifeguardYell02 priority=StreamPriorityHigh vol=200 dropoff=600 ID=LifeguardStream 
+ } 1 { TRG_SFX_Ghost_LifeguardYelling:Obj_PlayStream AU_LifeguardYell03 priority=StreamPriorityHigh vol=200 dropoff=600 ID=LifeguardStream 
+ } 1 { TRG_SFX_Ghost_LifeguardYelling:Obj_PlayStream AU_LifeguardYell04 priority=StreamPriorityHigh vol=200 dropoff=600 ID=LifeguardStream 
+ } 2 { TRG_SFX_Ghost_LifeguardYelling:Obj_PlayStream AU_LifeguardYell05 priority=StreamPriorityHigh vol=200 dropoff=600 ID=LifeguardStream 
+ } 2 { TRG_SFX_Ghost_LifeguardYelling:Obj_PlayStream AU_LifeguardYell06 priority=StreamPriorityHigh vol=200 dropoff=600 ID=LifeguardStream 
+ } } 
+    } 
+} 
+script AU_Event_A {
+    Kill Prefix="Geo_PostEvent_A" 
+    Kill Prefix="TRG_PostEvent_A" 
+    Kill Prefix="Geo_PreEvent_A" 
+    Kill Prefix="TRG_PreEvent_A" 
+    if ScreenElementExists ID=ped_speech_dialog {
+        DestroyScreenElement ID=ped_speech_dialog 
+    } 
+    KillAllTextureSplats box={height=50 dist=30 width=30 offset=(-339.0, 47.0, 870.0)} 
+    KillAllTextureSplats box={height=50 dist=10 width=10 offset=(-376.0, 46.0, 802.0)} 
+    PlayCutScene Name="CutScenes\\AU_LevelEvent1.Cut" RestartNode=TRG_Restart_Hydrant 
+} 
+script AU_Event_A_Out {
+    Kill Prefix="Geo_PostEvent_A" 
+    Kill Prefix="TRG_PostEvent_A" 
+    Kill Name=TRG_SFX_TrigBox_SnoringWorker 
+    Create Prefix="Geo_PostEvent_A" 
+    Create Prefix="TRG_PostEvent_A" 
+    CreateFastParticleSystem Name=JOW_SecretFoam01 params_Script=JOW_AU_SecretFoam01_fast_particle_params 
+    CreateFastParticleSystem Name=JOW_SecretFoam02 params_Script=JOW_AU_SecretFoam02_fast_particle_params 
+    CreateFastParticleSystem Name=JOW_SecretFoam03 params_Script=JOW_AU_SecretFoam03_fast_particle_params 
+    CreateFastParticleSystem Name=JOW_SecretFoam04 params_Script=JOW_AU_SecretFoam04_fast_particle_params 
+    CreateFastParticleSystem Name=JOW_SecretFoam05 params_Script=JOW_AU_SecretFoam05_fast_particle_params 
+    CreateFastParticleSystem Name=JOW_SecretFoam06 params_Script=JOW_AU_SecretFoam06_fast_particle_params 
+    CreateFastParticleSystem Name=JOW_Gusher01 params_Script=JOW_AU_Gusher01_fast_particle_params 
+    CreateFastParticleSystem Name=JOW_Gusher02 params_Script=JOW_AU_Gusher02_fast_particle_params 
+    SendException CRANE_POST_SPOT Prefix="Geo_Crane_Obj" 
+    Kill Name=Geo_Crane_Obj_KennyHead 
+    Kill Name=Geo_Crane_Obj_Chain 
+    if IsAlive Name=TRG_Ped_Foreman01 {
+        Kill Name=TRG_Ped_Foreman01 
+    } 
+    Kill Name=NightOn_01_Street_lamp_06 
+    TODManager_MarkPermanentlyDead Name=NightOn_01_Street_lamp_06 
+    Kill Name=NightOff_01_Street_lamp_06 
+    TODManager_MarkPermanentlyDead Name=NightOff_01_Street_lamp_06 
+    Kill Name=NightOn_01_Street_lamp_03_Globe01 
+    TODManager_MarkPermanentlyDead Name=NightOn_01_Street_lamp_03_Globe01 
+    Kill Name=NightOff_01_Street_lamp_03_Globe 
+    TODManager_MarkPermanentlyDead Name=NightOff_01_Street_lamp_03_Globe 
+    if IsAlive Name=TRG_Night_LevelLight_01_Lamp70 {
+        Kill Name=TRG_Night_LevelLight_01_Lamp70 
+    } 
+    TODManager_MarkPermanentlyDead Name=TRG_Night_LevelLight_01_Lamp70 
+    Kill Name=NightOff_01_Geo_LampShadow05 
+    TODManager_MarkPermanentlyDead Name=NightOff_01_Geo_LampShadow05 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps2 {
+        if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps2 {
+            GoalManager_SetGoalFlag Name=AU_Goal_Gaps2 got_1 1 
+        } 
+    } 
+    Create Name=TRG_SFX_TrigBox_CrackedHydrant 
+} 
+script AU_Event_B {
+    if InMultiPlayerGame {
+    } else {
+        if GetFlag flag=FLAG_EVENT_B_POST_STATE {
+        } else {
+            if GetFlag flag=FLAG_EVENT_A_POST_STATE {
+                GetCurrentSkaterProfileIndex 
+                GetSkaterProfileInfo Player=<CurrentSkaterProfileIndex> 
+                Printf "CR CR CR --- Skater Name is %a" a=<Name> 
+                if (<Name> = MiniKartDriver) {
+                    GetTriggerArray Grind Onto 
+                    if Triggertype <trigger_array> {
+                        SetFlag flag=FLAG_EVENT_B_POST_STATE 
+                        Wait 0.25 Seconds 
+                        Kill Prefix="Geo_PreEvent_B" 
+                        Kill Prefix="TRG_PreEvent_B" 
+                        if ScreenElementExists ID=ped_speech_dialog {
+                            DestroyScreenElement ID=ped_speech_dialog 
+                        } 
+                        PlayCutScene Name="CutScenes\\AU_LevelEvent2.Cut" RestartNode=TRG_Restart_Event_B 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script AU_Event_B_Out {
+    Printf "CR CR CR --- GOT TO EVENT B OUT SCRIPT!!!" 
+    Kill Prefix="Geo_PostEvent_A_Sway" 
+    Kill Prefix="Geo_PreEvent_B" 
+    Kill Prefix="TRG_PreEvent_B" 
+    Kill Prefix="Geo_PostEvent_B" 
+    Kill Prefix="TRG_PostEvent_B" 
+    if IsAlive Name=NightOn_01_Geo_PreEvent_B_StreetLamp01 {
+        Printf "CR CR CR --- Upright nighttime lampost is still alive, so kill it!" 
+        Kill Name=NightOn_01_Geo_PreEvent_B_StreetLamp01 
+    } 
+    if IsAlive Name=NightOff_01_Geo_PreEvent_B_StreetLamp01 {
+        Printf "CR CR CR --- Upright daytime lampost is still alive, so kill it!" 
+        Kill Name=NightOff_01_Geo_PreEvent_B_StreetLamp01 
+    } 
+    if IsAlive Name=TRG_Ped_Foreman02 {
+        Kill Name=TRG_Ped_Foreman02 
+    } 
+    if IsAlive Name=Geo_Crane_Obj_Chain {
+        Kill Name=Geo_Crane_Obj_Chain 
+    } 
+    if IsAlive Name=Geo_Crane_Obj_KennyHead {
+        Kill Name=Geo_Crane_Obj_KennyHead 
+    } 
+    Kill Name=NightOff_01_Geo_PreEvent_B_StreetLamp01 
+    TODManager_MarkPermanentlyDead Name=NightOff_01_Geo_PreEvent_B_StreetLamp01 
+    Kill Name=NightOn_01_Geo_PreEvent_B_StreetLamp01 
+    TODManager_MarkPermanentlyDead Name=NightOn_01_Geo_PreEvent_B_StreetLamp01 
+    Kill Name=NightOff_01_Geo_PreEvent_B_StreetLampGlobe 
+    TODManager_MarkPermanentlyDead Name=NightOff_01_Geo_PreEvent_B_StreetLampGlobe 
+    Kill Name=NightOn_01_Geo_PreEvent_B_StreetLampGlobe01 
+    TODManager_MarkPermanentlyDead Name=NightOn_01_Geo_PreEvent_B_StreetLampGlobe01 
+    if IsAlive Name=TRG_Night_LevelLight_01_Lamp68 {
+        Kill Name=TRG_Night_LevelLight_01_Lamp68 
+    } 
+    TODManager_MarkPermanentlyDead Name=TRG_Night_LevelLight_01_Lamp68 
+    Kill Name=NightOff_01_Geo_PreEvent_B_LampShadow 
+    TODManager_MarkPermanentlyDead Name=NightOff_01_Geo_PreEvent_B_LampShadow 
+    Create Prefix="Geo_PostEvent_B" 
+    Create Prefix="TRG_PostEvent_B" 
+    Printf "CR CR CR --- LAST OF CREATE/KILL OUT SCRIPT STUFF...MOVING TO GOAL CHECK!!!" 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps10 {
+        if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps10 {
+            Printf "CR CR CR --- Goal Exists and is not beaten...spawn win goal stuff" 
+            SpawnScript AU_Event_B_GoalEnd 
+        } 
+    } 
+} 
+script AU_Event_B_GoalEnd {
+    Printf "CR CR CR --- GOT TO SPAWNED GOAL END SCRIPT SO PAUSE SKATERS" 
+    PauseSkaters 
+    Printf "CR CR CR --- JUST PAUSED SKATERS SO NOW PLAY CAMERA" 
+    PlaySkaterCamAnim Name=CAM_BustedSkaters01 
+    Kill Name=TRG_Ped_Cop01 
+    Create Name=TRG_Ped_Cop02 
+    Wait 2.5 Seconds 
+    SendException EVENT_2_DONE Name=TRG_Ped_Busted01 
+    SendException EVENT_2_DONE Name=TRG_Ped_Busted02 
+    while {
+        if SkaterCamAnimFinished Name=CAM_BustedSkaters01 {
+            break 
+        } 
+        Wait 1 frames 
+    } 
+    Printf "CR CR CR --- CAMERA IS DONE SO UNPAUSE SKATERS" 
+    GoalManager_SetGoalFlag Name=AU_Goal_Gaps10 got_1 1 
+    UnPauseSkaters 
+} 
+script AU_Event_B_GoalDone {
+    UnPauseSkaters 
+} 
+script AU_Crane_Setup {
+    if InMultiPlayerGame {
+    } else {
+        GetTriggerArray spin Onto 
+        if Triggertype <trigger_array> {
+            if GetFlag flag=FLAG_EVENT_A_POST_STATE {
+            } else {
+                Create_Panel_Message {text="Keep Spinning - 4!" Style=Goal_Collect_Text} 
+                SpawnScript AU_Hydrant_Counter 
+            } 
+        } 
+    } 
+} 
+script AU_Hydrant_Counter {
+    SetException Ex=SkaterJump Scr=AU_Hydrant_Counter_Kill 
+    SetException Ex=SkaterBailed Scr=AU_Hydrant_Counter_Kill 
+    Wait 1 Second 
+    Create_Panel_Message {text="Keep Spinning - 3!" Style=Goal_Collect_Text} 
+    Wait 1 Second 
+    Create_Panel_Message {text="Keep Spinning - 2!" Style=Goal_Collect_Text} 
+    Wait 1 Second 
+    Create_Panel_Message {text="Keep Spinning - 1!" Style=Goal_Collect_Text} 
+    Wait 1 Second 
+    Create_Panel_Message {text="FIRE IN THE HOLE!" Style=Goal_Collect_Text} 
+    Wait 1 Second 
+    UnSetFlag flag=FLAG_EVENT_A_PRE_STATE 
+    SetFlag flag=FLAG_EVENT_A_POST_STATE 
+    AU_Event_A 
+} 
+script AU_Hydrant_Counter_Kill {
+    if GetFlag flag=FLAG_EVENT_A_POST_STATE {
+    } else {
+        Wait 0.5 Seconds 
+        Create_Panel_Message {text="Almost!" Style=Goal_Collect_Text} 
+    } 
+} 
+script AU_KennyHead_Sway {
+    while {
+        Obj_RotX Angle=-20 Speed=12 FLAG_MAX_COORDS Acceleration=20 Decceleration=0.15 
+        Obj_WaitRotate 
+        Obj_RotX Angle=20 Speed=12 FLAG_MAX_COORDS Acceleration=20 Decceleration=0.15 
+        Obj_WaitRotate 
+    } 
+} 
+script AU_Gull {
+    Obj_ShadowOff 
+    Obj_ClearExceptions 
+    Obj_SetException Ex=ObjectInRadius Scr=AU_Gull_Fly Params=<...> 
+    Obj_SetInnerRadius 15 
+    while {
+        Obj_CycleAnim Anim=Idle NumCycles=random { 1 { 3 } 1 { 4 } 1 { 5 } 1 { 6 } 1 { 7 } 1 { 8 } 1 { 9 } 1 { 10 } } 
+        Obj_CycleAnim Anim=FlyHop NumCycles=random { 1 { 1 } 1 { 2 } 1 { 3 } } 
+    } 
+} 
+script AU_Gull_Fly {
+    Obj_ClearExceptions 
+    if GameModeEquals Is_Career {
+        if GoalManager_GoalExists Name=AU_Goal_Gaps16 {
+            <GullsScared> = 0 
+            if ! GoalManager_GoalIsLocked Name=AU_Goal_Gaps16 {
+                <do_count> = 0 
+                if GetFlag flag=FLAG_GULL_COMBO {
+                    <do_count> = 1 
+                } 
+                if GetGlobalFlag flag=MOD_AU_NO_GULL_COMBO {
+                    <do_count> = 1 
+                } 
+                if (<do_count> = 1) {
+                    if ! GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=<flag> {
+                        GoalManager_SetGoalFlag Name=AU_Goal_Gaps16 <flag> 1 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=got_1 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=got_2 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=got_3 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=got_4 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=got_5 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_6 {
+                        <GulsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_7 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_8 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_9 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_10 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_11 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_12 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_13 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_14 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_15 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_16 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_17 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_18 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_19 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if GoalManager_GoalFlagSet Name=AU_Goal_Gaps16 flag=Got_20 {
+                        <GullsScared> = (<GullsScared> + 1) 
+                    } 
+                    if (<GullsScared> = 0) {
+                        
+                        Printf "CR CR CR --- NUM CANS = 0" 
+                        
+                    } else {
+                        if (<GullsScared> = 1) {
+                            
+                            Create_Panel_Message {ID=Current_Goal text="1 Gull Scared! " Style=Goal_Collect_Text} 
+                            
+                        } else {
+                            if (<GullsScared> = 2) {
+                                
+                                Create_Panel_Message {ID=Current_Goal text="2 Gulls Scared!" Style=Goal_Collect_Text} 
+                                
+                            } else {
+                                if (<GullsScared> = 3) {
+                                    
+                                    Create_Panel_Message {ID=Current_Goal text="3 Gulls Scared!" Style=Goal_Collect_Text} 
+                                    
+                                } else {
+                                    if (<GullsScared> = 4) {
+                                        
+                                        Create_Panel_Message {ID=Current_Goal text="4 Gulls Scared!" Style=Goal_Collect_Text} 
+                                        
+                                    } else {
+                                        if (<GullsScared> = 5) {
+                                            
+                                            Create_Panel_Message {ID=Current_Goal text="5 Gulls Scared!" Style=Goal_Collect_Text} 
+                                            
+                                        } else {
+                                            if (<GullsScared> = 6) {
+                                                
+                                                Create_Panel_Message {ID=Current_Goal text="6 Gulls Scared!" Style=Goal_Collect_Text} 
+                                                
+                                            } else {
+                                                if (<GullsScared> = 7) {
+                                                    
+                                                    Create_Panel_Message {ID=Current_Goal text="7 Gulls Scared!" Style=Goal_Collect_Text} 
+                                                    
+                                                } else {
+                                                    if (<GullsScared> = 8) {
+                                                        
+                                                        Create_Panel_Message {ID=Current_Goal text="8 Gulls Scared!" Style=Goal_Collect_Text} 
+                                                        
+                                                    } else {
+                                                        if (<GullsScared> = 9) {
+                                                            
+                                                            Create_Panel_Message {ID=Current_Goal text="9 Gulls Scared!" Style=Goal_Collect_Text} 
+                                                            
+                                                        } else {
+                                                            break 
+                                                            
+                                                        } 
+                                                    } 
+                                                } 
+                                            } 
+                                        } 
+                                    } 
+                                } 
+                            } 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
+    if ! GetGlobalFlag flag=MOD_AU_SILENCE_GULLS {
+        SpawnSound AU_SFX_Seagull_Fly_Up 
+    } 
+    Obj_PlayAnim Anim=Fly Cycle 
+    Obj_MoveToRelPos (0.0, 250.0, 0.0) Speed=12 Acceleration=2 
+    Obj_WaitMove 
+    Obj_SetOuterRadius 20 
+    Obj_SetException Ex=ObjectOutOfRadius Scr=AU_Gull_Return Params=<...> 
+} 
+script AU_Gull_Return {
+    Obj_ClearExceptions 
+    Obj_PlayAnim Anim=Fly Cycle 
+    Obj_MoveToRelPos (0.0, -250.0, 0.0) Speed=8 Acceleration=2 
+    Obj_WaitMove 
+    GoToPreserveParams AU_Gull 
+} 
+script AU_GullComboListener {
+    while {
+        Printf "CR CR CR --- SETTING COMBO LISTENER" 
+        WaitForEvent Type=SkaterEnterCombo 
+        Printf "CR CR CR -- GOT COMBO START SO PROCEED AND SET --IN COMBO-- FLAG" 
+        SetFlag flag=FLAG_GULL_COMBO 
+        Printf "CR CR CR --- SETTING EXIT COMBO LISTENER" 
+        WaitForEvent Type=SkaterExitCombo 
+        Printf "CR CR CR -- GOT EXIT COMBO SO PROCEED AND UNSET --IN COMBO-- FLAG" 
+        UnSetFlag flag=FLAG_GULL_COMBO 
+        if GoalManager_GoalExists Name=AU_Goal_Gaps16 {
+            if ! GoalManager_GoalIsLocked Name=AU_Goal_Gaps16 {
+                GoalManager_ResetGoalFlags Name=AU_Goal_Gaps16 
+            } 
+        } 
+    } 
+} 
+script AU_ShrimpWarp {
+    SpawnScript AU_SFX_ToiletFlush 
+    AU_Warp2Secret Node=TRG_Restart_BathroomExit01 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps11 {
+        if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps11 {
+            GoalManager_SetGoalFlag Name=AU_Goal_Gaps11 got_1 1 
+            Kill Prefix="TRG_Ped_ShrimpVendorChill" 
+            Create Name=TRG_Ped_ShrimpVendor 
+            Kill Name=TRG_Ped_CornGuy01 
+            Create Name=TRG_Ped_CornGuy02 
+        } 
+    } 
+} 
+script AU_Pigeon {
+    Obj_ShadowOff 
+    Obj_ClearExceptions 
+    Obj_SetException Ex=ObjectInRadius Scr=AU_Pigeon_Fly 
+    Obj_SetInnerRadius 15 
+    SpawnSound AU_SFX_Pigeons_Idle 
+    Obj_CycleAnim Anim=Idle 
+} 
+script AU_Pigeon_Fly {
+    Obj_ClearExceptions 
+    SpawnSound AU_SFX_Pigeons_FlyUp 
+    Obj_PlayAnim Anim=Fly Cycle 
+    Obj_MoveToRelPos (0.0, 250.0, 0.0) Speed=12 Acceleration=2 
+    Obj_WaitMove 
+    Obj_SetOuterRadius 20 
+    Obj_SetException Ex=ObjectOutOfRadius Scr=AU_Pigeon_Return 
+} 
+script AU_Pigeon_Return {
+    Obj_ClearExceptions 
+    Obj_PlayAnim Anim=Fly Cycle 
+    Obj_MoveToRelPos (0.0, -250.0, 0.0) Speed=8 Acceleration=2 
+    Obj_WaitMove 
+    GoTo AU_Pigeon 
+} 
+script AU_Ped_DetectorHint {
+    Ped_Utils_SetupHintSpeech {
+        Ped_ID=TRG_Ped_Detector01 
+        Accept_Text="Press \\m5 to talk." 
+        Hint_Text="Every day it's the same old thing. Strike out with all the girls...then strike out on my treasure hunt...then go home and cry myself to sleep." 
+        Hint_Text_Time=20 
+        VO=AU_Ped_MetalDetector_VO 
+        Volume=GlobalHintVOVol 
+        Inner_Radius=10 
+        Outer_Radius=15 
+        Dont_Deactivate_Goals} 
+    Ped_InitAI Fall MetalDetect 
+} 
+script AU_Ped_DetectorGoalActive {
+    Obj_ClearExceptions 
+    SetEventHandler Ex=ObjectInRadius Scr=AU_Ped_DetectorGoalCheck Params=<...> 
+    Obj_SetInnerRadius 15 
+    Ped_InitAI Fall MetalDetect 
+} 
+script AU_Ped_DetectorGoalCheck {
+    GoalManager_SetGoalFlag Name=AU_Goal_Gaps13 got_4 1 
+    ClearEventHandler ObjectInRadius 
+} 
+script AU_Ped_Cop {
+    Ped_InitAI Stand Knock Cop_Ticketing 
+} 
+script AU_Ped_Cop_Bummin {
+    Obj_LookAtNode Name=Geo_PostEvent_B_CopCar Speed=1000 
+    Ped_InitAI Stand Cop_Pissed 
+} 
+script AU_Ped_Busted {
+    Obj_ClearExceptions 
+    Obj_SetException Ex=EVENT_2_DONE Scr=AU_Ped_Busted_Running Params=<...> 
+    Obj_LookAtNode Name=TRG_Ped_Cop01 
+    Ped_InitAI Stand Fall Should_Look_At_Skater=0 
+} 
+script AU_Ped_Busted_Running {
+    Obj_ClearExceptions 
+    Obj_LookAtNode Name=<Buddy> Speed=400 
+    Wait random { 1 { 5 frames } 1 { 5 frames } 1 { 10 frames } 1 { 15 frames } 1 { 20 frames } } 
+    Obj_CycleAnim Anim=Ped_M_Talk2_WhatDoYouThink 
+    Wait random { 1 { 5 frames } 1 { 5 frames } 1 { 10 frames } 1 { 15 frames } 1 { 20 frames } } 
+    Obj_LookAtNode Name=TRG_Waypoint_Busted Speed=400 
+    Obj_WaitMove 
+    Obj_PlayAnim Anim=RunFromIdle 
+    Obj_MoveToNode Name=TRG_Waypoint_Busted Speed=12 
+    Obj_WaitAnimFinished 
+    Obj_CycleAnim Anim=Run 
+    Obj_WaitMove 
+    Die 
+} 
+script AU_Ped_GrafBombHint {
+    Ped_Utils_SetupHintSpeech {
+        Ped_ID=TRG_Ped_GrafPunk01 
+        Accept_Text="Press \\m5 to talk." 
+        Hint_Text="Yo! Think you're down with the Vedge Edge cause? These 'O's drawn on my hands mean that I'm better than everyone else on this planet! Anyone that manages to tag that heinous Emu Burger billboard might earn some 'O's of their own." 
+        Hint_Text_Time=20 
+        VO=AU_Ped_Grafiti_Punker_01_VO 
+        Volume=GlobalHintVOVol 
+        Inner_Radius=8 
+        Outer_Radius=30 
+        Dont_Deactivate_Goals} 
+    Obj_SetAttentionRadius 40 
+    Ped_InitAI Stand Fall GetAttention Graffiti 
+} 
+script AU_Ped_RampKidHint {
+    Ped_Utils_SetupHintSpeech {
+        Ped_ID=TRG_Ped_Hint_RampKid01 
+        Accept_Text="Press \\m5 to talk." 
+        Hint_Text="Ahh man...I can't believe it...Son of a...(Can't you see he's frustrated?  Have a heart and show the kid a cool liptrick)." 
+        Hint_Text_Time=20 
+        VO=AU_Ped_Ramp_Kid_01_VO 
+        Volume=GlobalHintVOVol 
+        Inner_Radius=10 
+        Outer_Radius=15 
+        Dont_Deactivate_Goals} 
+    Obj_SetAttentionRadius 40 
+    Ped_InitAI Stand Fall RampKid GetAttention 
+} 
+script AU_MiniKartHint {
+    Ped_Utils_SetupHintSpeech {
+        Ped_ID=TRG_Ped_Secret01 
+        Accept_Text="Press \\m5 to talk." 
+        Hint_Text="You found me! Meet me back outside and I'll let you give the mini kart a try!" 
+        Hint_Text_Time=20 
+        VO=AU_MiniKartGuy_VO 
+        Volume=GlobalHintVOVol 
+        Inner_Radius=8 
+        Outer_Radius=30 
+        Dont_Deactivate_Goals} 
+    Ped_InitAI Stand GetAttention minikart 
+} 
+script AU_MiniKartHint_Swap {
+    if IsAlive Name=TRG_Ped_MiniKart01 {
+        if IsAlive Name=TRG_Ped_Secret01 {
+            Kill Name=TRG_Ped_Secret01 
+        } 
+    } 
+} 
+script AU_Ped_ForemanHint {
+    Ped_Utils_SetupHintSpeech {
+        Ped_ID=TRG_Ped_Foreman01 
+        Accept_Text="Press \\m5 to talk." 
+        Hint_Text="How is anybody supposed to get anything done around here when that jackass is sleeping on the job? Somebody needs give him a rude awakening! That leaky hydrant may be of some use." 
+        Hint_Text_Time=20 
+        VO=AU_Ped_Construction_Worker_01_VO 
+        Volume=GlobalHintVOVol 
+        Inner_Radius=10 
+        Outer_Radius=20 
+        Dont_Deactivate_Goals} 
+    Obj_SetAttentionRadius 40 
+    Ped_InitAI Stand Avoid GetAttention 
+} 
+script AU_Ped_ForemanHint02 {
+    Ped_Utils_SetupHintSpeech {
+        Ped_ID=TRG_Ped_Foreman02 
+        Accept_Text="Press \\m5 to talk." 
+        Hint_Text="Crikey!  I knew that moron would cost us big! Do me a favor there, and just stay the heck away from the crane!  And definitely keep your friend's little zippy cart thing away from it!" 
+        Hint_Text_Time=20 
+        VO=AU_Ped_Construction_Worker_02_VO 
+        Volume=GlobalHintVOVol 
+        Inner_Radius=10 
+        Outer_Radius=15 
+        Dont_Deactivate_Goals} 
+    Obj_SetAttentionRadius 40 
+    Ped_InitAI Stand Avoid GetAttention 
+} 
+script AU_Ped_CraneOp {
+    Obj_PlayAnim Anim=Ped_CraneOperator Cycle 
+} 
+script AU_Ped_CornHint {
+    Ped_Utils_SetupHintSpeech {
+        Ped_ID=TRG_Ped_CornGuy01 
+        Accept_Text="Press \\m5 to talk." 
+        Hint_Text="Hey! My partner is running around here selling Shrimp. See if you can find him. And tell him that he left his box of extra shrimp over there by the guard rail." 
+        Hint_Text_Time=20 
+        VO=AU_Ped_Corn_Vendor_01_VO 
+        Volume=GlobalHintVOVol 
+        Inner_Radius=10 
+        Outer_Radius=15 
+        Dont_Deactivate_Goals} 
+    Obj_SetAttentionRadius 40 
+    Ped_InitAI Stand Fall GetAttention 
+} 
+script AU_Tony_Advance {
+    Obj_ClearExceptions 
+    Setup_Ped_Speech {Ped_ID=TRG_Ped_Hawk01 
+        Activation_Script=ChapterAdvanceDialog 
+        Accept_Text="Tony Hawk press \\m5 to talk"} 
+    Obj_SetAttentionRadius 40 
+    Ped_InitAI Stand Cop_Ticketing Should_Look_At_Skater=0 
+} 
+script AU_Ped_BustedHint {
+    Obj_ClearExceptions 
+    Obj_SetException Ex=EVENT_2_DONE Scr=AU_Ped_Busted_Running Params=<...> 
+    Obj_LookAtNode Name=TRG_Ped_Cop01 
+    Ped_InitAI Stand Fall Should_Look_At_Skater=0 
+} 
+script AU_Ped_BeachGirl {
+    Obj_ShadowOff 
+    while {
+        Obj_CycleAnim Anim=Ped_Bikini_Sit1 NumCycles=random { 1 { 1 } 1 { 3 } 1 { 5 } } 
+        Obj_CycleAnim Anim=Ped_Bikini_Sit1ToSit2 
+        Obj_CycleAnim Anim=Ped_Bikini_Sit2 NumCycles=random { 1 { 1 } 1 { 3 } 1 { 5 } } 
+        Obj_CycleAnim Anim=Ped_Bikini_Sit2ToSit3 
+        Obj_CycleAnim Anim=Ped_Bikini_Sit3 NumCycles=random { 1 { 1 } 1 { 3 } 1 { 5 } } 
+        Obj_CycleAnim Anim=Ped_Bikini_Sit1FromSit3 
+    } 
+} 
+script AU_Ped_SunBather {
+    Obj_ShadowOff 
+    Ped_InitAI Stand F_Bikini 
+} 
+script AU_Ped_BeachGuy {
+    Obj_ShadowOff 
+    while {
+        Obj_CycleAnim Anim=Ped_M_Cheer_SittingIdle NumCycles=random { 1 { 1 } 1 { 2 } 1 { 3 } } 
+        Obj_CycleAnim Anim=random {
+1 { Ped_M_Cheer_SittingIdle2 
+ } 1 { Ped_M_Cheer_SittingIdle3 
+ } 1 { Ped_M_Cheer_Sitting1 
+ } } 
+    } 
+} 
+script AU_RuleSignBreak {
+    GetTriggerArray Lip 
+    if Triggertype <trigger_array> {
+        if IsAlive Name=Geo_Sign_Rules01 {
+            Wait 15 frames 
+            GetBonus Score=1000 text="Destruction Bonus" 
+            Shatter {Name=Geo_Sign_Rules01 
+                area=2000 
+                texture_swap=CG_AU_Shatter_BeachSign 
+                variance=1.0 
+                spread=1.5 
+                life=6 
+                bounce=0.5 
+                scale=0.4 
+                vel_x=0 
+                vel_y=60 
+                vel_z=0 
+            } 
+            Kill Name=Geo_Sign_Rules01 
+        } 
+    } 
+} 
+script AU_EarShatter {
+    GetBonus Score=1000 text="Destruction Bonus" 
+    Shatter {Name=<Name> 
+        area=2000 
+        texture_swap=CG_AU_Shatter_KangEar 
+        variance=1.0 
+        spread=1.5 
+        life=6 
+        bounce=0.5 
+        scale=0.4 
+        vel_x=0 
+        vel_y=60 
+        vel_z=0 
+    } 
+    Kill Name=<Name> 
+} 
+script AU_BalconyFenceBreak {
+    if IsAlive Name=Geo_HtlBalcony_RailingBreak_Shadow {
+        Kill Name=Geo_HtlBalcony_RailingBreak_Shadow 
+    } 
+    GetBonus Score=50 text="Destruction Bonus" 
+    Shatter {Name=<Name> 
+        area=2000 
+        texture_swap=CG_AU_Shatter_BlueFence 
+        variance=1.0 
+        spread=1.5 
+        life=6 
+        bounce=0.5 
+        scale=0.4 
+        vel_x=0 
+        vel_y=60 
+        vel_z=0 
+        use_skater_vel} 
+    Kill Name=<Name> 
+} 
+script AU_TidePoolPump_Grind {
+    if ! InNetGame {
+        if IsAlive Name=Geo_TidePoolPump01 {
+            GetBonus Score=1000 text="Destruction Bonus" 
+            Create Name=Geo_TidePoolPump01_Broken 
+            Create Prefix="Particle_TP" 
+            Kill Name=TRG_SFX_TrigBox_SwitchBreakElectric 
+            Create Name=TRG_SFX_TrigBox_SwitchBreakElectric 
+            SpawnScript AU_SFX_DrainPool 
+            Kill Name=Geo_TidePoolPump01 
+            Geo_TidePoolWater:Obj_MoveToRelPos (0.0, -1000.0, 0.0) Speed=0.5 
+            Kill Name=Geo_Inv_Coll_TidePoolFloorParticle 
+            if GoalManager_GoalExists Name=AU_Goal_Gaps5 {
+                if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps5 {
+                    GoalManager_SetGoalFlag Name=AU_Goal_Gaps5 got_1 1 
+                } 
+            } 
+        } 
+    } else {
+        Geo_TidePoolWater:Obj_MoveToRelPos (0.0, -1000.0, 0.0) Speed=0.5 
+        Kill Name=Geo_Inv_Coll_TidePoolFloorParticle 
+    } 
+} 
+script AU_TidePoolPump_WallPlant {
+    GetTriggerArray Wallplant Onto 
+    if Triggertype <trigger_array> {
+        if IsAlive Name=Geo_TidePoolPump01 {
+            SendException PUMP_BREAK Name=TRG_TidePoolPump_Ghost01 
+            GetBonus Score=1000 text="Destruction Bonus" 
+        } 
+    } 
+} 
+script AU_TidePoolPump_Ghost {
+    Obj_ClearExceptions 
+    Obj_SetException Ex=PUMP_BREAK Scr=AU_TidePoolPump_Break 
+} 
+script AU_TidePoolPump_Break {
+    Kill Name=Geo_TidePoolPump01 
+    Create Name=Geo_TidePoolPump01_Broken 
+    Create Prefix="Particle_TP" 
+    Kill Name=Geo_Inv_Coll_TidePoolFloorParticle 
+    Geo_TidePoolWater:Obj_MoveToRelPos (0.0, -1000.0, 0.0) Speed=0.5 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps5 {
+        if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps5 {
+            GoalManager_SetGoalFlag Name=AU_Goal_Gaps5 got_1 1 
+        } 
+    } 
+} 
+script AU_BillboardGlove {
+    while {
+        Obj_RotX Angle=-45 Speed=30 
+        Obj_WaitRotate 
+        Obj_RotX Angle=45 Speed=30 
+        Obj_WaitRotate 
+    } 
+} 
+script AU_BillboardEye {
+    Obj_RotX Speed=300 
+} 
+script AU_FootShower {
+    if ! ObjectExists ID=JOW_FootBath01 {
+        TRG_SFX_Ghost_ShowerBreak:Obj_PlaySound SK6_BO_RiverLoop01_11 vol=80 pitch=200 dropoff=110 dropoff_function=exponential 
+        TRG_SFX_Ghost_ShowerBreak:Obj_PlaySound HitMetalCan vol=80 pitch=200 
+        GetBonus Score=1000 text="Destruction Bonus" 
+        CreateFastParticleSystem Name=JOW_FootBath01 params_Script=JOW_AU_FootBath01_fast_particle_params 
+        CreateFastParticleSystem Name=JOW_FootBath02 params_Script=JOW_AU_FootBath02_fast_particle_params 
+        Create Prefix="Geo_Shower_Active" 
+        Kill Prefix="Geo_Shower_InActive" 
+    } 
+} 
+script AU_Ammo_Node {
+    Obj_ClearExceptions 
+    Setup_Ped_Speech {Ped_ID=TRG_Ammo_Node 
+        Accept_Text="Press \\m5 to pick up Shrimp" 
+        Activation_Script=AU_Ammo_Got 
+        Dont_Deactivate_Goals} 
+} 
+script AU_Ammo_Got {
+    Give_Skater_Ammo Num=5 Type=Shrimp 
+    if ScreenElementExists ID=ped_speech_dialog {
+        DestroyScreenElement ID=ped_speech_dialog 
+    } 
+    UnPauseSkaters 
+} 
+script AU_Gap_BiggunsR2R_Start {
+    StartGap GapID=Bigguns Flags=[PURE_AIR] 
+} 
+script AU_Gap_BiggunsR2R_End {
+    EndGap GapID=Bigguns Score=250 text="Biggun's Ramp 2 Ramp" GapScript=AU_BiggunsGap_Got 
+} 
+script AU_Gap_BayLipLow_Start {
+    StartGap GapID=BayLipLow Flags=[PURE_AIR] 
+} 
+script AU_Gap_BayLipLow_End {
+    GetTriggerArray Lip Onto 
+    if Triggertype <trigger_array> {
+        EndGap GapID=BayLipLow Score=50 text="Low Bay Window Lip" 
+    } 
+} 
+script AU_Gap_BayLipHigh_Start {
+    StartGap GapID=BayLipHigh Flags=[PURE_AIR] 
+} 
+script AU_Gap_BayLipHigh_End {
+    GetTriggerArray Lip Onto 
+    if Triggertype <trigger_array> {
+        EndGap GapID=BayLipHigh Score=100 text="High Bay Window Lip" 
+    } 
+} 
+script AU_Gap_BalcLip_Start {
+    StartGap GapID=BalcLip Flags=[PURE_AIR] 
+} 
+script AU_Gap_BalcLip_End {
+    GetTriggerArray Lip Onto 
+    if Triggertype <trigger_array> {
+        EndGap GapID=BalcLip Score=25 text="Balcony Lip" 
+    } 
+} 
+script AU_Gap_BalcLipHigh_Start {
+    StartGap GapID=BalcLipHigh Flags=[PURE_AIR] 
+} 
+script AU_Gap_BalcLipHigh_End {
+    GetTriggerArray Lip Onto 
+    if Triggertype <trigger_array> {
+        EndGap GapID=BalcLipHigh Score=50 text="Balcony Lofty Lip" 
+    } 
+} 
+script AU_Gap_TideLip_Start {
+    StartGap GapID=TideLip Flags=[PURE_AIR] 
+} 
+script AU_Gap_TideLip_End {
+    GetTriggerArray Lip Onto 
+    if Triggertype <trigger_array> {
+        EndGap GapID=TideLip Score=25 text="Rock Lip" 
+    } 
+} 
+script AU_Gap_HotWireLip_Start {
+    StartGap GapID=WireLip Flags=[PURE_AIR] 
+} 
+script AU_Gap_HotWireLip_End {
+    GetTriggerArray Lip Onto 
+    if Triggertype <trigger_array> {
+        EndGap GapID=WireLip Score=50 text="Hot Wire Lip" 
+    } 
+} 
+script AU_Gap_L2L_Start {
+    StartGap GapID=<ID1> Flags=[PURE_AIR] 
+} 
+script AU_Gap_L2L_End {
+    EndGap GapID=<ID1> Score=25 text="Ledge Hop" 
+} 
+script AU_Gap_R2R_Start {
+    StartGap GapID=<ID1> Flags=[PURE_AIR] 
+} 
+script AU_Gap_R2R_End {
+    EndGap GapID=<ID1> Score=25 text="Rail 2 Rail" 
+} 
+script AU_Gap_Climber_Start {
+    StartGap GapID=<ID1> Flags=[CANCEL_LIP CANCEL_MANUAL] 
+} 
+script AU_Gap_Climber_End {
+    EndGap GapID=<ID1> Score=75 text="Balcony Climb" 
+} 
+script AU_Gap_RingVault_Start {
+    StartGap GapID=RingVault Flags=[PURE_AIR] 
+} 
+script AU_Gap_RingVault_End {
+    EndGap GapID=RingVault Score=100 text="Fountain Touchdown" 
+} 
+script AU_Gap_BrassStairs_Start {
+    StartGap GapID=BrassStairs Flags=[PURE_AIR] 
+} 
+script AU_Gap_BrassStairs_End {
+    EndGap GapID=BrassStairs Score=100 text="From Brass Over 10" 
+} 
+script AU_Gap_QP2TP_Start {
+    StartGap GapID=QP2TP Flags=[PURE_AIR] 
+} 
+script AU_Gap_QP2TP_End {
+    EndGap GapID=QP2TP Score=75 text="Coping Jump" 
+} 
+script AU_Gap_QP2TPBig_Start {
+    StartGap GapID=QP2TPBig Flags=[PURE_AIR] 
+} 
+script AU_Gap_QP2TPBig_End {
+    EndGap GapID=QP2TPBig Score=150 text="Big Coping Jump" 
+} 
+script AU_Gap_Chain_Start {
+    StartGap GapID=<ID1> Flags=[PURE_AIR] 
+} 
+script AU_Gap_Chain_End {
+    EndGap GapID=<ID1> Score=25 text="Chain Gang" 
+} 
+script AU_Gap_LDrop_Start {
+    StartGap GapID=LDrop Flags=[PURE_AIR] 
+} 
+script AU_Gap_LDrop_End {
+    EndGap GapID=LDrop Score=25 text="Ledge Drop" 
+} 
+script AU_Gap_Seawall_Start {
+    StartGap GapID=SW Flags=[PURE_AIR] 
+} 
+script AU_Gap_SeaWall_End {
+    EndGap GapID=SW uScore=25 text="Sea Wall Vault" 
+} 
+script AU_Gap_CanSkip_Start {
+    StartGap GapID=<ID1> Flags=[PURE_AIR] 
+} 
+script AU_Gap_CanSkip_End {
+    EndGap GapID=<ID1> Score=75 text="Can Skip" 
+} 
+script AU_Gap_HtlHiLo_Start {
+} 
+script AU_Gap_HtlHiLo_End {
+} 
+script AU_Gap_StreetR2RHard_Start {
+    StartGap GapID=StreetR2RHard Flags=[PURE_AIR] 
+} 
+script AU_Gap_StreetR2RHard_End {
+    EndGap GapID=StreetR2RHard Score=250 text="Big Steet Cross" 
+} 
+script AU_Gap_HiLo_Start {
+    StartGap GapID=<ID1> Flags=[PURE_AIR] 
+} 
+script AU_Gap_HiLo_End {
+    EndGap GapID=<ID1> Score=50 text="High 2 Low Transfer" 
+} 
+script AU_Gap_LoHi_Start {
+    StartGap GapID=<ID1> Flags=[PURE_AIR] 
+} 
+script AU_Gap_LoHi_End {
+    EndGap GapID=<ID1> Score=75 text="Low 2 High Transfer" 
+} 
+script AU_Gap_TCGrass_Start {
+    StartGap GapID=Grass Flags=[PURE_AIR] 
+} 
+script AU_Gap_TCGrass_End {
+    EndGap GapID=Grass Score=100 text="TC's Grass Gap" 
+} 
+script AU_Gap_HtlLoHi_Start {
+} 
+script AU_Gap_HtlLoHi_End {
+} 
+script AU_Gap_9Point_Start {
+    StartGap GapID=NinePoint Flags=[PURE_AIR] 
+} 
+script AU_Gap_9Point_End {
+    EndGap GapID=NinePoint Score=50 text="9 Point Landing" 
+} 
+script AU_Gap_10Point_Start {
+    StartGap GapID=TenPoint Flags=[PURE_AIR] 
+} 
+script AU_Gap_10Point_End {
+    EndGap GapID=TenPoint Score=75 text="10 Point Landing" 
+} 
+script AU_Gap_StreetR2R_Start {
+} 
+script AU_Gap_StreetR2R_End {
+} 
+script AU_Gap_Awning_Start {
+    StartGap GapID=AwningFS Flags=[PURE_AIR] 
+} 
+script AU_Gap_Awning_End {
+    EndGap GapID=AwningFS Score=150 text="TC's Awning" GapScript=AU_GotAwningGrind 
+} 
+script AU_GotAwningGrind {
+    if GoalManager_GoalExists Name=AU_Goal_Gaps19 {
+        GetCurrentSkaterProfileIndex 
+        GetSkaterProfileInfo Player=<CurrentSkaterProfileIndex> 
+        Printf "CR CR CR --- Skater Name is %a" a=<Name> 
+        <Awning_Grinds> = 0 
+        if ! GoalManager_GoalIsLocked Name=AU_Goal_Gaps19 {
+            if (<skater_family> = family_pro) {
+                if ! GoalManager_GoalFlagSet Name=AU_Goal_Gaps19 flag=got_1 Skater=Pro {
+                    GoalManager_SetGoalFlag Name=AU_Goal_Gaps19 got_1 1 Skater=Pro 
+                } 
+            } else {
+                if (<Name> = Custom) {
+                    if ! GoalManager_GoalFlagSet Name=AU_Goal_Gaps19 flag=got_1 Skater=<Name> {
+                        GoalManager_SetGoalFlag Name=AU_Goal_Gaps19 got_1 1 Skater=<Name> 
+                    } 
+                } else {
+                    if (<Name> = ShrimpVendor) {
+                        if ! GoalManager_GoalFlagSet Name=AU_Goal_Gaps19 flag=got_1 Skater=<Name> {
+                            GoalManager_SetGoalFlag Name=AU_Goal_Gaps19 got_1 1 Skater=<Name> 
+                        } 
+                    } 
+                } 
+            } 
+            if GoalManager_GoalFlagSet Name=AU_Goal_Gaps19 flag=got_1 Skater=Pro {
+                <Awning_Grinds> = (<Awning_Grinds> + 1) 
+            } 
+            if GoalManager_GoalFlagSet Name=AU_Goal_Gaps19 flag=got_1 Skater=Custom {
+                <Awning_Grinds> = (<Awning_Grinds> + 1) 
+            } 
+            if GoalManager_GoalFlagSet Name=AU_Goal_Gaps19 flag=got_1 Skater=ShrimpVendor {
+                <Awning_Grinds> = (<Awning_Grinds> + 1) 
+            } 
+            if (<Awning_Grinds> = 0) {
+                
+                Printf "0" 
+                
+            } else {
+                if (<Awning_Grinds> = 1) {
+                    
+                    Create_Panel_Message {text="1 of 3 Awning Grinds" Style=Goal_Collect_Text} 
+                    
+                } else {
+                    if (<Awning_Grinds> = 2) {
+                        
+                        Create_Panel_Message {text="2 of 3 Awning Grinds" Style=Goal_Collect_Text} 
+                        
+                    } else {
+                        break 
+                        
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script AU_Gap_KennyFingers_Start {
+    StartGap GapID=FingerSpin Flags=[CANCEL_GROUND] 
+    StartGap GapID=FingerKiss Flags=[CANCEL_GROUND] 
+} 
+script AU_Gap_KennyFingers_End {
+    GetTriggerArray spin Onto 
+    if Triggertype <trigger_array> {
+        Printf "CR CR CR --- GOT SPIN ONTO!!!" 
+        if ! GoalManager_GoalIsLocked Name=AU_Goal_Gaps21 {
+            Printf "CR CR CR --- KENNY FINGER GOAL IS NOT LOCKED!!!" 
+            EndGap GapID=FingerSpin Score=250 text="Peace Off!" 
+            GoalManager_SetGoalFlag Name=AU_Goal_Gaps21 got_1 1 
+            Wait 10 frames 
+            if IsAlive Name=Geo_KennyFinger01 {
+                ShatterAndDie Name=Geo_KennyFinger01 
+            } 
+        } 
+    } else {
+        Printf "CR CR CR --- GOT DUMPED OUT OF KENNY FINGER STUFF!" 
+        EndGap GapID=FingerKiss Score=100 text="Peace Out!" 
+    } 
+} 
+script AU_Gap_BridgeMan_Start {
+    StartGap GapID=<ID1> Flags=[PURE_MANUAL] 
+} 
+script AU_Gap_BridgeMan_End {
+    EndGap GapID=<ID1> Score=200 text="Up and Over Manual!" GapScript=AU_BridgeManGap_Got 
+} 
+script AU_Gap_BridgeR2R_Easy_Start {
+    StartGap GapID=<ID1> Flags=[PURE_AIR] 
+} 
+script AU_Gap_BridgeR2R_Easy_End {
+    if GoalManager_GoalExists Name=AU_Classic_Goal_Gaps {
+        Printf "CR CR CR --- GOAL GDAY FLAG IS %a" a=<flag> 
+        if (<flag> = got_1) {
+            EndGap GapID=<ID1> Score=50 text="G'Day Ramp 2 Ramp" GapScript=AU_GDAY_Got01 
+        } 
+        if (<flag> = got_2) {
+            EndGap GapID=<ID1> Score=50 text="G'Day Ramp 2 Ramp" GapScript=AU_GDAY_Got02 
+        } 
+        if (<flag> = got_3) {
+            EndGap GapID=<ID1> Score=50 text="G'Day Ramp 2 Ramp" GapScript=AU_GDAY_Got03 
+        } 
+        if (<flag> = got_4) {
+            EndGap GapID=<ID1> Score=50 text="G'Day Ramp 2 Ramp" GapScript=AU_GDAY_Got04 
+        } 
+        if (<flag> = got_5) {
+            EndGap GapID=<ID1> Score=50 text="G'Day Ramp 2 Ramp" GapScript=AU_GDAY_Got05 
+        } 
+    } 
+    EndGap GapID=<ID1> Score=50 text="G'Day Ramp 2 Ramp" 
+} 
+script AU_GDAY_Got01 {
+    if ! GoalManager_GoalFlagSet Name=AU_Classic_Goal_Gaps flag=got_1 {
+        GoalManager_SetGoalFlag Name=AU_Classic_Goal_Gaps got_1 1 
+        GoTo AU_Classic_GDAY_Message 
+    } 
+} 
+script AU_GDAY_Got02 {
+    if ! GoalManager_GoalFlagSet Name=AU_Classic_Goal_Gaps flag=got_2 {
+        GoalManager_SetGoalFlag Name=AU_Classic_Goal_Gaps got_2 1 
+        GoTo AU_Classic_GDAY_Message 
+    } 
+} 
+script AU_GDAY_Got03 {
+    if ! GoalManager_GoalFlagSet Name=AU_Classic_Goal_Gaps flag=got_3 {
+        GoalManager_SetGoalFlag Name=AU_Classic_Goal_Gaps got_3 1 
+        GoTo AU_Classic_GDAY_Message 
+    } 
+} 
+script AU_GDAY_Got04 {
+    if ! GoalManager_GoalFlagSet Name=AU_Classic_Goal_Gaps flag=got_4 {
+        GoalManager_SetGoalFlag Name=AU_Classic_Goal_Gaps got_4 1 
+        GoTo AU_Classic_GDAY_Message 
+    } 
+} 
+script AU_GDAY_Got05 {
+    if ! GoalManager_GoalFlagSet Name=AU_Classic_Goal_Gaps flag=got_5 {
+        GoalManager_SetGoalFlag Name=AU_Classic_Goal_Gaps got_5 1 
+        GoTo AU_Classic_GDAY_Message 
+    } 
+} 
+script AU_Classic_GDAY_Message {
+    <GDAY> = 0 
+    if GoalManager_GoalFlagSet Name=AU_Classic_Goal_Gaps flag=got_1 {
+        <GDAY> = (<GDAY> + 1) 
+    } 
+    if GoalManager_GoalFlagSet Name=AU_Classic_Goal_Gaps flag=got_2 {
+        <GDAY> = (<GDAY> + 1) 
+    } 
+    if GoalManager_GoalFlagSet Name=AU_Classic_Goal_Gaps flag=got_3 {
+        <GDAY> = (<GDAY> + 1) 
+    } 
+    if GoalManager_GoalFlagSet Name=AU_Classic_Goal_Gaps flag=got_4 {
+        <GDAY> = (<GDAY> + 1) 
+    } 
+    if GoalManager_GoalFlagSet Name=AU_Classic_Goal_Gaps flag=got_5 {
+        <GDAY> = (<GDAY> + 1) 
+    } 
+    if (<GDAY> = 0) {
+        
+        Printf "CR CR CR --- NUM GDay Gaps = 0" 
+        
+    } else {
+        if (<GDAY> = 1) {
+            
+            Printf "CR CR CR --- NUM GDay Gaps = 1" 
+            Create_Panel_Message {text="1 of 5 G'Day Gaps" Style=Goal_Collect_Text} 
+            
+        } else {
+            if (<GDAY> = 2) {
+                
+                Printf "CR CR CR --- NUM GDay Gaps = 2" 
+                Create_Panel_Message {text="2 of 5 G'Day Gaps" Style=Goal_Collect_Text} 
+                
+            } else {
+                if (<GDAY> = 3) {
+                    
+                    Printf "CR CR CR --- NUM GDay Gaps = 3" 
+                    Create_Panel_Message {text="3 of 5 G'Day Gaps" Style=Goal_Collect_Text} 
+                    
+                } else {
+                    if (<GDAY> = 4) {
+                        
+                        Printf "CR CR CR --- NUM GDay Gaps = 4" 
+                        Create_Panel_Message {text="4 of 5 G'Day Gaps" Style=Goal_Collect_Text} 
+                        
+                    } else {
+                        break 
+                        
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script AU_Gap_CraneBalc_Start {
+    StartGap GapID=CraneBalc Flags=[PURE_AIR] 
+} 
+script AU_Gap_CraneBalc_End {
+    EndGap GapID=CraneBalc Score=50 text="Crane Vault" 
+} 
+script AU_Gap_BalcHop_Start {
+    StartGap GapID=<ID1> Flags=[PURE_AIR] 
+} 
+script AU_Gap_BalcHop_End {
+    EndGap GapID=<ID1> Score=50 text="Balcony Hop" 
+} 
+script AU_Gap_HomeHand_Start {
+    Printf "CR CR CR --- START THE FUCKING DOWNED POLE GAP!!!" 
+    StartGap GapID=<ID1> Flags=[PURE_AIR] 
+} 
+script AU_Gap_HomeHand_End {
+    Printf "CR CR CR --- END THE FUCKING DOWNED POLE GAP!!!" 
+    EndGap GapID=<ID1> Score=25 text="Homemade Handrail" 
+} 
+script AU_Gap_Bus_Start {
+    StartGap GapID=Bus Flags=[PURE_AIR] 
+} 
+script AU_Gap_Bus_End {
+    EndGap GapID=Bus Score=50 text="Bus Stop Hop" 
+} 
+script AU_Gap_BridgeR2R_Hard_Start {
+    StartGap GapID=<ID1> Flags=[PURE_AIR] 
+} 
+script AU_Gap_BridgeR2R_Hard_End {
+    EndGap GapID=<ID1> Score=200 text="Footbridge Flyover" GapScript=AU_FootBridgeCheck 
+} 
+script AU_Gap_LGTap_Start {
+    StartGap GapID=LGTap Flags=[PURE_AIR] 
+} 
+script AU_Gap_LGTap_End {
+    EndGap GapID=LGTap Score=50 text="Life Guard Roof Tap" 
+} 
+script AU_Gap_SDTap_Start {
+    StartGap GapID=SDTap Flags=[PURE_AIR] 
+} 
+script AU_Gap_SDTap_End {
+    EndGap GapID=SDTap Score=50 text="Archway Roof Tap" 
+} 
+script AU_Gap_PowerLine_Start {
+    StartGap GapID=PwrLn Flags=[PURE_AIR] 
+} 
+script AU_Gap_PowerLine_End {
+    EndGap GapID=PwrLn Score=100 text="Tight Rope Act" 
+} 
+script AU_Gap_Perfect_Start {
+    StartGap GapID=Perfect Flags=[PURE_AIR] 
+} 
+script AU_Gap_Perfect_End {
+    EndGap GapID=Perfect Score=5000 text="NO @$%#@$%# WAY!!!" 
+} 
+script AU_FootBridgeCheck {
+    GetCurrentSkaterProfileIndex 
+    GetSkaterProfileInfo Player=<CurrentSkaterProfileIndex> 
+    Printf "CR CR CR --- Skater Name is %a" a=<Name> 
+    if (<Name> = MiniKartDriver) {
+        if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps20 {
+            Printf "CR CR CR --- 540 BRIDGE GOAL NOT WON!" 
+            Skater:GetSpin 
+            if (<spin> > 539) {
+                Printf "CR CR CR --- GOAL FLAG IS NOT SET SO SET IT AND WIN!" 
+                GoalManager_SetGoalFlag Name=AU_Goal_Gaps20 got_1 1 
+            } 
+        } 
+    } 
+} 
+script AU_FlowerPot {
+    GetBonus Score=1000 text="Destruction Bonus" 
+    Shatter {Name=<Name> 
+        area=2000 
+        texture_swap=CG_AU_Shatter_Pot 
+        variance=1.0 
+        spread=1.5 
+        life=6 
+        bounce=0.5 
+        scale=0.4 
+        vel_x=0 
+        vel_y=60 
+        vel_z=0 
+    } 
+    Kill Name=<Name> 
+    if ! IsAlive Name=<Plant> {
+        Create Name=<Plant> 
+        <Plant>:Rigidbody_Kick Vel=(0.0, 10.0, 0.0) 
+    } 
+    if GoalManager_GoalExists Name=AU_Classic_Goal_Collect {
+        if ! GoalManager_HasWonGoal Name=AU_Classic_Goal_Collect {
+            if (<Name> = AU_Classic_FlowerPot01) {
+                
+                Goal_Collect_Got_Object Goal_ID=AU_Classic_Goal_Collect flag=got_1 
+                
+            } else {
+                if (<Name> = AU_Classic_FlowerPot02) {
+                    
+                    Goal_Collect_Got_Object Goal_ID=AU_Classic_Goal_Collect flag=got_2 
+                    
+                } else {
+                    if (<Name> = AU_Classic_FlowerPot03) {
+                        
+                        Goal_Collect_Got_Object Goal_ID=AU_Classic_Goal_Collect flag=got_3 
+                        
+                    } else {
+                        if (<Name> = AU_Classic_FlowerPot04) {
+                            
+                            Goal_Collect_Got_Object Goal_ID=AU_Classic_Goal_Collect flag=got_4 
+                            
+                        } else {
+                            if (<Name> = AU_Classic_FlowerPot05) {
+                                
+                                Goal_Collect_Got_Object Goal_ID=AU_Classic_Goal_Collect flag=got_5 
+                                
+                            } 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
+} 
+script AU_SecretArea_On {
+    Visible Prefix="Geo_Sec" 
+    Visible Prefix="Geo_Sec_Ledges" 
+    TODManager_SetFogActive 0 
+    TODManager_ResetLevelLights State_Name=Afternoon 
+} 
+script AU_SecretArea_Off {
+    Invisible Prefix="Geo_Sec" 
+    Invisible Prefix="Geo_Sec_Ledges" 
+    TODManager_SetFogActive 1 
+    TODManager_ResetLevelLights 
+} 
+script AU_TreeSound {
+} 
+script AU_LampBulbBreak {
+    PlaySound AU_PoppingStreetLight vol=200 pitch=random { 1 { 60 } 1 { 75 } 1 { 90 } } 
+    PlaySound HitGlassPane2x vol=60 pitch=random { 1 { 120 } 1 { 130 } 1 { 140 } } 
+    if IsAlive Name=<Bulb> {
+        Printf "CR CR CR --- Bulb is alive...so shatter and kill" 
+        GetUniqueCompositeObjectID preferredID=JOW_AU_LampSpark 
+        CreateFastParticleSystem Name=<UniqueID> attachObjID=<Dummy> params_Script=JOW_AU_LampSparks01_fast_particle_params 
+        Wait 10 frames 
+        Kill Name=<Bulb> 
+    } 
+    if IsAlive Name=<NightBulb> {
+        Printf "CR CR CR --- Night Bulb is alive...so shatter and kill" 
+        GetUniqueCompositeObjectID preferredID=JOW_AU_LampSpark 
+        CreateFastParticleSystem Name=<UniqueID> attachObjID=<Dummy> params_Script=JOW_AU_LampSparks01_fast_particle_params 
+        Wait 10 frames 
+        Kill Name=<NightBulb> 
+    } 
+    Create Name=<Spark> 
+    if GoalManager_GoalIsActive Name=AU_Classic_Goal_Collect2 {
+        if ! GoalManager_HasWonGoal Name=AU_Classic_Goal_Collect2 {
+            if ! GoalManager_GoalFlagSet Name=AU_Classic_Goal_Collect2 flag=<flag> {
+                Goal_Collect_Got_Object Goal_ID=AU_Classic_Goal_Collect2 flag=<flag> 
+            } 
+        } 
+    } 
+} 
+Bulb02Params = {
+    Spark=Particle_LP_Spark07_Start 
+    Bulb=NightOff_01_Street_lamp_02_Globe 
+    NightBulb=NightOn_01_Street_lamp_02_Globe01 
+    flag=got_1 
+    Dummy=Street_lamp_02_Dummy} 
+Bulb03Params = {
+    Spark=Particle_LP_Spark10_Start 
+    Bulb=NightOff_01_Street_lamp_01_Globe 
+    NightBulb=NightOn_01_Street_lamp_01_Globe01 
+    flag=got_2 
+    Dummy=Street_lamp_01_Dummy} 
+Bulb04Params = {
+    Spark=Particle_LP_Spark13_Start 
+    Bulb=NightOff_01_Street_lamp_04_Globe 
+    NightBulb=NightOn_01_Street_lamp_04_Globe01 
+    flag=got_3 
+    Dummy=Street_lamp_04_Dummy} 
+Bulb05Params = {
+    Spark=Particle_LP_Spark16_Start 
+    Bulb=NightOff_01_Street_lamp_05_Globe 
+    NightBulb=NightOn_01_Street_lamp_05_Globe01 
+    flag=got_4 
+    Dummy=Street_lamp_05_Dummy} 
+Bulb06Params = {
+    Spark=Particle_LP_Spark19_Start 
+    Bulb=NightOff_01_Street_lamp_06_Globe 
+    NightBulb=NightOn_01_Street_lamp_06_Globe01 
+    flag=got_5 
+    Dummy=Street_lamp_06_Dummy} 
+FLAG_EVENT_A_POST_STATE = 0 
+FLAG_EVENT_A_PRE_STATE = 1 
+FLAG_EVENT_B_POST_STATE = 2 
+FLAG_TIDEPOOL_DRAINED = 3 
+FLAG_360_GOT = 4 
+FLAG_LOFTY_GAP_GOT = 5 
+FLAG_GULL_COMBO = 6 
+FLAG_DOUBLEHEEL_GOT = 7 
+FLAG_DOUBLEFLIP_GOT = 8 
+FLAG_LOFTY_GAP_TRICK_GOT = 9 
+script AU_Elimination_Start {
+    Kill Name=TRG_Ped_ShrimpVendor 
+    Kill Prefix="TRG_Ped_ShrimpVendorChill" 
+    Kill Name=TRG_Ped_TeammatePro 
+    Kill Name=TRG_Ped_MiniKart01 
+    Kill Name=TRG_Ped_Foreman01 
+    Kill Name=TRG_Ped_Foreman02 
+    Kill Name=TRG_Ped_Cop01 
+    Kill Name=TRG_Ped_CornGuy01 
+    Kill Name=TRG_Ped_CornGuy02 
+    Kill Prefix="TRG_Ped_Bikini" 
+    Kill Prefix="TRG_Ped_Detector" 
+    Kill Prefix="TRG_Ped_Bulk" 
+    Kill Prefix="TRG_Ped_Busted" 
+    Create Prefix="TRG_Beaver_Ghost" 
+    Create Prefix="TRG_Ped_Beaver_Construction" 
+    Create Prefix="TRG_Ped_Beaver_Bikini" 
+    Create Prefix="Geo_Beaver_BeachTowel" 
+    Create Prefix="Geo_Beaver_InvColl" 
+    Create Prefix="TRG_Ped_Beaver_Gull" 
+    Create Name=TRG_Ped_Beaver_Costume 
+    Create Name=TRG_Ped_Beaver_You 
+    Create Prefix="NBP" 
+    Create Prefix="TRG_NBP_Rail" 
+} 
+script AU_goal_intro_setup {
+    Create Prefix="TRG_Ped_Beaver_Intro" 
+} 
+script AU_goal_intro_cleanup {
+    Kill Prefix="TRG_Ped_Beaver_Intro" 
+    if GoalManager_HasWonGoal Name=AU_Goal_Gaps22 {
+        create_panel_block ID=Current_Goal text="Get the locals mad at Beaverhausen.\\nGet some seagulls to crap on the bikini girls!" Style=panel_message_goal 
+    } else {
+        if GoalManager_HasWonGoal Name=AU_Goal_Gaps23 {
+            create_panel_block ID=Current_Goal text="Get the locals mad at Beaverhausen.\\nBeaver Blast 5 construction workers!" Style=panel_message_goal 
+        } else {
+            create_panel_block ID=Current_Goal text="Get the locals mad at Beaverhausen.\\nGet some seagulls to crap on the bikini girls and\\nBeaver Blast 5 construction workers!" Style=panel_message_goal 
+        } 
+    } 
+    Kill Name=TRG_Ped_Beaver_Costume 
+    Kill Name=TRG_Ped_Beaver_You 
+} 
+script AU_goal_BeaverBlast_Success {
+    if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps23 {
+        create_panel_block ID=Current_Goal text="Get the locals mad at Beaverhausen.\\nGet some seagulls to crap on the bikini girls!" Style=panel_message_goal 
+    } 
+} 
+script AU_AddGoal_BeverHausen {
+    AddGoal_gaps {
+        version=22 
+        Silent_Activation 
+        Skater=Custom 
+        Reward_Points=500 
+        collect_type="Beaver Blasts" 
+        View_Goals_Text=AU_Construction_text 
+        goal_description=AU_Construction_Desc 
+        view_goals_notify_trick=Trick_BeaverBlast 
+        Goal_Success_Script=AU_goal_BeaverBlast_Success 
+        view_goals_cameras=[
+            {
+                targetOffset=(-14170.2, 587.2, 13521.8) 
+                positionOffset=(-5308.0, 443.7, 8891.5) 
+            } 
+        ] 
+        goal_flags=[got_1 
+            got_2 
+            got_3 
+            got_4 
+            got_5 
+        ] 
+    } 
+} 
+script AU_Beaver_Construction {
+    Obj_EnableAmbientLight 
+    Obj_EnableDiffuseLight index=0 
+    Obj_EnableDiffuseLight index=1 
+    Obj_SetLightAmbientColor r=200 g=200 b=200 
+    Obj_SetLightDiffuseColor index=0 r=0 g=0 b=0 
+    Obj_SetLightDiffuseColor index=1 r=0 g=0 b=0 
+    Ped_InitAI Fall 
+} 
+script AU_Beaver_Ghost_Wait {
+    Obj_ClearExceptions 
+    Obj_SetInnerRadius 30 
+    Obj_SetException Ex=ObjectInRadius Scr=AU_Beaver_Ghost_Near Params=<...> 
+    Printf "AU_Beaver_Ghost_Wait" 
+} 
+script AU_Beaver_Ghost_Near {
+    Obj_ClearExceptions 
+    Obj_SetOuterRadius 35 
+    Obj_SetException Ex=ObjectOutOfRadius Scr=AU_Beaver_Ghost_Wait Params=<...> 
+    Obj_SetException Ex=AU_Beaver_Blast Scr=AU_Beaver_Ghost_Burn Params=<...> 
+    Printf "AU_Beaver_Ghost_Near" 
+} 
+script AU_Beaver_Ghost_Burn {
+    Obj_ClearExceptions 
+    GoalManager_SetGoalFlag Name=AU_Goal_Gaps22 <flag> 1 
+    CreateFlexibleParticleSystem {
+        ObjID=<worker> 
+        Name=BurningHead 
+        params_Script=APM_flaming_HEAD_particle_params 
+    } 
+    <worker>:Ped_SetLogicState BE_STATE_Cop_OnFire Table=BE_CopLogic_Table 
+    <worker>:Obj_EnableAmbientLight 
+    <worker>:Obj_EnableDiffuseLight index=0 
+    <worker>:Obj_EnableDiffuseLight index=1 
+    <worker>:Obj_SetLightAmbientColor r=50 g=50 b=50 
+    <worker>:Obj_SetLightDiffuseColor index=0 r=0 g=0 b=0 
+    <worker>:Obj_SetLightDiffuseColor index=1 r=0 g=0 b=0 
+    Printf "Got a fart 2" 
+    Die 
+} 
+script AU_AddGoal_BeverHausen2 {
+    AddGoal_gaps {
+        version=23 
+        Silent_Activation 
+        Skater=Custom 
+        Reward_Points=500 
+        View_Goals_Text=AU_Bikini_text 
+        goal_description=AU_Bikini_Desc 
+        No_Gap_Messages 
+        Goal_Success_Script=AU_Goal_Gaps23_Success 
+        view_goals_cameras=[
+            {
+                targetOffset=(4829.6, -5861.2, 7472.2) 
+                positionOffset=(-2806.7, 244.7, 5377.0) 
+            } 
+        ] 
+        success_cam_anims=[
+            {virtual_cam 
+                targetid=world 
+                targetOffset=(3682.8, -1842.1, -2226.3) 
+                positionOffset=(-2507.2, -204.6, 5455.0) 
+                frames=100 
+                skippable=1 
+                pre_anim_script=AU_Goal_Gaps23_Pre_Success 
+                cam_anim_text=["Rack off you wally!  You got bird crap all over me! " 
+                ] 
+            } 
+        ] 
+        goal_flags=[got_1 
+            got_2 
+            got_3 
+            got_4 
+            got_5 
+        ] 
+    } 
+} 
+script AU_Goal_Gaps23_Pre_Success {
+    PlayStream AU_BikiniGirl_Beverhausen2_Success vol=200 priority=102 
+    Create Name=TRG_Ped_Beaver_Success01 
+} 
+script AU_Goal_Gaps23_Success {
+    if ! GoalManager_HasWonGoal Name=AU_Goal_Gaps22 {
+        create_panel_block ID=Current_Goal text="Get the locals mad at Beaverhausen.\\nBeaver Blast 5 construction workers!" Style=panel_message_goal 
+    } 
+    Kill Name=TRG_Ped_Beaver_Success01 
+} 
+script AU_Beaver_Bird {
+    Obj_ShadowOff 
+    Obj_ClearExceptions 
+    Obj_SetException Ex=ObjectInRadius Scr=AU_Beaver_Bird_Fly Params=<...> 
+    Obj_SetInnerRadius 10 
+    Obj_CycleAnim Anim=Idle 
+} 
+script AU_Beaver_Bird_Fly {
+    Obj_ClearExceptions 
+    Obj_PlayAnim Anim=Fly Cycle 
+    Obj_MoveToRelPos (0.0, 250.0, 0.0) Speed=12 Acceleration=2 
+    Obj_WaitMove 
+    Obj_SetOuterRadius 20 
+    Obj_SetException Ex=ObjectOutOfRadius Scr=AU_Beaver_Bird_Return Params=<...> 
+    if GoalManager_GoalExists Name=AU_Goal_Gaps23 {
+        GoalManager_SetGoalFlag Name=AU_Goal_Gaps23 <flag> 1 
+    } 
+} 
+script AU_Beaver_Bird_Return {
+    Obj_ClearExceptions 
+    Obj_PlayAnim Anim=Fly Cycle 
+    Obj_MoveToRelPos (0.0, -250.0, 0.0) Speed=8 Acceleration=2 
+    Obj_WaitMove 
+    GoToPreserveParams AU_Beaver_Bird 
+} 
+script AU_Angry_Chick {
+    Obj_PlayAnim Anim=Ped_F_Angry Cycle 
+} 
+script AU_Talking {
+    while {
+        PlayAnimWithPartialAnimIfExists Anim=Ped_M_Talk2_RightHere 
+        Obj_WaitAnimFinished 
+        PlayAnimWithPartialAnimIfExists Anim=Ped_M_Talk2_MixIt 
+        Obj_WaitAnimFinished 
+        PlayAnimWithPartialAnimIfExists Anim=Ped_M_Talk2_SureThing 
+        Obj_WaitAnimFinished 
+        PlayAnimWithPartialAnimIfExists Anim=Ped_M_Talk2_Idle2 
+        Obj_WaitAnimFinished 
+        PlayAnimWithPartialAnimIfExists Anim=Ped_M_Talk2_RightHere 
+        Obj_WaitAnimFinished 
+    } 
+} 
+script AU_Intro_Line1 {
+    TRG_Ped_Hawk01:Obj_PlayFam AU_Intro_01_Lip vol=145 priority=StreamPriorityHighest 
+} 
+script AU_Intro_Line2 {
+    TRG_Ped_Hawk01:Obj_PlayFam AU_Intro_02_Lip vol=145 priority=StreamPriorityHighest 
+} 
+script AU_Elimination_Line1 {
+    TRG_Ped_Beaver_Intro01:Obj_PlayFam AU_Elimination_Text1_Lip vol=200 priority=StreamPriorityHighest 
+} 
+script AU_Elimination_Line2 {
+    TRG_Ped_Beaver_Intro01:Obj_StopLastFam 
+    TRG_Ped_Beaver_Intro03:Obj_PlayFam AU_Elimination_Text2_Lip vol=200 priority=StreamPriorityHighest 
+} 
+script AU_Elimination_Line2A {
+    UnPauseSkater 0 
+    set_temporary_nude_appearance 
+    Skater:Obj_MoveToNode Name=TRG_Restart_Elimination Orient 
+} 
+script AU_Elimination_Line3 {
+    clear_temporary_nude_appearance 
+    TRG_Ped_Beaver_Intro03:Obj_PlayFam AU_Elimination_Text3_Lip vol=200 priority=StreamPriorityHighest 
+    do_fake_nigel 
+} 
+script AU_2d_sign_element_create {parent = menu3d_anchor 
+    if GetGlobalFlag flag=SCREEN_MODE_WIDE {
+        <offset> = (-8.0, 0.0) 
+    } else {
+        <offset> = (0.0, 0.0) 
+    } 
+    CreateScreenElement {
+        Type=SpriteElement 
+        parent=<parent> 
+        texture=AU_icon_1 
+        ID=AU_turtle 
+        scale=3.5 
+        rgba=[128 128 128 100] 
+        pos=((220.0, 310.0) + <offset>) 
+        rot_angle=0 
+        just=[center center] 
+        z_priority=-51 
+    } 
+    flame_angle = -90 
+    CreateScreenElement {
+        Type=SpriteElement 
+        parent=<parent> 
+        texture=AU_icon_2 
+        ID=AU_flame 
+        scale=2.2 
+        rgba=[124 45 23 128] 
+        pos=((76.0, 182.0) + <offset>) 
+        rot_angle=<flame_angle> 
+        just=[center bottom] 
+        z_priority=-51 
+    } 
+    RunScriptOnScreenElement ID=AU_turtle AU_turtle_anim 
+    RunScriptOnScreenElement ID=AU_flame AU_flame_anim 
+} 
+script AU_flame_anim {
+    while {
+        new_pt = random { 1 { (150.0, 215.0) } 1 { (76.0, 182.0) } 1 { (115.0, 152.0) } 1 { (198.0, 192.0) } } 
+        DoMorph time=0 scale=2.2 pos=<new_pt> alpha=1 
+        while {
+            DoMorph time=0 alpha=1 
+            DoMorph time=0.08 alpha=random { 1 { 0.4 } 1 { 0.5 } 1 { 0.8 } } rot_angle=random { 1 { -89 } 1 { -91 } } 
+        } random { 1 { 10 } 1 { 15 } 1 { 20 } } 
+        DoMorph time=1.5 scale=2.5 pos=(<new_pt> + (5.0, -15.0)) alpha=0 rot_angle=-90 
+        Wait random { 1 { 1 } 1 { 2 } 1 { 3 } } Seconds 
+    } 
+} 
+script AU_turtle_anim {
+    while {
+        DoMorph time=0 rot_angle=-3 
+        DoMorph time=0.2 rot_angle=3 
+        DoMorph time=0.3 rot_angle=-3 
+    } 
+} 
+script AU_EnterSand {
+    change SFX_FootStepWalk01=AU_SANDSTEP01 
+    change SFX_FootStepWalk02=AU_SANDSTEP02 
+    change SFX_FootStepWalk03=AU_SANDSTEP03 
+    change SFX_FootStepRun01=AU_SANDSTEP01 
+    change SFX_FootStepRun02=AU_SANDSTEP02 
+    change SFX_FootStepRun03=AU_SANDSTEP03 
+    change SFX_FootStepRun04=AU_SANDSTEP01 
+    change SFX_FootStepRun05=AU_SANDSTEP02 
+    if ! GetGlobalFlag flag=MOD_AU_SKATE_SAND {
+        ForceToWalk 
+    } 
+} 
+script AU_ExitSand {
+    SFX_Change_Footstep_Sounds_To_Default 
+    KillForceToWalk 
+} 
+script AU_WaterKill {
+    SFX_Change_Footstep_Sounds_To_Default 
+    SK3_KillSkater nodename=<nodename> 
+} 
+AU_StateLogic_Table = {
+    AU_STATE_RampKid={
+        ped_update_type=no_move_update 
+        script_ped_state=AU_STATECONTROL_RampKid 
+    } 
+    AU_STATE_LifeGuard_Walking={
+        ped_update_type=generic_move_update 
+        script_ped_state=AU_STATECONTROL_Lifeguard_Walking 
+    } 
+    AU_STATE_LifeGuard_Scanning={
+        ped_update_type=no_move_update 
+        script_ped_state=AU_STATECONTROL_Lifeguard_Scanning 
+    } 
+    AU_STATE_Cop_Pissed={
+        ped_update_type=no_move_update 
+        script_ped_state=AU_STATECONTROL_Cop_pissed 
+    } 
+    AU_STATE_F_Bikini={
+        ped_update_type=no_move_update 
+        script_ped_state=AU_STATECONTROL_F_Bikini 
+    } 
+    AU_STATE_F_Bikini_Front={
+        ped_update_type=no_move_update 
+        script_ped_state=AU_STATECONTROL_F_Bikini_Front 
+    } 
+    AU_STATE_F_Bikini_sit={
+        ped_update_type=no_move_update 
+        script_ped_state=AU_STATECONTROL_F_Bikini_Sit 
+    } 
+} 
+AU_MetalDetectLogic_Table = {
+    AU_STATE_MetalDetect_Walking={
+        ped_update_type=generic_move_update 
+        script_ped_state=AU_STATECONTROL_MetalDetect_Walking 
+    } 
+    AU_STATE_MetalDetect_Standing={
+        ped_update_type=no_move_update 
+        script_ped_state=AU_STATECONTROL_MetalDetect_Standing 
+    } 
+    STATE_Standing={
+        ped_update_type=no_move_update 
+        script_ped_state=AU_STATECONTROL_MetalDetect_Talking 
+    } 
+} 
+AU_Minikart_Table = {
+    AU_STATE_Minikart={
+        ped_update_type=no_move_update 
+        script_ped_state=AU_STATECONTROL_Minikart 
+    } 
+    STATE_GetAttention={
+        ped_update_type=no_move_update 
+        script_ped_state=AU_STATECONTROL_Minikart 
+    } 
+    STATE_Standing={
+        ped_update_type=no_move_update 
+        script_ped_state=AU_STATECONTROL_Minikart_Standing 
+    } 
+} 
+BE_GrillerLogic_Table = {
+    BE_STATE_Griller={
+        script_ped_state=BE_STATECONTROL_Grilling 
+        exit_state_action=wait_anim_finished 
+    } 
+    STATE_avoidstop={
+        high_priority 
+        script_ped_state=STATECONTROL_avoidstop_custom01 
+    } 
+} 
+script BE_STATECONTROL_Grilling {
+    while {
+        random {
+1 { PlayAnimWithPartialAnimIfExists Anim=Ped_Griller_Cooking01 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=Ped_Griller_Cooking02 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=Ped_Griller_FixesGrill 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=Ped_Griller_LooksAround 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=Ped_Griller_Stretch 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=Ped_Griller_CallingCustomers 
+ } } 
+        Obj_WaitAnimFinished 
+    } 
+} 
+script PEDAI_MetalDetectStopWaypoint {
+    Ped_SetLogicState AU_STATE_MetalDetect_Standing Table=AU_MetalDetectLogic_Table 
+} 
+script AU_Ped_Detector_Talk {
+    Ped_SetLogicState AU_STATE_MetalDetect_Talking Table=AU_MetalDetectLogic_Table 
+} 
+script AU_STATECONTROL_MetalDetect_Walking {
+    GetTags 
+    OBJ_EnableAnimBlending enabled=1 
+    while {
+        PlayAnimWithPartialAnimIfExists Anim=Ped_MetalDetect_WalkCyle 
+        Obj_WaitAnimFinished 
+    } 
+} 
+script AU_STATECONTROL_MetalDetect_Standing {
+    Ped_StopMoving 
+    PlayAnimWithPartialAnimIfExists Anim=Ped_MetalDetect_WalkCyleStop 
+    Obj_WaitAnimFinished 
+    GetRandomValue Name=RepeatCount a=1 b=3 resolution=3 Integer 
+    while {
+        random {
+1 { PlayAnimWithPartialAnimIfExists Anim=Ped_MetalDetect_Idle01 
+        SpawnSound AU_SFX_Metal_Detector_Beep 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=Ped_MetalDetect_PicksUpCoin 
+        SpawnSound AU_SFX_Metal_Detector_FindVO 
+ } } 
+        Obj_WaitAnimFinished 
+    } <RepeatCount> 
+    Ped_StartMoving 
+    PlayAnimWithPartialAnimIfExists Anim=Ped_MetalDetect_StartWalkCycle 
+    Obj_WaitAnimFinished 
+    Ped_SetLogicState AU_STATE_MetalDetect_Walking Table=AU_MetalDetectLogic_Table 
+} 
+script AU_STATECONTROL_MetalDetect_Talking {
+    Ped_StopMoving 
+    PlayAnimWithPartialAnimIfExists Anim=Ped_MetalDetect_WalkCyleStop 
+    Obj_WaitAnimFinished 
+    GetRandomValue Name=RepeatCount a=1 b=3 resolution=3 Integer 
+    while {
+        Printf "---------------------------------METAL DETECTOR TALKING--------------------------------------" 
+        PlayAnimWithPartialAnimIfExists Anim=Ped_MetalDetect_Idle01 
+        Obj_WaitAnimFinished 
+    } <RepeatCount> 
+    Ped_StartMoving 
+    PlayAnimWithPartialAnimIfExists Anim=Ped_MetalDetect_StartWalkCycle 
+    Obj_WaitAnimFinished 
+    Ped_SetLogicState AU_STATE_MetalDetect_Walking Table=AU_MetalDetectLogic_Table 
+} 
+script AU_STATECONTROL_RampKid {
+    while {
+        GetRandomValue Name=RepeatCount a=1 b=3 resolution=3 Integer 
+        while {
+            random {
+2 { PlayAnimWithPartialAnimIfExists Anim=Ped_RampKid_Idle01 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=Ped_RampKid_Looking 
+ } } 
+            Obj_WaitAnimFinished 
+        } <RepeatCount> 
+        PlayAnimWithPartialAnimIfExists Anim=Ped_RampKid_PutBoardDown 
+        Obj_WaitAnimFinished 
+        GetRandomValue Name=RepeatCount a=1 b=3 resolution=3 Integer 
+        while {
+            random {
+1 { PlayAnimWithPartialAnimIfExists Anim=Ped_RampKid_BrdDwnLooks 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=Ped_RampKid_BrdDwnHelmet 
+ } 1 { Printf "Rampkid skip" 
+ } } 
+            Obj_WaitAnimFinished 
+        } <RepeatCount> 
+        PlayAnimWithPartialAnimIfExists Anim=Ped_RampKid_PickUpBrd 
+        Obj_WaitAnimFinished 
+    } 
+} 
+script AU_STATECONTROL_Minikart {
+    while {
+        PlayAnimWithPartialAnimIfExists Anim=Veh_Minikart_Idle 
+        Obj_WaitAnimFinished 
+    } 
+} 
+script AU_STATECONTROL_Minikart_Standing {
+    PlayAnimWithPartialAnimIfExists Anim=Veh_Minikart_Ollie 
+    Obj_WaitAnimFinished 
+    PlayAnimWithPartialAnimIfExists Anim=Veh_Minikart_Land 
+    Obj_WaitAnimFinished 
+    while {
+        PlayAnimWithPartialAnimIfExists Anim=Veh_Minikart_Idle 
+        Obj_WaitAnimFinished 
+    } 
+} 
+script PEDAI_LifeGuard_StopWayPoint {
+    Ped_StopMoving 
+    Ped_GetCurrentNodeNames 
+    Obj_MoveToNode Name=<node_from> Speed=5 mph 
+    Obj_WaitMove 
+    Ped_StartMoving 
+    Ped_SetLogicState AU_STATE_LifeGuard_Scanning Table=AU_StateLogic_Table 
+} 
+script AU_STATECONTROL_Lifeguard_Scanning {
+    Ped_TurnToCurrentWaypointOrientation time=0.75 
+    PlayAnimWithPartialAnimIfExists Anim=WWalkToStand 
+    Obj_WaitAnimFinished 
+    while {
+        random {
+1 { PlayAnimWithPartialAnimIfExists Anim=WStandIdle2 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=WStandIdle3 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=WStandIdle4 
+ } } 
+        Obj_WaitAnimFinished 
+    } 5 
+    Ped_Statelogic_SetDefaultState 
+} 
+script AU_STATECONTROL_Lifeguard_Walking {
+    PlayAnimWithPartialAnimIfExists Anim=WWalkToStand 
+    Obj_WaitAnimFinished 
+    while {
+        PlayAnimWithPartialAnimIfExists Anim=WWalk 
+        Obj_WaitAnimFinished 
+    } 
+} 
+script AU_STATECONTROL_Cop_pissed {
+    obj_getID 
+    <ObjID>:SwitchOnAtomic ped_m_accessories 
+    <ObjID>:SwitchOffAtomic ped_Board 
+    while {
+        random {
+1 { PlayAnimWithPartialAnimIfExists Anim=PED_M_Pissed01 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=PED_M_Pissed02 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=PED_M_Pissed03 
+ } 1 { PlayAnimWithPartialAnimIfExists Anim=PED_M_Pissed04 
+ } } 
+        Obj_WaitAnimFinished 
+    } 
+} 
+__register_checksums__ Ped_M_Talk2_RightHere AU_Gap_CanSkip_Start AU_Goal_Gaps3 b Goal_Collect_Text AU_Minikart_Goal_Intro_Cameras Grass create_panel_block SFX_FootStepWalk01 TRG_Car01 TRG_COMBO_M AU_Ped_DetectorGoalActive AU_LoftyGap_TrickWait Die Goal_Success_Script NullScript KillSpawnedScript Obj_WaitMove CAN_SPIN_START TRG_Ped_Detector03 AU_Lofty_Tip Bulb02Params Trigger_Obj_ID Particle_LP_Spark07_Start AU_Graf_Desc TRG_Ped_Hawk01 Got_18 AU_TidePool_Desc Obj_SetLightAmbientColor Give_Skater_Ammo exponential AU_AddGoal_BeverHausen Geo_ComboRail03 exit_state_action Reward_Points TRG_Ped_Beaver_Costume Ped_M_Cheer_SittingIdle2 r AU_DoubleHeel_SpinCheck Got_6 TRG_SFX_Ghost_LifeguardYelling wait_anim_finished No_Fail_Messages vel_x Ped_F_Angry menu3d_anchor resolution AddGoal_HighCombo AU_Acid_Tip AU_Gap_DoubleCar_End SCREEN_MODE_WIDE SwitchOffAtomic BalcLip AU_Gap_Awning_Start NightOn_01_Street_lamp_02_Globe01 Num AU_Goal_Gaps2 AU_KnyHd_Tip worker Vel TRG_Ped_Detector02 RestartNode AU_Gap_JumpFan_End NightOn_01_Geo_PreEvent_B_StreetLampGlobe01 AU_Classic_ProScore_Text PauseSkaters Table AU_STATECONTROL_MetalDetect_Walking AU_Startup Obj_SetOuterRadius AU_Ped_DetectorGoalCheck Geo_ComboRail02 Ped_M_Cheer_SittingIdle3 Spark AU_Event_A_Out Got_19 AU_DoubleHeel_Clean dropoff Avoid Got_7 AU_STATECONTROL_MetalDetect_Standing Fall AU_STATE_MetalDetect_Talking ClearExceptionGroup AU_Gulls_Text vel_y AU_LoftyGap_TrickCheck life Speed SpriteElement AU_Ped_DetectorHint AU_DoubleHeel_Got TRG_Car03 TRG_COMBO_O Params Bulb SkaterLanded TRG_Ped_Detector01 TRG_Ammo_Node pitch TRG_Ped_ShrimpVendorChill01 SwitchOnAtomic GoalManager_UnlockGoal CANCEL_LIP Geo_NetGeo_KennyHead GoalManager_ResetGoalFlags WaitForEvent ObjectExists GetTags SFX_FootStepWalk03 AU_Gap_BalcHop_End Obj_StopLastFam CreateScreenElement vel_z Shatter got_4 wetwarning FLAG_LOFTY_GAP_GOT Ped_MetalDetect_WalkCyleStop AU_Classic_Easy_HighCombo Restart_Node WWalk GUEST_FOUND_SHRIMPVENDOR Geo_ComboRail01 AU_Gull_Fly AU_TidePoolPump_Ghost PURE_MANUAL AddGoal_gaps AU_TTO_Text AU_Meal_Desc AU_turtle JOW_AU_SecretFoam04_fast_particle_params WWalkToStand DefSkaterVO TRG_Car02 NightOn_01_Street_lamp_06_Globe01 TRG_Ped_Hint_RampKid01 ShatterAndDie AU_Event_B_GoalEnd GetSpin SFX_FootStepWalk02 AU_Tony_Advance AU_Ped_Construction_Worker_01_VO SFX_Change_Footstep_Sounds_To_Default AU_Slap_Desc Onto GapScript AU_STATE_LifeGuard_Walking letter_info AU_TTO_Desc_Hard Perfect a AU_Mini_Desc_Med UnPauseSkater GrillFireParticleSystem AU_CreateMovingCars BE_GrillerLogic_Table Shrimp Is_CreateGoals SendException Decceleration Trick_Rotisserie got_5 change Geo_Crane_Obj_KennyHead Street_lamp_02_Dummy classic_mode_goal Goal_Objects AU_TidePoolPump_Break GetSkaterProfileInfo use_hud_counter TRG_Ped_ShrimpVendor_Intro NightOff_01_Street_lamp_02_Globe Name SkaterExitCombo Ped_Griller_Cooking01 AU_Bigguns_Tip AU_Shrimp_Text Volume obj_getID NightOff_01_Geo_PreEvent_B_LampShadow BE_CopLogic_Table Knock AU_Goal_Gaps16 panel_message_goal just AU_Gap_Bus_End Orient Obj_PlayStream Create_Panel_Message AU_turtle_anim AU_Gap_PowerLine_Start AU_Gap_BayLipHigh_Start AU_goal_intro_setup TRG_SKATE_A NightBulb CG_AU_Shatter_Pot Unlocked_By_Another Goal_Collect_Got_Object FLAG_DOUBLEHEEL_GOT Obj_LookAtNode Inner_Radius AU_Elimination_Line3 AU_Gap_BridgeR2R_Hard_Start SkaterLandedClean uScore FingerSpin key_combo AU_AddGoal_Focus2 AU_Goal_TimedScoreRun AddGoal_TrickTheObjects AU_Elimination_Line2A Geo_NetGeo_CraneArm texture Plant AU_ExitSand AU_AddGoal_Gulls area play_swappable_pro_intro_cameras ObjectInRadius AU_STATE_F_Bikini_Front View_Goals_Text AU_Gap_TideLip_Start Ped_MetalDetect_PicksUpCoin AU_Classic_Goal_Collect2 AU_Gap_BrassStairs_End PlaySound AU_Goal_Gaps17 Play_Cutscene off targetOffset skippable AU_Elimination_Line2 AU_Gap_BridgeMan_Start AU_TrashCanRotate_Wait AU_PoppingStreetLight AU_KnyFngr_Text unlimited_time AddGoal_Combo success_cam_anims AU_STATECONTROL_Minikart_Standing AU_Ped_MetalDetector_VO AU_Gap_HiLo_End AU_Ped_Corn_Vendor_01_VO AU_AddGoal_Focus NightOff_01_Geo_PreEvent_B_StreetLampGlobe AU_Classic_Goal_Gaps AU_Intro_02_Lip SetGlobalFlag AU_AddGoal_TimedScoreRun AU_Goal_Gaps14 ClearEventHandler AwardNewSpecialTrickToProfile AU_CreateAllCars TRG_SKATE_S node_from Required_Score Ped_MetalDetect_StartWalkCycle AU_Initializer ped_update_type NightOn_01_Geo_PreEvent_B_StreetLamp01 Obj_MoveToRelPos BurningHead SpawnScript Veh_Minikart_Ollie AU_AddGoal_Meal AU_Stairs_Text AU_Goal_Gaps Trick_Object_Prefix AU_GullComboListener AU_AddGoal_Trash Ped_M_Cheer_SittingIdle GetNumberOfTrickOccurrences JOW_AU_LampSparks01_fast_particle_params AU_Gap_Chain_End Obj_EnableAmbientLight WStandToRun AU_Aborigine_Text AU_Elimination_Line1 GoalManager_GoalExists JOW_AU_FootBath02_fast_particle_params GoTo STATE_Standing Triggertype WStandIdle4 AU_flame_anim AU_Goal_Gaps15 LoadParticleTexture AU_Crane_Desc AU_STATE_Minikart SW AU_TidePoolPump_WallPlant RotVel AU_Graf_EmuBomb Ped_Griller_Cooking02 secret_tape_id AU_Table_Knock AU_STATE_MetalDetect_Standing AU_AddGoal_TidePool StreamPriorityHighest AU_Bigguns_Text priority AU_Gap_TideLip_End AU_Gap_RingVault_Start AU_Gap_L2L_End ScreenElementExists FingerKiss UniqueID Ped_Bikini_Sit1ToSit2 TODManager_SetFogActive AU_Goal_TrickObjects AU_Beaver_Ghost_Burn AU_SFX_DrainPool TRG_Ped_Busted02 Accept_Text AU_Goal_Gaps7 Ped_Bikini_Sit1FromSit3 AU_Beaver_Construction generic_move_update AddGoal_TimedScoreRun AU_SignSlam Bulb06Params AU_Setup AwningFS AU_ShrimpVendorChill NightOn_01_Street_lamp_06 T_obj_id AU_Goal_Gaps21 AU_2Cars_Text TRG_Ped_Cop02 AU_Bikini_Desc PURE_AIR AU_Gap_SDTap_Start Trash2 Flag AU_SANDSTEP01 AU_Gap_BridgeR2R_Easy_Start AU_Gap_Bus_Start enabled got_2 collect_type g AU_Goal_Gaps6 AU_ShrimpVendorChillInside AddGoal_collect AU_AS_MasterPiece_Final01 Bus AU_Gap_9Point_Start AU_Bigguns GlobalHintVOVol AU_Gap_StreetR2RHard_End Geo_PostEvent_B_CopCar TRG_Car04 AU_WaterKill Particle_LP_Spark13_Start VehicleScript TRG_Night_LevelLight_01_Lamp70 UnPauseSkaters NightOff_01_Street_lamp_04_Globe PwrLn HitGlassPane2x Ped_Bikini_Sit1 AU_Goal_Gaps20 goal NightOn_01_Street_lamp_03_Globe01 AU_Ped_BeachGirl Street_lamp_04_Dummy center AU_STATECONTROL_F_Bikini_Front F_Bikini AU_Pro_Goal_Intro_Cameras TrickScript AU_Gap_StreetR2R_Start got_3 AU_Gap_BalcHop_Start Trash3 Integer TRG_Ped_CornGuy02 GetUniqueCompositeObjectID AU_TTO_Desc_Easy Geo_Inv_Coll_TidePoolFloorParticle Goal_ID intro_cameras AU_Beaver_Ghost_Near Bulb04Params dropoff_function AU_TTO_Desc_Med AU_STATECONTROL_RampKid Obj_ShadowOff WRun Outer_Radius TrickText RunScriptOnScreenElement SkaterEnterManual FLAG_360_GOT TRG_Restart_Billboard AU_Gap_KennyFingers_Start AU_Hydrant_Counter_Kill Can offset Ped_RampKid_Idle01 Ped_MetalDetect_Idle01 new_pt AU_Goal_Gaps5 Init_Script Ped_StartMoving AU_Gap_LDrop_End AU_SANDSTEP03 TRG_Ped_CornGuy01 Obj_EnableDiffuseLight GulsScared JOW_AU_SecretFoam05_fast_particle_params Num_Flags_To_Win goal_intro_cameras LoftyGapGroup Cop_Pissed AU_Ped_CraneOp AU_Gap_KennyFingers_End AU_Goal_Gaps23 Ped_Bikini_Sit2 JOW_AU_Gusher02_fast_particle_params AU_Lofty_Desc SK3_KillSkater Lip Ped_M_Talk2_SureThing BE_STATE_Griller AU_StateLogic_Table AU_Gap_LoHi_Start TRG_TidePoolPump_Ghost01 TRG_Ped_ShrimpVendor TRG_AU_Secret_Tape Player BE_STATE_Cop_OnFire AU_Gap_BayLipLow_Start PedHitByProjectile AU_Construction_text AU_Goal_Gaps4 AU_KnyHd_Text TRG_Ped_Busted01 AU_Ped_RampKidHint Ped_M_Talk2_WhatDoYouThink AU_SFX_Pigeons_Idle AU_StartGap_BigAcid AU_Elimination_Text3_Lip AU_Gap_BigStairs_End got_1 AU_GotAwningGrind Setup_Ped_Speech AU_SANDSTEP02 AU_TSR_Desc Trash1 Trigger_Start_Script AU_Gap_HotWireLip_End Ped_Bikini_Sit3 AU_LoftyGap_Bailed AU_Ammo_Node AU_Slap_Tip NightOff_01_Street_lamp_06_Globe TeleportSkaterToNode AU_Gap_BigStairs_Start E_obj_id TRG_Ped_Cop01 view_goals_cameras AU_DoubleFlip_Clean AU_Goal_Gaps22 Street_lamp_06_Dummy AU_Gap_HtlHiLo_End AU_Team_Desc AU_Spawn_SwitchSkaters AU_Classic_SickScore_Text AU_CraneHead_Post asswipe Printf Seconds AU_Gap_BrassStairs_Start WStandIdle3 AU_MiniKartHint AU_Gap_BalcLip_End SkaterJump AU_Goal_Gaps12 CG_AU_Shatter_BeachSign LGTap SkaterCamAnimFinished AU_Gap_R2R_Start AU_Gap_TCGrass_Start JOW_AU_SecretFoam01_fast_particle_params AU_MiniLip_Fail SetFlag Awning_Grinds TRG_SKATE_E AU_Intro_Line2 AU_BridgeMan_Desc OBJ_EnableAnimBlending TRG_SFX_TrigBox_SwitchBreakElectric Obj_SetLightDiffuseColor SkaterEnterRevert TRG_Ped_GrafPunk01 AU_Classic_Easy_HighScore AU_STATE_Cop_Pissed Ped_RampKid_BrdDwnLooks skater_family Arcade_Machine_Start_Goal AU_AddGoal_Signs AU_Ammo_Got alpha AU_TTO_Score_Normal AU_Classic_FlowerPots_Create AU_BiggunsGap_Bailed AU_Elimination_Text1_Lip AU_Goal_Gaps13 GetAttention TRG_SKATE_T TenPoint AU_AddGoal_KennyHead Geo_KennyFinger01 AU_AddGoal_ShrimpSlap Wallplant AU_TidePoolPump_Grind WStandIdle2 AU_Beaver_Bird_Fly frames pro_teammate AU_SecretArea_Off CRANE_POST_SPOT AU_AddGoal_540Bridge AU_Classic_HighCombo_Text trick can_retry_goal AU_Signs_Desc AU_Gap_LGTap_End AU_Ped_ForemanHint02 AU_2d_sign_element_create Hint_Text_Time PEDAI_MetalDetectStopWaypoint JOW_Gusher02 AU_Gap_Climber_Start GoalManager_SetGoalFlag AU_Goal_Gaps10 AU_Acid_Desc Ped_RampKid_BrdDwnHelmet Stander ShrimperCooking AU_Classic_Easy_SickScore_Text TODManager_ResetLevelLights AU_540_Desc swap_skaters_get_current_name TRG_Ped_MiniKart01 AU_LampBulbBreak Trigger_Success_Script Difficulty_Level Stand JOW_Gusher01 CANCEL_GROUND AU_Unlock_Aborigine_Goals Geo_ProximBox01 Require_Combo Ped_M_Talk2_Idle2 Ped_SetLogicState JOW_AU_HydrantDrip01 CurrentSkaterProfileIndex AddGoal_HighScore TRG_SFX_Ghost_ShowerBreak AU_TrashCanRotate AU_Ped_Busted family_pro AU_Goal_Gaps11 AU_TreeSound Ped_CraneOperator trigger_array AU_Gap_CraneBalc_Start Style AU_BalconyFenceBreak NinePoint SkaterLastScoreLandedGreaterThan Visible Geo_TidePoolWater AddGoal_Skate AU_STATECONTROL_F_Bikini AU_Gap_HiLo_Start ped_m_accessories Node time WireLip K_obj_id TRG_COMBO_O01 AU_SecretArea_On box set_temporary_nude_appearance LifeguardStream NightOff_01_Geo_LampShadow05 TRG_Ped_GrafPunk02 Ped_ID AU_Classic_Easy_ProScore_Text AU_Intro_Line1 AU_KennyHead_Sway AU_BillboardGlove AU_Classic_Easy_HighCombo_Text AU_SecCombo_Desc AU_Trash_Desc AU_Classic_SickScore JOW_AU_LampSpark AU_Beaver_Blast AU_Unlock_Shrimp_Goals AU_AddGoal_BeverHausen2 AU_goal_BeaverBlast_Success Geo_Crane_Obj_Arm EVENT_2_DONE JOW_AU_HydrantDrip01_fast_particle_params TRG_Waypoint_Busted SpAir_L_D_Circle JOW_AU_SecretFoam06_fast_particle_params vol AU_RuleSignBreak PlaySkaterCamAnim AU_CanPickup AU_Gap_BalcLipHigh_End cam_start_script Silent_Activation JOW_AU_Gusher01_fast_particle_params AU_Crane_Setup BigAcid AU_Crane_Text AU_Gap_L2L_Start text State_Name AU_Classic_FlowerPot01 AU_Bigguns_Desc TakeOver_VO MetalDetect CreateFlexibleParticleSystem AU_EarShatter AU_MiniKartHint_Swap AU_HitHandiSign AU_ShrimpWarp Geo_NetGeo_Chain Grind AU_AddGoal_Crane Obj_SetInnerRadius HitMetalCan Skater Obj_WaitRotate Got_10 AU_Angry_Chick SkaterEnterGround FLAG_EVENT_A_POST_STATE AU_Stairs_Tip LDrop Scr AU_EnterSand AU_Gap_QP2TP_End AU_CreatePeds minikart is_classic use_skater_vel PED_M_Pissed04 Buddy ShrimpVendor Rigidbody_MatchVelocityTo Score ID AU_ShrimpVendorRun Ped_GetCurrentNodeNames BalcLipHigh ped_Board AU_Stairs_Desc Type Geo_Sec_Ledges04 ID1 Obj_SetAttentionRadius CreateFastParticleSystem Block ForceToWalk FLAG_TIDEPOOL_DRAINED AU_FootBridgeCheck SetEventHandler AU_Aborigine_Desc Got_11 AU_TTO_Score_Easy AU_Intro_Text1 index StreetR2RHard Invisible Pro AU_SFX_Seagull_Fly_Up AU_Minikart_Table TRG_SFX_TrigBox_SnoringWorker AU_Classic_FlowerPot03 NightOn_01_Street_lamp_04_Globe01 AU_Goal_Gaps9 GameModeEquals AU_AddGoal_ShrimpVendor Ped_Griller_LooksAround AU_Beaver_Bird NumCycles STATE_avoidstop Geo_Crane_Obj_Chain AU_KnyFngr_Desc AU_Ped_SunBather AU_STATECONTROL_Lifeguard_Walking AU_AborigineGap SK6_BO_RiverLoop01_11 AU_Goal_Gaps23_Success AU_Intro_Text2 pos Got_12 Obj_WaitAnimFinished TRG_Restart_Elimination Trick_BeaverBlast SKATER_UNLOCKED_SHRIMPVENDOR SkaterBailed CG_AU_Shatter_KangEar Custom AU_DoubleHeel_Group Prefix AU_Gap_HomeHand_End Ped_M_Talk2_MixIt ChapterAdvanceDialog Ped_Statelogic_SetDefaultState AddGoal_ProScore AU_Classic_FlowerPot02 AU_Goal_Gaps8 CAM_BustedSkaters01 AU_Shrimp_Desc virtual_cam UnSetFlag Kill AU_SFX_ScreamingpeopleAtCafe PlayCutScene Geo_TidePoolPump01 DestroyScreenElement Got_13 Ped_RampKid_Looking AU_MiniLipGroup PlayAnimWithPartialAnimIfExists BigStairs Ped_Griller_CallingCustomers Ped_MetalDetect_WalkCyle preferredID AU_Intro_01_Lip do_fake_nigel jump Afternoon AU_Gap_QP2TP_Start Dont_Deactivate_Goals PRO_FOUND_04 SDTap AU_Gap_9Point_End Obj_CycleAnim AU_Event_B_Out AU_STATE_F_Bikini_sit GoalManager_GetDifficultyLevel Car_Generic01 ApplyRandomAdjustment Activation_Script Jacked DefaultSpeed AU_Gap_JumpFan_Start BE_STATECONTROL_Grilling AU_Meal_Text AU_Mini_Score_Normal AU_Gap_BayLipLow_End JOW_FootBath01 CAM_Classic_Intro01 AU_STATECONTROL_MetalDetect_Talking JOW_SecretFoam03 AU_Aborigine_Tip TRG_Restart_Event_B AU_Slap_Text FLAG_LOFTY_GAP_TRICK_GOT AU_Gap_PowerLine_End AU_Event_B_GoalDone NightOff_01_Street_lamp_03_Globe AU_Classic_ProScore AU_STATE_MetalDetect_Walking Table02 SFX_FootStepRun01 Is_SingleSession AU_LifeguardYell06 AU_Gap_HtlLoHi_End AU_icon_2 nodename scale AU_Event_A TurnDist FLAG_EVENT_B_POST_STATE AU_BiggunsGap_Got Acceleration GoalManager_HasWonGoal AU_SFX_Metal_Detector_FindVO SkaterEnterCombo GullsScared Geo_TidePoolPump01_Broken Obj_RotX AU_Gap_DoubleCar_Start AU_2Cars_Tip AU_Mini_Desc_Easy StickToGround Difficulty_Level_Params JOW_SecretFoam02 GoToPreserveParams PlayStream skate width AU_Elimination_Start QP2TPBig CANCEL_MANUAL Idle AU_Classic_HighCombo height AU_Beaver_Ghost_Wait KillAllTextureSplats Angle AU_Ped_GrafBombHint AU_Gap_BridgeMan_End Table03 CG_AU_Shatter_BlueFence JOW_SecretFoam01 AU_STATECONTROL_F_Bikini_Sit A_obj_id JOW_AU_SecretFoam02_fast_particle_params Particle_LP_Spark16_Start TRG_Ped_MiniKart_Intro AU_Shrimp_Goal_Intro_Cameras AU_AddGoal_BridgeManual Bigguns FLAG_GULL_COMBO Ped_TurnToCurrentWaypointOrientation TRG_Ped_LifeGuard04 AU_Classic_FlowerPots_Kill Rigidbody_DisablePlayerCollision Group AU_GDAY_Got04 AU_Gap_Chain_Start Run no_move_update AU_LifeguardYell04 SFX_FootStepRun03 AU_Main_Story_goals CraneBalc AU_Gap_BalcLipHigh_Start AU_Gap_Seawall_Start TRG_SKATE_K Graffiti AU_TidePool_Tip AU_Goal_TrickObjects2 AU_Mini_Score_Hard NightOff_01_Street_lamp_01_Globe AddGoal_SecretTape AU_Gap_QP2TPBig_Start AU_Gulls_Desc cam_anim_text spin Street_lamp_01_Dummy AU_BillboardEye GoalManager_GoalIsLocked AU_Gap_HomeHand_Start Bulb03Params KillForceToWalk FlyHop IsSkaterFocused IsAlive MiniKartDriver JOW_FootBath02 TRG_Ped_LifeGuard05 AU_Gap_BridgeR2R_Easy_End Anim bounce AU_GDAY_Got05 Obj_RotZ Got_20 StreamPriorityHigh AU_AddGoal_Team Geo_HtlBalcony_RailingBreak_Shadow clear_temporary_nude_appearance AU_Event_B TRG_Restart_Hydrant AU_AddGoal_EmuGraf Obj_SetException dont_kill_trigger_on_success AU_icon_1 Trigger_Wait_Script AU_STATECONTROL_Minikart SFX_FootStepRun02 Table01 Hint_Text AU_Graf_Text offegdge AU_LifeguardYell05 AU_BridgeMan_Tip AU_TidePool_Text TRG_Ped_RampKid_Skate01 APM_flaming_HEAD_particle_params Ex Particle_LP_Spark19_Start Veh_Minikart_Idle high_priority AU_Ped_Cop_Bummin PED_M_Pissed01 FLAG_EVENT_A_PRE_STATE AU_DoubleFlip_Got Wait AU_FlowerPot AU_Classic_FlowerPot05 Ped_Griller_Stretch PUMP_BREAK AU_Goals TRG_Restart_Arcade StartGap version TRG_Ped_Beaver_Success01 Fly AU_Elimination_Text1 TinCans NightOn_01_Street_lamp_01_Globe01 AU_Gap_HtlHiLo_Start Geo_Sec_Ledges01 GetTriggerArray AU_FootShower Got_14 AU_Gap_BalcLip_Start AU_Classic_Easy_SickScore AU_BridgeManGap_Got AU_DoubleFlip_Group Ped_M_Cheer_Sitting1 AU_Trash_Text AU_Elimination_Text2_Lip AU_SecCombo_Text Obj_PlayFam AU_Ped_BustedHint AU_Acid_Text TODManager_MarkPermanentlyDead Geo_Sign_Rules01 PlayIntroCameras AU_Unlock_Pro_Goals TRG_Ped_Secret01 BayLipLow AU_SFX_Pigeons_FlyUp SkaterTrickDisplayed AU_Ped_Cop AU_540_Text AU_AddGoal_LoftyGap AU_Gap_SDTap_End LoadAsset texture_swap ObjID AU_Classic_FlowerPot04 Trick_Object_Light_Group AU_Gap_Perfect_End obj_id NightOff_01_Geo_PreEvent_B_StreetLamp01 AU_ShrimpSlap_Counter AU_JumpFan01 goal_flags InMultiPlayerGame Veh_Minikart_Land AU_Pigeon_Fly cluster_id AU_AddGoal_MiniRamp NightOff_01_Street_lamp_06 TRG_Ped_Foreman02 RepeatCount AU_Ped_Busted_Running AU_Hydrant_Counter Got_15 AU_Classic_HighScore_Text script_ped_state pre_anim_script all_profiles AU_Gap_TCGrass_End Obj_PlayAnim JumpFan AU_AddGoal_Bigguns AU_TrashCanRotate_Signal TRG_Restart_BathroomExit01 Ped_Griller_FixesGrill ObjectOutOfRadius TRG_COMBO_C targetid QP2TP AU_Gap_StreetR2R_End To PED_M_Pissed03 AU_CarOnPath_A Ped_InitAI DestroyFlexibleParticleSystem ped_speech_dialog AU_Warp2Secret Got_16 AU_goal_intro_cleanup Pulse_Blur NightOn_01_Street_lamp_05_Globe01 bottom S_obj_id Trigger_Speed_Boost TRG_Ped_Foreman01 Got_8 AU_SFX_Metal_Detector_Beep positionOffset flame_angle View_Goals_Tip AU_Signs_Text AU_Gap_Climber_End AU_Elimination_Text3 AddGoal_SickScore Obj_MoveToNode AU_EndGap_BigAcid RunFromIdle AU_Team_Text Ped_RampKid_PickUpBrd Projectile AU_LoftyGap_Landed Goal_Text AU_Gap_R2R_End AU_Gap_10Point_End AU_Pigeon PED_M_Pissed02 AU_TTO_Score_Hard TRG_Ped_Beaver_You Number_Of_Occurrences TRG_COMBO_B Current_Goal rgba hud_counter_caption Dummy Outdoor AU_AddGoal_KennyFingers TRG_Night_LevelLight_01_Lamp68 GetBonus FLAG_MAX_COORDS AU_ShrimpSlap_Check AU_Classic_Easy_HighScore_Text AU_Gap_RingVault_End Shadow letterbox variance Got_17 AU_Elimination_Text2 Geo_Sec_Ledges02 PEDAI_LifeGuard_StopWayPoint DoMorph RingVault Got_9 AU_BridgeMan_Text AU_Classic_HighScore AU_Classic_GDAY_Message Ped_StopMoving Sign TRG_Ped_LifeGuard02 mph TRG_Ped_TeammatePro AU_GDAY_Got02 TRG_Ped_Beaver_Intro03 Ped_Bikini_Sit2ToSit3 AU_Mini_Text AU_Construction_Desc AU_AddGoal_BigAcid Griller Obj_PlaySound rot_angle LastPedHit All GapID AU_Mini_Score_Easy Obj_ClearExceptions AU_BikiniGirl_Beverhausen2_Success Particle_LP_Spark10_Start GetCurrentSkaterProfileIndex AU_KnyHd_Desc JOW_AU_FootBath01_fast_particle_params AU_Beaver_Bird_Return Flags AU_TSR_Text AU_Ped_Construction_Worker_02_VO InSplitScreenGame AU_flame AU_Capstone_Story_goals AU_Gap_HtlLoHi_Start goal_description AU_Gap_BayLipHigh_End AU_Pigeon_Return Cycle GUEST_FOUND_ABORIGINE AU_Mini_Tip Table06 SFX_FootStepRun05 AU_LifeguardYell02 AU_Gap_CraneBalc_End Cop_Ticketing AU_Gap_Perfect_Start Printstruct GetFlag AU_MetalDetectLogic_Table Ped_RampKid_PutBoardDown Projectile_Last_Ped_ID Always_Initialize_Goal Second TRG_Ped_LifeGuard03 AU_AddGoal_Aborigine AU_Gap_LoHi_End AU_GDAY_Got03 AU_Gap_HotWireLip_Start AU_Ped_CornHint JOW_SecretFoam06 Is_Career params_Script GoalManager_GoalFlagSet No_Gap_Messages Bulb05Params AU_MiniLip Obj_StopStream world AU_Ped_Ramp_Kid_01_VO GrillSmokeParticleSystem AU_SwitchSkaters AU_BiggunsGap_Landed AU_Gap_CanSkip_End AU_SFX_ToiletFlush AU_KnyFngr_Tip AU_STATECONTROL_Lifeguard_Scanning AU_LifeguardYell03 AU_Goal_Intro_Cameras AU_Gap_BridgeR2R_Hard_End AU_Crane_Tip SFX_FootStepRun04 AU_Lofty_Text Ped_Utils_SetupHintSpeech AU_Goal_Gaps23_Pre_Success SpawnSound TRG_SFX_TrigBox_CrackedHydrant TRG_Arcade_Machine AU_SandWarning TideLip AU_EmuBomb_Success AU_AddGoal_SecretAreaCombo AU_Classic_Easy_ProScore Create Should_Look_At_Skater dist AU_AddGoal_TrickTheObjects AU_MiniKartGuy_VO AU_Gap_BiggunsR2R_End AU_Classic_Goal_Collect GoalManager_GoalIsActive JOW_SecretFoam05 BayLipHigh AU_Goal_Gaps18 TRG_Ped_Beaver_Intro01 z_priority BrassStairs AU_Gap_SeaWall_End GetGlobalFlag AU_Gap_Awning_End FLAG_DOUBLEFLIP_GOT AU_Ped_ForemanHint AU_Gap_StreetR2RHard_Start GrillFireParticleSystemLow Goal_Deactivate_Script MiniScore AU_Ped_Detector_Talk AU_STATE_RampKid AU_Gull_Return Table04 AU_Gull Street_lamp_05_Dummy SpawnSkaterScript AU_Gap_LGTap_Start AU_GotAcidDrop RampKid Gaps13 NightOff_01_Street_lamp_05_Globe AU_MiniLip_Got AU_Gap_10Point_Start AU_Ped_Grafiti_Punker_01_VO FirstSwap_VO spread AU_Gap_QP2TPBig_End JOW_SecretFoam04 Add_MultiPlayer_Mode_Goals view_goals_notify_trick Rigidbody_Kick AU_Gap_BiggunsR2R_Start parent EndGap AU_GDAY_Got01 AU_Goal_Gaps19 VO TRG_Ped_LifeGuard01 GetRandomValue STATE_GetAttention AU_Talking Table05 AU_Bikini_text AU_LifeguardYell01 SetException AU_STATE_F_Bikini JOW_AU_SecretFoam03_fast_particle_params AU_Gap_LDrop_Start AU_Ped_BeachGuy AU_Elimination_Intro_Cameras GDAY AU_2Cars_Desc AU_CraneHead_Pre AU_Mini_Desc_Hard InNetGame STATECONTROL_avoidstop_custom01 AU_STATE_LifeGuard_Scanning AU_CreateNewCar AU_STATECONTROL_Cop_pissed attachObjID MOD_AU_SKATE_SAND MOD_AU_NO_GULL_COMBO MOD_AU_SILENCE_GULLS do_count flag

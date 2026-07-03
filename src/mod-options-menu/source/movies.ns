@@ -1,0 +1,110 @@
+
+script playmovie_script_temp {
+} 
+play_mainmenu_attract_movie = 1 
+script playmovie_script {
+    <anims_unloaded> = 0 
+    <parts_pre_unloaded> = 0 
+    <temp_pre_unloaded> = 0 
+    if LevelIs Load_MainMenu {
+        if (play_mainmenu_attract_movie = 0) {
+            return 
+        } 
+        PauseObjects 
+        <anims_unloaded> = 1 
+        
+        if isNGC {
+            if InPreFile "skaterparts_temp.pre" {
+                UnloadPreFile "skaterparts_temp.pre" 
+                <temp_pre_unloaded> = 1 
+            } 
+        } else {
+            if InPreFile "skaterparts.pre" {
+                UnloadPreFile "skaterparts.pre" 
+                <parts_pre_unloaded> = 1 
+            } 
+            if InPreFile "skaterparts_temp.pre" {
+                UnloadPreFile "skaterparts_temp.pre" 
+                <temp_pre_unloaded> = 1 
+            } 
+        } 
+    } 
+    mempushcontext 0 
+    if ! GetGlobalFlag flag=MOD_TR_SKIP_INTRO {
+        playmovie <...> 
+    } 
+    if isXbox {
+        <time> = 6.0 
+    } else {
+        <time> = 4.5 
+    } 
+    if ! isNGC {
+        if LevelIs Load_MainMenu {
+            DisplayLoadingScreen "loadscrn_generic" <time> 
+        } 
+    } 
+    mempopcontext 
+    if (<anims_unloaded> = 1) {
+        
+        UnpauseObjects 
+    } 
+    if (<parts_pre_unloaded> = 1) {
+        if ! LevelIs Load_MainMenu {
+            script_assert "Can only unload skaterparts/play movies from skateshop (mainmenu) level" 
+        } 
+        if ! isNGC {
+            LoadPreFile "skaterparts.pre" 
+        } 
+    } 
+    if (<temp_pre_unloaded> = 1) {
+        if ! isNGC {
+            LoadPreFile "skaterparts_temp.pre" 
+        } 
+    } 
+    if (<temp_pre_unloaded> = 1) {
+        if isNGC {
+            LoadPreFile "skaterparts_temp.pre" use_bottom_up_heap 
+        } 
+    } 
+    if LevelIs Load_MainMenu {
+        HideLoadingScreen 
+    } 
+} 
+script ingame_play_movie {
+    ingame_pre_movie_cleanup 
+    mempushcontext 0 
+    if ! GetGlobalFlag flag=MOD_TR_SKIP_INTRO {
+        if GotParam movies {
+            GetArraySize <movies> 
+            index = 0 
+            while {
+                playmovie (<movies> [<index>]) 
+                index = (<index> + 1) 
+            } <array_size> 
+        } else {
+            playmovie <...> 
+        } 
+    } 
+    mempopcontext 
+    ingame_post_movie_cleanup <...> 
+} 
+script ingame_pre_movie_cleanup {
+    DisplayLoadingScreen blank 
+    goalmanager_levelunload 
+    cleanup preserve_skaters 
+    KillMessages 
+} 
+script ingame_post_movie_cleanup {loading_screen = blank 
+    mempushcontext 0 
+    DisplayLoadingScreen <loading_screen> 
+    mempopcontext 
+    if ! GotParam level {
+        GetCurrentLevel 
+    } 
+    if ObjectExists id=current_menu_anchor {
+        DestroyScreenElement id=current_menu_anchor 
+    } 
+    change_level level=<level> 
+    restore_start_key_binding 
+} 
+__register_checksums__ parts_pre_unloaded ObjectExists playmovie_script_temp GotParam GetCurrentLevel movies mempopcontext playmovie LoadPreFile isXbox preserve_skaters level InPreFile temp_pre_unloaded UnloadPreFile GetArraySize ingame_post_movie_cleanup printf play_mainmenu_attract_movie use_bottom_up_heap ingame_play_movie loading_screen time LevelIs script_assert id index isNGC UnpauseObjects DisplayLoadingScreen DestroyScreenElement Load_MainMenu cleanup blank PauseObjects array_size current_menu_anchor ingame_pre_movie_cleanup anims_unloaded goalmanager_levelunload KillMessages change_level HideLoadingScreen restore_start_key_binding playmovie_script mempushcontext GetGlobalFlag MOD_TR_SKIP_INTRO flag

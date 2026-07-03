@@ -1,0 +1,7 @@
+# <archive>	<internal-name>	<ns-source>
+qb_scripts.prx	scripts\engine\movies.qb	source/movies.ns
+qb_scripts.prx	scripts\game\cutscene.qb	source/cutscene.ns
+qb_scripts.prx	scripts\game\menu\gamemenu_pause.qb	source/gamemenu_pause.ns
+qb_scripts.prx	scripts\game\misc\global_flags.qb	source/global_flags.ns
+qb_scripts.prx	scripts\game\ped\Sk6Ped_StateLogic.qb	source/Sk6Ped_StateLogic.ns
+qb_scripts.prx	scripts\game\skater\skater_sfx.qb	source/skater_sfx.ns

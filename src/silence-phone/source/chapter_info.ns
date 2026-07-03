@@ -1,0 +1,2321 @@
+
+total_num_goals = 0 
+dont_lock_goals = 0 
+total_cheat_points = 0 
+current_teammate_pro_appearance_name = none 
+CHAPTER_STATUS = [
+    CHAPTER_UNLOCKED, 
+    CHAPTER_LOCKED, 
+    CHAPTER_LOCKED, 
+    CHAPTER_LOCKED, 
+    CHAPTER_LOCKED, 
+    CHAPTER_LOCKED, 
+    CHAPTER_LOCKED, 
+    CHAPTER_LOCKED, 
+    CHAPTER_LOCKED, 
+    CHAPTER_LOCKED, 
+    CHAPTER_LOCKED, 
+    CHAPTER_LOCKED, 
+] 
+CHAPTER_INTROS_VIEWED = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+CHAPTER_OUTTROS_VIEWED = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+CHAPTER_INFO = [
+    {
+        title="Chapter 1" 
+        level=load_tr 
+        level_total_points=1000 
+        points_to_advance=0 
+        no_advance_dialog_on_goal_win 
+        setup_script=TR_1_Start 
+        post_intro_cutscene_setup=TR_sound_setup 
+        cleanup_script=TR_1_End 
+        start_cutscenes=[{name="cutscenes\\TR_1A.cut" flag=VIEWED_CUTSCENE_01} 
+            {name="cutscenes\\TR_1B.cut" flag=VIEWED_CUTSCENE_02} 
+            {name="cutscenes\\TR_1C.cut" flag=VIEWED_CUTSCENE_03} 
+        ] 
+        goal_intro_cameras=Tr_Goal_Intro_Cameras 
+        advance_ped_info={
+            name="Tony" 
+            need_more_points_message="" 
+            move_on_now_message="You ready to get started?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+    {
+        title="Chapter 2" 
+        level=load_bo 
+        level_total_points=1000 
+        points_to_advance=[
+            400 
+            500 
+            800 
+        ] 
+        setup_script=BO_1_Start 
+        cleanup_script=BO_1_End 
+        end_cutscenes=[{name="cutscenes\\BO_2A.cut" flag=VIEWED_CUTSCENE_04}, 
+            {name="cutscenes\\BO_2B.cut" flag=VIEWED_CUTSCENE_05} 
+        ] 
+        goal_intro_cameras=BO_Goal_Intro_Cameras 
+        text_message_point_triggers=[
+            {
+                points=5 
+                text={
+                    priority_message 
+                    from="Tony Hawk" 
+                    message="You banked your first points! Every once in a while you will receive a text message. Check these messages as they might contain important and useful information. The phone icon will appear when you have a new message. Pause the game and select 'View Messages' to read these." 
+                } 
+            } 
+            {
+                points=[
+                    200 
+                    250 
+                    400 
+                ] 
+                text={
+                    from="Bam Margera" 
+                    message="What do you get when you blast a fire hose at a bunch of drunks through an electric fence? 100 points for my team! Top that, sucker!" 
+                } 
+            } 
+            {
+                points=points_to_advance 
+                text={
+                    priority_message 
+                    from="Tony Hawk" 
+                    message="Good job! I think we have enough points now to take the lead on Bam's team. I'm hanging out on the street over by Jeers. Come see me when you are ready to move on to the next city!" 
+                    reply_script=GotoNextChapterAccept 
+                    reply_text="REPLY: 'LET'S GO NOW!'" 
+                } 
+            } 
+            {
+                points=1000 
+                text={
+                    from="Tony Hawk" 
+                    message="Wow! We've completed every possible goal in this level. Let's move on to the next city." 
+                } 
+            } 
+        ] 
+        selectable_pros=[Burnquist, Mullen, Muska, Vallely] 
+        advance_ped_info={
+            name="Tony" 
+            need_more_points_message="Yo, complete some more goals and come back." 
+            move_on_now_message="You ready to move on?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+    {
+        title="Chapter 3" 
+        level=load_ba 
+        level_total_points=1000 
+        points_to_advance=[
+            400 
+            500 
+            800 
+        ] 
+        setup_script=BA_1_Start 
+        cleanup_script=BA_1_End 
+        goal_intro_cleanup=BA_1_Message 
+        end_cutscenes=[{name="cutscenes\\BA_3.cut" flag=VIEWED_CUTSCENE_06}, 
+            {name="cutscenes\\BA_3B.cut" flag=VIEWED_CUTSCENE_14} 
+        ] 
+        goal_intro_cameras=BA_Goal_Intro_Cameras 
+        text_message_point_triggers=[
+            {
+                points=[
+                    200 
+                    250 
+                    400 
+                ] 
+                text={
+                    from="Wee-Man" 
+                    message="I heard that someone got 100 points for using a leaf blower to rocket launch Phil's crusty underpants into the face of some Spaniards! Oh yea, that was me! Ha! You suck!" 
+                } 
+            } 
+            {
+                points=points_to_advance 
+                text={
+                    priority_message 
+                    from="Tony Hawk" 
+                    message="We have to be in the lead with all of the points you have scored. I think we are safe to leave this city now. I'm out near the street so come see me and we'll tally up our points!" 
+                    reply_script=GotoNextChapterAccept 
+                    reply_text="REPLY: 'LET'S GO NOW!'" 
+                } 
+            } 
+            {
+                points=[
+                    500 
+                    750 
+                    750 
+                ] 
+                text={
+                    from="Bob Burnquist" 
+                    message="In case anyone cares, yes my nuts are finally healing. And yes, one of them still has the markings of a tennis ball. Thanks!" 
+                } 
+            } 
+            {
+                points=1000 
+                text={
+                    from="Tony Hawk" 
+                    message="I didn't think we could do it, but we've scored all of the possible points in this city! Let's get out of here!" 
+                } 
+            } 
+        ] 
+        selectable_pros=[Mullen, Muska, Vallely] 
+        advance_ped_info={
+            name="Tony" 
+            need_more_points_message="Complete some more goals and then come back to see me." 
+            move_on_now_message="You ready to move on?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+    {
+        title="Chapter 4" 
+        level=load_be 
+        level_total_points=1000 
+        points_to_advance=[
+            400 
+            500 
+            800 
+        ] 
+        setup_script=BE_1_Start 
+        cleanup_script=BE_1_End 
+        end_cutscenes=[{name="cutscenes\\BE_4A.cut" flag=VIEWED_CUTSCENE_07}, 
+            {name="cutscenes\\BE_4B.cut" flag=VIEWED_CUTSCENE_08} 
+        ] 
+        goal_intro_cameras=BE_Goal_Intro_Cameras 
+        text_message_point_triggers=[
+            {
+                points=[
+                    200 
+                    250 
+                    400 
+                ] 
+                text={
+                    from="Tony Hawk" 
+                    message="Oh man, Sparrow just tried to do a blindfolded 900 and took out an entire polka band! I think he might have even killed the tuba player. We need you back!" 
+                } 
+            } 
+            {
+                points=points_to_advance 
+                text={
+                    priority_message 
+                    from="Bam Margera" 
+                    message="We have killed this city. Those dorks on Tony's team are probably still trying to do kickflips. I say we leave and get a head start on the next city. Meet up with Phil when you want to leave." 
+                    reply_script=GotoNextChapterAccept 
+                    reply_text="REPLY: 'LET'S GO NOW!'" 
+                } 
+            } 
+            {
+                points=1000 
+                text={
+                    from="Bam Margera" 
+                    message="Dude, YOU ruled this city! We've got all the points we can get, so let's make like trees and leave!" 
+                } 
+            } 
+        ] 
+        selectable_pros=[Margera] 
+        advance_ped_info={
+            name="Phil" 
+            need_more_points_message="You don't have enough points yet." 
+            move_on_now_message="Ready to go to the next city?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+    {
+        title="Chapter 5" 
+        level=load_au 
+        level_total_points=1000 
+        points_to_advance=[
+            400 
+            500 
+            800 
+        ] 
+        setup_script=AU_1_Start 
+        cleanup_script=AU_1_End 
+        goals_script=AU_Main_Story_goals 
+        end_cutscenes=[{name="cutscenes\\AU_5.cut" flag=VIEWED_CUTSCENE_09}] 
+        goal_intro_cameras=AU_Goal_Intro_Cameras 
+        text_message_point_triggers=[
+            {
+                points=50 
+                text={
+                    from="Thai-Baby68" 
+                    message="You throw big good-time party! You come back Thailand soon! I call you phone number you give but man name Bob Burnquist answer. Who he?\\nP.S. How to get water buffalo off grandfather's roof?" 
+                } 
+            } 
+            {
+                points=points_to_advance 
+                text={
+                    priority_message 
+                    from="Tony Hawk" 
+                    message="It's good to have you back! Our team performed really well here in Australia. I think we're ready to take off. If you want to come with us, come and see me." 
+                    reply_script=GotoNextChapterAccept 
+                    reply_text="REPLY: 'LET'S GO NOW!'" 
+                } 
+            } 
+            {
+                points=1000 
+                text={
+                    from="Tony Hawk" 
+                    message="You've cleared your list! Australia is out of things for us to do. Let's hit the road!" 
+                } 
+            } 
+        ] 
+        selectable_pros=[Mullen, Muska, Vallely] 
+        advance_ped_info={
+            name="Tony" 
+            need_more_points_message="Yo, complete some more goals and come back." 
+            move_on_now_message="You ready to move on?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+    {
+        title="Chapter 6" 
+        level=load_au 
+        level_total_points=2000 
+        points_to_advance=1000 
+        setup_script=AU_2_Start 
+        cleanup_script=AU_2_End 
+        goals_script=AU_Capstone_Story_goals 
+        end_cutscenes=[{name="cutscenes\\AU_6.cut" flag=VIEWED_CUTSCENE_10}] 
+        goal_intro_setup=AU_goal_intro_setup 
+        goal_intro_cameras=AU_Elimination_Intro_Cameras 
+        goal_intro_cleanup=AU_goal_intro_cleanup 
+        text_message_point_triggers=[
+            {
+                points=50 
+                text={
+                    from="Eric Sparrow" 
+                    message="I've got this one locked up! You can't possibly do something better... I stole Nigel's clothes! I'm brilliant!" 
+                } 
+            } 
+        ] 
+        should_do_fake_nigel=0 
+        skater_start_node=TRG_Restart_Elimination 
+        capstone_chapter 
+        advance_ped_info={
+            name="Tony" 
+            need_more_points_message="Yo, complete some more goals and come back." 
+            move_on_now_message="You ready to move on?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+    {
+        title="Chapter 7" 
+        level=load_no 
+        level_total_points=1000 
+        points_to_advance=[
+            400 
+            500 
+            800 
+        ] 
+        setup_script=NO_1_Start 
+        cleanup_script=NO_1_End 
+        goals_script=NO_Main_Story_goals 
+        end_cutscenes=[{name="cutscenes\\NO_7.cut" flag=VIEWED_CUTSCENE_11}] 
+        goal_intro_cameras=NO_Goal_Intro_Cameras 
+        text_message_point_triggers=[
+            {
+                points=[
+                    200 
+                    250 
+                    400 
+                ] 
+                text={
+                    from="Paulie" 
+                    message="Hey pork sniffer! Let me know when you come close to my score. I'll be treating the ladies to a hot plate of southern fried Paulie!" 
+                } 
+            } 
+            {
+                points=points_to_advance 
+                text={
+                    priority_message 
+                    from="Tony Hawk" 
+                    message="Right on! We've got more points than Bam can count. When you think you've had enough, come see me!" 
+                    reply_script=GotoNextChapterAccept 
+                    reply_text="REPLY: 'LET'S GO NOW!'" 
+                } 
+            } 
+            {
+                points=1000 
+                text={
+                    from="Tony Hawk" 
+                    message="Our team has cleaned up Nawlins! Nothing more to do here, so let's head on out!" 
+                } 
+            } 
+        ] 
+        selectable_pros=[Mullen, Muska, Vallely] 
+        advance_ped_info={
+            name="Tony" 
+            need_more_points_message="Yo, complete some more goals and come back." 
+            move_on_now_message="You ready to move on?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+    {
+        title="Chapter 8" 
+        level=load_no 
+        level_total_points=2000 
+        points_to_advance=1000 
+        setup_script=NO_2_Start 
+        cleanup_script=NO_2_End 
+        goals_script=NO_Capstone_Story_goals 
+        end_cutscenes=[{name="cutscenes\\NO_8.cut" flag=VIEWED_CUTSCENE_12}] 
+        goal_intro_setup=NO_goal_intro_setup 
+        goal_intro_cameras=NO_Equalizer_Intro_Cameras 
+        goal_intro_cleanup=NO_goal_intro_cleanup 
+        skater_start_node=TRG_Restart_Equalizer_Intro 
+        capstone_chapter 
+        advance_ped_info={
+            name="Tony" 
+            need_more_points_message="Yo, complete some more goals and come back." 
+            move_on_now_message="You ready to move on?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+    {
+        title="Chapter 9" 
+        level=load_st 
+        level_total_points=1000 
+        points_to_advance=[
+            400 
+            500 
+            800 
+        ] 
+        setup_script=ST_1_Start 
+        cleanup_script=ST_1_End 
+        goals_script=ST_Main_Story_goals 
+        goal_intro_cameras=ST_Goal_Intro_Cameras 
+        text_message_point_triggers=[
+            {
+                points=[
+                    200 
+                    250 
+                    400 
+                ] 
+                text={
+                    from="Mike Vallely" 
+                    message="We're in jail but we should be rollin' your way soon. Beaverhausen will be here to bail us out any minute. Before we got nabbed, we stole his truck!" 
+                } 
+            } 
+            {
+                points=points_to_advance 
+                text={
+                    priority_message 
+                    from="Tony Hawk" 
+                    message="I really think we have enough points to win this thing! Let's go see Bam and we'll call a final point tally!" 
+                    reply_script=GotoNextChapterAccept 
+                    reply_text="REPLY: 'LET'S GO NOW!'" 
+                } 
+            } 
+            {
+                points=1000 
+                text={
+                    from="Tony Hawk" 
+                    message="There is no way that Bam's guys can beat us now... you scored so many points! Come meet up with me so we can hand Bam and his team the loser trophy!" 
+                } 
+            } 
+        ] 
+        selectable_pros=[Hawk] 
+        advance_ped_info={
+            name="Bam" 
+            need_more_points_message="You better get some more points and come back." 
+            move_on_now_message="You ready to end this thing?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+    {
+        title="Chapter 10" 
+        level=load_st 
+        level_total_points=2000 
+        points_to_advance=1000 
+        setup_script=ST_2_Start 
+        cleanup_script=ST_2_End 
+        goals_script=ST_Capstone_Story_goals 
+        goal_intro_setup=ST_EndGoal_Bam_intro_setup 
+        goal_intro_cameras=ST_EndGoal_Bam_Cameras 
+        goal_intro_cleanup=ST_EndGoal_Bam_intro_cleanup 
+        force_skater_swap={profile_name=Margera obj=TRG_Ped_Endgoal_Bam1} 
+        skater_start_node=TRG_restart_finalgoal 
+        capstone_chapter 
+        advance_ped_info={
+            name="Bam" 
+            need_more_points_message="Yo, complete some more goals and come back." 
+            move_on_now_message="You ready to move on?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+    {
+        title="Chapter 11" 
+        level=load_st 
+        level_total_points=3000 
+        points_to_advance=1000 
+        setup_script=ST_3_Start 
+        cleanup_script=ST_3_End 
+        goals_script=ST_Capstone_Story_goals_part2 
+        goal_intro_setup=ST_EndGoal_Hawk_intro_setup 
+        goal_intro_cameras=ST_EndGoal_Hawk_Cameras 
+        goal_intro_cleanup=ST_EndGoal_Hawk_intro_cleanup 
+        force_skater_swap={profile_name=Hawk obj=TRG_Ped_Endgoal_Hawk1} 
+        skater_start_node=TRG_restart_finalgoal2 
+        capstone_chapter 
+        advance_ped_info={
+            name="Bam" 
+            need_more_points_message="Yo, complete some more goals and come back." 
+            move_on_now_message="You ready to move on?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+    {
+        title="Chapter 12" 
+        level=load_st 
+        level_total_points=4000 
+        points_to_advance=1000 
+        setup_script=ST_4_Start 
+        cleanup_script=ST_4_End 
+        goals_script=ST_Capstone_Story_goals_part3 
+        end_cutscenes=[{name="cutscenes\\SK_9.cut" flag=VIEWED_CUTSCENE_13}] 
+        post_outtro_cutscene_setup=ST_4_End 
+        goal_intro_setup=ST_EndGoal_End_setup 
+        goal_intro_cameras=ST_EndGoal_End_Cameras 
+        goal_intro_cleanup=ST_EndGoal_End_cleanup 
+        skater_start_node=[
+            TRG_restart_finalgoal4 
+            TRG_restart_finalgoal3 
+            TRG_restart_finalgoal3 
+        ] 
+        capstone_chapter 
+        last_chapter 
+        advance_ped_info={
+            name="Bam" 
+            need_more_points_message="Yo, complete some more goals and come back." 
+            move_on_now_message="You ready to move on?" 
+            already_moved_on_message="Hey, check your level select screen to move on." 
+        } 
+    } 
+] 
+script SetCurrentTeammateProAppearanceName {
+} 
+script GetChapterSelectableProCount {
+    if ! GameModeEquals is_career {
+        return selectable_pro_count=0 
+    } 
+    GetCurrentChapterInfo 
+    if ! LevelIs <level> {
+        return selectable_pro_count=0 
+    } 
+    if ! GotParam selectable_pros {
+        return selectable_pro_count=0 
+    } 
+    GetArraySize <selectable_pros> 
+    return selectable_pro_count=<array_size> 
+} 
+script IsCurrentChapterCapstone {
+    GetCurrentChapterInfo 
+    if GotParam capstone_chapter {
+        return capstone_chapter 
+    } 
+} 
+script GetValueFromDifficultyParam {
+    GoalManager_GetDifficultyLevel 
+    if IsArray <param> {
+        return value=(<param> [<difficulty_level>]) 
+    } else {
+        return value=<param> 
+    } 
+} 
+script GetCurrentPointsToAdvance {
+    GetCurrentChapterInfo 
+    GetValueFromDifficultyParam param=<points_to_advance> 
+    return points_to_advance=<value> 
+} 
+script SetHighestChapterWithLevel {
+    if CD {
+        if LevelIs <level> {
+            return 
+        } 
+    } 
+    force = 0 
+    GetArraySize CHAPTER_STATUS 
+    index = (<array_size> -1) 
+    while {
+        if (CHAPTER_INFO [<index>].level=<level>) {
+            if (CHAPTER_STATUS [<index>]=CHAPTER_LOCKED) {
+                if (all_levels_unlocked = 1) {
+                    target_chapter = <index> 
+                    force = 1 
+                } 
+            } else {
+                if (CHAPTER_STATUS [<index>]=CHAPTER_COMPLETE) {
+                    target_chapter = <index> 
+                } else {
+                    force = 0 
+                    target_chapter = <index> 
+                    break 
+                } 
+            } 
+        } 
+        index = (<index> -1) 
+    } <array_size> 
+    if GotParam target_chapter {
+        change chapter_post_cutscene_target_chapter=<target_chapter> 
+        change chapter_post_cutscene_force_unlock=<force> 
+        EndCurrentChapter callback=SetHighestChapterWithLevelPostCutscene 
+    } else {
+        
+        EndCurrentChapter dont_check_outtros 
+    } 
+} 
+chapter_post_cutscene_target_chapter = 0 
+chapter_post_cutscene_force_unlock = 0 
+script SetHighestChapterWithLevelPostCutscene {
+    if (chapter_post_cutscene_force_unlock = 1) {
+        SetCurrentChapter chapter=0 
+        while {
+            UnlockNextChapter 
+            AdvanceStage 
+        } (chapter_post_cutscene_target_chapter) 
+    } else {
+        SetCurrentChapter chapter=(chapter_post_cutscene_target_chapter) 
+    } 
+    if GotParam from_cutscenes {
+        LoadCurrentChapter 
+    } 
+} 
+script UnlockNextChapter {
+    MarkChapterComplete 
+    GetCurrentChapter 
+    next_chapter = (<chapter> + 1) 
+    GetArraySize CHAPTER_STATUS 
+    if ! (<next_chapter> < <array_size>) {
+        
+    } else {
+        CheckIfChapterIntrosViewed next 
+        if (<viewed> = 0) {
+            if (CHAPTER_STATUS [<next_chapter>]=CHAPTER_LOCKED) {
+                <status_array> = CHAPTER_STATUS 
+                SetArrayElement ArrayName=status_array index=<next_chapter> NewValue=CHAPTER_UNLOCKED 
+            } 
+            level = ((CHAPTER_INFO [<next_chapter>]).level) 
+            GetArraySize level_select_menu_level_info 
+            index = 0 
+            while {
+                if ((level_select_menu_level_info [<index>].level) = <level>) {
+                    SetGlobalFlag flag=(level_select_menu_level_info [<index>].flag) 
+                    if ! GotParam dont_set_seen_flags {
+                        if StructureContains structure=(level_select_menu_level_info [<index>]) seen_flag {
+                            SetGlobalFlag flag=(level_select_menu_level_info [<index>].seen_flag) 
+                        } 
+                    } 
+                    break 
+                } 
+                index = (<index> + 1) 
+            } <array_size> 
+        } 
+    } 
+} 
+script CheckIfChapterUnlocked {
+    GetCurrentChapter 
+    if GotParam next {
+        chapter = (<chapter> + 1) 
+    } 
+    GetArraySize CHAPTER_STATUS 
+    if ! (<chapter> < <array_size>) {
+    } else {
+        if ! (CHAPTER_STATUS [<chapter>]=CHAPTER_LOCKED) {
+            return unlocked=1 
+        } 
+    } 
+    return unlocked=0 
+} 
+script SendPagerMessageWithDelay {send_delay = 2 
+    wait <send_delay> seconds 
+    if ! GetGlobalFlag flag=MOD_SILENCE_PHONE {
+        Skater:SendPagerMessage <text> 
+    } 
+} 
+script CheckCurrentTextMessageTriggers {
+    GetCurrentChapterInfo 
+    if GotParam text_message_point_triggers {
+        GetArraySize <text_message_point_triggers> 
+        index = 0 
+        while {
+            GetValueFromDifficultyParam param=(<text_message_point_triggers> [<index>].points) 
+            if (<value> = points_to_advance) {
+                GetCurrentPointsToAdvance 
+                value = <points_to_advance> 
+            } 
+            if (<value> > <before>) {
+                if ! (<value> > <after>) {
+                    SpawnScript SendPagerMessageWithDelay params={(<text_message_point_triggers> [<index>])} 
+                } 
+            } 
+            index = (<index> + 1) 
+        } <array_size> 
+    } 
+} 
+script WaitUntilScreenClear {pass = 0 
+    wait 0.2 seconds 
+    while {
+        wait 1 gameframes 
+        if Skater:OnGround {
+            root_window:GetSingleTag menu_state 
+            if (<menu_state> = off) {
+                if ! ScreenElementExists id=speech_box_anchor {
+                    if ! ScreenElementExists id=goal_description_anchor {
+                        if ! ScreenElementExists id=current_menu_anchor {
+                            if (<pass> = 2) {
+                                wait 1 gameframes 
+                                RemoveParameter pass 
+                                SafeCallback <...> 
+                                return 
+                            } else {
+                                break 
+                            } 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+        pass = 0 
+    } 
+    pass = (<pass> + 1) 
+    GotoPreserveParams WaitUntilScreenClear 
+} 
+script CheckChapterAdvancementStatus {
+    if ! GameModeEquals is_career {
+        return 
+    } 
+    GoalManager_GetActiveRewardPoints 
+    GetCurrentPointsToAdvance 
+    if GotParam RewardPoints {
+        CheckCurrentTextMessageTriggers before=(<active_points> - <RewardPoints>) after=<active_points> 
+    } 
+    if IsTrue DEMO_BUILD {
+        if LevelIs load_ba {
+            return 
+        } 
+    } 
+    ProcessGameRewards 
+    ProcessGoalRewards 
+    if ! (<active_points> < <points_to_advance>) {
+        UnlockNextChapter 
+        GetCurrentChapterInfo 
+        if ! GotParam no_advance_dialog_on_goal_win {
+            if GotParam capstone_chapter {
+                change waiting_for_complete_message=1 
+                GetArraySize CHAPTER_STATUS 
+                GetCurrentChapter 
+                if ! LevelIs load_st {
+                    SpawnScript WaitUntilScreenClear params={callback=GotoNextChapter} 
+                } else {
+                    SpawnScript GotoNextChapter 
+                } 
+                return 
+            } 
+        } 
+    } 
+    DoCompletionMessages 
+} 
+script AdvanceStage {
+    GetCurrentChapter 
+    chapter = (<chapter> + 1) 
+    GetArraySize CHAPTER_STATUS 
+    if (<chapter> = <array_size>) {
+        
+    } else {
+        SetCurrentChapter chapter=<chapter> 
+    } 
+} 
+script GetCurrentChapterInfo {
+    GetCurrentChapter 
+    GetArraySize CHAPTER_INFO 
+    if ((<chapter> < 0) or (<chapter> > (<array_size> - 1))) {
+        script_assert "current_chapter has bad value %i" i=<chapter> 
+    } 
+    return (CHAPTER_INFO [<chapter>]) 
+} 
+script GotoNextChapter {
+    EndCurrentChapter callback=GoToNextChapterPostCutscene 
+} 
+script GoToNextChapterPostCutscene {
+    GetCurrentChapterInfo 
+    if GotParam post_outtro_cutscene_setup {
+        <post_outtro_cutscene_setup> 
+    } 
+    UnlockNextChapter 
+    if GotParam last_chapter {
+        GetCurrentChapter 
+        SetCurrentChapter chapter=8 
+    } else {
+        AdvanceStage 
+    } 
+    change waiting_for_complete_message=0 
+    if IsTrue want_completion_movie {
+        DoCompletionMessages 
+    } else {
+        LoadCurrentChapter 
+    } 
+} 
+script LoadCurrentChapter {
+    GetCurrentChapterInfo 
+    if ! LevelIs <level> {
+        change_level level=<level> 
+    } else {
+        StartCurrentChapter 
+    } 
+} 
+script GoToPreviousChapter {
+    EndCurrentChapter 
+    GetCurrentChapter 
+    chapter = (<chapter> -1) 
+    if (<chapter> > -1) {
+        SetCurrentChapter chapter=<chapter> 
+    } 
+    LoadCurrentChapter 
+} 
+script SetUpChapterMenu {
+    change dont_restore_start_key_binding=1 
+    Skater:PausePhysics 
+    Skater:RemoveSkaterFromWorld 
+    if ObjectExists id=current_menu_anchor {
+        DestroyScreenElement id=current_menu_anchor 
+    } 
+    hide_all_hud_items dont_restore_input 
+    kill_start_key_binding 
+    PauseMusic 1 
+    root_window:SetTags menu_state=on 
+    SafeCallback <...> 
+} 
+script KillChapterMenu {
+    dialog_box_exit 
+    if ScreenElementExists id=current_menu_anchor {
+        DestroyScreenElement id=current_menu_anchor 
+    } 
+    if GotParam need_unpause_streams {
+        PauseStream 0 
+    } 
+    if GotParam inside_run {
+        UnPauseGame 
+        UnPauseSkaters 
+        show_all_hud_items 
+    } else {
+        if GotParam mark_first_input {
+            mark_first_input_received <...> 
+        } 
+        if ScreenElementExists id=current_menu_anchor {
+            DestroyScreenElement id=current_menu_anchor 
+        } 
+        root_window:SetTags menu_state=off 
+        change dont_restore_start_key_binding=0 
+        restore_start_key_binding 
+        PauseMusic 0 
+        Skater:UnpausePhysics 
+        Skater:AddSkaterToWorld 
+        show_all_hud_items 
+    } 
+    SafeCallback <...> 
+} 
+script PlayChapterCutsceneList {index = 0 
+    if ! GotParam list {
+        return 
+    } 
+    GetArraySize <list> 
+    if (<array_size> = 0) {
+        return 
+    } 
+    if (<index> = <array_size>) {
+        SafeCallback <...> from_cutscenes=from_cutscenes 
+        return 
+    } 
+    if (<index> = 0) {
+        unload = 1 
+        UnPauseGame 
+        PauseMusic 0 
+    } else {
+        unload = 0 
+    } 
+    if (<index> = (<array_size> -1)) {
+        reload = 1 
+    } else {
+        reload = 0 
+    } 
+    exit_params = {list=<list> 
+        index=(<index> + 1) 
+        callback=<callback> 
+    } 
+    if StructureContains structure=(<list> [<index>]) flag {
+        if GetGlobalFlag flag=((<list> [<index>]).flag) {
+            PlayChapterCutsceneList <exit_params> 
+            return 
+        } else {
+            SetGlobalFlag flag=((<list> [<index>]).flag) 
+        } 
+    } 
+    play_cutscene_only_if_good {
+        name=((<list> [<index>]).name) 
+        unload_anims=<unload> 
+        unload_goals=<unload> 
+        reload_anims=<reload> 
+        reload_goals=<reload> 
+        exitScript=PlayChapterCutsceneList 
+        exitParams=<exit_params> 
+    } 
+} 
+script get_is_cutscene_bad {
+    <bad_cutscene> = 0 
+    return bad_cutscene=<bad_cutscene> cutscene_name=<cutscene_name> 
+} 
+script play_cutscene_only_if_good {
+    if IsNgc {
+        get_is_cutscene_bad name=<name> 
+    } else {
+        <bad_cutscene> = 0 
+    } 
+    if IsNgc {
+        if StringEquals a=<name> b="cutscenes\\no_7.cut" {
+            Skater:Obj_ClearGeoms 
+        } 
+    } 
+    if (<bad_cutscene> = 0) {
+        RemoveComponent bad_cutscene 
+        RemoveComponent cutscene_name 
+        PlayCutscene <...> 
+    } else {
+        if (<unload_goals> = 1) {
+            if GameModeEquals is_classic {
+                GoalManager_PauseAllGoals 
+            } else {
+                GoalManager_UninitializeAllGoals 
+            } 
+        } 
+        if (<unload_anims> = 1) {
+            if InPreFile "skaterparts.pre" {
+                UnloadPreFile "skaterparts.pre" 
+                cutscene_skaterparts_unloaded = 1 
+            } 
+            do_unload_unloadable 
+        } 
+        if ! GotParam cutscene_name {
+            script_assert "no cutscene name!" 
+        } 
+        FormatText ChecksumName=start_script "%i_begin" i=<cutscene_name> 
+        if ScriptExists <start_script> {
+            <start_script> 
+        } 
+        if (<reload_anims> = 1) {
+            if (cutscene_skaterparts_unloaded = 1) {
+                LoadPreFile "skaterparts.pre" 
+                change cutscene_skaterparts_unloaded=0 
+            } 
+            do_load_unloadable 
+        } 
+        if (<reload_goals> = 1) {
+            if GameModeEquals is_classic {
+                GoalManager_UnPauseAllGoals 
+                show_goal_panel_messages 
+            } else {
+                GoalManager_InitializeAllGoals 
+            } 
+        } else {
+            DisplayLoadingScreen Blank 
+        } 
+        FormatText ChecksumName=end_script "%i_end" i=<cutscene_name> 
+        if ScriptExists <end_script> {
+            <end_script> 
+        } 
+        <exitScript> <exitParams> 
+    } 
+} 
+script CheckIfChapterIntrosViewed {
+    GetCurrentChapter 
+    if GotParam next {
+        chapter = (<chapter> + 1) 
+        GetArraySize CHAPTER_STATUS 
+        if (<chapter> = <array_size>) {
+            return viewed=1 
+        } 
+    } 
+    return viewed=(CHAPTER_INTROS_VIEWED [<chapter>]) 
+} 
+script CheckIfChapterOuttrosViewed {
+    GetCurrentChapter 
+    return viewed=(CHAPTER_OUTTROS_VIEWED [<chapter>]) 
+} 
+script MarkChapterIntrosViewed {
+    GetCurrentChapter 
+    <status_array> = CHAPTER_INTROS_VIEWED 
+    SetArrayElement ArrayName=status_array index=<chapter> NewValue=1 
+} 
+script MarkChapterOuttrosViewed {
+    GetCurrentChapter 
+    <status_array> = CHAPTER_OUTTROS_VIEWED 
+    SetArrayElement ArrayName=status_array index=<chapter> NewValue=1 
+} 
+script MarkChapterComplete {
+    GetCurrentChapter 
+    <status_array> = CHAPTER_STATUS 
+    SetArrayElement ArrayName=status_array index=<chapter> NewValue=CHAPTER_COMPLETE 
+} 
+chapter_goals_loaded = 0 
+script GetOptionalChapterGoalsScript {
+    change chapter_goals_loaded=1 
+    new_level = <level> 
+    GetCurrentChapterInfo 
+    if ! (<level> = <new_level>) {
+        return 
+    } 
+    if GotParam goals_script {
+        return goals_script=<goals_script> 
+    } 
+} 
+script StartCurrentChapter {
+    SetCurrentTeammateProAppearanceName 
+    change total_cheat_points=0 
+    update_goal_points_display refresh 
+    Skater:StatsManager_ActivateGoals 
+    if ScreenElementExists id=new_ammo_message {
+        DestroyScreenElement id=new_ammo_message 
+        DestroyScreenElement id=new_ammo_message2 
+    } 
+    GetCurrentChapterInfo 
+    if ! LevelIs <level> {
+        create_select_pro_menu from_chapter_intro 
+        return 
+    } 
+    if GotParam goals_script {
+        if (chapter_goals_loaded = 0) {
+            PushMemProfile "Goals script" 
+            <goals_script> 
+            PopMemProfile 
+            init_goal_manager 
+            change chapter_goals_loaded=1 
+        } 
+    } 
+    CheckIfChapterIntrosViewed 
+    if GotParam setup_script {
+        <setup_script> 
+    } 
+    if (<viewed> = 1) {
+        if GotParam capstone_chapter {
+            StartCurrentChapterStartRun 
+        } else {
+            create_select_pro_menu from_chapter_intro 
+        } 
+        return 
+    } else {
+        if GotParam level_total_points {
+            SetLevelTotalPoints <level_total_points> 
+            
+        } 
+        MarkChapterIntrosViewed 
+    } 
+    root_window:SetTags menu_state=on 
+    if GotParam start_cutscenes {
+        
+        PlayChapterCutsceneList list=(<start_cutscenes>) callback=StartCurrentChapterStartRun 
+        return 
+    } 
+    StartCurrentChapterStartRun 
+} 
+fake_nigel_active = 0 
+script StartCurrentChapterWelcome {
+    GetCurrentChapterInfo 
+    KillChapterMenu 
+    if ! LevelIs <level> {
+        return 
+    } 
+    if GotParam skater_start_node {
+        GetValueFromDifficultyParam param=<skater_start_node> 
+        Skater:Obj_MoveToNode name=<value> Orient 
+    } 
+    if GotParam force_skater_swap {
+        ChapterForceSkaterSwap <force_skater_swap> 
+    } 
+    if GotParam should_do_fake_nigel {
+        if (<should_do_fake_nigel> = 1) {
+            do_fake_nigel 
+        } 
+    } 
+    if GotParam welcome_dialog {
+        <welcome_dialog> 
+    } 
+} 
+script do_fake_nigel {
+    if ! GetGlobalFlag flag=TRICK_UNLOCKED_BEAVERBLAST {
+        SetGlobalFlag flag=TRICK_UNLOCKED_BEAVERBLAST 
+        AwardNewSpecialTrickToProfile {
+            all_profiles 
+            trick=Trick_BeaverBlast 
+            key_combo=SpAir_L_R_Square 
+        } 
+    } 
+    if IsTrue fake_nigel_active {
+        script_assert "fake_nigel is already active?!?" 
+    } 
+    GetCurrentSkaterProfileIndex 
+    RememberTemporaryAppearance player=<currentSkaterProfileIndex> name=fake_nigel_temp_profile NoFaceTexture 
+    GetSkaterProfileInfo player=<currentSkaterProfileIndex> 
+    if (<is_male> = 1) {
+        EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=sleeves desc_id=none} 
+        EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=skater_m_torso desc_id=none} 
+        EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=skater_m_legs desc_id=Briefs} 
+        EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=skater_m_hands desc_id=Hands} 
+        EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=shoes desc_id=BareFeet} 
+    } else {
+        EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=sleeves desc_id=none} 
+        EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=skater_f_torso desc_id=none} 
+        EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=skater_f_legs desc_id=none} 
+        EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=skater_f_hands desc_id=Hands} 
+        EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=shoes desc_id=BareFeet} 
+    } 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=socks} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=socks_lower} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=shoe_laces} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=kneepads} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=elbowpads} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=accessory1} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=accessory2} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=accessory3} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=hat} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=skater_m_hair} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=skater_f_hair} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=sleeves desc_id=none} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=skater_m_torso desc_id=Shirt_Nigel_Costume} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=skater_m_jaw desc_id=`Honest Abe` h=325 s=65 v=20 use_default_hsv=0} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=skater_m_hair desc_id=`Ponytail 1` h=20 s=41 v=26 use_default_hsv=0} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=SetPart targetParams={part=glasses desc_id=Specs_Nigel_Costume} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=torso_bone_group} 
+    EditPlayerAppearance profile=<currentSkaterProfile> target=ClearPart targetParams={part=stomach_bone_group} 
+    RememberTemporaryAppearance player=<currentSkaterProfileIndex> name=fake_nigel_temp_profile_save NoFaceTexture 
+    refresh_skater_model 
+    change fake_nigel_active=1 
+} 
+script undo_fake_nigel {
+    if IsTrue fake_nigel_active {
+        GetCurrentSkaterProfileIndex 
+        RestoreTemporaryAppearance player=<currentSkaterProfileIndex> name=fake_nigel_temp_profile NoFaceTexture 
+        refresh_skater_model 
+        change fake_nigel_active=0 
+    } 
+} 
+script ChapterForceSkaterSwap {
+    if ! isAlive name=<obj> {
+        create name=<obj> 
+    } 
+    Skater:swap_skaters objid=<obj> profile_name=<profile_name> no_ped_setup 
+    <obj>:Hide 
+} 
+script story_intro_advance_cam {
+    intro_camera_event_handler:SetTags pressed_x 
+} 
+script PlaySingleIntroVirtualCamera {
+    PlaySkaterCamAnim {
+        name=<name> 
+        skaterId=<skaterId> 
+        targetID=<targetID> 
+        targetOffset=<targetOffset> 
+        positionOffset=<positionOffset> 
+        frames=<frames> 
+        skippable=0 
+        virtual_cam 
+    } 
+} 
+script PlayIntroSkaterCam {
+    if ! GotParam cam {
+        return 
+    } 
+    if StructureContains structure=<cam> name {
+        PlaySkaterCamAnim name=(<cam>.name) skippable=0 
+    } else {
+        GetIntroSkaterCamName <...> 
+        PlaySingleIntroVirtualCamera <cam> name=<name> 
+    } 
+} 
+script GetIntroSkaterCamName {
+    if StructureContains structure=<cam> name {
+        return name=(<cam>.name) 
+    } else {
+        FormatText ChecksumName=moviename "intro_cam_%i" i=<index> 
+        return name=<moviename> 
+    } 
+} 
+script IntroCameraDescription {
+    if ! GotParam text {
+        if ! GotParam goal {
+            return 
+        } 
+    } 
+    KillSpawnedScript name=TemporarilyDisableInput 
+    SetButtonEventMappings block_menu_input 
+    if (<cam_index> = 0) {
+        SpawnScript TemporarilyDisableInput params={time=1000} 
+    } else {
+        SpawnScript TemporarilyDisableInput params={time=300} 
+    } 
+    if GotParam text {
+        create_panel_block {id=intro_panel 
+            text=<text> 
+            rgba=[128 128 128 128] 
+            pos=(12.0, 395.0) 
+            time=<time> 
+            dims=(616.0, 0.0) 
+            just=[left center] 
+            internal_just=[center top] 
+            parent=root_window 
+        } 
+    } else {
+        time2 = 1000000 
+        GoalManager_GetGoalParams name=<goal> 
+        FormatText TextName=goal_desc "\\c0%a - \\c5%b PTS." a=<view_goals_text> b=<reward_points> 
+        create_intro_panel_block {id=intro_panel 
+            text=<goal_desc> 
+            rgba=[8 97 121 128] 
+            pos=(12.0, 395.0) 
+            time=<time2> 
+            dims=(616.0, 0.0) 
+            just=[left center] 
+            internal_just=[center top] 
+            parent=root_window 
+            create_bg 
+        } 
+    } 
+    if GotParam cam_start_script {
+        <cam_start_script> 
+    } 
+    while {
+        if SkaterCamAnimFinished name=<name> {
+            break 
+        } 
+        if intro_camera_event_handler:GetSingleTag pressed_x {
+            intro_camera_event_handler:RemoveTags tags=[pressed_x] 
+            KillSkaterCamAnim name=<name> 
+            break 
+        } 
+        wait 1 gameframes 
+    } 
+    if GotParam cam_end_script {
+        <cam_end_script> 
+    } 
+    if ScreenElementExists id=intro_panel {
+        DestroyScreenElement id=intro_panel 
+    } 
+    Debounce X time=0.3 
+} 
+script DoChapterIntroCamSetup {
+    GetCurrentChapterInfo 
+    if GotParam goal_intro_setup {
+        <goal_intro_setup> 
+    } 
+} 
+script DoChapterIntroCamCleanup {
+    GetCurrentChapterInfo 
+    if GotParam goal_intro_cleanup {
+        <goal_intro_cleanup> 
+    } 
+} 
+script PlayIntroCameras {
+    if ! GotParam goal_intro_cameras {
+        SafeCallback <...> 
+        return 
+    } 
+    if GotParam from_chapter_intro {
+        DoChapterIntroCamSetup 
+    } 
+    GetArraySize <goal_intro_cameras> 
+    if (<array_size> > 0) {
+        if GotParam from_cutscenes {
+            fadetoblack on time=0 alpha=1.0 
+            wait 1 gameframes 
+            fadetoblack off time=0 
+        } 
+        SetUpChapterMenu 
+        if GotParam letterbox {
+            fake_letterboxing 
+        } 
+        if ! ScreenElementExists id=intro_camera_event_handler {
+            CreateScreenElement {
+                type=ContainerElement 
+                parent=root_window 
+                id=intro_camera_event_handler 
+                event_handlers=[{pad_choose story_intro_advance_cam}] 
+            } 
+        } 
+        FireEvent type=focus target=intro_camera_event_handler 
+        <index> = 0 
+        while {
+            play_me = 1 
+            if StructureContains structure=(<goal_intro_cameras> [<index>]) goal {
+                if GoalManager_HasWonGoal name=((<goal_intro_cameras> [<index>]).goal) {
+                    play_me = 0 
+                } 
+            } 
+            if (<play_me> = 1) {
+                PlayIntroSkaterCam index=<index> cam=(<goal_intro_cameras> [<index>]) 
+            } 
+            <index> = (<index> + 1) 
+        } <array_size> 
+        <index> = 0 
+        while {
+            play_me = 1 
+            if StructureContains structure=(<goal_intro_cameras> [<index>]) goal {
+                if GoalManager_HasWonGoal name=((<goal_intro_cameras> [<index>]).goal) {
+                    play_me = 0 
+                } 
+            } 
+            if (<play_me> = 1) {
+                GetIntroSkaterCamName index=<index> cam=(<goal_intro_cameras> [<index>]) 
+                IntroCameraDescription (<goal_intro_cameras> [<index>]) name=<name> cam_index=<index> 
+            } 
+            <index> = (<index> + 1) 
+        } <array_size> 
+        DestroyScreenElement id=intro_camera_event_handler 
+        
+        fake_letterboxing remove 
+        if ! GotParam from_chapter_intro {
+            DisplayLoadingScreen freeze 
+            KillChapterMenu 
+            PauseMusicAndStreams 1 
+            wait 1 gameframes 
+            HideLoadingScreen 
+            PauseGame 
+            hide_all_hud_items 
+            Debounce X time=0.3 
+            ingame_confirm_save no_script=ingame_save_return_to_game 
+            return 
+        } 
+        KillChapterMenu 
+        if GotParam from_cutscenes {
+            fadetoblack on time=0 alpha=1 
+            wait 1 gameframes 
+            fadetoblack off time=0 
+        } 
+    } 
+    RemoveParameter goal_intro_cameras 
+    if GotParam from_chapter_intro {
+        DoChapterIntroCamCleanup 
+    } 
+    SafeCallback <...> 
+} 
+script fake_letterboxing {
+    if ScreenElementExists id=letterbox_anchor {
+        DestroyScreenElement id=letterbox_anchor 
+    } 
+    if GotParam remove {
+        return 
+    } 
+    SetScreenElementLock id=root_window off 
+    CreateScreenElement {
+        type=ContainerElement 
+        id=letterbox_anchor 
+        parent=root_window 
+        z_priority=999 
+        just=[center center] 
+        internal_just=[left top] 
+    } 
+    CreateScreenElement {
+        type=spriteElement 
+        parent=letterbox_anchor 
+        texture=white2 
+        scale=(100.0, 10.0) 
+        pos=(0.0, 0.0) 
+        rgba=[0 0 0 128] 
+        just=[left top] 
+        z_priority=-5 
+    } 
+    CreateScreenElement {
+        type=spriteElement 
+        parent=letterbox_anchor 
+        texture=white2 
+        scale=(100.0, 15.0) 
+        pos=(0.0, 360.0) 
+        rgba=[0 0 0 128] 
+        just=[left top] 
+        z_priority=-5 
+    } 
+} 
+script ingame_confirm_save {no_script = create_pause_menu yes_script = launch_ingame_menu_save_game_sequence 
+    create_snazzy_dialog_box {
+        title="Save" 
+        text="Would you like to save your progress now?" 
+        text_dims=(400.0, 0.0) 
+        no_bg 
+        buttons=[{font=small text=%"No" pad_choose_script=<no_script> 
+            } 
+            {font=small text=%"Yes" pad_choose_script=<yes_script> 
+            } 
+        ] 
+    } 
+} 
+script ingame_save_return_to_game {
+    Debounce X time=0.3 
+    dialog_box_exit 
+    UnPauseGame 
+    UnpauseMusicAndStreams 
+    show_all_hud_items 
+} 
+script StartCurrentChapterStartRun {
+    if IsTrue DEMO_BUILD {
+        if LevelIs load_tr {
+            if GotParam from_cutscenes {
+                DisplayLoadingScreen Blank 
+                AdvanceStage 
+                LoadCurrentChapter 
+                return 
+            } 
+        } 
+    } 
+    root_window:SetTags menu_state=off 
+    update_goal_points_display refresh 
+    GetCurrentChapterInfo 
+    if GotParam post_intro_cutscene_setup {
+        <post_intro_cutscene_setup> 
+    } 
+    if GotParam capstone_chapter {
+        from_cutscenes = from_cutscenes 
+    } 
+    if GotParam goal_intro_cameras {
+        kill_start_key_binding 
+    } 
+    SpawnScript PlayIntroCameras params={callback=create_select_pro_menu 
+        from_chapter_intro 
+        goal_intro_cameras=<goal_intro_cameras> 
+        letterbox 
+        from_cutscenes=<from_cutscenes> 
+    } 
+} 
+script EndCurrentChapter {callback = nullscript 
+    GetCurrentChapterInfo 
+    if ! LevelIs <level> {
+        <callback> 
+        return 
+    } 
+    kill_speech_boxes 
+    GoalManager_DeactivateAllGoals 
+    Skater:ResetSkaterToCustom 
+    Skater:ClearPagerMessages 
+    GoalManager_GetActiveRewardPoints 
+    GetCurrentPointsToAdvance 
+    GoalManager_LevelUnload 
+    GoalManager_RemoveAllGoals 
+    change chapter_goals_loaded=0 
+    if GotParam cleanup_script {
+        <cleanup_script> 
+    } 
+    if GotParam dont_check_outtros {
+        <callback> 
+        return 
+    } 
+    CheckIfChapterOuttrosViewed 
+    if (<viewed> = 1) {
+        <callback> 
+        return 
+    } 
+    if IsTrue DEMO_BUILD {
+        if LevelIs load_ba {
+            <callback> 
+            return 
+        } 
+    } 
+    if ! (<active_points> < <points_to_advance>) {
+        MarkChapterOuttrosViewed 
+        if GotParam end_cutscenes {
+            goto PlayChapterCutsceneList params={list=<end_cutscenes> callback=<callback>} 
+        } 
+    } 
+    <callback> 
+} 
+script PrintChapterStatus {
+    index = 0 
+    GetArraySize CHAPTER_STATUS 
+    while {
+        
+        <index> = (<index> + 1) 
+    } <array_size> 
+    GetCurrentChapter 
+    FormatText TextName=chap "Our current chapter is %c." c=<chapter> 
+    
+} 
+script ResetChapterStatus {
+    index = 0 
+    GetArraySize CHAPTER_STATUS 
+    chapter_size = <array_size> 
+    status_array = CHAPTER_STATUS 
+    intro_array = CHAPTER_INTROS_VIEWED 
+    outtro_array = CHAPTER_OUTTROS_VIEWED 
+    while {
+        if (<index> = 0) {
+            SetArrayElement ArrayName=status_array index=<index> NewValue=CHAPTER_UNLOCKED 
+        } else {
+            SetArrayElement ArrayName=status_array index=<index> NewValue=CHAPTER_LOCKED 
+        } 
+        SetArrayElement ArrayName=intro_array index=<index> NewValue=0 
+        SetArrayElement ArrayName=outtro_array index=<index> NewValue=0 
+        if StructureContains structure=(CHAPTER_INFO [<index>]) start_cutscenes {
+            GetArraySize ((CHAPTER_INFO [<index>]).start_cutscenes) 
+            index2 = 0 
+            while {
+                if StructureContains structure=((CHAPTER_INFO [<index>]).start_cutscenes [<index2>]) flag {
+                    UnSetGlobalFlag flag=(((CHAPTER_INFO [<index>]).start_cutscenes [<index2>]).flag) 
+                } 
+                index2 = (<index2> + 1) 
+            } <array_size> 
+        } 
+        if StructureContains structure=(CHAPTER_INFO [<index>]) end_cutscenes {
+            GetArraySize ((CHAPTER_INFO [<index>]).end_cutscenes) 
+            index2 = 0 
+            while {
+                if StructureContains structure=((CHAPTER_INFO [<index>]).end_cutscenes [<index2>]) flag {
+                    UnSetGlobalFlag flag=(((CHAPTER_INFO [<index>]).end_cutscenes [<index2>]).flag) 
+                } 
+                index2 = (<index2> + 1) 
+            } <array_size> 
+        } 
+        <index> = (<index> + 1) 
+    } <chapter_size> 
+} 
+script ChapterAdvanceDialog {
+    GetCurrentChapter 
+    if ! StructureContains structure=(CHAPTER_INFO [<chapter>]) advance_ped_info {
+        script_assert "This chapter is missing advance_ped_info....can't find the dialog text" 
+    } 
+    ped_info = (CHAPTER_INFO [<chapter>].advance_ped_info) 
+    if ScreenElementExists id=ped_speech_dialog {
+        DestroyScreenElement id=ped_speech_dialog 
+    } 
+    if ! GotParam before_run {
+        PauseGame 
+        PauseStream 1 
+        need_unpause_streams = need_unpause_streams 
+        hide_all_hud_items 
+        inside_run = inside_run 
+    } else {
+        SetUpChapterMenu 
+    } 
+    CheckIfChapterIntrosViewed next 
+    if (<viewed> = 1) {
+        buttons = [{font=small text=%"OK" pad_choose_script=KillChapterMenu 
+                pad_choose_params={callback=<callback> <...>} 
+            } 
+        ] 
+        title = (<ped_info>.name) 
+        text = (<ped_info>.already_moved_on_message) 
+    } else {
+        CheckIfChapterUnlocked next 
+        if (<unlocked> = 0) {
+            buttons = [{font=small text=%"OK" pad_choose_script=KillChapterMenu 
+                    pad_choose_params={callback=<callback> <...>} 
+                } 
+            ] 
+            title = (<ped_info>.name) 
+            text = (<ped_info>.need_more_points_message) 
+        } else {
+            buttons = [{font=small text=%"No" pad_choose_script=KillChapterMenu 
+                    pad_choose_params={callback=<callback> <...>} 
+                } 
+                {font=small text=%"Yes" pad_choose_script=KillChapterMenu 
+                    pad_choose_params={callback=GotoNextChapterAccept} 
+                } 
+            ] 
+            title = (<ped_info>.name) 
+            text = (<ped_info>.move_on_now_message) 
+        } 
+    } 
+    create_snazzy_dialog_box {
+        title=<title> 
+        text=<text> 
+        text_dims=(400.0, 0.0) 
+        no_bg 
+        buttons=<buttons> 
+    } 
+} 
+script GotoNextChapterAccept {
+    KillChapterMenu inside_run 
+    if IsTrue DEMO_BUILD {
+        if LevelIs load_ba {
+            return 
+        } 
+    } 
+    if IsXbox {
+        DisplayLoadingScreen freeze 
+    } else {
+        DisplayLoadingScreen Blank 
+    } 
+    GotoNextChapter 
+} 
+script SetChapterOnLevel {
+    if ! GotParam level {
+        return 
+    } 
+    if (<level> = load_sk5ed) {
+        return 
+    } 
+    if (<level> = load_skateshop) {
+        return 
+    } 
+    if (<level> = load_mainmenu) {
+        return 
+    } 
+    SetCurrentChapter chapter=0 
+    GetArraySize CHAPTER_INFO 
+    index = 0 
+    while {
+        if ((CHAPTER_INFO [<index>].level) = <level>) {
+            return 
+        } 
+        UnlockNextChapter dont_set_seen_flags 
+        AdvanceStage 
+        index = (<index> + 1) 
+    } <array_size> 
+} 
+script TR_1_MoveOnDialog {
+    ChapterAdvanceDialog <...> 
+} 
+script TR_1_Start {
+    kill name=TRG_SFX_TrigBox_Drips_01 
+    kill name=TRG_SFX_TrigBox_Drips_02 
+    kill name=TRG_SFX_TrigBox_WarehouseHum_01 
+    kill name=TRG_SFX_TrigBox_TR_Reverb01 
+    UnlockNextChapter 
+    
+} 
+script TR_sound_setup {
+    
+    kill name=TRG_SFX_TrigBox_Drips_01 
+    kill name=TRG_SFX_TrigBox_Drips_02 
+    kill name=TRG_SFX_TrigBox_WarehouseHum_01 
+    kill name=TRG_SFX_TrigBox_TR_Reverb01 
+    create name=TRG_SFX_TrigBox_Drips_01 
+    create name=TRG_SFX_TrigBox_Drips_02 
+    create name=TRG_SFX_TrigBox_WarehouseHum_01 
+    create name=TRG_SFX_TrigBox_TR_Reverb01 
+} 
+script TR_1_End {
+    
+} 
+script BO_1_Start {
+    
+    if IsTrue DEMO_BUILD {
+        UnSetGlobalFlag flag=LEVEL_UNLOCKED_TR 
+    } 
+} 
+script BO_1_End {
+    
+} 
+script BO_1_Sample {
+    
+} 
+script BA_1_Start {
+    
+} 
+script BA_1_End {
+    
+} 
+script BA_1_Message {
+    Skater:SendPagerMessage from="Steve-O" message="Guess what? Steve-O just joined the party! Find me and I'll show you a real ride... nothing like that rolling cocktail dress you call a skateboard!" 
+} 
+script BE_1_Start {
+    
+} 
+script BE_1_End {
+    
+} 
+script AU_1_Start {
+    
+} 
+script AU_1_End {
+    
+} 
+script AU_2_Start {
+    
+    AU_Elimination_Start 
+} 
+script AU_2_End {
+    
+} 
+script NO_1_Start {
+    
+} 
+script NO_1_End {
+    
+    
+    FlushDeadObjects 
+    kill name=TRG_Ped_TeammatePro 
+    kill prefix="TRG_Ped_club" 
+    kill prefix="TRG_Ped_Hint" 
+    kill prefix="trg_ped_jazz" 
+} 
+script NO_2_Start {
+    
+    NO_Equalizer_Start 
+} 
+script NO_goal_intro_setup {
+    NO_Equalizer_Intro_Setup 
+} 
+script NO_goal_intro_cleanup {
+    NO_Equalizer_Intro_CleanUp 
+} 
+script NO_2_End {
+    
+} 
+script ST_1_Start {
+    
+} 
+script ST_1_End {
+    
+} 
+script ST_2_Start {
+    
+    TODManager_SetActive 0 
+    TODManager_SetTODInstant afternoon 
+    Skater:destroyflexibleparticlesystem name=boardsmoke 
+    ST_KillCars 
+    if isAlive name=TRG_Ped_Bam {
+        kill name=TRG_Ped_Bam 
+    } 
+    if isAlive name=TRG_ped_bigfoot {
+        kill name=TRG_ped_bigfoot 
+    } 
+    if isAlive name=TRG_ped_bigfoot01 {
+        kill name=TRG_ped_bigfoot01 
+    } 
+    if isAlive name=TRG_ped_Guest {
+        kill name=TRG_ped_Guest 
+    } 
+    if isAlive name=TRG_ped_JesseJames {
+        kill name=TRG_ped_JesseJames 
+    } 
+    if isAlive name=TRG_Ped_TeammatePro {
+        kill name=TRG_Ped_TeammatePro 
+    } 
+    if isAlive name=TRG_ped_hint_01 {
+        kill prefix="TRG_ped_hint_" 
+    } 
+    if isAlive name=TRG_ped_hawkhint_01 {
+        kill prefix="TRG_ped_hawkhint_" 
+    } 
+    if isAlive name=g_object_chainsaw {
+        kill name=g_object_chainsaw 
+    } 
+    if ! isAlive name=g_endgoal_topbomb_02 {
+        create prefix="g_endgoal_topbomb_" 
+    } 
+    if ! GoalManager_HasWonGoal name=ST_goal_gaps25 {
+        if ! isAlive name=g_endgoal_top_trig_01 {
+            create name=g_endgoal_top_trig_01 
+        } 
+    } 
+    if GoalManager_HasWonGoal name=ST_goal_gaps25 {
+        if ! isAlive name=g_endgoal_topbomb_on_01 {
+            create name=g_endgoal_topbomb_on_01 
+            createfastparticlesystem name=radiowaves01 params_script=apm_st_radioWaves_fast_particle_params 
+            radiowaves01:obj_setposition position=(557.0, 7035.0, 636.0) 
+        } 
+    } 
+    if ! isAlive name=trg_rail_endgoal_bomb5_00 {
+        create prefix="TRG_rail_endgoal_bomb5_" 
+    } 
+    if ! isAlive name=g_endgoal_spin_00 {
+        create prefix="g_endgoal_spin_" 
+    } 
+    if ! isAlive name=TRG_climb_endgoal_01 {
+        create prefix="TRG_climb_endgoal_" 
+    } 
+    if ! GoalManager_HasWonGoal name=ST_goal_gaps20 {
+        if ! isAlive name=g_endgoal_spin_trig_01 {
+            create prefix="g_endgoal_spin_trig_" 
+        } 
+        if ! isAlive name=g_endgoal_spinlight_red {
+            create name=g_endgoal_spinlight_red 
+            create name=g_endgoal_spinlight_red_glow 
+        } 
+    } 
+    if GoalManager_HasWonGoal name=ST_goal_gaps20 {
+        if ! isAlive name=g_endgoal_spinlight_green {
+            create name=g_endgoal_spinlight_green 
+            create name=g_endgoal_spinlight_green_glow 
+        } 
+        createfastparticlesystem name=radiowaves05 params_script=apm_st_radioWaves_fast_particle_params 
+        radiowaves05:obj_setposition position=(448.0, 6363.0, 2970.0) 
+        create name=APM_spinna_ghost01 
+        create name=APM_spinna_ghost02 
+        create name=APM_spinna_ghost03 
+        create name=APM_spinna_ghost04 
+        SpawnScript Rocketshake01 
+        SpawnScript Rocketshake02 
+        SpawnScript Rocketshake03 
+        SpawnScript Rocketshake04 
+    } 
+    if ! isAlive name=g_endgoal_fountain_00 {
+        create prefix="g_endgoal_fountain_" 
+    } 
+    if ! isAlive name=TRG_rail_endgoal_05 {
+        create prefix="TRG_rail_endgoal_" 
+    } 
+    if GoalManager_HasWonGoal name=ST_goal_gaps23 {
+        create name=g_endgoal_fountain_on 
+        createfastparticlesystem name=radiowaves03 params_script=apm_st_radioWaves_fast_particle_params 
+        radiowaves03:obj_setposition position=(1919.0, 6229.0, -1573.0) 
+    } 
+    if ! isAlive name=g_endgoal_bombbox_01 {
+        create prefix="g_endgoal_bombbox_" 
+    } 
+    if ! GoalManager_HasWonGoal name=ST_goal_gaps24 {
+        GoalManager_GetDifficultyLevel 
+        if (<difficulty_level> = 0) {
+            if ! isAlive name=g_endgoal_bombbox_eztrig_01 {
+                create prefix="g_endgoal_bombbox_eztrig_" 
+            } 
+        } else {
+            if ! isAlive name=g_endgoal_bombbox_trig_01 {
+                create prefix="g_endgoal_bombbox_trig_" 
+            } 
+        } 
+        if ! isAlive name=g_endgoal_bombbox_invis_00 {
+            create prefix="g_endgoal_bombbox_invis_" 
+        } 
+    } 
+    if GoalManager_HasWonGoal name=ST_goal_gaps24 {
+        if ! isAlive name=g_endgoal_bombbox_antenna_on01 {
+            create name=g_endgoal_bombbox_antenna_on01 
+        } 
+        if ! isAlive name=g_endgoal_bombbox_on_04 {
+            create prefix="g_endgoal_bombbox_on_" 
+        } 
+        createfastparticlesystem name=radiowaves02 params_script=apm_st_radioWaves_fast_particle_params 
+        radiowaves02:obj_setposition position=(844.0, 6258.0, -2316.0) 
+    } 
+    if ! isAlive name=g_endgoal_rocket_box_02 {
+        create prefix="g_endgoal_rocket_box_" 
+    } 
+    if ! isAlive name=g_endgoal_rail_rocket_box_00 {
+        create prefix="g_endgoal_rail_rocket_box_" 
+    } 
+    if ! GoalManager_HasWonGoal name=ST_goal_gaps22 {
+        if ! isAlive name=g_endgoal_rocket_01 {
+            create prefix="g_endgoal_rocket_" 
+        } 
+        if ! isAlive name=trg_rail_endgoal_rocket_01 {
+            create prefix="TRG_rail_endgoal_rocket_" 
+        } 
+        if ! isAlive name=g_endgoal_rocket_camtrig {
+            create name=g_endgoal_rocket_camtrig 
+        } 
+    } 
+    if GoalManager_HasWonGoal name=ST_goal_gaps22 {
+        create name=g_endgoal_rockets_complete 
+        createfastparticlesystem name=radiowaves04 params_script=apm_st_radioWaves_fast_particle_params 
+        radiowaves04:obj_setposition position=(1190.0, 5753.0, 1894.0) 
+    } 
+    if ! isAlive name=g_endgoal_tnt_00 {
+        create prefix="g_endgoal_tnt_" 
+    } 
+    
+    if GoalManager_GoalIsLocked name=ST_goal_gaps20 {
+        GoalManager_UnlockGoal name=ST_goal_gaps20 
+    } 
+    if GoalManager_GoalIsLocked name=ST_goal_gaps22 {
+        GoalManager_UnlockGoal name=ST_goal_gaps22 
+    } 
+    if GoalManager_GoalIsLocked name=ST_goal_gaps23 {
+        GoalManager_UnlockGoal name=ST_goal_gaps23 
+    } 
+    if GoalManager_GoalIsLocked name=ST_goal_gaps24 {
+        GoalManager_UnlockGoal name=ST_goal_gaps24 
+    } 
+    if GoalManager_GoalIsLocked name=ST_goal_gaps25 {
+        GoalManager_UnlockGoal name=ST_goal_gaps25 
+    } 
+} 
+script ST_2_End {
+    
+    if ! isAlive name=g_endgoal_spinlight_green {
+        create name=g_endgoal_spinlight_green 
+        create name=g_endgoal_spinlight_green_glow 
+    } 
+    if ! isAlive name=g_endgoal_topbomb_on_01 {
+        create name=g_endgoal_topbomb_on_01 
+    } 
+    if ! isAlive name=g_endgoal_fountain_on {
+        create name=g_endgoal_fountain_on 
+    } 
+    if ! isAlive name=g_endgoal_bombbox_antenna_on01 {
+        create name=g_endgoal_bombbox_antenna_on01 
+    } 
+    if ! isAlive name=g_endgoal_rockets_complete {
+        create name=g_endgoal_rockets_complete 
+    } 
+    if isAlive name=g_endgoal_top_trig_01 {
+        kill name=g_endgoal_top_trig_01 
+    } 
+    if isAlive name=g_endgoal_spin_trig_01 {
+        kill prefix="g_endgoal_spin_trig_" 
+    } 
+    if isAlive name=g_endgoal_bombbox_trig_01 {
+        kill prefix="g_endgoal_bombbox_trig_" 
+    } 
+    if isAlive name=trg_rail_endgoal_rocket_01 {
+        kill prefix="TRG_rail_endgoal_rocket_" 
+    } 
+} 
+script ST_3_Start {
+    ST_KillPeds 
+    ST_KillCars 
+    if isAlive name=TRG_Ped_Bam {
+        kill name=TRG_Ped_Bam 
+    } 
+    if isAlive name=TRG_ped_bigfoot {
+        kill name=TRG_ped_bigfoot 
+    } 
+    if isAlive name=TRG_ped_bigfoot01 {
+        kill name=TRG_ped_bigfoot01 
+    } 
+    if isAlive name=TRG_ped_Guest {
+        kill name=TRG_ped_Guest 
+    } 
+    if isAlive name=TRG_Ped_TeammatePro {
+        kill name=TRG_Ped_TeammatePro 
+    } 
+    if isAlive name=TRG_Ped_PinkCat {
+        kill name=TRG_Ped_PinkCat 
+    } 
+    if isAlive name=TRG_ped_hint_01 {
+        kill prefix="TRG_ped_hint_" 
+    } 
+    if isAlive name=TRG_ped_hawkhint_01 {
+        kill prefix="TRG_ped_hawkhint_" 
+    } 
+    if ! isAlive name=TRG_ped_endgoal_skatopiaguy {
+        create name=TRG_ped_endgoal_skatopiaguy 
+        create prefix="TRG_ped_endgoal_randomized_" 
+    } 
+    if ! isAlive name=g_endgoal_topbomb_02 {
+        create prefix="g_endgoal_topbomb_" 
+    } 
+    if ! isAlive name=g_endgoal_topbomb_on_01 {
+        create name=g_endgoal_topbomb_on_01 
+        createfastparticlesystem name=radiowaves01 params_script=apm_st_radioWaves_fast_particle_params 
+        radiowaves01:obj_setposition position=(557.0, 7035.0, 636.0) 
+    } 
+    if ! isAlive name=trg_rail_endgoal_bomb5_00 {
+        create prefix="TRG_rail_endgoal_bomb5_" 
+    } 
+    if ! isAlive name=g_endgoal_spin_00 {
+        create prefix="g_endgoal_spin_" 
+    } 
+    if ! isAlive name=TRG_climb_endgoal_01 {
+        create prefix="TRG_climb_endgoal_" 
+    } 
+    if ! isAlive name=g_endgoal_spinlight_green {
+        create name=g_endgoal_spinlight_green 
+        create name=g_endgoal_spinlight_green_glow 
+    } 
+    createfastparticlesystem name=radiowaves05 params_script=apm_st_radioWaves_fast_particle_params 
+    radiowaves05:obj_setposition position=(448.0, 6363.0, 2970.0) 
+    if ! isAlive name=APM_spinna_ghost01 {
+        create name=APM_spinna_ghost01 
+        create name=APM_spinna_ghost02 
+        create name=APM_spinna_ghost03 
+        create name=APM_spinna_ghost04 
+    } 
+    SpawnScript Rocketshake01 
+    SpawnScript Rocketshake02 
+    SpawnScript Rocketshake03 
+    SpawnScript Rocketshake04 
+    if ! isAlive name=g_endgoal_fountain_00 {
+        create prefix="g_endgoal_fountain_" 
+    } 
+    if ! isAlive name=TRG_rail_endgoal_05 {
+        create prefix="TRG_rail_endgoal_" 
+    } 
+    if ! isAlive name=g_endgoal_fountain_on {
+        create name=g_endgoal_fountain_on 
+        createfastparticlesystem name=radiowaves03 params_script=apm_st_radioWaves_fast_particle_params 
+        radiowaves03:obj_setposition position=(1919.0, 6229.0, -1573.0) 
+    } 
+    if ! isAlive name=g_endgoal_bombbox_01 {
+        create prefix="g_endgoal_bombbox_" 
+    } 
+    if ! isAlive name=g_endgoal_bombbox_antenna_on01 {
+        create name=g_endgoal_bombbox_antenna_on01 
+        createfastparticlesystem name=radiowaves02 params_script=apm_st_radioWaves_fast_particle_params 
+        radiowaves02:obj_setposition position=(844.0, 6258.0, -2316.0) 
+    } 
+    if ! isAlive name=g_endgoal_rocket_box_02 {
+        create prefix="g_endgoal_rocket_box_" 
+    } 
+    if ! isAlive name=g_endgoal_rail_rocket_box_00 {
+        create prefix="g_endgoal_rail_rocket_box_" 
+    } 
+    if ! isAlive name=g_endgoal_rockets_complete {
+        create name=g_endgoal_rockets_complete 
+        createfastparticlesystem name=radiowaves04 params_script=apm_st_radioWaves_fast_particle_params 
+        radiowaves04:obj_setposition position=(1190.0, 5753.0, 1894.0) 
+    } 
+    if ! isAlive name=g_endgoal_tnt_00 {
+        create prefix="g_endgoal_tnt_" 
+    } 
+    create prefix="g_endgoal_dog_trig" 
+    create prefix="trg_endgoal_dog" 
+    if ! isAlive name=TRG_ped_escape_pinkcat {
+        create name=TRG_ped_escape_pinkcat 
+    } 
+    if GoalManager_GoalExists name=ST_goal_gaps21 {
+        if GoalManager_GoalIsLocked name=ST_goal_gaps21 {
+            GoalManager_UnlockGoal name=ST_goal_gaps21 
+        } else {
+        } 
+    } 
+    TODManager_SetActive 0 
+    TODManager_SetTODInstant evening 
+    EnableFog 
+} 
+script ST_3_End {
+    
+    destroy_digital_timer 
+    kill prefix="TRG_ped_endgoal_escape_" 
+    if isAlive name=TRG_ped_escape_pinkcat {
+        kill name=TRG_ped_escape_pinkcat 
+    } 
+} 
+script ST_4_Start {
+    ST_KillCars 
+    kill prefix="TRG_SFX_Trigbox_EG" 
+    kill prefix="TRG_SFX_TrigBox_Night" 
+    create prefix="TRG_SFX_Trigbox_EG" 
+    if ! isAlive name=g_endgoal_lowrv {
+        create name=g_endgoal_lowrv 
+    } 
+    if ! isAlive name=TRG_Ped_Escape_Bam {
+        create name=TRG_Ped_Escape_Bam 
+    } 
+    if isAlive name=TRG_ped_skatopiaguy {
+        kill name=TRG_ped_skatopiaguy 
+    } 
+    destroy_digital_timer 
+    
+    ST_KillPeds 
+    
+    if ! isAlive name=g_endgoal_topbomb_02 {
+        create prefix="g_endgoal_topbomb_" 
+    } 
+    if ! isAlive name=g_endgoal_fountain_00 {
+        create prefix="g_endgoal_fountain_" 
+    } 
+    if ! isAlive name=TRG_rail_endgoal_05 {
+        create prefix="TRG_rail_endgoal_" 
+    } 
+    if ! isAlive name=g_endgoal_rocket_box_02 {
+        create prefix="g_endgoal_rocket_box_" 
+    } 
+    if ! isAlive name=g_endgoal_rail_rocket_box_00 {
+        create prefix="g_endgoal_rail_rocket_box_" 
+    } 
+    if isAlive name=g_endgoal_rockets_complete {
+        kill name=g_endgoal_rockets_complete 
+    } 
+    kill prefix="g_endgoal_rocket_" 
+    create prefix="trg_endgoal_rocket_fly_" 
+    kill prefix="g_endgoal_tnt_trig_" 
+    create prefix="g_endgoal_tnt_trig_" 
+    kill prefix="g_endgoal_tnt_" 
+    create prefix="g_endgoal_tnt_" 
+    
+    kill name=nighton_08_g_todd_hang_lightglo04 
+    TODManager_markpermanentlydead name=nighton_08_g_todd_hang_lightglo04 
+    kill name=nighton_08_g_todd_hang_lightglo03 
+    TODManager_markpermanentlydead name=nighton_08_g_todd_hang_lightglo03 
+    kill name=nighton_08_g_todd_hang_lightglo02 
+    TODManager_markpermanentlydead name=nighton_08_g_todd_hang_lightglo02 
+    kill name=nighton_08_g_house_90 
+    TODManager_markpermanentlydead name=nighton_08_g_house_90 
+    kill name=nighton_08_g_todd_pool_gr_lightglo02 
+    TODManager_markpermanentlydead name=nighton_08_g_todd_pool_gr_lightglo02 
+    kill name=g_house_70 
+    kill name=g_house_71 
+    create name=g_house_sign_cinder_on01 
+    KillSpawnedScript name=Rocketshake01 
+    KillSpawnedScript name=Rocketshake02 
+    KillSpawnedScript name=Rocketshake03 
+    KillSpawnedScript name=Rocketshake04 
+    
+    if isAlive name=trg_rail_endgoal_bomb5_00 {
+        kill prefix="TRG_rail_endgoal_bomb5_" 
+    } 
+    if isAlive name=g_endgoal_spin_00 {
+        kill prefix="g_endgoal_spin_" 
+    } 
+    if isAlive name=TRG_climb_endgoal_01 {
+        kill prefix="TRG_climb_endgoal_" 
+    } 
+    if isAlive name=g_endgoal_spinlight_green {
+        kill name=g_endgoal_spinlight_green 
+        kill name=g_endgoal_spinlight_green_glow 
+    } 
+    if isAlive name=g_endgoal_spinlight_red {
+        kill name=g_endgoal_spinlight_red 
+        kill name=g_endgoal_spinlight_red_glow 
+    } 
+    
+    destroyfastparticlesystem name=radiowaves01 
+    destroyfastparticlesystem name=radiowaves02 
+    destroyfastparticlesystem name=radiowaves03 
+    destroyfastparticlesystem name=radiowaves04 
+    destroyfastparticlesystem name=radiowaves05 
+    
+    if ! isAlive name=g_endgoal_obj_spinbomb01 {
+        create name=g_endgoal_obj_spinbomb01 
+        create name=g_endgoal_obj_spinbomb_base 
+    } 
+    create name=APM_spinna_ghost05 
+    APM_spinna_ghost05:obj_locktoobject objectname=g_endgoal_obj_spinbomb01 (-215.0, -25.0, 67.0) 
+    APM_spinna_ghost05:createflexibleparticlesystem name=apm_spinner01 params_script=apm_ST_spinnerF03_particle_params 
+    create name=APM_spinna_ghost06 
+    APM_spinna_ghost06:obj_locktoobject objectname=g_endgoal_obj_spinbomb01 (-67.0, -25.0, -215.0) 
+    APM_spinna_ghost06:createflexibleparticlesystem name=apm_spinner02 params_script=apm_ST_spinnerF04_particle_params 
+    create name=APM_spinna_ghost07 
+    APM_spinna_ghost07:obj_locktoobject objectname=g_endgoal_obj_spinbomb01 (215.0, -25.0, -67.0) 
+    APM_spinna_ghost07:createflexibleparticlesystem name=apm_spinner03 params_script=apm_ST_spinnerF01_particle_params 
+    create name=APM_spinna_ghost08 
+    APM_spinna_ghost08:obj_locktoobject objectname=g_endgoal_obj_spinbomb01 (67.0, -25.0, 215.0) 
+    APM_spinna_ghost08:createflexibleparticlesystem name=apm_spinner04 params_script=apm_ST_spinnerF02_particle_params 
+    
+    
+    TODManager_SetActive 0 
+    TODManager_SetParams {
+        system=1 
+        transition_length=90000 
+        groups=[
+            {parts=6 wait_frames=3 light_group=outdoor} 
+            {parts=2 wait_frames=3 light_group=nolevellights reset_light_group=indoor} 
+        ] 
+        morning=tod_manager_default_morning 
+        afternoon=tod_manager_default_afternoon 
+        evening=tod_manager_default_evening 
+        night={(tod_manager_default_night) 
+            fog_red=33 
+            fog_green=5 
+            fog_blue=14 
+            fog_alpha=55 
+            fog_dist=100 
+            bloom_on=1 
+            bloom_color=[150 150 150] 
+            bloom1=10 
+            bloom2=100 
+            bloom_strength=[22 100 200] 
+        } 
+    } 
+    TODManager_SetTODInstant night 
+    create name=g_endgoal_firewall_killerz_01 
+    create name=g_endgoal_fireWall01 
+    create name=g_endgoal_fireWall02 
+    create name=g_firewall_01 
+    create name=g_firewall_ground01 
+    create name=g_firewall_sky01 
+    create prefix="g_firewall_smoke_" 
+    create name=g_trig_endgoal_combo 
+    create name=g_trig_endgoal_ez_combo 
+    create name=g_trig_endgoal_success 
+    
+    createfastparticlesystem name=signfire01 params_script=apm_ST_fire_Sign_fast_particle_params 
+    signfire01:obj_setposition position=(877.0, 5755.0, 4349.0) 
+    createfastparticlesystem name=signfire02 params_script=apm_ST_fire_Sign_fast_particle_params 
+    signfire02:obj_setposition position=(982.0, 5766.0, 4288.0) 
+    createfastparticlesystem name=signfire03 params_script=apm_ST_fire_Sign_fast_particle_params 
+    signfire03:obj_setposition position=(1062.0, 5760.0, 4247.0) 
+    createfastparticlesystem name=signfire04 params_script=apm_ST_fire_Sign_fast_particle_params 
+    signfire04:obj_setposition position=(1127.0, 5750.0, 4233.0) 
+    
+    create name=apm_firesign01 
+    createfastparticlesystem name=sparkfountain01 params_script=apm_ST_SparkFountain01_fast_particle_params 
+    sparkfountain01:obj_setposition position=(1926.0, 6603.0, -654.0) 
+    createfastparticlesystem name=treefire01 params_script=apm_ST_fire_TREE01_fast_particle_params 
+    treefire01:obj_setposition position=(100.0, 5707.0, 4250.0) 
+    createfastparticlesystem name=treesmoke01 params_script=apm_ST_TREE_smoke01_fast_particle_params 
+    treesmoke01:obj_setposition position=(100.0, 5707.0, 4250.0) 
+    createfastparticlesystem name=treefire02 params_script=apm_ST_fire_TREE01_fast_particle_params 
+    treefire02:obj_setposition position=(1746.0, 6050.0, 2007.0) 
+    createfastparticlesystem name=treesmoke02 params_script=apm_ST_TREE_smoke01_fast_particle_params 
+    treesmoke02:obj_setposition position=(1746.0, 6050.0, 2007.0) 
+    createfastparticlesystem name=treefire03 params_script=apm_ST_fire_TREE01_fast_particle_params 
+    treefire03:obj_setposition position=(1506.0, 6450.0, -930.0) 
+    createfastparticlesystem name=treesmoke03 params_script=apm_ST_TREE_smoke01_fast_particle_params 
+    treesmoke03:obj_setposition position=(1506.0, 6450.0, -930.0) 
+    
+    createfastparticlesystem name=firebase01 params_script=apm_ST_fireBASE01_fast_particle_params 
+    firebase01:obj_setposition position=(120.0, 6260.0, -3974.0) 
+    createfastparticlesystem name=firebase02 params_script=apm_ST_fireBASE02_fast_particle_params 
+    firebase02:obj_setposition position=(-428.0, 6260.0, -3323.0) 
+} 
+script ST_4_End {
+    
+    
+    
+    
+    if isAlive name=g_endgoal_lowrv {
+        kill name=g_endgoal_lowrv 
+    } 
+    if isAlive name=TRG_Ped_Escape_Bam {
+        kill name=TRG_Ped_Escape_Bam 
+    } 
+    TODManager_SetParams {
+        system=1 
+        transition_length=90000 
+        groups=[
+            {parts=6 wait_frames=3 light_group=outdoor} 
+            {parts=2 wait_frames=3 light_group=nolevellights reset_light_group=indoor} 
+        ] 
+        morning=tod_manager_default_morning 
+        afternoon=tod_manager_default_afternoon 
+        evening=tod_manager_default_evening 
+        night=tod_manager_default_night 
+    } 
+    TODManager_SetActive 1 
+    TODManager_SetTODInstant night 
+    destroyfastparticlesystem name=signfire01 
+    destroyfastparticlesystem name=signfire02 
+    destroyfastparticlesystem name=signfire03 
+    destroyfastparticlesystem name=signfire04 
+    destroyfastparticlesystem name=sparkfountain01 
+    destroyfastparticlesystem name=treefire01 
+    destroyfastparticlesystem name=treesmoke01 
+    destroyfastparticlesystem name=treefire02 
+    destroyfastparticlesystem name=treesmoke02 
+    destroyfastparticlesystem name=treefire03 
+    destroyfastparticlesystem name=treesmoke03 
+    destroyfastparticlesystem name=firebase01 
+    destroyfastparticlesystem name=firebase02 
+    if isAlive name=g_endgoal_firewall_killerz_01 {
+        kill name=g_endgoal_firewall_killerz_01 
+    } 
+    if isAlive name=g_endgoal_fireWall01 {
+        kill name=g_endgoal_fireWall01 
+    } 
+    if isAlive name=g_endgoal_fireWall02 {
+        kill name=g_endgoal_fireWall02 
+    } 
+    if isAlive name=g_firewall_01 {
+        kill name=g_firewall_01 
+    } 
+    if isAlive name=g_firewall_ground01 {
+        kill name=g_firewall_ground01 
+    } 
+    if isAlive name=g_firewall_sky01 {
+        kill name=g_firewall_sky01 
+    } 
+    if isAlive name=g_firewall_smoke_perf01 {
+        kill name=g_firewall_smoke_perf01 
+    } 
+    if isAlive name=g_firewall_smoke_perf_rear01 {
+        kill name=g_firewall_smoke_perf_perf_rear01 
+    } 
+    if isAlive name=g_firewall_smoke_perf_rear02 {
+        kill name=g_firewall_smoke_perf_rear02 
+    } 
+    if isAlive name=g_trig_endgoal_combo {
+        kill name=g_trig_endgoal_combo 
+    } 
+    if isAlive name=g_trig_endgoal_ez_combo {
+        kill name=g_trig_endgoal_ez_combo 
+    } 
+    if isAlive name=g_trig_endgoal_success {
+        kill name=g_trig_endgoal_success 
+    } 
+    if isAlive name=g_endgoal_spin_00 {
+        kill prefix="g_endgoal_spin_" 
+    } 
+    if isAlive name=g_endgoal_obj_spinbomb01 {
+        kill name=g_endgoal_obj_spinbomb01 
+    } 
+    if isAlive name=APM_spinna_ghost05 {
+        kill name=APM_spinna_ghost05 
+    } 
+    if isAlive name=APM_spinna_ghost06 {
+        kill name=APM_spinna_ghost06 
+    } 
+    if isAlive name=APM_spinna_ghost07 {
+        kill name=APM_spinna_ghost07 
+    } 
+    if isAlive name=APM_spinna_ghost08 {
+        kill name=APM_spinna_ghost08 
+    } 
+    if ! isAlive name=nighton_08_g_todd_hang_lightglo04 {
+        create name=nighton_08_g_todd_hang_lightglo04 
+        create name=nighton_08_g_todd_hang_lightglo03 
+        create name=nighton_08_g_todd_hang_lightglo02 
+        create name=nighton_08_g_todd_pool_gr_lightglo02 
+        create name=nighton_08_g_house_90 
+        create name=g_house_70 
+        create name=g_house_71 
+        kill name=g_house_sign_cinder_on01 
+    } 
+    if isAlive name=trg_endgoal_rocket_fly_03 {
+        KillSpawnedScript name=ST_Rockets_Launch_01 
+        KillSpawnedScript name=ST_Rockets_Respawn_01 
+        KillSpawnedScript name=ST_Rockets_Launch_02 
+        KillSpawnedScript name=ST_Rockets_Respawn_02 
+        KillSpawnedScript name=ST_Rockets_Launch_03 
+        KillSpawnedScript name=ST_Rockets_Respawn_03 
+        kill prefix="trg_endgoal_rocket_fly_" 
+    } 
+    if isAlive name=g_endgoal_tnt_trig_00 {
+        kill prefix="g_endgoal_tnt_trig_" 
+    } 
+    KillSpawnedScript name=ST_Escape_Reactivate 
+    ST_CreatePeds 
+} 
+script give_cheat_points {points = 50 
+    change total_cheat_points=((total_cheat_points) + <points>) 
+    update_goal_points_display refresh 
+    CheckChapterAdvancementStatus RewardPoints=<points> 
+} 
+script reset_cheat_points {
+    change total_cheat_points=0 
+    update_goal_points_display refresh 
+    Skater:ClearPagerMessages 
+} 
+script unlock_all_chapters {
+    prev_level = NULL 
+    chapter_status2 = CHAPTER_STATUS 
+    GetArraySize CHAPTER_STATUS 
+    index = 0 
+    while {
+        if ! ChecksumEquals a=(CHAPTER_INFO [<index>].level) b=<prev_level> {
+            prev_level = (CHAPTER_INFO [<index>].level) 
+            SetArrayElement ArrayName=chapter_status2 index=<index> NewValue=CHAPTER_UNLOCKED 
+        } else {
+            SetArrayElement ArrayName=chapter_status2 index=<index> NewValue=CHAPTER_LOCKED 
+        } 
+        index = (<index> + 1) 
+    } <array_size> 
+} 
+script career_post_load {
+    if ! IsXbox {
+        if ! LevelIs load_mainmenu {
+            if GetGlobalFlag flag=SCREEN_MODE_STANDARD {
+                if GetGlobalFlag flag=SCREEN_MODE_WIDE {
+                    screen_setup_letterbox 
+                } else {
+                    screen_setup_standard 
+                } 
+            } else {
+                if GetGlobalFlag flag=SCREEN_MODE_WIDE {
+                    screen_setup_widescreen 
+                } 
+            } 
+        } else {
+            if GetGlobalFlag flag=SCREEN_MODE_STANDARD {
+                if GetGlobalFlag flag=SCREEN_MODE_WIDE {
+                    change ingame_screen_mode=letterbox_screen_mode 
+                } else {
+                    change ingame_screen_mode=standard_screen_mode 
+                } 
+            } else {
+                if GetGlobalFlag flag=SCREEN_MODE_WIDE {
+                    change ingame_screen_mode=widescreen_screen_mode 
+                } 
+            } 
+        } 
+    } 
+    set_default_temporary_profiles 
+} 
+__register_checksums__ target unload ResetSkaterToCustom b ClearPart g_house_sign_cinder_on01 welcome_dialog BE_1_Start create_panel_block total_cheat_points fog_green CD StartCurrentChapterStartRun nullscript KillSpawnedScript NO_Capstone_Story_goals points_to_advance ST_EndGoal_End_setup new_level Rocketshake02 top SetHighestChapterWithLevel event_handlers GotoNextChapterAccept exitScript bloom_strength load_be NO_1_End reward_points ST_Main_Story_goals load_tr night next_chapter time2 ProcessGoalRewards SCREEN_MODE_WIDE firebase02 c NO_2_Start Rocketshake03 status_array TR_1_End GoalManager_DeactivateAllGoals do_load_unloadable apm_spinner01 CHAPTER_LOCKED goal_intro_setup s spriteElement params cam_index ST_goal_gaps25 text_message_point_triggers BA_1_Start GoalManager_UnlockGoal ObjectExists firebase01 WaitUntilScreenClear unload_anims CreateScreenElement apm_ST_fire_Sign_fast_particle_params VIEWED_CUTSCENE_08 ST_EndGoal_Bam_intro_cleanup PrintChapterStatus apm_spinner02 g_endgoal_fountain_on TRG_ped_JesseJames is_male launch_ingame_menu_save_game_sequence KillChapterMenu GotParam AU_1_End g_trig_endgoal_combo SetLevelTotalPoints cleanup_script bloom_color apm_ST_spinnerF02_particle_params Rocketshake01 ST_goal_gaps24 sleeves reload bloom_on AddSkaterToWorld a after morning VIEWED_CUTSCENE_09 points Shirt_Nigel_Costume UnPauseGame change standard_screen_mode chapter_post_cutscene_force_unlock give_cheat_points unlocked DEMO_BUILD shoe_laces apm_spinner03 GetSkaterProfileInfo name TRG_SFX_TrigBox_TR_Reverb01 index2 tod_manager_default_morning undo_fake_nigel AdvanceStage RestoreTemporaryAppearance GetCurrentPointsToAdvance g_endgoal_tnt_trig_00 NO_Equalizer_Start just Orient socks AU_goal_intro_setup before CheckChapterAdvancementStatus letterbox_anchor RemoveTags torso_bone_group key_combo UnpausePhysics texture nighton_08_g_house_90 ChapterForceSkaterSwap view_goals_text skater_m_hands ST_EndGoal_Hawk_Cameras kneepads off targetOffset skippable no_bg GoalManager_GetGoalParams remove g_endgoal_rocket_box_02 indoor CHAPTER_COMPLETE Obj_ClearGeoms want_completion_movie GoalManager_GetActiveRewardPoints chapter_post_cutscene_target_chapter unload_goals SetGlobalFlag AwardNewSpecialTrickToProfile end_script NewValue TRG_restart_finalgoal2 ST_KillCars g_trig_endgoal_ez_combo TRG_ped_skatopiaguy create_pause_menu ingame_confirm_save SpawnScript ST_4_Start nighton_08_g_todd_hang_lightglo03 LoadPreFile ingame_save_return_to_game param GoalManager_GoalExists GoToNextChapterPostCutscene reset_light_group goto TRG_restart_finalgoal3 apm_firesign01 IsXbox GoalManager_RemoveAllGoals waiting_for_complete_message CHAPTER_OUTTROS_VIEWED prev_level load_st NULL hat target_chapter capstone_chapter nighton_08_g_todd_hang_lightglo02 TRG_Ped_Endgoal_Bam1 gameframes g_endgoal_obj_spinbomb01 internal_just level ScreenElementExists ST_4_End load_au TR_1_MoveOnDialog InPreFile AU_2_Start pressed_x TextName NO_Main_Story_goals move_on_now_message dont_lock_goals Mullen FormatText GetChapterSelectableProCount ST_goal_gaps23 load_ba apm_spinner04 NO_Equalizer_Intro_Setup intro_panel flag advance_ped_info g_endgoal_spinlight_green_glow "Ponytail 1" v yes_script objectname UnloadPreFile RemoveSkaterFromWorld cam MarkChapterIntrosViewed tod_manager_default_evening stomach_bone_group GetArraySize ST_goal_gaps22 GoalManager_PauseAllGoals UnPauseSkaters Burnquist from_cutscenes StructureContains before_run goal Hide bloom1 ST_EndGoal_Bam_Cameras center ingame_screen_mode g_firewall_smoke_perf01 no_advance_dialog_on_goal_win TRG_restart_finalgoal ST_goal_gaps21 UnpauseMusicAndStreams Rocketshake04 cutscene_name force_skater_swap focus BO_1_End block_menu_input glasses apm_ST_fireBASE01_fast_particle_params GoToPreviousChapter pad_choose NO_Equalizer_Intro_CleanUp goal_intro_cameras bloom2 pad_choose_params dims post_intro_cutscene_setup ST_goal_gaps20 TRG_rail_endgoal_05 fake_letterboxing player PushMemProfile create_intro_panel_block BA_1_Message TODManager_SetActive g_endgoal_bombbox_01 story_intro_advance_cam small fake_nigel_temp_profile_save SetCurrentChapter profile ArrayName goal_desc printf PausePhysics DoCompletionMessages RewardPoints seconds TRG_restart_finalgoal4 currentSkaterProfile SetUpChapterMenu ST_Goal_Intro_Cameras on cutscene_skaterparts_unloaded ST_EndGoal_Hawk_intro_setup SkaterCamAnimFinished ST_2_End skater_f_hands load_no ST_KillPeds g_endgoal_topbomb_02 ST_2_Start g_endgoal_rail_rocket_box_00 IsCurrentChapterCapstone ST_Rockets_Respawn_03 nolevellights LEVEL_UNLOCKED_TR dont_restore_start_key_binding NO_Equalizer_Intro_Cameras apm_ST_spinnerF04_particle_params groups alpha SetScreenElementLock last_chapter targetParams do_unload_unloadable GetOptionalChapterGoalsScript GetIntroSkaterCamName StartCurrentChapter g_firewall_smoke_perf_rear02 frames g_endgoal_fireWall02 create_select_pro_menu create_snazzy_dialog_box tod_manager_default_afternoon trick fog_red TRG_ped_bigfoot01 goal_intro_cleanup ST_Rockets_Respawn_02 nighton_08_g_todd_hang_lightglo04 viewed g_endgoal_bombbox_trig_01 "Honest Abe" RememberTemporaryAppearance BO_Goal_Intro_Cameras ST_EndGoal_Bam_intro_setup BE_Goal_Intro_Cameras career_post_load mark_first_input MarkChapterOuttrosViewed font TODManager_SetParams StatsManager_ActivateGoals dont_restore_input difficulty_level screen_setup_widescreen no_ped_setup EditPlayerAppearance ST_Rockets_Respawn_01 fog_alpha TRG_climb_endgoal_01 ST_CreatePeds currentSkaterProfileIndex evening PauseMusicAndStreams g_firewall_smoke_perf_rear01 g_endgoal_fireWall01 transition_length g_endgoal_rockets_complete title bad_cutscene APM_spinna_ghost08 time obj_locktoobject value CHAPTER_INTROS_VIEWED play_me fadetoblack list OnGround fog_blue parts structure PlaySkaterCamAnim UnlockNextChapter cam_start_script VIEWED_CUTSCENE_10 load_sk5ed text socks_lower g_trig_endgoal_success GetValueFromDifficultyParam ContainerElement VIEWED_CUTSCENE_02 createflexibleparticlesystem SendPagerMessage desc_id KillSkaterCamAnim trg_endgoal_rocket_fly_03 Debounce treesmoke03 SetHighestChapterWithLevelPostCutscene apm_ST_fireBASE02_fast_particle_params Skater TRG_ped_endgoal_skatopiaguy g_endgoal_top_trig_01 GetCurrentChapterInfo LevelIs left is_classic apm_ST_fire_TREE01_fast_particle_params LoadCurrentChapter script_assert id TRG_ped_hawkhint_01 VIEWED_CUTSCENE_11 active_points fake_nigel_temp_profile VIEWED_CUTSCENE_03 type createfastparticlesystem TRG_ped_escape_pinkcat UnSetGlobalFlag treesmoke02 refresh_skater_model TRICK_UNLOCKED_BEAVERBLAST ProcessGameRewards index SafeCallback g_endgoal_spin_trig_01 IsNgc VIEWED_CUTSCENE_12 sparkfountain01 PauseMusic h GameModeEquals skater_f_torso screen_setup_letterbox IsTrue chap get_is_cutscene_bad pos load_bo ped_info TRG_Restart_Elimination treesmoke01 Trick_BeaverBlast AU_1_Start NO_goal_intro_cleanup g_house_70 ClearPagerMessages DisplayLoadingScreen prefix ST_EndGoal_Hawk_intro_cleanup X elbowpads ChapterAdvanceDialog exitParams destroy_digital_timer i VIEWED_CUTSCENE_13 virtual_cam kill chapter_status2 g_endgoal_spinlight_red PlayCutscene g_firewall_01 SetButtonEventMappings DestroyScreenElement white2 intro_array TRG_Ped_Escape_Bam selectable_pros do_fake_nigel SetTags goal_description_anchor afternoon apm_ST_SparkFountain01_fast_particle_params g_endgoal_firewall_killerz_01 show_goal_panel_messages dont_set_seen_flags Hawk g_house_71 VIEWED_CUTSCENE_01 FlushDeadObjects apm_ST_spinnerF01_particle_params NO_1_Start GoalManager_GetDifficultyLevel outtro_array create_bg DoChapterIntroCamSetup signfire04 inside_run send_delay APM_spinna_ghost07 TR_sound_setup radiowaves05 CHAPTER_INFO buttons ScriptExists BE_1_End priority_message g_endgoal_bombbox_on_04 obj_setposition scale NO_2_End GoalManager_HasWonGoal g_firewall_sky01 mark_first_input_received BO_1_Start ChecksumName dialog_box_exit goals_script APM_spinna_ghost06 radiowaves04 skaterId start_cutscenes g_endgoal_spinlight_green FireEvent GotoPreserveParams apm_ST_spinnerF03_particle_params should_do_fake_nigel treefire01 show_all_hud_items chapter NO_Goal_Intro_Cameras AU_Elimination_Start root_window SetCurrentTeammateProAppearanceName load_mainmenu letterbox_screen_mode init_goal_manager position g_endgoal_spinlight_red_glow APM_spinna_ghost05 g_endgoal_lowrv kill_start_key_binding text_dims AU_Main_Story_goals CheckIfChapterOuttrosViewed GetCurrentChapter StringEquals g_endgoal_obj_spinbomb_base seen_flag SetArrayElement treefire02 SetChapterOnLevel GoalManager_GoalIsLocked Specs_Nigel_Costume APM_spinna_ghost04 obj isAlive PlayIntroSkaterCam Blank hide_all_hud_items new_ammo_message AU_2_End g_endgoal_bombbox_eztrig_01 apm_ST_TREE_smoke01_fast_particle_params TODManager_SetTODInstant tags callback pass CheckIfChapterUnlocked freeze treefire03 Hands g_endgoal_fountain_00 accessory3 g_endgoal_rocket_01 wait post_outtro_cutscene_setup skater_f_hair VIEWED_CUTSCENE_14 PlayChapterCutsceneList level_select_menu_level_info MarkChapterComplete ST_Rockets_Launch_02 VIEWED_CUTSCENE_06 TRG_Ped_PinkCat BA_Goal_Intro_Cameras TODManager_markpermanentlydead IntroCameraDescription reset_cheat_points TRG_ped_Guest ST_EndGoal_End_Cameras PlayIntroCameras CheckIfChapterIntrosViewed GoalManager_UnPauseAllGoals accessory2 ST_1_End pad_choose_script chapter_goals_loaded objid total_num_goals widescreen_screen_mode already_moved_on_message no_script GetSingleTag ST_Rockets_Launch_03 VIEWED_CUTSCENE_07 force need_unpause_streams skater_m_hair CHAPTER_UNLOCKED level_total_points TRG_ped_hint_01 need_more_points_message ST_1_Start RemoveParameter all_profiles SetPart reply_text all_levels_unlocked moviename g_endgoal_spin_00 current_teammate_pro_appearance_name NO_goal_intro_setup accessory1 targetID destroyflexibleparticlesystem RemoveComponent ped_speech_dialog array_size EnableFog AU_goal_intro_cleanup g_firewall_ground01 CHAPTER_STATUS BO_1_Sample SpAir_L_R_Square positionOffset VIEWED_CUTSCENE_04 end_cutscenes apm_st_radioWaves_fast_particle_params current_menu_anchor g_firewall_smoke_perf_perf_rear01 g_endgoal_topbomb_on_01 Obj_MoveToNode trg_rail_endgoal_rocket_01 ResetChapterStatus dont_check_outtros SCREEN_MODE_STANDARD fog_dist Tr_Goal_Intro_Cameras rgba outdoor setup_script g_endgoal_tnt_00 reload_goals letterbox ST_3_Start skater_m_torso ST_Rockets_Launch_01 VIEWED_CUTSCENE_05 use_default_hsv intro_camera_event_handler skater_start_node from_chapter_intro TR_1_Start TRG_Ped_TeammatePro GoalManager_LevelUnload TRG_Restart_Equalizer_Intro Muska radiowaves01 APM_spinna_ghost03 trg_rail_endgoal_bomb5_00 TRG_SFX_TrigBox_Drips_02 GetCurrentSkaterProfileIndex swap_skaters Margera BA_1_End Briefs SendPagerMessageWithDelay menu_state AU_Capstone_Story_goals PlaySingleIntroVirtualCamera shoes kill_speech_boxes NoFaceTexture profile_name selectable_pro_count g_endgoal_rocket_camtrig system skater_m_legs from destroyfastparticlesystem tod_manager_default_night signfire01 speech_box_anchor ChecksumEquals change_level is_career params_script GotoNextChapter skater_f_legs APM_spinna_ghost02 screen_setup_standard reply_script AU_Goal_Intro_Cameras unlock_all_chapters PauseGame HideLoadingScreen chapter_size ST_Capstone_Story_goals create refresh APM_spinna_ghost01 skater_m_jaw radiowaves03 fake_nigel_active GoalManager_InitializeAllGoals ST_Escape_Reactivate signfire02 BareFeet GoalManager_UninitializeAllGoals ST_Capstone_Story_goals_part2 none z_priority StartCurrentChapterWelcome TRG_Ped_Bam new_ammo_message2 part ST_EndGoal_End_cleanup PopMemProfile GetGlobalFlag play_cutscene_only_if_good DoChapterIntroCamCleanup start_script CheckCurrentTextMessageTriggers Vallely TemporarilyDisableInput EndCurrentChapter IsArray restore_start_key_binding wait_frames message g_endgoal_bombbox_antenna_on01 TRG_SFX_TrigBox_Drips_01 nighton_08_g_todd_pool_gr_lightglo02 cam_end_script exit_params radiowaves02 g_endgoal_bombbox_invis_00 parent TRG_Ped_Endgoal_Hawk1 signfire03 load_skateshop set_default_temporary_profiles PauseStream update_goal_points_display ST_Capstone_Story_goals_part3 boardsmoke next TRG_ped_bigfoot AU_Elimination_Intro_Cameras g_object_chainsaw TRG_SFX_TrigBox_WarehouseHum_01 reload_anims light_group ST_3_End

@@ -1,0 +1,15 @@
+# Mods applied in order by apply-mods.sh (and thugkit build --mods).
+# The curated OPEN QOL mod set for THUG2: Violet Vandal Edition — pure NeverScript
+# (.ns) sources that recompile byte-perfect. No game data, no licensed payloads.
+mod-options-menu
+mainmenu-mod
+au-level
+be-level
+no-level
+st-level
+tr-level
+au-seagull
+boston-no-traffic
+silence-phone
+# --- optional bring-your-own pack (payload NOT shipped; fetch via `revert acquire-hq textures`) ---
+hq-level-textures

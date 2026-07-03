@@ -1,0 +1,12 @@
+# Caches
+lib/__pycache__/
+*.pyc
+
+# Platform-specific compiler binary — provide via NS=... or build from the
+# neverscript source; not committed.
+lib/ns
+
+# Derivative / community binary payloads — do NOT publish (treat like the game):
+packs/*/blob/
+packs/*/Data/
+src/*/blob/

@@ -1,0 +1,1181 @@
+
+script create_pause_menu {
+    if GotParam no_exit {
+        set_pause_menu_allow_continue off 
+    } else {
+        if root_window:GetSingleTag no_exit_pause_menu {
+            no_exit = no_exit 
+        } 
+    } 
+    if CustomParkMode editing {
+        SetParkEditorPauseMode pause 
+    } 
+    if ! GotParam no_sound {
+    } 
+    unhide_root_window 
+    if (inside_pause = 1) {
+    } 
+    hide_all_hud_items 
+    unhide_current_goal 
+    if InNetGame {
+        if ! IsObserving {
+            Skater:NetDisablePlayerInput 
+        } 
+    } else {
+        if CustomParkMode editing {
+            parked_setup_main_menu 
+            PauseMusicAndStreams 1 
+            build_pause_menu_parts 
+            return 
+        } 
+        if CustomParkMode testing {
+            parked_setup_test_play_menu 
+            PauseMusicAndStreams 1 
+            build_pause_menu_parts 
+            return 
+        } 
+        if InSplitScreenGame {
+            create_mp_pause_menu 
+            PauseMusicAndStreams 1 
+            build_pause_menu_parts 
+            return 
+        } 
+    } 
+    if (inside_pause = 0) {
+        if MusicIsPaused {
+            change music_was_paused=1 
+        } else {
+            change music_was_paused=0 
+        } 
+    } 
+    PauseMusicAndStreams 1 
+    pause_rain 
+    if (in_cat_preview_mode = 1) {
+        create_CAT_pause_menu 
+        return 
+    } 
+    if ! GotParam no_exit {
+        helper = generic_helper_text 
+    } else {
+        helper = generic_helper_text_no_back 
+    } 
+    if GotParam no_exit {
+        make_new_roundbar_menu {
+            menu_id=pause_menu 
+            vmenu_id=pause_vmenu 
+            pad_back_script=nullscript 
+            pos=(250.0, 95.0) 
+            dims=(250.0, 480.0) 
+            internal_text_just=right 
+            helper_text=<helper> 
+            add_3d_bg 
+        } 
+    } else {
+        make_new_roundbar_menu {
+            menu_id=pause_menu 
+            vmenu_id=pause_vmenu 
+            pad_back_script=handle_start_pressed 
+            pos=(250.0, 95.0) 
+            dims=(250.0, 480.0) 
+            internal_text_just=right 
+            helper_text=<helper> 
+            add_3d_bg 
+        } 
+    } 
+    do_localized_pause_title pos=(500.0, 95.0) 
+    kill_start_key_binding 
+    pause_menu_gradient right 
+    add_music_track_text pos=(575.0, 320.0) 
+    if GameModeEquals is_singlesession {
+        add_roundbar_menu_item {text="CONTINUE" 
+            id=menu_continue 
+            pad_choose_script=handle_pause_continue 
+            pad_choose_sound=generic_pause_exit_sound 
+        } 
+        if GoalManager_goalIsActive name=TrickAttack {
+            add_roundbar_menu_item {
+                text="RETRY HIGH SCORE RUN" 
+                id=menu_retry_high_score_run 
+                pad_choose_script=menu_select 
+                pad_choose_params={stop_streams menu_select_script=RetryCurrentGoal} 
+            } 
+            add_roundbar_menu_item {
+                text="END HIGH SCORE RUN" 
+                id=menu_end_high_score_run 
+                pad_choose_script=menu_select 
+                pad_choose_params={menu_select_script=end_high_score_run} 
+            } 
+        } else {
+            add_roundbar_menu_item {
+                text="START HIGH SCORE RUN" 
+                id=menu_start_high_score_run 
+                pad_choose_script=menu_select 
+                pad_choose_params={menu_select_script=TrickAttack_MenuStartRun} 
+            } 
+        } 
+    } else {
+        if ! GotParam no_exit {
+            add_roundbar_menu_item {text="CONTINUE" 
+                id=menu_continue 
+                pad_choose_script=handle_pause_continue 
+                pad_choose_sound=generic_pause_exit_sound 
+            } 
+        } 
+    } 
+    if GameModeEquals is_goal_attack {
+        if ! IsObserving {
+            GetGoalsMode 
+            if (<goals> = goals_created) {
+                if GoalManager_CanRetryGoal {
+                    if GoalManager_GetLastGoalId {
+                        if ! GoalManager_HasWonGoal name=<goal_id> {
+                            add_roundbar_menu_item text="RETRY LAST GOAL" id=menu_retry_goal pad_choose_script=menu_select pad_choose_params={stop_vibration menu_select_script=RetryCurrentGoal} 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+        add_roundbar_menu_item text="VIEW GOALS" id=menu_view_goals pad_choose_script=create_view_selected_goals_menu pad_choose_params={from_pause} 
+    } 
+    if GameModeEquals is_career {
+        goal_id = (goal_utility_allow_end_goal_name) 
+        if ! ChecksumEquals a=<goal_id> b=null {
+            if GoalManager_GoalExists name=<goal_id> {
+                if GoalManager_goalIsActive name=<goal_id> {
+                    add_roundbar_menu_item text="END CURRENT RUN" id=menu_end_run pad_choose_script=arcade_machine_end_run pad_choose_params={goal_id=<goal_id>} 
+                } 
+            } 
+        } 
+        if GoalManager_CanRetryGoal {
+            add_roundbar_menu_item text="RETRY LAST GOAL" id=menu_retry_goal pad_choose_script=menu_select pad_choose_params={stop_vibration stop_streams menu_select_script=RetryCurrentGoal} 
+        } 
+        if ! LevelIs load_se {
+            add_roundbar_menu_item text="VIEW GOALS" id=menu_chapters pad_choose_script=view_goals_menu_create 
+        } 
+        add_roundbar_menu_item text="TEXT MESSAGES" id=menu_pager pad_choose_script=pager_window_create 
+    } else {
+        if GameModeEquals is_creategoals {
+            if GoalManager_HasActiveGoals {
+                add_roundbar_menu_item text="END CURRENT GOAL" id=menu_end_current_goal pad_choose_script=menu_select pad_choose_params={menu_select_script=end_current_goal_run} 
+            } 
+            add_roundbar_menu_item text="VIEW GOALS" id=menu_view_goals pad_choose_script=view_created_goals_menu_create 
+            if ! LevelIs load_sk5ed_gameplay {
+                add_roundbar_menu_item text="CREATE A GOAL" id=menu_create_a_goal pad_choose_script=create_existing_goals_menu 
+            } 
+        } 
+    } 
+    if GameModeEquals is_classic {
+        classic_mode_menu_add_pause_options 
+    } 
+    if GameModeEquals is_creategoals {
+        if ! LevelIs load_sk5ed_gameplay {
+            add_roundbar_menu_item text="LOAD GOALS" id=menu_load_goals pad_choose_script=prompt_launch_cag_pause_load 
+            GoalEditor:GetNumEditedGoals ExcludeParkEditorGoals 
+            if (<NumGoals> = 0) {
+                no_edited_goals = 1 
+            } 
+            add_roundbar_menu_item text="SAVE GOALS" id=menu_save_goals pad_choose_script=launch_pause_menu_save_created_goals not_focusable=<no_edited_goals> 
+        } 
+    } 
+    display_level_select = 1 
+    if InNetGame {
+        display_level_select = 0 
+    } 
+    if GameModeEquals is_classic {
+        if ! GotParam no_exit {
+            display_level_select = 0 
+        } 
+    } 
+    if (<display_level_select> = 1) {
+        add_roundbar_menu_item {text="CHANGE LEVEL" 
+            id=menu_level_select 
+            pad_choose_script=launch_level_select_menu 
+            tag_grid_x=1 
+        } 
+    } 
+    if InNetGame {
+        if IsHost {
+            if GameModeEquals is_lobby {
+                if ! NetworkGamePending {
+                    if ! ChangeLevelPending {
+                        add_roundbar_menu_item text="START GAME" id=menu_network_start_select pad_choose_script=network_game_options_selected 
+                    } 
+                } 
+            } else {
+                add_roundbar_menu_item text="END CURRENT GAME" id=menu_network_end_select pad_choose_script=network_end_game_selected 
+            } 
+        } 
+    } 
+    if InNetGame {
+        if ! NetworkGamePending {
+            if OnServer {
+                if OnXbox {
+                    add_roundbar_menu_item text="HOST OPTIONS" id=menu_network_server_opts_select pad_choose_script=network_options_selected 
+                } else {
+                    add_roundbar_menu_item text="SERVER OPTIONS" id=menu_network_server_opts_select pad_choose_script=network_options_selected 
+                } 
+            } 
+            if IsHost {
+                if GameModeEquals is_lobby {
+                    if ! OnServer {
+                        if OnXbox {
+                            add_roundbar_menu_item text="HOST OPTIONS" id=menu_network_server_opts_select pad_choose_script=network_options_selected 
+                        } else {
+                            add_roundbar_menu_item text="SERVER OPTIONS" id=menu_network_server_opts_select pad_choose_script=network_options_selected 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
+    if InNetGame {
+        if ! IsObserving {
+            <game_active> = 0 
+            if GoalManager_HasActiveGoals count_all {
+                <game_active> = 1 
+            } 
+            if (<game_active> = 1) {
+                <trick_text> = "VIEW TRICKS" 
+                <trick_helper> = view_tricks_helper_desc 
+            } else {
+                if ! GoalManager_HasActiveGoals {
+                    <trick_text> = "EDIT TRICKS" 
+                    <trick_helper> = edit_tricks_helper_desc 
+                } else {
+                    <trick_text> = "VIEW TRICKS" 
+                    <trick_helper> = view_tricks_helper_desc 
+                } 
+            } 
+            add_roundbar_menu_item text=<trick_text> id=menu_cas pad_choose_script=create_edit_tricks_menu 
+        } 
+    } 
+    if InNetGame {
+        if IsHost {
+            if GameModeEquals is_lobby {
+                if ! NetworkGamePending {
+                    if ! ChangeLevelPending {
+                        add_roundbar_menu_item text="CHANGE LEVEL" id=menu_level_select pad_choose_script=launch_level_select_menu pad_choose_params={show_warning} 
+                    } 
+                } 
+            } 
+        } 
+        if OnXbox {
+            if IsTrue bootstrap_build {
+                add_roundbar_menu_item text="PLAYER LIST" id=menu_network_remove_select pad_choose_script=launch_remove_players_menu not_focusable=not_focusable 
+            } else {
+                add_roundbar_menu_item text="PLAYER LIST" id=menu_network_player_list_select pad_choose_script=launch_player_list_menu 
+                if ProfileLoggedIn {
+                    add_roundbar_menu_item text="HOMIE LIST" id=menu_network_homie_list_select pad_choose_script=launch_homie_list 
+                    if AnyBuddyMessagesLeft {
+                        add_roundbar_menu_item text="VIEW MESSAGES" id=menu_network_homie_list_view pad_choose_script=view_buddy_messages 
+                    } 
+                } 
+            } 
+        } 
+    } 
+    if ! InNetGame {
+        if GameModeEquals is_career {
+            GetChapterSelectableProCount 
+            if (<selectable_pro_count> > 1) {
+                GetCurrentSkaterProfileIndex 
+                GetSkaterProfileInfo player=<currentSkaterProfileIndex> 
+                if ChecksumEquals a=<skater_family> b=family_pro {
+                    if Skater:IsInBail {
+                        pro_focus_param = not_focusable 
+                    } else {
+                        pro_focus_param = {} 
+                    } 
+                    add_roundbar_menu_item text="CHANGE PRO" id=menu_change_pro pad_choose_script=create_select_pro_menu <pro_focus_param> 
+                } 
+            } 
+        } 
+    } 
+    if ((GameModeEquals is_career) or (GameModeEquals is_classic)) {
+        if Skater:IsSkaterOnVehicle {
+            add_roundbar_menu_item text="VIEW STATS" id=menu_edit_stats pad_choose_script=create_stats_menu not_focusable 
+        } else {
+            add_roundbar_menu_item text="VIEW STATS" id=menu_edit_stats pad_choose_script=create_stats_menu 
+        } 
+    } 
+    if ! InNetGame {
+        add_roundbar_menu_item text="YOUR OPTIONS" id=menu_your_options pad_choose_script=create_your_options_menu 
+    } 
+    add_roundbar_menu_item text="GAME OPTIONS" id=menu_game_options pad_choose_script=create_options_menu 
+    if ! InNetGame {
+        add_roundbar_menu_item text="LEVEL MODS" id=menu_level_mods pad_choose_script=create_level_mods_menu 
+    } 
+    if ! CD {
+        if (main_menu_jump_to_cas = 1) {
+            add_roundbar_menu_item text="BACK TO CAS" id=debug_cas_menu pad_choose_script=create_pre_cas_menu pad_choose_params={load_assets=1} 
+        } 
+    } 
+    if InNetGame {
+        add_roundbar_menu_item text="CHAT MESSAGE" id=menu_chat pad_choose_script=launch_chat_keyboard 
+        if ! OnServer {
+            if ! IsObserving {
+                if InInternetMode {
+                    if IsTrue bootstrap_build {
+                        if ! GoalManager_HasActiveGoals {
+                            add_roundbar_menu_item text="OBSERVE" id=menu_network_observe_select pad_choose_script=chose_observe not_focusable=not_focusable 
+                        } 
+                    } else {
+                        if ! GoalManager_HasActiveGoals {
+                            add_roundbar_menu_item text="OBSERVE" id=menu_network_observe_select pad_choose_script=chose_observe 
+                        } 
+                    } 
+                } 
+            } 
+        } 
+        add_roundbar_menu_item text="QUIT" id=menu_quit pad_choose_script=generic_menu_pad_choose pad_choose_params={callback=launch_quit_game_dialog} 
+    } else {
+        if CustomParkMode testing {
+            
+            add_roundbar_menu_item text="BACK TO EDITOR" id=menu_skateshop pad_choose_script=menu_confirm_quit pad_choose_params={yes_script=exit_test_play} 
+        } else {
+            if GameModeEquals is_classic {
+                classic_mode_menu_add_quit_option 
+            } else {
+                add_roundbar_menu_item {text="QUIT" 
+                    id=menu_skateshop 
+                    pad_choose_script=generic_menu_pad_choose 
+                    pad_choose_params={callback=menu_confirm_quit} 
+                    tip_text="Seeya!" 
+                } 
+            } 
+        } 
+    } 
+    kill_blur start=0 
+    if root_window:GetSingleTag highlight_change_level {
+        focus_data = {grid_index=1} 
+        root_window:RemoveTags tags=[highlight_change_level] 
+    } 
+    roundbar_menu_finish show_deck=show_deck data=<focus_data> 
+} 
+script create_mp_pause_menu {
+    SetButtonEventMappings unblock_menu_input 
+    kill_start_key_binding 
+    make_new_roundbar_menu {
+        menu_id=pause_menu 
+        vmenu_id=pause_vmenu 
+        pad_back_script=handle_start_pressed 
+        title="Paused" 
+        additional_create_script=pause_create_tipbox 
+        additional_focus_script=pause_focus_tipbox 
+        additional_unfocus_script=pause_unfocus_tipbox 
+        helper_text=<helper> 
+    } 
+    create_helper_text generic_helper_text 
+    add_roundbar_menu_item text="Continue" id=menu_continue pad_choose_script=handle_start_pressed 
+    add_roundbar_menu_item text="End Current Game" id=menu_network_end_select pad_choose_script=network_end_game_selected 
+    add_roundbar_menu_item text="Options" id=menu_mp_options pad_choose_script=generic_menu_pad_choose pad_choose_params={callback=create_options_menu} 
+    add_roundbar_menu_item text="Quit" id=menu_skateshop pad_choose_script=generic_menu_pad_choose pad_choose_params={callback=menu_confirm_quit} 
+    roundbar_menu_finish 
+} 
+script do_localized_pause_title {pos = (500.0, 40.0) 
+    if IsPAL {
+        if ! English {
+            CreateScreenElement {
+                type=TextElement 
+                parent=current_menu_anchor 
+                id=localized_pause_title 
+                font=small 
+                text="PAUSED" 
+                pos=<pos> 
+                just=[right bottom] 
+                scale=2 
+                rgba=[128 40 10 128] 
+                shadow 
+                shadow_rgba=[0, 0, 0, 128] 
+                shadow_offs=(3.0, 3.0) 
+                z_priority=50 
+            } 
+        } 
+    } 
+} 
+script exit_pause_menu {menu_id = current_menu_anchor 
+    change check_for_unplugged_controllers=0 
+    if ScreenElementExists id=current_menu_anchor {
+        FireEvent type=unfocus target=current_menu_anchor 
+    } 
+    ClearViewerObject 
+    Debounce X time=0.3 
+    Debounce Triangle time=0.3 
+    pause_menu_gradient off 
+    change inside_pause=0 
+    change no_focus_sound=1 
+    if ! CD {
+        change viewer_buttons_enabled=1 
+    } 
+    show_all_hud_items 
+    if InNetGame {
+        if ! IsObserving {
+            if ObjectExists id=Skater {
+                Skater:NetEnablePlayerInput 
+            } 
+        } 
+    } 
+    UnpauseGame 
+    possibly_add_temp_special_trick 
+    PauseStream 0 
+    if (music_was_paused = 0) {
+        PauseMusic 0 
+    } 
+    if root_window:GetSingleTag need_music_zone_refresh {
+        root_window:RemoveTags tags=[need_music_zone_refresh] 
+        SpawnScript SFX_refresh_music_box_triggers params={wait} 
+    } 
+    unpause_rain 
+    GoalManager_UnPauseAllGoals 
+    if ObjectExists id=<menu_id> {
+        DestroyScreenElement id=<menu_id> 
+    } 
+    SetScreenElementProps id=root_window tags={menu_state=off} 
+    if CustomParkMode editing {
+        if ! GotParam DoNotSwitchEditorState {
+            SetParkEditorState state=edit 
+            SetParkEditorPauseMode unpause 
+            SwitchToParkEditorCamera 
+        } 
+    } 
+    if ! GotParam dont_restore_start_key_binding {
+        restore_start_key_binding 
+    } 
+    menu3d_hide 
+    if ! InNetGame {
+        if ! GameModeEquals is_horse {
+            unpauseskaters 
+        } 
+    } 
+    change check_for_unplugged_controllers=1 
+} 
+script pause_launch_level {
+    Skater:StatsManager_Reset 
+    if ((<level> = load_boardshop) or (<level> = load_cas)) {
+        temp = <level> 
+        GetCurrentLevel 
+        array = return_to_level 
+        SetArrayElement arrayname=array index=0 newvalue=<level> 
+        level = <temp> 
+    } 
+    if GameModeEquals is_career {
+        GoalManager_DeactivateAllGoals 
+        Skater:ResetSkaterToCustom 
+    } 
+    change_level <...> 
+} 
+script mod_max_stats_item {
+    GetStatValue air 
+    if GotParam overridden {
+        mod_text = "On" 
+    } else {
+        mod_text = "Off" 
+    } 
+    theme_menu_add_item {text="Max All Stats:" 
+        extra_text=<mod_text> 
+        id=<id> 
+        pad_choose_script=mod_toggle_max_stats 
+        pad_choose_params={id=<id>} 
+    } 
+} 
+script mod_toggle_max_stats {
+    GetStatValue air 
+    if GotParam overridden {
+        SetAllStats value=0 
+        UpdateSkaterStats player=0 
+        SetScreenElementProps id={<id> child=3} text="Off" 
+    } else {
+        SetAllStats value=10 
+        UpdateSkaterStats player=0 
+        SetScreenElementProps id={<id> child=3} text="On" 
+    } 
+} 
+script create_level_mods_menu {
+    make_new_themed_sub_menu title="LEVEL MODS" 
+    create_helper_text {helper_text_elements=[{text="\\b7/\\b4 = Select"} 
+            {text="\\bn = Back"} 
+            {text="\\bm = Accept"} 
+        ] 
+    } 
+    SetScreenElementProps {id=sub_menu 
+        event_handlers=[
+            {pad_back generic_menu_pad_back params={callback=level_mods_exit}} 
+        ] 
+    } 
+    if LevelIs Load_AU {
+        if GetGlobalFlag flag=MOD_AU_SILENCE_GULLS {
+            mod_text = "On" 
+        } else {
+            mod_text = "Off" 
+        } 
+        theme_menu_add_item {text="Silence Seagulls:" 
+            extra_text=<mod_text> 
+            id=menu_mod_au_gulls 
+            pad_choose_script=toggle_mod_au_gulls 
+        } 
+        if GetGlobalFlag flag=MOD_AU_NO_GULL_COMBO {
+            mod_text = "On" 
+        } else {
+            mod_text = "Off" 
+        } 
+        theme_menu_add_item {text="Gulls Need No Combo:" 
+            extra_text=<mod_text> 
+            id=menu_mod_au_combo 
+            pad_choose_script=toggle_mod_au_combo 
+        } 
+        if GetGlobalFlag flag=MOD_AU_SKATE_SAND {
+            mod_text = "On" 
+        } else {
+            mod_text = "Off" 
+        } 
+        theme_menu_add_item {text="Skate on Sand:" 
+            extra_text=<mod_text> 
+            id=menu_mod_au_sand 
+            pad_choose_script=toggle_mod_au_skate_sand 
+        } 
+    } 
+    if LevelIs Load_TR {
+        if GetGlobalFlag flag=MOD_TR_FREESKATE {
+            mod_text = "On" 
+        } else {
+            mod_text = "Off" 
+        } 
+        theme_menu_add_item {text="Free-Skate (Open Level):" 
+            extra_text=<mod_text> 
+            id=menu_mod_tr_free 
+            pad_choose_script=toggle_mod_tr_free 
+        } 
+        if GetGlobalFlag flag=MOD_TR_UNLOCK_GOALS {
+            mod_text = "On" 
+        } else {
+            mod_text = "Off" 
+        } 
+        theme_menu_add_item {text="Unlock All Goals:" 
+            extra_text=<mod_text> 
+            id=menu_mod_tr_unlock 
+            pad_choose_script=toggle_mod_tr_unlock 
+        } 
+    } 
+    if LevelIs Load_BO {
+        if GetGlobalFlag flag=MOD_BO_NO_TRAFFIC {
+            mod_text = "Off" 
+        } else {
+            mod_text = "On" 
+        } 
+        theme_menu_add_item {text="Traffic:" 
+            extra_text=<mod_text> 
+            id=menu_mod_bo_traffic 
+            pad_choose_script=toggle_mod_bo_traffic 
+        } 
+    } 
+    if LevelIs Load_BE {
+        if GetGlobalFlag flag=MOD_BE_KEEP_SOUNDTRACK {
+            mod_text = "On" 
+        } else {
+            mod_text = "Off" 
+        } 
+        theme_menu_add_item {text="Keep Soundtrack:" 
+            extra_text=<mod_text> 
+            id=menu_mod_be_music 
+            pad_choose_script=toggle_mod_be_soundtrack 
+        } 
+    } 
+    if LevelIs Load_NO {
+        if GetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK {
+            mod_text = "On" 
+        } else {
+            mod_text = "Off" 
+        } 
+        theme_menu_add_item {text="Keep Soundtrack:" 
+            extra_text=<mod_text> 
+            id=menu_mod_no_music 
+            pad_choose_script=toggle_mod_no_soundtrack 
+        } 
+        if GetGlobalFlag flag=MOD_NO_BALCONY_RESPAWN {
+            mod_text = "On" 
+        } else {
+            mod_text = "Off" 
+        } 
+        theme_menu_add_item {text="Balcony Respawn:" 
+            extra_text=<mod_text> 
+            id=menu_mod_no_balcony 
+            pad_choose_script=toggle_mod_no_balcony 
+        } 
+        if GetGlobalFlag flag=MOD_NO_NO_TRAFFIC {
+            mod_text = "Off" 
+        } else {
+            mod_text = "On" 
+        } 
+        theme_menu_add_item {text="Traffic:" 
+            extra_text=<mod_text> 
+            id=menu_mod_no_traffic 
+            pad_choose_script=toggle_mod_no_traffic 
+        } 
+    } 
+    if LevelIs Load_ST {
+        if GetGlobalFlag flag=MOD_ST_NO_CAR {
+            mod_text = "Off" 
+        } else {
+            mod_text = "On" 
+        } 
+        theme_menu_add_item {text="Traffic:" 
+            extra_text=<mod_text> 
+            id=menu_mod_st_car 
+            pad_choose_script=toggle_mod_st_car 
+        } 
+    } 
+    if GetGlobalFlag flag=MOD_DISABLE_NPC_NAG {
+        mod_text = "On" 
+    } else {
+        mod_text = "Off" 
+    } 
+    theme_menu_add_item {text="Disable NPC Nag:" 
+        extra_text=<mod_text> 
+        id=menu_mod_npc_nag 
+        pad_choose_script=toggle_mod_npc_nag 
+    } 
+    mod_max_stats_item id=menu_mod_maxstats 
+    theme_menu_add_item {text="Skip Goal..." id=menu_mod_skipgoal pad_choose_script=create_skip_goal_menu} 
+    theme_menu_add_item {text="Set Stats..." id=menu_mod_setstats pad_choose_script=create_set_stats_menu} 
+    theme_menu_add_item text="Done" id=menu_mod_done pad_choose_script=level_mods_exit last_menu_item=1 
+    finish_themed_sub_menu 
+} 
+script create_skip_goal_menu {
+    make_new_themed_sub_menu title="SKIP GOAL" Scrolling 
+    create_helper_text {helper_text_elements=[{text="\\b7/\\b4 = Select"} 
+            {text="\\bn = Back"} 
+            {text="\\bm = Complete"} 
+        ] 
+    } 
+    SetScreenElementProps {id=sub_menu 
+        event_handlers=[
+            {pad_back generic_menu_pad_back params={callback=skip_goal_back}} 
+        ] 
+    } 
+        if LevelIs Load_AU {
+        mod_add_skipgoal_item goal=AU_Goal_Gaps6 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps11 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps10 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps2 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps3 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps12 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps7 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps8 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps9 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps4 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps14 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps15 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps18 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps13 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps17 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps21 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps19 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps16 
+        mod_add_skipgoal_item goal=AU_Goal_TrickObjects2 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps20 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps5 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps22 
+        mod_add_skipgoal_item goal=AU_Goal_Gaps23 
+    } 
+    if LevelIs Load_BA {
+        mod_add_skipgoal_item goal=BA_Goal_Gaps2 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps8 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps4 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps13 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps14 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps5 
+        mod_add_skipgoal_item goal=BA_Goal_SkateTheLine1 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps15 
+        mod_add_skipgoal_item goal=BA_Goal_TrickObjects1 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps10 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps12 
+        mod_add_skipgoal_item goal=BA_goal_Gaps20 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps6 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps11 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps1 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps19 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps16 
+        mod_add_skipgoal_item goal=BA_Goal_HighCombo 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps17 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps21 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps3 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps7 
+        mod_add_skipgoal_item goal=BA_Goal_Gaps9 
+    } 
+    if LevelIs Load_BE {
+        mod_add_skipgoal_item goal=BE_Goal_Gaps3 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps4 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps5 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps15 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps16 
+        mod_add_skipgoal_item goal=BE_Goal_SkateTheLine2 
+        mod_add_skipgoal_item goal=BE_Goal_SkateTheLine3 
+        mod_add_skipgoal_item goal=BE_Goal_HighCombo3 
+        mod_add_skipgoal_item goal=BE_Goal_HighCombo2 
+        mod_add_skipgoal_item goal=BE_AddGoal_SkateTheLine 
+        mod_add_skipgoal_item goal=BE_Goal_SkateTheLine 
+        mod_add_skipgoal_item goal=BE_AddGoal_SkateTheLine02 
+        mod_add_skipgoal_item goal=BE_AddGoal_Gaps15 
+        mod_add_skipgoal_item goal=BE_AddGoal_Gaps16 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps20 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps6 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps11 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps12 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps14 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps19 
+        mod_add_skipgoal_item goal=BE_AddGoal_SkateTheLine3 
+        mod_add_skipgoal_item goal=BE_AddGoal_Gaps19 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps2 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps8 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps13 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps10 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps9 
+        mod_add_skipgoal_item goal=BE_Goal_Gaps7 
+    } 
+    if LevelIs Load_BO {
+        mod_add_skipgoal_item goal=BO_Goal_Gaps7 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps10 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps8 
+        mod_add_skipgoal_item goal=BO_Goal_SkateTheLine4 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps 
+        mod_add_skipgoal_item goal=BO_Goal_gaps15 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps12 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps14 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps13 
+        mod_add_skipgoal_item goal=BO_Goal_HighCombo2 
+        mod_add_skipgoal_item goal=BO_Goal_SkateTheLine2 
+        mod_add_skipgoal_item goal=BO_Goal_SkateTheLine3 
+        mod_add_skipgoal_item goal=BO_Goal_TrickBeat 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps6 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps9 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps4 
+        mod_add_skipgoal_item goal=BO_Goal_TrickObjects 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps3 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps11 
+        mod_add_skipgoal_item goal=BO_Goal_HighCombo 
+        mod_add_skipgoal_item goal=BO_Goal_SkateTheLine 
+        mod_add_skipgoal_item goal=bo_goal_highcombo3 
+        mod_add_skipgoal_item goal=BO_Goal_Gaps5 
+    } 
+    if LevelIs Load_NO {
+        mod_add_skipgoal_item goal=NO_Goal_TrickBeat 
+        mod_add_skipgoal_item goal=NO_Goal_TrickObjects 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps2 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps7 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps8 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps5 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps6 
+        mod_add_skipgoal_item goal=NO_Goal_SkateTheLine2 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps10 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps3 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps12 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps13 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps9 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps14 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps15 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps19 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps11 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps16 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps18 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps17 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps 
+        mod_add_skipgoal_item goal=NO_Goal_Gaps4 
+        mod_add_skipgoal_item goal=NO_goal_skatetheline3 
+        mod_add_skipgoal_item goal=NO_Goal_SkateTheLine 
+    } 
+    if LevelIs Load_ST {
+        mod_add_skipgoal_item goal=ST_Goal_Gaps 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps3 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps2 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps14 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps12 
+        mod_add_skipgoal_item goal=ST_goal_gaps13 
+        mod_add_skipgoal_item goal=ST_goal_gaps21 
+        mod_add_skipgoal_item goal=ST_goal_gaps26 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps22 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps25 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps20 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps24 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps17 
+        mod_add_skipgoal_item goal=ST_goal_gaps15 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps16 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps18 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps19 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps4 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps8 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps9 
+        mod_add_skipgoal_item goal=ST_Goal_SkatetheLine3 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps5 
+        mod_add_skipgoal_item goal=ST_Goal_trickobjects 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps6 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps11 
+        mod_add_skipgoal_item goal=ST_Goal_SkatetheLine2 
+        mod_add_skipgoal_item goal=ST_Goal_SkatetheLine4 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps10 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps7 
+        mod_add_skipgoal_item goal=ST_Goal_Gaps23 
+    } 
+    if LevelIs Load_TR {
+        mod_add_skipgoal_item goal=TR_Goal_Gaps27 
+        mod_add_skipgoal_item goal=tr_goal_gaps12 
+        mod_add_skipgoal_item goal=tr_goal_counter5 
+        mod_add_skipgoal_item goal=tr_goal_gaps7 
+        mod_add_skipgoal_item goal=tr_goal_counter 
+        mod_add_skipgoal_item goal=tr_goal_gaps 
+        mod_add_skipgoal_item goal=TR_Goal_Gaps5 
+        mod_add_skipgoal_item goal=tr_goal_gaps3 
+        mod_add_skipgoal_item goal=tr_goal_gaps4 
+        mod_add_skipgoal_item goal=TR_Goal_gaps8 
+        mod_add_skipgoal_item goal=TR_Goal_counter4 
+        mod_add_skipgoal_item goal=TR_Goal_counter2 
+        mod_add_skipgoal_item goal=TR_Goal_gaps10 
+        mod_add_skipgoal_item goal=TR_Goal_gaps9 
+        mod_add_skipgoal_item goal=tr_goal_counter3 
+        mod_add_skipgoal_item goal=tr_goal_gaps11 
+        mod_add_skipgoal_item goal=TR_Goal_Counter6 
+        mod_add_skipgoal_item goal=tr_goal_gaps13 
+        mod_add_skipgoal_item goal=TR_Goal_gaps14 
+        mod_add_skipgoal_item goal=TR_Goal_counter7 
+        mod_add_skipgoal_item goal=tr_goal_gaps15 
+        mod_add_skipgoal_item goal=TR_Goal_gaps18 
+        mod_add_skipgoal_item goal=TR_Goal_gaps19 
+        mod_add_skipgoal_item goal=TR_Goal_gaps25 
+        mod_add_skipgoal_item goal=tr_goal_gaps16 
+        mod_add_skipgoal_item goal=TR_Goal_gaps17 
+        mod_add_skipgoal_item goal=tr_goal_gaps26 
+        mod_add_skipgoal_item goal=TR_Goal_gaps22 
+        mod_add_skipgoal_item goal=tr_goal_gaps21 
+        mod_add_skipgoal_item goal=TR_Goal_Gaps23 
+        mod_add_skipgoal_item goal=TR_Goal_gaps24 
+        mod_add_skipgoal_item goal=TR_Goal_Counter8 
+        mod_add_skipgoal_item goal=TR_Goal_gaps28 
+        mod_add_skipgoal_item goal=TR_Goal_Gaps29
+    }
+    if GameModeEquals is_classic {
+        mod_add_skipgoal_bytype type="HighScore"
+        mod_add_skipgoal_bytype type="ProScore"
+        mod_add_skipgoal_bytype type="SickScore"
+        mod_add_skipgoal_bytype type="HighCombo"
+        mod_add_skipgoal_bytype type="Skate"
+        mod_add_skipgoal_bytype type="Combo"
+        mod_add_skipgoal_bytype type="SecretTape"
+    }
+    if LevelIs Load_BA {
+        mod_add_skipgoal_item goal=BA_Classic_Goal_Collect
+        mod_add_skipgoal_item goal=ba_classic_goal_gaps
+        mod_add_skipgoal_item goal=ba_classic_goal_gaps2
+        mod_add_skipgoal_item goal=BA_classic_goal_collect2
+    }
+    if LevelIs Load_AU {
+        mod_add_skipgoal_item goal=AU_Classic_Goal_Collect
+        mod_add_skipgoal_item goal=AU_Classic_Goal_Collect2
+        mod_add_skipgoal_item goal=AU_Classic_Goal_Gaps
+        mod_add_skipgoal_item goal=AU_classic_goal_gaps2
+    }
+    if LevelIs Load_ST {
+        mod_add_skipgoal_item goal=st_classic_goal_collect
+        mod_add_skipgoal_item goal=st_classic_goal_collect2
+        mod_add_skipgoal_item goal=st_classic_goal_gaps13
+        mod_add_skipgoal_item goal=ST_classic_goal_gaps
+        mod_add_skipgoal_item goal=ST_classic_goal_gaps2
+    }
+    if LevelIs Load_BE {
+        mod_add_skipgoal_item goal=BE_classic_goal_collect
+        mod_add_skipgoal_item goal=BE_classic_goal_gaps17
+        mod_add_skipgoal_item goal=BE_classic_goal_gaps18
+        mod_add_skipgoal_item goal=BE_classic_goal_gaps
+        mod_add_skipgoal_item goal=BE_classic_goal_gaps2
+        mod_add_skipgoal_item goal=BE_classic_goal_collect2
+    }
+    if LevelIs Load_AP {
+        mod_add_skipgoal_item goal=AP_classic_goal_gaps
+        mod_add_skipgoal_item goal=AP_classic_goal_gaps2
+        mod_add_skipgoal_item goal=ap_classic_goal_collect2
+        mod_add_skipgoal_item goal=AP_classic_goal_collect
+    }
+    if LevelIs Load_SC {
+        mod_add_skipgoal_item goal=SC_classic_goal_gaps2
+        mod_add_skipgoal_item goal=sc_classic_goal_collect
+        mod_add_skipgoal_item goal=sc_classic_goal_collect2
+        mod_add_skipgoal_item goal=SC_classic_goal_gaps
+    }
+    if LevelIs Load_DJ {
+        mod_add_skipgoal_item goal=DJ_classic_goal_gaps2
+        mod_add_skipgoal_item goal=dj_classic_goal_collect
+        mod_add_skipgoal_item goal=dj_classic_goal_collect2
+        mod_add_skipgoal_item goal=DJ_classic_goal_gaps
+    }
+    if LevelIs Load_NO {
+        mod_add_skipgoal_item goal=NO_Classic_Goal_Collect
+        mod_add_skipgoal_item goal=NO_Classic_Goal_Collect2
+        mod_add_skipgoal_item goal=no_classic_goal_gaps
+        mod_add_skipgoal_item goal=NO_classic_goal_gaps2
+    }
+    if LevelIs Load_TR {
+        mod_add_skipgoal_item goal=TR_classic_goal_Gaps30
+        mod_add_skipgoal_item goal=TR_classic_goal_collect
+        mod_add_skipgoal_item goal=tr_classic_goal_collect2
+        mod_add_skipgoal_item goal=TR_classic_goal_gaps
+        mod_add_skipgoal_item goal=TR_classic_goal_gaps2
+    }
+    if LevelIs Load_BO {
+        mod_add_skipgoal_item goal=bo_classic_goal_collect
+        mod_add_skipgoal_item goal=bo_classic_goal_collect2
+        mod_add_skipgoal_item goal=bo_classic_goal_gaps2
+        mod_add_skipgoal_item goal=BO_classic_goal_gaps
+    }
+    if LevelIs Load_CA {
+        mod_add_skipgoal_item goal=CA_classic_goal_gaps2
+        mod_add_skipgoal_item goal=ca_classic_goal_collect
+        mod_add_skipgoal_item goal=ca_classic_goal_collect2
+        mod_add_skipgoal_item goal=ca_classic_goal_gaps
+    }
+    if LevelIs Load_PH {
+        mod_add_skipgoal_item goal=PH_classic_goal_collect
+        mod_add_skipgoal_item goal=PH_classic_goal_gaps2
+        mod_add_skipgoal_item goal=ph_classic_goal_collect2
+        mod_add_skipgoal_item goal=PH_classic_goal_gaps
+    }
+    if LevelIs Load_LA {
+        mod_add_skipgoal_item goal=LA_classic_goal_gaps2
+        mod_add_skipgoal_item goal=la_classic_goal_collect
+        mod_add_skipgoal_item goal=la_classic_goal_collect2
+        mod_add_skipgoal_item goal=LA_classic_goal_gaps
+    }
+    if LevelIs Load_SE2 {
+        mod_add_skipgoal_item goal=SE2_Classic_Goal_Collect
+        mod_add_skipgoal_item goal=SE2_Classic_Goal_Gaps
+        mod_add_skipgoal_item goal=SE2_Classic_Goal_gaps2
+        mod_add_skipgoal_item goal=SE2_classic_goal_collect2
+    }
+    theme_menu_add_item text="Done" id=menu_sg_done pad_choose_script=skip_goal_back last_menu_item=1
+    finish_themed_sub_menu 
+} 
+script mod_add_skipgoal_item {
+    if GoalManager_GoalExists name=<goal> {
+        GoalManager_GetGoalParams name=<goal> 
+        if ! GotParam view_goals_text {
+            view_goals_text = <goal> 
+        } 
+        sg_status = "Skip" 
+        if GoalManager_HasWonGoal name=<goal> {
+            sg_status = "Done" 
+        } 
+        theme_menu_add_item {text=<view_goals_text> extra_text=<sg_status> id=<goal> pad_choose_script=mod_skip_goal pad_choose_params={goal=<goal>}}
+    }
+}
+script mod_add_skipgoal_bytype {
+    GoalManager_CreateGoalName Goal_Type=<type>
+    mod_add_skipgoal_item goal=<Goal_Id>
+}
+script mod_skip_goal {
+    SpawnScript mod_skip_goal_deferred params={goal=<goal>} 
+    exit_pause_menu 
+} 
+script mod_skip_goal_deferred {
+    wait 5 frames 
+    GoalManager_UnlockGoal name=<goal> 
+    GoalManager_WinGoal name=<goal> 
+} 
+script skip_goal_back {
+    if ScreenElementExists id=current_menu_anchor {
+        DestroyScreenElement id=current_menu_anchor 
+    } 
+    create_level_mods_menu 
+} 
+script create_set_stats_menu {
+    make_new_themed_sub_menu title="SET STATS" 
+    create_helper_text {helper_text_elements=[{text="\\b7/\\b4 = Select"} 
+            {text="\\bn = Back"} 
+            {text="\\bm = +1"} 
+        ] 
+    } 
+    SetScreenElementProps {id=sub_menu 
+        event_handlers=[
+            {pad_back generic_menu_pad_back params={callback=set_stats_back}} 
+        ] 
+    } 
+    mod_add_stat_item name=air text="Air" id=menu_ss_air 
+    mod_add_stat_item name=speed text="Speed" id=menu_ss_speed 
+    mod_add_stat_item name=ollie text="Ollie" id=menu_ss_ollie 
+    mod_add_stat_item name=spin text="Spin" id=menu_ss_spin 
+    mod_add_stat_item name=`switch` text="Switch" id=menu_ss_switch 
+    mod_add_stat_item name=flip_speed text="Flip Speed" id=menu_ss_flip 
+    mod_add_stat_item name=rail_balance text="Rail" id=menu_ss_rail 
+    mod_add_stat_item name=lip_balance text="Lip" id=menu_ss_lip 
+    mod_add_stat_item name=manual_balance text="Manual" id=menu_ss_manual 
+    mod_add_stat_item name=run text="Run" id=menu_ss_run 
+    mod_max_stats_item id=menu_ss_max 
+    theme_menu_add_item text="Done" id=menu_ss_done pad_choose_script=set_stats_back last_menu_item=1 
+    finish_themed_sub_menu 
+} 
+script mod_add_stat_item {
+    GetStatValue <name> 
+    if (<stat_value> > 10) {
+        stat_value = 10 
+    } 
+    FormatText textname=valstr "%i" i=<stat_value> 
+    theme_menu_add_item {text=<text> 
+        extra_text=<valstr> 
+        id=<id> 
+        pad_choose_script=mod_cycle_stat 
+        pad_choose_params={name=<name> id=<id>} 
+    } 
+} 
+script mod_cycle_stat {
+    GetStatValue <name> 
+    new_val = (<stat_value> + 1) 
+    if (<new_val> > 10) {
+        new_val = 0 
+    } 
+    stat_menu_change_stat name=<name> value=<new_val> 
+    UpdateSkaterStats player=0 
+    FormatText textname=valstr "%i" i=<new_val> 
+    SetScreenElementProps id={<id> child=3} text=<valstr> 
+} 
+script set_stats_back {
+    if ScreenElementExists id=current_menu_anchor {
+        DestroyScreenElement id=current_menu_anchor 
+    } 
+    create_level_mods_menu 
+} 
+script level_mods_exit {
+    if ScreenElementExists id=current_menu_anchor {
+        DestroyScreenElement id=current_menu_anchor 
+    } 
+    create_pause_menu 
+} 
+script toggle_mod_au_gulls {
+    if ! GetGlobalFlag flag=MOD_AU_SILENCE_GULLS {
+        SetScreenElementProps id={menu_mod_au_gulls child=3} text="On" 
+        SetGlobalFlag flag=MOD_AU_SILENCE_GULLS 
+    } else {
+        SetScreenElementProps id={menu_mod_au_gulls child=3} text="Off" 
+        UnsetGlobalFlag flag=MOD_AU_SILENCE_GULLS 
+    } 
+} 
+script toggle_mod_au_combo {
+    if ! GetGlobalFlag flag=MOD_AU_NO_GULL_COMBO {
+        SetScreenElementProps id={menu_mod_au_combo child=3} text="On" 
+        SetGlobalFlag flag=MOD_AU_NO_GULL_COMBO 
+    } else {
+        SetScreenElementProps id={menu_mod_au_combo child=3} text="Off" 
+        UnsetGlobalFlag flag=MOD_AU_NO_GULL_COMBO 
+    } 
+} 
+script toggle_mod_au_skate_sand {
+    if ! GetGlobalFlag flag=MOD_AU_SKATE_SAND {
+        SetScreenElementProps id={menu_mod_au_sand child=3} text="On" 
+        SetGlobalFlag flag=MOD_AU_SKATE_SAND 
+    } else {
+        SetScreenElementProps id={menu_mod_au_sand child=3} text="Off" 
+        UnsetGlobalFlag flag=MOD_AU_SKATE_SAND 
+    } 
+}
+script toggle_mod_be_soundtrack {
+    if ! GetGlobalFlag flag=MOD_BE_KEEP_SOUNDTRACK {
+        SetScreenElementProps id={menu_mod_be_music child=3} text="On" 
+        SetGlobalFlag flag=MOD_BE_KEEP_SOUNDTRACK 
+    } else {
+        SetScreenElementProps id={menu_mod_be_music child=3} text="Off" 
+        UnsetGlobalFlag flag=MOD_BE_KEEP_SOUNDTRACK 
+    } 
+}
+script toggle_mod_no_soundtrack {
+    if ! GetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK {
+        SetScreenElementProps id={menu_mod_no_music child=3} text="On" 
+        SetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK 
+    } else {
+        SetScreenElementProps id={menu_mod_no_music child=3} text="Off" 
+        UnsetGlobalFlag flag=MOD_NO_KEEP_SOUNDTRACK 
+    } 
+}
+script toggle_mod_no_balcony {
+    if ! GetGlobalFlag flag=MOD_NO_BALCONY_RESPAWN {
+        SetScreenElementProps id={menu_mod_no_balcony child=3} text="On" 
+        SetGlobalFlag flag=MOD_NO_BALCONY_RESPAWN 
+    } else {
+        SetScreenElementProps id={menu_mod_no_balcony child=3} text="Off" 
+        UnsetGlobalFlag flag=MOD_NO_BALCONY_RESPAWN 
+    } 
+} 
+script toggle_mod_npc_nag {
+    if ! GetGlobalFlag flag=MOD_DISABLE_NPC_NAG {
+        SetScreenElementProps id={menu_mod_npc_nag child=3} text="On" 
+        SetGlobalFlag flag=MOD_DISABLE_NPC_NAG 
+    } else {
+        SetScreenElementProps id={menu_mod_npc_nag child=3} text="Off" 
+        UnsetGlobalFlag flag=MOD_DISABLE_NPC_NAG 
+    } 
+} 
+script toggle_mod_tr_free {
+    if ! GetGlobalFlag flag=MOD_TR_FREESKATE {
+        SetScreenElementProps id={menu_mod_tr_free child=3} text="On" 
+        SetGlobalFlag flag=MOD_TR_FREESKATE 
+        if LevelIs Load_TR {
+            TR_FreeskateOpenNow 
+        } 
+    } else {
+        SetScreenElementProps id={menu_mod_tr_free child=3} text="Off" 
+        UnsetGlobalFlag flag=MOD_TR_FREESKATE 
+    } 
+} 
+script toggle_mod_tr_unlock {
+    if ! GetGlobalFlag flag=MOD_TR_UNLOCK_GOALS {
+        SetScreenElementProps id={menu_mod_tr_unlock child=3} text="On" 
+        SetGlobalFlag flag=MOD_TR_UNLOCK_GOALS 
+        if LevelIs Load_TR {
+            TR_ModApply 
+        } 
+    } else {
+        SetScreenElementProps id={menu_mod_tr_unlock child=3} text="Off" 
+        UnsetGlobalFlag flag=MOD_TR_UNLOCK_GOALS 
+    } 
+} 
+script toggle_mod_st_car {
+    if ! GetGlobalFlag flag=MOD_ST_NO_CAR {
+        SetScreenElementProps id={menu_mod_st_car child=3} text="Off" 
+        SetGlobalFlag flag=MOD_ST_NO_CAR 
+        if LevelIs Load_ST {
+            ST_KillCars 
+        } 
+    } else {
+        SetScreenElementProps id={menu_mod_st_car child=3} text="On" 
+        UnsetGlobalFlag flag=MOD_ST_NO_CAR 
+        if LevelIs Load_ST {
+            pause_launch_level level=Load_ST 
+        } 
+    } 
+} 
+script toggle_mod_no_traffic {
+    if ! GetGlobalFlag flag=MOD_NO_NO_TRAFFIC {
+        SetScreenElementProps id={menu_mod_no_traffic child=3} text="Off" 
+        SetGlobalFlag flag=MOD_NO_NO_TRAFFIC 
+        if LevelIs Load_NO {
+            NO_ApplyTrafficMod 
+        } 
+    } else {
+        SetScreenElementProps id={menu_mod_no_traffic child=3} text="On" 
+        UnsetGlobalFlag flag=MOD_NO_NO_TRAFFIC 
+        if LevelIs Load_NO {
+            pause_launch_level level=Load_NO 
+        } 
+    } 
+} 
+script toggle_mod_bo_traffic {
+    if ! GetGlobalFlag flag=MOD_BO_NO_TRAFFIC {
+        SetScreenElementProps id={menu_mod_bo_traffic child=3} text="Off" 
+        SetGlobalFlag flag=MOD_BO_NO_TRAFFIC 
+        if LevelIs Load_BO {
+            BO_ApplyTrafficMod 
+        } 
+    } else {
+        SetScreenElementProps id={menu_mod_bo_traffic child=3} text="On" 
+        UnsetGlobalFlag flag=MOD_BO_NO_TRAFFIC 
+        if LevelIs Load_BO {
+            pause_launch_level level=Load_BO 
+        } 
+    } 
+}
+__register_checksums__ target ResetSkaterToCustom b CD nullscript DoNotSwitchEditorState debug_cas_menu main_menu_jump_to_cas GoalEditor menu_save_goals generic_helper_text_no_back no_sound menu_your_options menu_continue GoalManager_DeactivateAllGoals NetworkGamePending shadow_offs menu_network_player_list_select menu_end_current_goal params need_music_zone_refresh GoalManager_CanRetryGoal ObjectExists CreateScreenElement array pro_focus_param launch_homie_list OnServer menu3d_hide launch_player_list_menu GotParam a menu_select_script pause_menu goals is_creategoals UnpauseGame change create_helper_text edit GetSkaterProfileInfo shadow_rgba GoalManager_GetLastGoalId pause_rain name menu_view_goals menu_load_goals just unhide_root_window exit_test_play menu_end_high_score_run no_exit_pause_menu Triangle RemoveTags view_goals_menu_create network_game_options_selected build_pause_menu_parts GetCurrentLevel off newvalue view_created_goals_menu_create set_pause_menu_allow_continue stop_streams create_pause_menu ExcludeParkEditorGoals SpawnScript GetNumEditedGoals load_se do_localized_pause_title load_sk5ed_gameplay launch_level_select_menu GoalManager_GoalExists is_horse no_focus_sound pad_back_script OnXbox null classic_mode_menu_add_pause_options pause_focus_tipbox pause_menu_gradient possibly_add_temp_special_trick level ScreenElementExists bootstrap_build menu_end_run chose_observe classic_mode_menu_add_quit_option not_focusable GetChapterSelectableProCount unpause_rain network_options_selected helper internal_text_just add_3d_bg create_mp_pause_menu yes_script additional_create_script count_all unpauseskaters unpause prompt_launch_cag_pause_load load_cas menu_start_high_score_run goal_id launch_remove_players_menu IsInBail menu_level_select TrickAttack_MenuStartRun goal_utility_allow_end_goal_name NetEnablePlayerInput trick_helper pad_choose_params music_was_paused dims add_music_track_text return_to_level player menu_create_a_goal view_tricks_helper_desc SetParkEditorPauseMode small make_new_roundbar_menu testing arrayname create_edit_tricks_menu printf check_for_unplugged_controllers IsHost viewer_buttons_enabled menu_network_homie_list_view parked_setup_main_menu dont_restore_start_key_binding skater_family create_CAT_pause_menu launch_pause_menu_save_created_goals create_select_pro_menu menu_id font GetGoalsMode create_pre_cas_menu in_cat_preview_mode generic_pause_exit_sound currentSkaterProfileIndex NetDisablePlayerInput PauseMusicAndStreams family_pro launch_chat_keyboard title time menu_cas create_view_selected_goals_menu end_current_goal_run from_pause menu_quit NumGoals text pad_choose_sound ClearViewerObject Debounce menu_network_server_opts_select Skater LevelIs is_classic stop_vibration id type tag_grid_x AnyBuddyMessagesLeft menu_network_homie_list_select index PauseMusic menu_chapters GameModeEquals IsTrue pos network_end_game_selected is_lobby menu_pager X inside_pause localized_pause_title additional_unfocus_script SetButtonEventMappings DestroyScreenElement no_exit helper_text temp ProfileLoggedIn create_options_menu is_singlesession start scale GoalManager_HasWonGoal grid_index roundbar_menu_finish FireEvent ChangeLevelPending create_existing_goals_menu handle_start_pressed pause_vmenu pause_create_tipbox show_all_hud_items menu_network_observe_select root_window right is_goal_attack unblock_menu_input InInternetMode kill_start_key_binding menu_retry_high_score_run RetryCurrentGoal IsObserving menu_network_start_select edit_tricks_helper_desc SetArrayElement SetParkEditorState launch_quit_game_dialog trick_text hide_all_hud_items load_assets tip_text tags callback menu_mp_options menu_game_options SFX_refresh_music_box_triggers wait end_high_score_run menu_retry_goal SwitchToParkEditorCamera display_level_select StatsManager_Reset GoalManager_UnPauseAllGoals data menu_skateshop view_buddy_messages pad_choose_script unhide_current_goal SetScreenElementProps GetSingleTag CustomParkMode unfocus pause_launch_level state parked_setup_test_play_menu pause menu_chat pager_window_create add_roundbar_menu_item additional_focus_script handle_pause_continue bottom IsPAL current_menu_anchor MusicIsPaused goals_created rgba generic_menu_pad_choose generic_helper_text load_boardshop shadow highlight_change_level menu_select English editing focus_data GetCurrentSkaterProfileIndex game_active menu_confirm_quit InSplitScreenGame menu_state selectable_pro_count kill_blur ChecksumEquals change_level is_career arcade_machine_end_run show_warning TrickAttack no_edited_goals vmenu_id pause_unfocus_tipbox show_deck GoalManager_goalIsActive menu_network_end_select menu_network_remove_select z_priority GoalManager_HasActiveGoals restore_start_key_binding exit_pause_menu parent TextElement PauseStream menu_change_pro InNetGame create_your_options_menu theme_menu_add_item generic_menu_pad_back SetGlobalFlag menu_mod_done UnsetGlobalFlag MOD_AU_SILENCE_GULLS flag event_handlers child level_mods_exit create_level_mods_menu finish_themed_sub_menu GetGlobalFlag menu_mod_au_combo menu_level_mods sub_menu MOD_DISABLE_NPC_NAG helper_text_elements menu_mod_au_gulls toggle_mod_au_combo Load_AU toggle_mod_au_gulls extra_text mod_text menu_mod_npc_nag MOD_AU_NO_GULL_COMBO pad_back last_menu_item make_new_themed_sub_menu toggle_mod_npc_nag MOD_TR_FREESKATE MOD_TR_UNLOCK_GOALS toggle_mod_tr_unlock menu_mod_tr_free TR_ModApply toggle_mod_tr_free TR_FreeskateOpenNow menu_mod_tr_unlock Load_TR value SetAllStats generic_menu_pad_choose_sound menu_mod_maxstats mod_max_all_stats UpdateSkaterStats create_stats_menu IsSkaterOnVehicle menu_edit_stats stat_value menu_ss_done air menu_mod_setstats menu_ss_max menu_ss_lip `switch` overridden spin run menu_ss_switch FormatText mod_cycle_stat rail_balance menu_ss_ollie menu_ss_manual mod_toggle_max_stats stat_menu_change_stat create_set_stats_menu valstr mod_add_stat_item speed flip_speed manual_balance mod_max_stats_item menu_ss_flip GetStatValue menu_ss_rail ollie menu_ss_run menu_ss_air i menu_ss_speed textname menu_ss_spin lip_balance set_stats_back new_val MOD_BO_NO_TRAFFIC toggle_mod_bo_traffic menu_mod_bo_traffic Load_BO BO_ApplyTrafficMod

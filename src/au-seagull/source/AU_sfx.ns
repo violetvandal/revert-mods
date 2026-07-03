@@ -1,0 +1,359 @@
+
+AU_SFX_WalkingOnTheBeach = 0 
+script AU_LoadingSounds {
+    LoadSound "Shared\\Menu\\CheatBad" 
+    LoadSound "Shared\\Hits\\HitGlassPane2x" 
+    LoadSound "Shared\\Auto\\LA_Skid_11" vol=100 dropoff=150 
+    LoadSound "Shared\\Auto\\CarBrakeSqueal" vol=100 dropoff=150 
+    LoadSound "Shared\\Auto\\CarHorn_11" vol=100 dropoff=150 
+    LoadSound "Shared\\Hits\\HitMetalCan" vol=100 dropoff=150 PosUpdateWithDoppler 
+    LoadSound "Shared\\Hits\\BonkBush" vol=100 dropoff=0 
+    LoadSound "Shared\\Water\\FallWater" 
+    LoadSound "Shared\\Auto\\CarLoop" vol=100 dropoff=150 PosUpdateWithDoppler 
+    LoadSound "Vehicles\\Silent_Vehicle_Tire_Loop" 
+    LoadSound "Terrains\\BonkMetal_11" 
+    LoadSound "BouncyObjects\\Bouncy_AluminumCanHit01" 
+    LoadSound "BouncyObjects\\Bouncy_AluminumCanHit02" 
+    LoadSound "BouncyObjects\\Bouncy_BottleNonBreakHit01" 
+    LoadSound "BouncyObjects\\Bouncy_BottleNonBreakHit02" 
+    LoadSound "BouncyObjects\\Bouncy_MetalTrashHit02" 
+    LoadSound "BouncyObjects\\Bouncy_UmbrellaHit01" 
+    LoadSound "BouncyObjects\\Bouncy_UmbrellaHit02" 
+    LoadSound "BA\\SK6_TrashCanHitSpin02" 
+    LoadSound "BouncyObjects\\Bouncy_MetalHit01" 
+    LoadSound "BouncyObjects\\Bouncy_BeachBallHit02" 
+    LoadSound "BouncyObjects\\Bouncy_WoodPole_Hit01" 
+    LoadSound "BouncyObjects\\Bouncy_WoodenTableHit01" 
+    LoadSound "BouncyObjects\\Bouncy_WoodenTableHit02" 
+    LoadSound "BouncyObjects\\Bouncy_PlasticMetalChair01" 
+    LoadSound "BouncyObjects\\Bouncy_PlasticGarbageHit01" 
+    LoadSound "Au\\AU_PoppingStreetLight" 
+    LoadSound "BO\\SK6_BO_RiverLoop01_11" 
+    LoadSound "AU\\AU_HitHandiSign" 
+    LoadSound "AU\\AU_KartLoop" 
+    LoadSound "AU\\AU_KartLand" 
+    LoadSound "AU\\AU_KartJump" 
+    LoadSound "AU\\AU_KartGrind" 
+    LoadSound "AU\\AU_SANDSTEP01" 
+    LoadSound "AU\\AU_SANDSTEP02" 
+    LoadSound "AU\\AU_SANDSTEP03" 
+    if (DebugSoundFX = 1) {
+        dumpheaps 
+    } 
+} 
+script AU_SFX_DrainPool {
+    if ! IsStreamPlaying DrainingThePool {
+        PlayStream AU_DrainPool vol=100 id=DrainingThePool priority=101 
+    } 
+} 
+script AU_SFX_ElectricSparks {
+    while {
+        random2 {
+1 { Obj_PlayStream SK6_SmSpark01 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.7 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark02 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.65 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark03 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.48 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark04 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.42 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark05 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.86 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark06 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.09 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark07 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.44 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark08 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.99 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark09 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.43 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark10 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.66 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark11 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.46 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark12 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.59 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark13 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.53 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark14 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 1.0 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark15 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 1.08 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark16 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 1.54 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark17 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.68 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark18 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 1.22 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark19 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.51 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark20 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.34 seconds 
+ } 1 { Obj_PlayStream SK6_SmSpark21 emitter=TRG_SFX_SOB_SwitchBreakElectric dropoff_function=exponential priority=StreamPriorityLow 
+        wait 0.36 seconds 
+ } } 
+        wait 0.1 seconds 
+    } 
+} 
+script AU_SFX_Waves01 {
+    if skatercamanimfinished {
+        if ! IsStreamPlaying AU_SFX_WavesLeftStream {
+            while {
+                random2 {
+1 { Obj_PlayStream AU_WavesLeft01 vol=50 emitter=TRG_SFX_SOB_Waves01 dropoff_function=inv_exponential id=AU_SFX_WavesLeftStream 
+ } 1 { Obj_PlayStream AU_WavesLeft02 vol=50 emitter=TRG_SFX_SOB_Waves01 dropoff_function=inv_exponential id=AU_SFX_WavesLeftStream 
+ } 1 { Obj_PlayStream AU_WavesLeft03 vol=50 emitter=TRG_SFX_SOB_Waves01 dropoff_function=inv_exponential id=AU_SFX_WavesLeftStream 
+ } 1 { Obj_PlayStream AU_WavesLeft04 vol=50 emitter=TRG_SFX_SOB_Waves01 dropoff_function=inv_exponential id=AU_SFX_WavesLeftStream 
+ } 1 { Obj_PlayStream AU_WavesLeft05 vol=50 emitter=TRG_SFX_SOB_Waves01 dropoff_function=inv_exponential id=AU_SFX_WavesLeftStream 
+ } 1 { Obj_PlayStream AU_WavesLeft06 vol=50 emitter=TRG_SFX_SOB_Waves01 dropoff_function=inv_exponential id=AU_SFX_WavesLeftStream 
+ } } 
+                wait 23 seconds 
+            } 
+        } 
+    } 
+} 
+script AU_SFX_Waves02 {
+    if skatercamanimfinished {
+        if ! IsStreamPlaying AU_SFX_WavesRightStream {
+            while {
+                random2 {
+1 { Obj_PlayStream AU_WavesRight01 vol=50 emitter=TRG_SFX_SOB_Waves02 dropoff_function=inv_exponential id=AU_SFX_WavesRightStream 
+ } 1 { Obj_PlayStream AU_WavesRight02 vol=50 emitter=TRG_SFX_SOB_Waves02 dropoff_function=inv_exponential id=AU_SFX_WavesRightStream 
+ } 1 { Obj_PlayStream AU_WavesRight03 vol=50 emitter=TRG_SFX_SOB_Waves02 dropoff_function=inv_exponential id=AU_SFX_WavesRightStream 
+ } 1 { Obj_PlayStream AU_WavesRight04 vol=50 emitter=TRG_SFX_SOB_Waves02 dropoff_function=inv_exponential id=AU_SFX_WavesRightStream 
+ } 1 { Obj_PlayStream AU_WavesRight05 vol=50 emitter=TRG_SFX_SOB_Waves02 dropoff_function=inv_exponential id=AU_SFX_WavesRightStream 
+ } 1 { Obj_PlayStream AU_WavesRight06 vol=50 emitter=TRG_SFX_SOB_Waves02 dropoff_function=inv_exponential id=AU_SFX_WavesRightStream 
+ } } 
+                wait 23 seconds 
+            } 
+        } 
+    } 
+} 
+script AU_SFX_ScreamingpeopleAtCafe {
+    if ! IsStreamPlaying AU_PeopleScreaming {
+        random2 {
+1 { PlayStream SK6_AU_Crowd_Scream01 vol=170 priority=StreamPriorityHigh id=AU_PeopleScreaming 
+ } 1 { PlayStream SK6_AU_Crowd_Scream02 vol=170 priority=StreamPriorityHigh id=AU_PeopleScreaming 
+ } 1 { PlayStream SK6_AU_Crowd_Scream03 vol=170 priority=StreamPriorityHigh id=AU_PeopleScreaming 
+ } } 
+    } 
+} 
+script AU_SFX_ToiletFlush {
+    if ! IsStreamPlaying ThisToiletFlushing {
+        PlayStream AU_SFX_ToiletFlush vol=65 id=ThisToiletFlushing 
+    } 
+} 
+script AU_SFX_Aborigine_Waterfall {
+    Obj_PlaySound SK6_BO_RiverLoop01_11 vol=50 emitter=TRG_SFX_SOB_AborigineWaterfall 
+} 
+script AU_SFX_Aborigine_Jungle {
+} 
+script AU_SFX_Aborigine_Music_Volume_Box {
+    if (StaticMusicBoxesOn = 1) {
+        SFX_Music_Volume_Box 
+    } 
+} 
+script AU_SFX_Aborigine_Music {
+    if ! InSplitScreenGame {
+        if skatercamanimfinished {
+            if ! IsStreamPlaying Aborigine_Stream {
+                random2 {
+1 { Obj_PlayStream Aborigine_02 vol=150 id=Aborigine_Stream emitter=TRG_SFX_SOB_AborigineMusic dropoff_function=inv_exponential num_loops=-1 
+ } 1 { Obj_PlayStream Aborigine_03 vol=150 id=Aborigine_Stream emitter=TRG_SFX_SOB_AborigineMusic dropoff_function=inv_exponential num_loops=-1 
+ } 1 { Obj_PlayStream Aborigine_04 vol=150 id=Aborigine_Stream emitter=TRG_SFX_SOB_AborigineMusic dropoff_function=inv_exponential num_loops=-1 
+ } 1 { Obj_PlayStream Aborigine_05 vol=150 id=Aborigine_Stream emitter=TRG_SFX_SOB_AborigineMusic dropoff_function=inv_exponential num_loops=-1 
+ } } 
+                Obj_AddStream Aborigine_Stream add=Aborigine_01 vol=150 
+                wait 1 gameframe 
+                Obj_RemoveStream Aborigine_Stream remove=Aborigine_02 
+                Obj_RemoveStream Aborigine_Stream remove=Aborigine_03 
+                Obj_RemoveStream Aborigine_Stream remove=Aborigine_04 
+                Obj_RemoveStream Aborigine_Stream remove=Aborigine_05 
+            } 
+        } 
+    } 
+} 
+script AU_SFX_Cracked_Hydrant {
+    Obj_PlaySound SK6_BO_RiverLoop01_11 vol=160 pitch=200 emitter=TRG_SFX_SOB_Hydrant dropoff_function=inv_exponential 
+} 
+script AU_SFX_Snoring_Worker {
+    if ! IsStreamPlaying CraneEngineIdleSFX {
+        Obj_PlayStream SK6_AU_CraneEngineIdle vol=150 emitter=TRG_SFX_SOB_SnoringWorker id=CraneEngineIdleSFX num_loops=-1 priority=StreamPriorityMidHigh dropoff_function=exponential 
+    } 
+    if ! InNetGame {
+        while {
+            if ! IsStreamPlaying ConstructionSnoring {
+                random2 {
+1 { Obj_PlayStream AU_WorkerSnoring01 vol=200 emitter=TRG_SFX_SOB_SnoringWorker priority=StreamPriorityLowMid id=ConstructionSnoring 
+ } 1 { Obj_PlayStream AU_WorkerSnoring02 vol=200 emitter=TRG_SFX_SOB_SnoringWorker priority=StreamPriorityLowMid id=ConstructionSnoring 
+ } 1 { Obj_PlayStream AU_WorkerSnoring03 vol=200 emitter=TRG_SFX_SOB_SnoringWorker priority=StreamPriorityLowMid id=ConstructionSnoring 
+ } 1 { Obj_PlayStream AU_WorkerSnoring04 vol=200 emitter=TRG_SFX_SOB_SnoringWorker priority=StreamPriorityLowMid id=ConstructionSnoring 
+ } 1 { Obj_PlayStream AU_WorkerSnoring05 vol=200 emitter=TRG_SFX_SOB_SnoringWorker priority=StreamPriorityLowMid id=ConstructionSnoring 
+ } } 
+            } 
+            wait 2 seconds 
+        } 
+    } 
+} 
+script AU_SFX_OutdoorCafe {
+    if skatercamanimfinished {
+        if ! IsStreamPlaying AU_OutdoorCafe {
+            Obj_PlayStream AU_OutdoorCafe emitter=TRG_SFX_SOB_OutdoorCafe priority=StreamPriorityHigh num_loops=-1 
+        } 
+    } 
+} 
+script AU_SFX_Lifeguard_Yelling {
+} 
+script AU_SFX_Seagull_Idle {
+} 
+script AU_SFX_Seagull_Fly_Up {
+    StopStream SeagullFlyUpStream 
+    wait 1 gameframe 
+    if ! IsStreamPlaying SeagullFlyUpStream {
+        random {
+1 { Obj_PlayStream AU_Seagull_Fly_Up_01 id=GullFlyUpSound vol=0 id=SeagullFlyUpStream 
+ } 1 { Obj_PlayStream AU_Seagull_Fly_Up_02 id=GullFlyUpSound vol=0 id=SeagullFlyUpStream 
+ } } 
+    } 
+} 
+script AU_SFX_Metal_Detector_Beep {
+    while {
+        if ! IsStreamPlaying MetDetStream {
+            random2 {
+1 { Obj_PlayStream AU_Met_Detector_Beep_01 vol=100 priority=StreamPriorityLow dropoff=150 id=MetDetStream 
+ } 1 { Obj_PlayStream AU_Met_Detector_Beep_02 vol=100 priority=StreamPriorityLow dropoff=150 id=MetDetStream 
+ } } 
+        } 
+        wait 2 seconds 
+    } 2 
+} 
+script AU_SFX_Metal_Detector_FindVO {
+    Obj_StopStream MetDetStream 
+    random2 {
+1 { Obj_PlayStream AU_Met_Detector_Beep_01 vol=100 priority=StreamPriorityLow dropoff=150 id=MetDetStream 
+ } 1 { Obj_PlayStream AU_Met_Detector_Beep_02 vol=100 priority=StreamPriorityLow dropoff=150 id=MetDetStream 
+ } } 
+    wait 2 seconds 
+    random2 {
+1 { Obj_PlayStream AU_Met_Det_Guy_Find_VO_01 vol=200 priority=StreamPriorityMid dropoff=150 id=MetDetStream 
+ } 1 { Obj_PlayStream AU_Met_Det_Guy_Find_VO_02 vol=200 priority=StreamPriorityMid dropoff=150 id=MetDetStream 
+ } 1 { Obj_PlayStream AU_Met_Det_Guy_Find_VO_03 vol=200 priority=StreamPriorityMid dropoff=150 id=MetDetStream 
+ } } 
+} 
+script AU_SFX_Bridge_Reverb {
+    if ! GameIsPaused {
+        if ! InSplitScreenGame {
+            if (inside) {
+                
+                change InsideAdjacentReverbBox01=1 
+                GetValueFromVolume cdvol 
+                if (InsideAdjacentReverbBox02 = 0) {
+                    if (<value> = 0) {
+                        SetSfxReverb 50 mode=REV_MODE_ROOM 
+                    } else {
+                        SetSfxReverb 60 mode=REV_MODE_ROOM 
+                    } 
+                } 
+            } else {
+                
+                if (InsideAdjacentReverbBox02 = 0) {
+                    SetSfxReverb 0 mode=REV_MODE_ROOM 
+                } else {
+                } 
+                change InsideAdjacentReverbBox01=0 
+            } 
+        } 
+    } 
+} 
+script AU_SFX_SecreteAreaReverb01 {
+    if ! GameIsPaused {
+        if ! InSplitScreenGame {
+            if (inside) {
+                
+                change InsideAdjacentReverbBox01=1 
+                GetValueFromVolume cdvol 
+                if (InsideAdjacentReverbBox02 = 0) {
+                    if (<value> = 0) {
+                        SetSfxReverb 65 mode=REV_MODE_ROOM 
+                    } else {
+                        SetSfxReverb 80 mode=REV_MODE_ROOM 
+                    } 
+                } 
+            } else {
+                
+                if (InsideAdjacentReverbBox02 = 0) {
+                    SetSfxReverb 0 mode=REV_MODE_ROOM 
+                } else {
+                } 
+                change InsideAdjacentReverbBox01=0 
+            } 
+        } 
+    } 
+} 
+script AU_BirdsFlyUpPoopOnGirls {
+} 
+script AU_SFX_Night_Crix01 {
+    if InSplitScreenGame {
+        if ! IsStreamPlaying SK6_CrixLoop_01 {
+            Obj_PlayStream SK6_CrixLoop_01 vol=30 num_loops=-1 priority=StreamPriorityHigh 
+        } 
+    } else {
+        Obj_PlayStream SK6_CrixLoop_01 vol=30 num_loops=-1 priority=StreamPriorityHigh 
+    } 
+} 
+script AU_SFX_Night_Crix02 {
+    if InSplitScreenGame {
+        if ! IsStreamPlaying SK6_CrixLoop_01 {
+            Obj_PlayStream SK6_CrixLoop_01 vol=30 num_loops=-1 priority=StreamPriorityHigh 
+        } 
+    } else {
+        Obj_PlayStream SK6_CrixLoop_01 vol=30 num_loops=-1 priority=StreamPriorityHigh 
+    } 
+} 
+script SFX_HandleLandOnSand {
+    random2 {
+1 { Obj_PlaySound (SFX_FootStepRun01) pitch=randomrange(97.0, 102.0) vol=randomrange(105.0, 120.0) 
+ } 1 { Obj_PlaySound (SFX_FootStepRun02) pitch=randomrange(97.0, 102.0) vol=randomrange(105.0, 120.0) 
+ } 1 { Obj_PlaySound (SFX_FootStepRun03) pitch=randomrange(97.0, 102.0) vol=randomrange(105.0, 120.0) 
+ } 1 { Obj_PlaySound (SFX_FootStepRun04) pitch=randomrange(97.0, 102.0) vol=randomrange(105.0, 120.0) 
+ } 1 { Obj_PlaySound (SFX_FootStepRun05) pitch=randomrange(97.0, 102.0) vol=randomrange(105.0, 120.0) 
+ } } 
+    wait 0.1 seconds 
+    random2 {
+1 { Obj_PlaySound (SFX_FootStepRun01) pitch=randomrange(97.0, 102.0) vol=randomrange(105.0, 120.0) 
+ } 1 { Obj_PlaySound (SFX_FootStepRun02) pitch=randomrange(97.0, 102.0) vol=randomrange(105.0, 120.0) 
+ } 1 { Obj_PlaySound (SFX_FootStepRun03) pitch=randomrange(97.0, 102.0) vol=randomrange(105.0, 120.0) 
+ } 1 { Obj_PlaySound (SFX_FootStepRun04) pitch=randomrange(97.0, 102.0) vol=randomrange(105.0, 120.0) 
+ } 1 { Obj_PlaySound (SFX_FootStepRun05) pitch=randomrange(97.0, 102.0) vol=randomrange(105.0, 120.0) 
+ } } 
+} 
+script AU_SFX_Pigeons_Idle {
+    if skatercamanimfinished {
+        wait random {
+1 { 1 } 1 { 0.5 } 1 { 0.1 } } seconds 
+        if ! IsStreamPlaying PigeonFlyUpSound {
+            if ! IsStreamPlaying PigeonIdleSound {
+                random {
+2 { 
+ } 1 { Obj_PlayStream BO_Pigeon id=PigeonIdleSound vol=50 pitch=randomrange(95.0, 100.0) priority=StreamPriorityLowMid 
+ } 1 { Obj_PlayStream BO_Pigeon_02 id=PigeonIdleSound vol=50 pitch=randomrange(95.0, 100.0) priority=StreamPriorityLowMid 
+ } } 
+            } 
+        } 
+    } 
+} 
+script AU_SFX_Pigeons_FlyUp {
+    if IsStreamPlaying PigeonIdleSound {
+        StopStream PigeonIdleSound 
+    } 
+    if IsStreamPlaying BO_Pigeon {
+        StopStream BO_Pigeon 
+    } 
+    StopStream BO_PigeonFly 
+    if ! IsStreamPlaying PigeonFlyUpSound {
+        Obj_PlayStream BO_PigeonFly id=PigeonFlyUpSound vol=150 
+    } 
+} 
+
+
+__register_checksums__ ThisToiletFlushing AU_OutdoorCafe Aborigine_04 SK6_SmSpark17 exponential SK6_SmSpark05 TRG_SFX_SOB_OutdoorCafe AU_Seagull_Fly_Up_01 Aborigine_05 SK6_SmSpark16 SK6_SmSpark04 TRG_SFX_SOB_AborigineMusic GameIsPaused AU_WorkerSnoring01 dropoff SK6_SmSpark15 PosUpdateWithDoppler pitch AU_WorkerSnoring02 SK6_SmSpark07 SK6_SmSpark14 DebugSoundFX AU_SFX_Seagull_Idle AU_Seagull_Fly_Up_02 AU_WorkerSnoring03 change num_loops SK6_SmSpark06 AU_SFX_Waves01 Obj_PlayStream AU_WavesRight04 AU_SFX_ElectricSparks PigeonIdleSound AU_WavesRight05 emitter remove AU_SFX_WalkingOnTheBeach AU_WavesRight06 AU_SFX_Waves02 SK6_CrixLoop_01 GullFlyUpSound priority SetSfxReverb AU_SFX_DrainPool SK6_SmSpark13 SK6_SmSpark01 SK6_AU_Crowd_Scream03 AU_WorkerSnoring04 Aborigine_01 AU_Met_Det_Guy_Find_VO_01 AU_Met_Detector_Beep_01 SK6_SmSpark12 StreamPriorityMidHigh SK6_AU_Crowd_Scream02 AU_WorkerSnoring05 AU_SFX_WavesRightStream SK6_SmSpark11 dropoff_function TRG_SFX_SOB_SwitchBreakElectric AU_Met_Detector_Beep_02 AU_SFX_WavesLeftStream Aborigine_02 AU_Met_Det_Guy_Find_VO_02 SK6_SmSpark03 LoadSound SK6_AU_Crowd_Scream01 AU_BirdsFlyUpPoopOnGirls GetValueFromVolume SK6_SmSpark10 AU_SFX_Pigeons_Idle AU_Met_Det_Guy_Find_VO_03 Aborigine_03 StreamPriorityLow SK6_SmSpark02 printf seconds AU_SFX_SecreteAreaReverb01 TRG_SFX_SOB_SnoringWorker skatercamanimfinished StopStream AU_SFX_Aborigine_Music_Volume_Box Aborigine_Stream SK6_SmSpark20 SeagullFlyUpStream SK6_SmSpark21 AU_WavesRight01 dumpheaps AU_WavesRight02 value SFX_Music_Volume_Box AU_WavesRight03 InsideAdjacentReverbBox01 vol mode AU_SFX_Aborigine_Jungle DrainingThePool AU_WavesLeft06 id SK6_AU_CraneEngineIdle TRG_SFX_SOB_Hydrant AU_SFX_Seagull_Fly_Up AU_WavesLeft05 StaticMusicBoxesOn SFX_HandleLandOnSand SK6_BO_RiverLoop01_11 StreamPriorityMid AU_WavesLeft04 AU_SFX_ScreamingpeopleAtCafe InsideAdjacentReverbBox02 AU_PeopleScreaming AU_SFX_Snoring_Worker SFX_FootStepRun01 AU_SFX_Metal_Detector_FindVO AU_SFX_Night_Crix02 AU_DrainPool REV_MODE_ROOM PlayStream IsStreamPlaying BO_PigeonFly AU_SFX_Night_Crix01 Obj_AddStream SFX_FootStepRun03 ConstructionSnoring AU_SFX_Aborigine_Music StreamPriorityHigh SFX_FootStepRun02 cdvol add wait AU_WavesLeft03 inv_exponential SK6_SmSpark09 BO_Pigeon AU_SFX_Pigeons_FlyUp AU_SFX_Lifeguard_Yelling AU_WavesLeft02 TRG_SFX_SOB_Waves01 SK6_SmSpark08 AU_SFX_Aborigine_Waterfall AU_WavesLeft01 PigeonFlyUpSound SK6_SmSpark19 AU_SFX_Bridge_Reverb inside AU_SFX_Metal_Detector_Beep TRG_SFX_SOB_Waves02 StreamPriorityLowMid SK6_SmSpark18 Obj_RemoveStream Obj_PlaySound MetDetStream InSplitScreenGame SFX_FootStepRun05 AU_LoadingSounds BO_Pigeon_02 Obj_StopStream AU_SFX_ToiletFlush SFX_FootStepRun04 AU_SFX_Cracked_Hydrant gameframe TRG_SFX_SOB_AborigineWaterfall CraneEngineIdleSFX AU_SFX_OutdoorCafe InNetGame
