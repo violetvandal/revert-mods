@@ -11,5 +11,6 @@ tr-level
 au-seagull
 boston-no-traffic
 silence-phone
+vv-skater
 # --- optional bring-your-own pack (payload NOT shipped; fetch via `revert acquire-hq textures`) ---
 hq-level-textures
