@@ -1654,9 +1654,6 @@ script AU_CanPickup {
                                     Kill Name=TRG_Ped_Detector01 
                                     Create Name=TRG_Ped_Detector02 
                                     
-                                } else {
-                                    break 
-                                    
                                 } 
                             } 
                         } 
@@ -1744,6 +1741,32 @@ script AU_Unlock_Pro_Goals {
     } else {
         TakeOver_VO 
     } 
+    // VV: unlock any goal of this group still locked (Skip Goal can win the first one
+    // individually, which used to strand the rest of the group locked forever).
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps7 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps7 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps8 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps8 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps9 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps9 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps21 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps21 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps4 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps4 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps6 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps6 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps13 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps13 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps19 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps19 
+    } 
 } 
 script AU_Unlock_Shrimp_Goals {
     DestroyFlexibleParticleSystem Name=GrillFireParticleSystemLow 
@@ -1769,6 +1792,20 @@ script AU_Unlock_Shrimp_Goals {
     } else {
         TakeOver_VO 
     } 
+    // VV: unlock any goal of this group still locked (Skip Goal can win the first one
+    // individually, which used to strand the rest of the group locked forever).
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps14 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps14 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps15 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps15 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps18 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps18 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps16 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps16 
+    } 
 } 
 script AU_Unlock_Aborigine_Goals {
     if GoalManager_GoalIsLocked Name=AU_Goal_Gaps17 {
@@ -1785,6 +1822,20 @@ script AU_Unlock_Aborigine_Goals {
         GoalManager_UnlockGoal Name=AU_Goal_Gaps20 
     } else {
         TakeOver_VO 
+    } 
+    // VV: unlock any goal of this group still locked (Skip Goal can win the first one
+    // individually, which used to strand the rest of the group locked forever).
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps17 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps17 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_TrickObjects2 {
+        GoalManager_UnlockGoal Name=AU_Goal_TrickObjects2 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps10 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps10 
+    } 
+    if GoalManager_GoalIsLocked Name=AU_Goal_Gaps20 {
+        GoalManager_UnlockGoal Name=AU_Goal_Gaps20 
     } 
 } 
 script AU_ShrimpVendorChill {
@@ -2167,9 +2218,6 @@ script AU_Gull_Fly {
                                                         if (<GullsScared> = 9) {
                                                             
                                                             Create_Panel_Message {ID=Current_Goal text="9 Gulls Scared!" Style=Goal_Collect_Text} 
-                                                            
-                                                        } else {
-                                                            break 
                                                             
                                                         } 
                                                     } 
@@ -2807,9 +2855,6 @@ script AU_GotAwningGrind {
                         
                         Create_Panel_Message {text="2 of 3 Awning Grinds" Style=Goal_Collect_Text} 
                         
-                    } else {
-                        break 
-                        
                     } 
                 } 
             } 
@@ -2942,9 +2987,6 @@ script AU_Classic_GDAY_Message {
                         
                         Printf "CR CR CR --- NUM GDay Gaps = 4" 
                         Create_Panel_Message {text="4 of 5 G'Day Gaps" Style=Goal_Collect_Text} 
-                        
-                    } else {
-                        break 
                         
                     } 
                 } 

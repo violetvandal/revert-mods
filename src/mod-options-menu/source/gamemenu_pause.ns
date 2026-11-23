@@ -652,7 +652,9 @@ script create_skip_goal_menu {
         ] 
     } 
         if LevelIs Load_AU {
-        mod_add_skipgoal_item goal=AU_Goal_Gaps6 
+        mod_add_skipgoal_item goal=AU_Goal_TimedScoreRun
+        mod_add_skipgoal_item goal=AU_Goal_TrickObjects
+        mod_add_skipgoal_item goal=AU_Goal_Gaps6
         mod_add_skipgoal_item goal=AU_Goal_Gaps11 
         mod_add_skipgoal_item goal=AU_Goal_Gaps10 
         mod_add_skipgoal_item goal=AU_Goal_Gaps2 
